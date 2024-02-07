@@ -8,8 +8,11 @@ Kevin Xu, Josh Yu, Tyler Kubecka, Ben Yu, Bryan Lee
 
 
 ## the proposed project
+Increasing awareness of and providing resources for people with eating disorders.
 
 ## URLs of at least three data sources that you will programmatically scrape (at least one must be a RESTful API) (be very sure about this)
+https://www.samhsa.gov/data/sites/default/files/reports/rpt41908/national-directory-mh-facilities-2023.pdf
+https://www.ncbi.nlm.nih.gov/research/bionlp/APIs/BioC-PMC/
 
 ## at least three models
 
