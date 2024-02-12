@@ -43,10 +43,11 @@ function About() {
       <h2>About Us</h2>
       <div className="row justfiy-content-center mb-5">
         {developers.map((developer, index) => {
-          const developers_res = contributors.filter(
-            (contributor_api) => contributor_api.email === developer.email
+          const developers_res = contributors.filter((contributor_api) =>
+            developer.emails.includes(contributor_api.email)
           );
           let numCommits = 0;
+          console.log(developers_res);
 
           if (developers_res.length > 0) {
             numCommits = developers_res[0].commits;
