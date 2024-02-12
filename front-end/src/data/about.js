@@ -43,7 +43,7 @@ export const developers = [
   },
   {
     name: "Ben Yu",
-    emails: "benyu1414@gmail.com",
+    emails: ["benyu1414@gmail.com", "benyu1414@utexas.edu"],
     gitlab_username: "benyu14141",
     description: "Placeholder",
     role: "Backend",

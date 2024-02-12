@@ -20,10 +20,23 @@
 }
 
 .navbar .links {
-    margin-left: auto;
+    display: flex; /* Aligns links in a row */
+    gap: 20px; /* Creates space between each link */
 }
 
+.navbar .links a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+    border-radius: 5px; /* Adds rounded corners */
+    background-color: #f2f2f2; /* Light background color */
+}
 
+.navbar .links a:hover {
+    color: #3cdfff;
+    background-color: #e0e0e0; /* Slightly darker background on hover */
+}
 
 .content {
     max-width: 600px;

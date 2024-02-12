@@ -2,6 +2,9 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import Home from './pages/Home';
 import About from './pages/About';
+import Cities from './pages/Cities';
+import Organizations from './pages/Organizations';
+import Scholarships from './pages/Scholarships';
 import NavBar from './components/NavBar';
 
 
@@ -13,6 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
+          <Route path="/cities" element={<Cities />}></Route>
+          <Route path="/organizations" element={<Organizations />}></Route>
+          <Route path="/scholarships" element={<Scholarships />}></Route>
         </Routes>
       </Router>
     </div>

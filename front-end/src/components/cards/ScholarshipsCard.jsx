@@ -1,6 +1,6 @@
 import React from "react";
 
-const OrganizationsCard = (props) => {
+const ScholarshipsCard = (props) => {
   return (
     <div key={props.index} className="col-md-4 mb-4">
       <div className="card">
@@ -13,16 +13,10 @@ const OrganizationsCard = (props) => {
           <p className="card-text">Award: {props.award}</p>
           <p className="card-text">Number of Recipients: {props.people}</p>
           <p className="card-text">Requirements: {props.description}</p>
-
-          <ul className="list-group list-group-flush">
-            <li>Commits: {props.numCommits}</li>
-            <li>Issues: {props.numIssues}</li>
-            <li>Unit Tests: {props.tests}</li>
-          </ul>
         </div>
       </div>
     </div>
   );
 };
 
-export default StatsCard;
+export default ScholarshipsCard;
