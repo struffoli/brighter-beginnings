@@ -25,7 +25,7 @@ School Support Orgs/Resources: local tutoring, counseling, etc
 
 Scholarships: Awareness of programs that students in these areas can apply for
 
-## an estimate of the number of instances of each model
+## An estimate of the number of instances of each model
 50 most populous Cities in texas
 
 100+ organizations around those cities
