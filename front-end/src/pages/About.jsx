@@ -47,11 +47,13 @@ function About() {
             developer.emails.includes(contributor_api.email)
           );
           let numCommits = 0;
-          console.log(developers_res);
 
           if (developers_res.length > 0) {
-            numCommits = developers_res[0].commits;
+            for (let i = 0; i < developers_res.length; i++) {
+              numCommits += developers_res[i].commits;
+            }
           }
+
           const numIssues = issues.filter(
             (issue) => issue.author.username === developer.gitlab_username
           ).length;
