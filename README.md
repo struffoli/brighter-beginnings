@@ -32,7 +32,7 @@ Scholarships: Awareness of programs that students in these areas can apply for
 
 150+ scholarships for low-income students
 
-## each model must have many attributes. describe five of those attributes for each model that you can filter or sort
+## Each model must have many attributes. Describe five of those attributes for each model that you can filter or sort
 **Cities:**\
 Name\
 Population\
@@ -59,7 +59,7 @@ Award amount\
 Number of recipients\
 Type(?) (need-based, essay, no essay, etc.)
 
-## instances of each model must connect to instances of at least two other models
+## Instances of each model must connect to instances of at least two other models
 **Cities:**
 
 organizations will be organizable by area, organizations that have data gathered on them will reflect cities analyzed in the map links to organizations (links to organizations)
@@ -74,7 +74,7 @@ Scholarships that particular organizations have will be listed on their card (li
 
   
 
-## instances of each model must be rich with different media (e.g., feeds, images, maps, text, videos, etc.) (be very sure about this). describe two types of media for instances of each model
+## Instances of each model must be rich with different media (e.g., feeds, images, maps, text, videos, etc.) (be very sure about this). Describe two types of media for instances of each model
 
 Cities: Maps, Text
 
@@ -84,7 +84,7 @@ Scholarships: feed, text
 
   
 
-## describe three questions that your site will answer
+## Describe three questions that your site will answer
 
 How does low-income affect students’ educations?
 
