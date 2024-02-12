@@ -7,13 +7,10 @@ const OrganizationsCard = (props) => {
         <img className="card-img-top" src={props.img_src} style={{ objectFit: "cover", height: "300px" }} />
         <div className="card-body">
           <h5 className="card-title">{props.name}</h5>
-          <p className="card-text">Role: {props.role}</p>
-          <p className="card-text">{props.description}</p>
-          <ul className="list-group list-group-flush">
-            <li>Commits: {props.numCommits}</li>
-            <li>Issues: {props.numIssues}</li>
-            <li>Unit Tests: {props.tests}</li>
-          </ul>
+          <p className="card-text">{props.location}</p>
+          <p className="card-text">{props.distance}</p>
+          <p className="card-text">{props.contactInfo}</p>
+          <p className="card-text">{props.organizationType}</p>
         </div>
       </div>
     </div>
