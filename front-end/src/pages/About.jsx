@@ -40,7 +40,7 @@ function About() {
 
   return (
     <div>
-      <h2>About Us</h2>
+      <h2 style={{ padding: "1%", marginLeft: "0.5%" }}>About Us</h2>
       <div className="row justfiy-content-center mb-5">
         {developers.map((developer, index) => {
           const developers_res = contributors.filter((contributor_api) =>
