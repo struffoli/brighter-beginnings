@@ -6,6 +6,7 @@ export const citiesData = [
   {
     img_src: austin,
     name: "Austin",
+    id: 1,
     population: "964,177",
     numSchools: 125,
     testScore: "1150",
@@ -17,6 +18,7 @@ export const citiesData = [
   {
     img_src: sanfran,
     name: "San Francisco",
+    id: 2,
     population: "815,201",
     numSchools: 113,
     testScore: "1100",
@@ -28,6 +30,7 @@ export const citiesData = [
   {
     img_src: miami,
     name: "Miami",
+    id: 3,
     population: "439,890",
     numSchools: 522,
     testScore: "1180",
