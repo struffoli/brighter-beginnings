@@ -6,7 +6,7 @@ const Cities = () => {
   return (
     <div>
       <h2 style={{ padding: "1%", marginLeft: "0.5%" }}>Cities</h2>
-      <div className="row">
+      <div className="row justify-content-center mb-5 mx-2">
         {citiesData.map((city, index) => (
           <CitiesCard
             key={index}

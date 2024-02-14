@@ -6,7 +6,7 @@ const Scholarships = () => {
   return (
     <div>
       <h2 style={{ padding: "1%", marginLeft: "0.5%" }}>Scholarships</h2>
-      <div className="row">
+      <div className="row justify-content-center mb-5 mx-2">
         {scholarshipsData.map((scholarship, index) => (
           <ScholarshipsCard
             key={index}
