@@ -5,14 +5,16 @@ const CitiesCard = (props) => {
   return (
     <div key={props.index} className="col-md-4 mb-4">
       <div className="card">
-        <img
-          className="card-img-top"
-          src={props.img_src}
-          style={{ objectFit: "cover", height: "300px" }}
-        />
+        <Link to={`/about/${props.name}`} className="link">
+          <img
+            className="card-img-top"
+            src={props.img_src}
+            style={{ objectFit: "cover", height: "300px" }}
+          />
+        </Link>
         <div className="card-body">
           <h5 className="card-title" style={{ paddingBottom: "4px" }}>
-            <Link to={`/about/${props.name}`} className='link'>
+            <Link to={`/about/${props.name}`} className="link">
               <b>{props.name}</b>
             </Link>
           </h5>
