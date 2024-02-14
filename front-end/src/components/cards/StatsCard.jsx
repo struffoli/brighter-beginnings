@@ -20,7 +20,7 @@ const StatsCard = (props) => {
             style={{ marginLeft: "3%" }}
           >
             <li>Commits: {props.numCommits}</li>
-            <li>Issues: {props.numIssues}</li>
+            <li>Issues closed: {props.numIssues}</li>
             <li>Unit Tests: {props.tests}</li>
           </ul>
         </div>

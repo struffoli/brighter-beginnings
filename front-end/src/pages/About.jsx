@@ -19,7 +19,6 @@ function About() {
     )
       .then((response) => response.json())
       .then((json) => {
-        console.log(json);
         setContributors(json);
       })
       .catch((error) => console.log(error));
@@ -54,8 +53,9 @@ function About() {
             }
           }
 
+          // count the number of issues closed by this developer
           const numIssues = issues.filter(
-            (issue) => issue.author.username === developer.gitlab_username
+            (issue) => issue.closed_by && issue.closed_by.username === developer.gitlab_username
           ).length;
           return (
             <StatsCard {...{ ...developer, numCommits, numIssues, index }} />
