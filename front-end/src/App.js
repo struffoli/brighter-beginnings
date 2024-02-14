@@ -7,7 +7,7 @@ import Cities from './pages/Cities';
 import Organizations from './pages/Organizations';
 import Scholarships from './pages/Scholarships';
 import NavBar from './components/NavBar';
-import CitiesSubPage from './pages/CitiesSubPage';
+import CitiesSubPage from './pages/CitySubPage';
 import OrganizationSubPage from './pages/OrganizationSubPage';
 import ScholarshipsSubPage from './pages/ScholarshipSubPage';
 
