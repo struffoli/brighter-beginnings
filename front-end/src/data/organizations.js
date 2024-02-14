@@ -1,7 +1,16 @@
 import helpinghands from "../assets/helpinghands.png";
 import educationforall from "../assets/educationforall.png";
+import texasace from "../assets/texasace.png";
 
 export const organizationsData = [
+  {
+    img_src: texasace,
+    name: "Texas ACE",
+    location: "1701 N. Congress Avenue, Austin, Texas, 78701",
+    distance: "5 miles",
+    contactInfo: "(512) 463-9734",
+    organizationType: "Government",
+  },
   {
     img_src: helpinghands,
     name: "Helping Hands",
