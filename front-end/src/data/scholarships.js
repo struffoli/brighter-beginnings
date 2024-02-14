@@ -1,10 +1,24 @@
 import futureleaders from "../assets/futureleaders.png";
 import artistsoftomorrow from "../assets/artistsoftomorrow.png";
+import haganScholarship from "../assets/haganscholarship.jpg";  
+import horatioalger from "../assets/horatioalger.png";
 
 export const scholarshipsData = [
   {
+    img_src: haganScholarship,
+    name: "The Hagan Scholarship",
+    id: 1,
+    donor: "Dan Hagan",
+    area: "Need-based",
+    ageGroup: "K-12",
+    award: "$7,500",
+    people: 10,
+    description: "Nationwide need-based merit scholarship",
+  },
+  {
     img_src: futureleaders,
     name: "Future Leaders Scholarship",
+    id: 2,
     donor: "Tech Innovators Inc.",
     area: "Technology",
     ageGroup: "18-24",
@@ -13,13 +27,14 @@ export const scholarshipsData = [
     description: "For aspiring tech leaders",
   },
   {
-    img_src: artistsoftomorrow,
-    name: "Artists of Tomorrow Award",
-    donor: "Creative Minds Foundation",
-    area: "Arts",
-    ageGroup: "18-30",
-    award: "$3000",
-    people: 5,
-    description: "For emerging artists",
+    img_src: horatioalger,
+    name: "Horatio Alger National Scholarship",
+    id: 3,
+    donor: "Horatio Alger Foundation",
+    area: "Diversity",
+    ageGroup: "Highschool Juniors & Seniors",
+    award: "$25,000",
+    people: 75,
+    description: "One of the largest need-based scholarships",
   },
 ];
