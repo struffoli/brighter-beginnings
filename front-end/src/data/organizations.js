@@ -1,6 +1,8 @@
 import helpinghands from "../assets/helpinghands.png";
 import educationforall from "../assets/educationforall.png";
 import texasace from "../assets/texasace.png";
+import educationTrust from "../assets/theeducationtrust.png";
+import texasSchoolGuide from "../assets/texasschoolguide.jpg";
 
 export const organizationsData = [
   {
@@ -13,21 +15,21 @@ export const organizationsData = [
     organizationType: "Government",
   },
   {
-    img_src: helpinghands,
-    name: "Helping Hands",
+    img_src: educationTrust,
     id: 2,
-    location: "123 Charity St, Springfield",
+    name: "The Education Trust in Texas",
+    location: "1501 K St. NW, Suite 200, Washington, DC 20005",
     distance: "5 miles",
-    contactInfo: "555-0101",
+    contactInfo: "(202) 293 1217",
     organizationType: "Non-profit",
   },
   {
-    img_src: educationforall,
-    name: "Education for All",
+    img_src: texasSchoolGuide,
     id: 3,
-    location: "456 Learning Ave, Riverdale",
+    name: "Texas School Guide",
+    location: "2900 Live Oak St., Dallas, TX 75204",
     distance: "10 miles",
-    contactInfo: "555-0202",
+    contactInfo: "214-599-0072",
     organizationType: "Educational",
   },
 ];
