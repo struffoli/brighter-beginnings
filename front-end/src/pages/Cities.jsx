@@ -5,8 +5,10 @@ import { citiesData } from "../data/cities.js"; // Importing cities data
 const Cities = () => {
   return (
     <div>
-      <h2 style={{ padding: "1%", marginLeft: "0.5%" }}>Cities</h2>
-      <div className="row justify-content-center mb-5 mx-2">
+      <h2 className="mx-4 my-4 px-2">
+        <b>Cities</b>
+      </h2>
+      <div className="row justify-content-center mb-5 mx-4">
         {citiesData.map((city, index) => (
           <CitiesCard
             key={index}

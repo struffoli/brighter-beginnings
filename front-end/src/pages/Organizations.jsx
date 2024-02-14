@@ -5,8 +5,10 @@ import { organizationsData } from "../data/organizations";
 const Organizations = () => {
   return (
     <div>
-      <h2 style={{ padding: "1%", marginLeft: "0.5%" }}>Organizations</h2>
-      <div className="row justify-content-center mb-5 mx-2">
+      <h2 className="mx-4 my-4 px-2">
+        <b>Organizations</b>
+      </h2>
+      <div className="row justify-content-center mb-5 mx-4">
         {organizationsData.map((org, index) => (
           <OrganizationsCard
             key={index}

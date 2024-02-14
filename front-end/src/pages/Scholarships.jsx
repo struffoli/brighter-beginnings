@@ -5,8 +5,10 @@ import { scholarshipsData } from "../data/scholarships";
 const Scholarships = () => {
   return (
     <div>
-      <h2 style={{ padding: "1%", marginLeft: "0.5%" }}>Scholarships</h2>
-      <div className="row justify-content-center mb-5 mx-2">
+      <h2 className="mx-4 my-4 px-2">
+        <b>Scholarships</b>
+      </h2>
+      <div className="row justify-content-center mb-5 mx-4">
         {scholarshipsData.map((scholarship, index) => (
           <ScholarshipsCard
             key={index}

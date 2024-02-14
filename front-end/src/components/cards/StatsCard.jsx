@@ -19,7 +19,9 @@ const StatsCard = (props) => {
             </Link>
           </h5>
           <p className="card-text">Role: {props.role}</p>
-          <p className="card-text">{props.description}</p>
+          <p className="card-text">
+            <i>{props.description}</i>
+          </p>
           <ul
             className="list-group list-group-flush"
             style={{ marginLeft: "3%" }}
