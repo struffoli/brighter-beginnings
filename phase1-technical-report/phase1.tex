@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=red]{hyperref}
+
+\title{CS373 Group 01 Phase 1 Technical Report}
+\author{Kevin Xu, Josh Yu, Ben Yu, Bryan Lee, Tyler Kubecka}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+
+Our website is hosted at \href{https://brighterbeginnings.me}{brighterbeginnings.me} using AWS Amplify.
+\\
+Currently it is configured to build automatically from our \href{https://gitlab.com/kxut/cs373-group-01/}{GitLab repo}.
+\\
+Dependencies:
+
+React
+
+Boostrap
+\subsection{Frontend}
+The front-end is a React app, which is what is running on AWS.
+\\ You can build and run the app like this:
+\begin{verbatim}
+(in cs373-group-01/front-end)
+    npm install
+    npm run start
+\end{verbatim}
+If running locally, it will be at localhost:3000 by default.
+
+\end{document}
