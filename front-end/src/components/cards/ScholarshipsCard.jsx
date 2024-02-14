@@ -5,7 +5,7 @@ const ScholarshipsCard = (props) => {
   return (
     <div key={props.index} className="col-md-4 mb-4">
       <div className="card">
-        <Link to={`/about/${props.name}`} className="link">
+        <Link to={`/scholarships/${props.name}`} className="link">
           <img
             className="card-img-top"
             src={props.img_src}
