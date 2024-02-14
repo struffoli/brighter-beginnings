@@ -7,6 +7,7 @@ export const scholarshipsData = [
   {
     img_src: haganScholarship,
     name: "The Hagan Scholarship",
+    id: 1,
     donor: "Dan Hagan",
     area: "Need-based",
     ageGroup: "K-12",
@@ -17,6 +18,7 @@ export const scholarshipsData = [
   {
     img_src: futureleaders,
     name: "Future Leaders Scholarship",
+    id: 2,
     donor: "Tech Innovators Inc.",
     area: "Technology",
     ageGroup: "18-24",
@@ -27,6 +29,7 @@ export const scholarshipsData = [
   {
     img_src: horatioalger,
     name: "Horatio Alger National Scholarship",
+    id: 3,
     donor: "Horatio Alger Foundation",
     area: "Diversity",
     ageGroup: "Highschool Juniors & Seniors",

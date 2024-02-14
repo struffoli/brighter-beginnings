@@ -8,6 +8,7 @@ export const organizationsData = [
   {
     img_src: texasace,
     name: "Texas ACE",
+    id: 1,
     location: "1701 N. Congress Avenue, Austin, Texas, 78701",
     distance: "5 miles",
     contactInfo: "(512) 463-9734",
