@@ -1,6 +1,6 @@
 import React from "react";
 import CitiesCard from "../components/cards/CitiesCard";
-import { citiesData } from "../data/cities.js"; // Importing cities data
+import { cities } from "../data/cities.js"; // Importing cities data
 
 const Cities = () => {
   return (
@@ -9,7 +9,7 @@ const Cities = () => {
         <b>Cities</b>
       </h2>
       <div className="row justify-content-center mb-5 mx-4">
-        {citiesData.map((city, index) => (
+        {cities.map((city, index) => (
           <CitiesCard
             key={index}
             img_src={city.img_src}

@@ -1,6 +1,6 @@
 import React from "react";
 import ScholarshipsCard from "../components/cards/ScholarshipsCard";
-import { scholarshipsData } from "../data/scholarships";
+import { scholarships } from "../data/scholarships";
 
 const Scholarships = () => {
   return (
@@ -9,7 +9,7 @@ const Scholarships = () => {
         <b>Scholarships</b>
       </h2>
       <div className="row justify-content-center mb-5 mx-4">
-        {scholarshipsData.map((scholarship, index) => (
+        {scholarships.map((scholarship, index) => (
           <ScholarshipsCard
             key={index}
             img_src={scholarship.img_src}

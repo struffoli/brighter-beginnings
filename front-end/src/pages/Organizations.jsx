@@ -1,6 +1,6 @@
 import React from "react";
 import OrganizationsCard from "../components/cards/OrganizationsCard";
-import { organizationsData } from "../data/organizations";
+import { organizations } from "../data/organizations";
 
 const Organizations = () => {
   return (
@@ -9,7 +9,7 @@ const Organizations = () => {
         <b>Organizations</b>
       </h2>
       <div className="row justify-content-center mb-5 mx-4">
-        {organizationsData.map((org, index) => (
+        {organizations.map((org, index) => (
           <OrganizationsCard
             key={index}
             img_src={org.img_src}
