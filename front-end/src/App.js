@@ -7,7 +7,9 @@ import Cities from './pages/Cities';
 import Organizations from './pages/Organizations';
 import Scholarships from './pages/Scholarships';
 import NavBar from './components/NavBar';
-
+import CitiesSubPage from './pages/CitiesSubPage';
+import OrganizationSubPage from './pages/OrganizationSubPage';
+import ScholarshipsSubPage from './pages/ScholarshipSubPage';
 
 function App() {
   return (
@@ -19,9 +21,11 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/about/dev" element={<AboutSubPage />}></Route>
           <Route path="/cities" element={<Cities />}></Route>
+          <Route path="/cities/city" element={<CitiesSubPage />}></Route>
           <Route path="/organizations" element={<Organizations />}></Route>
-          {/* <Route path="/organizations/orgs" element={} */}
+          <Route path="/organizations/org" element={<OrganizationSubPage />}></Route>
           <Route path="/scholarships" element={<Scholarships />}></Route>
+          <Route path="/scholarships/schp" element={<ScholarshipsSubPage />}></Route>
         </Routes>
       </Router>
     </div>

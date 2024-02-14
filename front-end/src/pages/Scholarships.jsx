@@ -18,7 +18,7 @@ const Scholarships = () => {
             area={scholarship.area}
             ageGroup={scholarship.ageGroup}
             award={scholarship.award}
-            people={scholarship.people}
+            recipients={scholarship.recipients}
             description={scholarship.description}
           />
         ))}

@@ -5,7 +5,7 @@ const CitiesCard = (props) => {
   return (
     <div key={props.index} className="col-md-4 mb-4">
       <div className="card">
-        <Link to={`/cities/${props.name}`} className="link">
+        <Link to={`/cities/city?name=${props.name}`} className="link">
           <img
             className="card-img-top"
             src={props.img_src}
@@ -14,7 +14,7 @@ const CitiesCard = (props) => {
         </Link>
         <div className="card-body">
           <h5 className="card-title" style={{ paddingBottom: "4px" }}>
-            <Link to={`/cities/${props.name}`} className="link">
+            <Link to={`/cities/city?name=${props.name}`} className="link">
               <b>{props.name}</b>
             </Link>
           </h5>
