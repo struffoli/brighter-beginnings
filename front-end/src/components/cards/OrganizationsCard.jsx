@@ -18,10 +18,22 @@ const OrganizationsCard = (props) => {
               <b>{props.name}</b>
             </Link>
           </h5>
-          <p className="card-text">{props.location}</p>
-          <p className="card-text">{props.distance}</p>
-          <p className="card-text">{props.contactInfo}</p>
-          <p className="card-text">{props.organizationType}</p>
+          <p className="card-text">
+            <b>Description: </b> {props.description}
+          </p>
+          <p className="card-text">
+            <b>Location: </b>
+            {props.location}
+          </p>
+          <p className="card-text">
+            <b>City: </b>
+            {props.city}</p>
+          <p className="card-text">
+            <b>Contact: </b>
+            {props.contactInfo}</p>
+          <p className="card-text">
+            <b>Organization Type: </b>
+            {props.organizationType}</p>
         </div>
       </div>
     </div>

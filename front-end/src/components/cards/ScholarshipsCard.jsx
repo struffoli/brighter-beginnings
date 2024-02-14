@@ -34,7 +34,7 @@ const ScholarshipsCard = (props) => {
             <b>Number of Recipients:</b> {props.people}
           </p>
           <p className="card-text">
-            <b>Requirements:</b> {props.description}
+            <b>Description:</b> {props.description}
           </p>
         </div>
       </div>

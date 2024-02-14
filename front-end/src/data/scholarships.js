@@ -1,9 +1,19 @@
-import futureleaders from "../assets/futureleaders.png";
-import artistsoftomorrow from "../assets/artistsoftomorrow.png";
+import acescholarship from "../assets/acescholarship.jpg"
 import haganScholarship from "../assets/haganscholarship.jpg";  
 import horatioalger from "../assets/horatioalger.png";
 
 export const scholarships = [
+  {
+    img_src: acescholarship,
+    name: "ACE Scholarship",
+    id: 2,
+    donor: "Alex Cranberg, Charlie Gallagher, Ralph Nagel, John Saeman",
+    area: "Low-income students",
+    ageGroup: "K-12",
+    award: "$2000-$3,000",
+    recipients: 10,
+    description: "To provide children of lower-income families with scholarships to private schools in grades K-12, and to advocate for expanded school choice",
+  },
   {
     img_src: haganScholarship,
     name: "The Hagan Scholarship",
@@ -14,17 +24,6 @@ export const scholarships = [
     award: "$7,500",
     recipients: 10,
     description: "Nationwide need-based merit scholarship",
-  },
-  {
-    img_src: futureleaders,
-    name: "Future Leaders Scholarship",
-    id: 2,
-    donor: "Tech Innovators Inc.",
-    area: "Technology",
-    ageGroup: "18-24",
-    award: "$5000",
-    recipients: 10,
-    description: "For aspiring tech leaders",
   },
   {
     img_src: horatioalger,

@@ -20,8 +20,8 @@
 }
 
 .navbar .links {
-    display: flex; /* Aligns links in a row */
-    gap: 20px; /* Creates space between each link */
+    display: flex;
+    gap: 20px;
 }
 
 .navbar .links a {
@@ -29,13 +29,13 @@
     color: #333;
     padding: 5px 10px;
     transition: color 0.3s ease;
-    border-radius: 5px; /* Adds rounded corners */
-    background-color: #f2f2f2; /* Light background color */
+    border-radius: 5px;
+    background-color: #f2f2f2;
 }
 
 .navbar .links a:hover {
     color: #3cdfff;
-    background-color: #e0e0e0; /* Slightly darker background on hover */
+    background-color: #e0e0e0;
 }
 
 .content {

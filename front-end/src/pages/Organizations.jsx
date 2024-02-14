@@ -15,7 +15,8 @@ const Organizations = () => {
             img_src={org.img_src}
             name={org.name}
             location={org.location}
-            distance={org.distance}
+            city={org.city}
+            description={org.description}
             contactInfo={org.contactInfo}
             organizationType={org.organizationType}
           />

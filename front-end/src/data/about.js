@@ -54,7 +54,7 @@ export const developers = [
       "benyu.cs.utexas@edu",
     ],
     gitlab_username: "benyu14141",
-    description: "I love to code!",
+    description: "I am a sophomore student majoring in CS at UT Austin. I enjoy playing basketball and oil painting.",
     role: "Backend",
     tests: 0,
     img_src: ben,
