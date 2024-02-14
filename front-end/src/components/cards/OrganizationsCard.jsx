@@ -14,7 +14,7 @@ const OrganizationsCard = (props) => {
         </Link>
         <div className="card-body">
           <h5 className="card-title" style={{ paddingBottom: "4px" }}>
-            <Link to={`/about/${props.name}`} className="link">
+            <Link to={`/organizations/${props.name}`} className="link">
               <b>{props.name}</b>
             </Link>
           </h5>
