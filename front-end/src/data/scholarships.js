@@ -3,7 +3,7 @@ import artistsoftomorrow from "../assets/artistsoftomorrow.png";
 import haganScholarship from "../assets/haganscholarship.jpg";  
 import horatioalger from "../assets/horatioalger.png";
 
-export const scholarshipsData = [
+export const scholarships = [
   {
     img_src: haganScholarship,
     name: "The Hagan Scholarship",

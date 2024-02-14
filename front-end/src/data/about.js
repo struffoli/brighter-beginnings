@@ -14,7 +14,7 @@ export const developers = [
       "youhooey12@gmail.com",
     ],
     gitlab_username: "blee02",
-    description: "I love to code!",
+    description: "I'm a CSB junior at UT Austin. If I didn't major in cs, I probably would've become a web-comic creator.",
     role: "Backend",
     tests: 0,
     img_src: bryan,

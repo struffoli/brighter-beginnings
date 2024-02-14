@@ -2,7 +2,7 @@ import austin from "../assets/austin.png";
 import sanfran from "../assets/sanfran.png";
 import miami from "../assets/miami.png";
 
-export const citiesData = [
+export const cities = [
   {
     img_src: austin,
     name: "Austin",

@@ -4,7 +4,7 @@ import texasace from "../assets/texasace.png";
 import educationTrust from "../assets/theeducationtrust.png";
 import texasSchoolGuide from "../assets/texasschoolguide.jpg";
 
-export const organizationsData = [
+export const organizations = [
   {
     img_src: texasace,
     name: "Texas ACE",

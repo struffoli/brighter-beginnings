@@ -1,0 +1,24 @@
+{
+  "name": "cs373-group-01",
+  "version": "1.0.0",
+  "description": "01",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/kxut/cs373-group-01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/kxut/cs373-group-01/issues"
+  },
+  "homepage": "https://gitlab.com/kxut/cs373-group-01#readme",
+  "dependencies": {
+    "dependencies": "0.0.1",
+    "react-scripts": "^5.0.1"
+  }
+}
