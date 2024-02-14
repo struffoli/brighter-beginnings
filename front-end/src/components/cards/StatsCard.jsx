@@ -5,7 +5,7 @@ const StatsCard = (props) => {
   return (
     <div key={props.index} className="col-md-4 mb-4">
       <div className="card">
-        <Link to={`/about/${props.name}`} className="link">
+        <Link to={`/about/dev?name=${props.name}`} className="link">
           <img
             className="card-img-top"
             src={props.img_src}
@@ -14,7 +14,7 @@ const StatsCard = (props) => {
         </Link>
         <div className="card-body">
           <h5 className="card-title" style={{ marginBottom: "3%" }}>
-            <Link to={`/about/${props.name}`} className="link">
+            <Link to={`/about/dev?name=${props.name}`} className="link">
               {props.name}
             </Link>
           </h5>
