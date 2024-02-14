@@ -6,6 +6,7 @@ export const organizationsData = [
   {
     img_src: texasace,
     name: "Texas ACE",
+    id: 1,
     location: "1701 N. Congress Avenue, Austin, Texas, 78701",
     distance: "5 miles",
     contactInfo: "(512) 463-9734",
@@ -14,6 +15,7 @@ export const organizationsData = [
   {
     img_src: helpinghands,
     name: "Helping Hands",
+    id: 2,
     location: "123 Charity St, Springfield",
     distance: "5 miles",
     contactInfo: "555-0101",
@@ -22,6 +24,7 @@ export const organizationsData = [
   {
     img_src: educationforall,
     name: "Education for All",
+    id: 3,
     location: "456 Learning Ave, Riverdale",
     distance: "10 miles",
     contactInfo: "555-0202",
