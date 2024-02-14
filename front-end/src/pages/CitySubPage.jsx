@@ -2,7 +2,7 @@ import { React }from "react";
 import { useSearchParams } from "react-router-dom";
 import { cities } from "../data/cities.js";
 
-function CitiesSubPage() {
+function CitySubPage() {
   const [queryParameters] = useSearchParams();
 
   const getCity = (query) => {
@@ -54,4 +54,4 @@ function CitiesSubPage() {
   );
 }
 
-export default CitiesSubPage;
+export default CitySubPage;
