@@ -58,7 +58,7 @@ function About() {
             (issue) => issue.closed_by && issue.closed_by.username === developer.gitlab_username
           ).length;
           return (
-            <StatsCard {...{ ...developer, numCommits, numIssues, index }} />
+            <StatsCard {...{ ...developer, numCommits, numIssues, index }}/>
           );
         })}
       </div>
