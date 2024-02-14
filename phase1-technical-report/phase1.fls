@@ -82,10 +82,10 @@ INPUT /u/kxu/swe/cs373-group-01/phase1-technical-report/phase1.out
 INPUT /u/kxu/swe/cs373-group-01/phase1-technical-report/phase1.out
 INPUT /u/kxu/swe/cs373-group-01/phase1-technical-report/phase1.out
 INPUT /u/kxu/swe/cs373-group-01/phase1-technical-report/phase1.out
-OUTPUT /u/kxu/swe/cs373-group-01/phase1-technical-report/phase1.pdf
 INPUT /u/kxu/swe/cs373-group-01/phase1-technical-report/phase1.out
 INPUT /u/kxu/swe/cs373-group-01/phase1-technical-report/phase1.out
 OUTPUT /u/kxu/swe/cs373-group-01/phase1-technical-report/phase1.out
+OUTPUT /u/kxu/swe/cs373-group-01/phase1-technical-report/phase1.pdf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm

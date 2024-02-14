@@ -58,5 +58,5 @@ export const developers = [
     role: "Backend",
     tests: 0,
     img_src: ben,
-  },
+  }
 ];
