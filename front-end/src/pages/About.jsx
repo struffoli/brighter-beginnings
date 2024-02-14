@@ -5,12 +5,12 @@ import ToolsCard from "../components/cards/ToolsCard";
 import { developers } from "../data/about";
 import { tools } from "../data/tools";
 
-function About() {
-  const [contributors, setContributors] = useState([]);
-  const [issues, setIssues] = useState([]);
+export async function getDeveloperInfo (){
+  let contributors = [];
+  let issues = [];
 
-  useEffect(() => {
-    fetch(
+  try {
+    const response = await fetch(
       "https://gitlab.com/api/v4/projects/54692100/repository/contributors",
       {
         method: "GET",
@@ -18,14 +18,14 @@ function About() {
           "PRIVATE-TOKEN": "glpat-rxsy5-NkxUn32FePrjQn",
         },
       }
-    )
-      .then((response) => response.json())
-      .then((json) => {
-        setContributors(json);
-      })
-      .catch((error) => console.log(error));
+    );
+    contributors = await response.json();
+  } catch (error) {
+    console.log(error);
+  }
 
-    fetch(
+  try {
+    const response = await fetch(
       "https://gitlab.com/api/v4/projects/54692100/issues?scope=all&per_page=1000",
       {
         method: "GET",
@@ -33,10 +33,21 @@ function About() {
           "PRIVATE-TOKEN": "glpat-rxsy5-NkxUn32FePrjQn",
         },
       }
-    )
-      .then((response) => response.json())
-      .then((json) => setIssues(json))
-      .catch((error) => console.log(error));
+    );
+    issues = await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+
+  return { contributors, issues }
+}
+
+function About() {
+
+  const [devInfo, setDevInfo] = useState({ contributors: [], issues: [] });
+
+  useEffect(() => {
+    getDeveloperInfo().then(data => setDevInfo(data));
   }, []);
 
   return (
@@ -64,7 +75,7 @@ function About() {
 
       <div className="row justify-content-center mb-5 mx-5 mt-4">
         {developers.map((developer, index) => {
-          const developers_res = contributors.filter((contributor_api) =>
+          const developers_res = devInfo.contributors.filter((contributor_api) =>
             developer.emails.includes(contributor_api.email)
           );
           let numCommits = 0;
@@ -76,7 +87,7 @@ function About() {
           }
 
           // count the number of issues closed by this developer
-          const numIssues = issues.filter(
+          const numIssues = devInfo.issues.filter(
             (issue) =>
               issue.closed_by &&
               issue.closed_by.username === developer.gitlab_username
