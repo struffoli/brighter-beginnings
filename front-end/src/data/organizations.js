@@ -16,6 +16,7 @@ export const organizationsData = [
   },
   {
     img_src: educationTrust,
+    id: 2,
     name: "The Education Trust in Texas",
     location: "1501 K St. NW, Suite 200, Washington, DC 20005",
     distance: "5 miles",
@@ -24,6 +25,7 @@ export const organizationsData = [
   },
   {
     img_src: texasSchoolGuide,
+    id: 3,
     name: "Texas School Guide",
     location: "2900 Live Oak St., Dallas, TX 75204",
     distance: "10 miles",
