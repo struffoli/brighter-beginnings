@@ -23,7 +23,7 @@ export const developers = [
     name: "Kevin Xu",
     emails: ["kx@utexas.edu"],
     gitlab_username: "kxut",
-    description: "I love to code!",
+    description: "I'm a sophomore CS major at UT Austin. Outside of school, I enjoy cars and weight lifting.",
     role: "Backend",
     tests: 0,
     img_src: kevin,
