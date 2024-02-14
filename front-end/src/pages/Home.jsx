@@ -19,7 +19,9 @@ const Home = () => {
           }}
         >
           Empowering today's students and tomorrow's leaders by providing
-          information for accessible sources of aid for low-income students.
+          information for accessible sources of aid for low-income students. 
+          Use the NavBar to navigate through our database of cities,
+          scholarships, and organizations providing aid.
         </h4>
       </div>
     </div>
