@@ -5,7 +5,7 @@ const ScholarshipsCard = (props) => {
   return (
     <div key={props.index} className="col-md-4 mb-4">
       <div className="card">
-        <Link to={`/scholarships/${props.name}`} className="link">
+        <Link to={`/scholarships/schp?name=${props.name}`} className="link">
           <img
             className="card-img-top"
             src={props.img_src}
@@ -14,7 +14,7 @@ const ScholarshipsCard = (props) => {
         </Link>
         <div className="card-body">
           <h5 className="card-title" style={{ paddingBottom: "4px" }}>
-            <Link to={`/scholarships/${props.name}`} className="link">
+            <Link to={`/scholarships/schp?name=${props.name}`} className="link">
               <b>{props.name}</b>
             </Link>
           </h5>
@@ -31,7 +31,7 @@ const ScholarshipsCard = (props) => {
             <b>Award:</b> {props.award}
           </p>
           <p className="card-text">
-            <b>Number of Recipients:</b> {props.people}
+            <b>Number of Recipients:</b> {props.recipients}
           </p>
           <p className="card-text">
             <b>Requirements:</b> {props.description}
