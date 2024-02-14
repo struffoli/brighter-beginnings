@@ -31,7 +31,7 @@ function OrganizationSubPage() {
           <b>Location:</b> {org.location}
         </p>
         <p className="">
-          <b>Distance:</b> {org.distance}
+          <b>City:</b> {org.city}
         </p>
         <p className="">
           <b>Contact Info:</b> {org.contactInfo}
