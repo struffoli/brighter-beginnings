@@ -1,4 +1,9 @@
 import pfp from "../assets/pfp.png";
+import bryan from "../assets/bryan.png";
+import kevin from "../assets/kevin.png";
+import tyler from "../assets/tyler.png";
+import josh from "../assets/josh.png";
+import ben from "../assets/ben.png";
 
 export const developers = [
   {
@@ -12,7 +17,7 @@ export const developers = [
     description: "Placeholder",
     role: "Backend",
     tests: 0,
-    img: pfp,
+    img_src: bryan,
   },
   {
     name: "Kevin Xu",
@@ -21,7 +26,7 @@ export const developers = [
     description: "Placeholder",
     role: "Backend",
     tests: 0,
-    img: pfp,
+    img_src: kevin,
   },
   {
     name: "Tyler Kubecka",
@@ -30,7 +35,7 @@ export const developers = [
     description: "Placeholder",
     role: "Backend",
     tests: 0,
-    img: pfp,
+    img_src: tyler,
   },
   {
     name: "Josh Yu",
@@ -39,7 +44,7 @@ export const developers = [
     description: "Placeholder",
     role: "Backend",
     tests: 0,
-    img: pfp,
+    img_src: josh,
   },
   {
     name: "Ben Yu",
@@ -52,6 +57,6 @@ export const developers = [
     description: "Placeholder",
     role: "Backend",
     tests: 0,
-    img: pfp,
+    img_src: ben,
   },
 ];

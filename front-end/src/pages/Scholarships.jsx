@@ -10,7 +10,7 @@ const Scholarships = () => {
         {scholarshipsData.map((scholarship, index) => (
           <ScholarshipsCard
             key={index}
-            // img_src={scholarship.img_src}
+            img_src={scholarship.img_src}
             name={scholarship.name}
             donor={scholarship.donor}
             area={scholarship.area}

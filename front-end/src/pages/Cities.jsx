@@ -10,7 +10,7 @@ const Cities = () => {
         {citiesData.map((city, index) => (
           <CitiesCard
             key={index}
-            // img_src={city.img_src}
+            img_src={city.img_src}
             name={city.name}
             population={city.population}
             numSchools={city.numSchools}

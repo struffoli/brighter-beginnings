@@ -10,7 +10,7 @@ const Organizations = () => {
         {organizationsData.map((org, index) => (
           <OrganizationsCard
             key={index}
-            // img_src={org.img_src}
+            img_src={org.img_src}
             name={org.name}
             location={org.location}
             distance={org.distance}
