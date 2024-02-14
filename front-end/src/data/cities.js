@@ -38,5 +38,5 @@ export const citiesData = [
     percentUnemployment: 5,
     freeLunch: 32,
     educated: 58,
-  },
+  }
 ];
