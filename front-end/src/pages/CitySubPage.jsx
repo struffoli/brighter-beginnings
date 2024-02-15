@@ -49,6 +49,7 @@ function CitySubPage() {
         <p className="">
           <b>Percent of Adults College Educated:</b> {city.educated}%
         </p>
+        {/* only display if this city has organizations */}
         {city.organizations.length > 0 ? (
           <p className="">
             <b>Organizations:</b>
@@ -69,6 +70,7 @@ function CitySubPage() {
         ) : (
           <></>
         )}
+        {/* only display if this city has scholarships */}
         {city.scholarships.length > 0 ? (
           <p className="">
             <b>Scholarships:</b>
