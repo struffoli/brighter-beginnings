@@ -14,7 +14,8 @@ export const developers = [
       "youhooey12@gmail.com",
     ],
     gitlab_username: "blee02",
-    description: "I'm a CSB junior at UT Austin. If I didn't major in cs, I probably would've become a web-comic creator.",
+    description:
+      "I'm a CSB junior at UT Austin. If I didn't major in cs, I probably would've become a web-comic creator.",
     role: "Backend",
     tests: 0,
     img_src: bryan,
@@ -23,7 +24,8 @@ export const developers = [
     name: "Kevin Xu",
     emails: ["kx@utexas.edu", "kxu@cs.utexas.edu"],
     gitlab_username: "kxut",
-    description: "I'm a sophomore CS major at UT Austin. Outside of school, I enjoy cars and weight lifting.",
+    description:
+      "I'm a sophomore CS major at UT Austin. Outside of school, I enjoy cars and weight lifting.",
     role: "Backend",
     tests: 0,
     img_src: kevin,
@@ -32,7 +34,8 @@ export const developers = [
     name: "Tyler Kubecka",
     emails: ["tyandkub@gmail.com", "tylerkubecka@Tylers-MacBook-Air-2.local"],
     gitlab_username: "tyandkub",
-    description: "I love to code!",
+    description:
+      "I'm a sophomore CS major at UT Austin with an interest in fashion and modeling. I really love League of Legends.",
     role: "Backend",
     tests: 0,
     img_src: tyler,
@@ -41,7 +44,8 @@ export const developers = [
     name: "Josh Yu",
     emails: ["joshty1215@gmail.com", "joshyu@utexas.edu"],
     gitlab_username: "struffoli",
-    description: "I love to code!",
+    description:
+      "I'm a sophomore at UT Austin pursuing a major in CS and a minor in Chinese. I like to play volleyball and dance.",
     role: "Backend",
     tests: 0,
     img_src: josh,
@@ -54,9 +58,10 @@ export const developers = [
       "benyu.cs.utexas@edu",
     ],
     gitlab_username: "benyu14141",
-    description: "I am a sophomore student majoring in CS at UT Austin. I enjoy playing basketball and oil painting.",
+    description:
+      "I am a sophomore student majoring in CS at UT Austin. I enjoy playing basketball and oil painting.",
     role: "Backend",
     tests: 0,
     img_src: ben,
-  }
+  },
 ];
