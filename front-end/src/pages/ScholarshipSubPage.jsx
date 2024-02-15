@@ -36,14 +36,18 @@ function ScholarshipsSubPage() {
             to={`/organizations/org?name=${scholarship.organization}`}
             className="link"
           >
-            <b>{scholarship.organization}</b>
+            {scholarship.organization}
           </Link>
         </p>
         <p className="">
           <b>Eligible for students from: </b>
-          <Link to={`/cities/city?name=${scholarship.city}`} className="link">
-            <b>{scholarship.city}</b>
-          </Link>
+          {scholarship.city !== "" ? (
+            <Link to={`/cities/city?name=${scholarship.city}`} className="link">
+              {scholarship.city}
+            </Link>
+          ) : (
+            `Many Cities`
+          )}
         </p>
         <p className="">
           <b>Area:</b> {scholarship.area}
@@ -60,33 +64,6 @@ function ScholarshipsSubPage() {
         <p className="">
           <b>Description:</b> {scholarship.description}
         </p>
-        {scholarship.cities.length > 0 ? (
-          <p className="">
-            <b>Cities:</b>
-            {scholarship.cities.map((cty) => {
-              const city = cities.find((city) => city.name === cty);
-              return (
-                <p>
-                  <a href={`/cities/city?name=${city.name}`}>{city.name}</a>
-                </p>
-              );
-            })}
-          </p>
-        ) : (
-          <></>
-        )}
-        {scholarship.organization !== "" ? (
-          <p className="">
-            <b>Organization:</b>
-            <p>
-              <a href={`/organizations/org?name=${scholarship.organization}`}>
-                {scholarship.organization}
-              </a>
-            </p>
-          </p>
-        ) : (
-          <></>
-        )}
         <ul className="list-group list-group-flush"></ul>
       </div>
     </div>

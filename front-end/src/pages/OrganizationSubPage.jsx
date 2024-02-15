@@ -51,9 +51,12 @@ function OrganizationSubPage() {
               );
               return (
                 <p>
-                  <a href={`/scholarships/schp?name=${schp.name}`}>
+                  <Link
+                    to={`/scholarships/schp?name=${schp.name}`}
+                    className="link"
+                  >
                     {schp.name}
-                  </a>
+                  </Link>
                 </p>
               );
             })}
@@ -61,14 +64,6 @@ function OrganizationSubPage() {
         ) : (
           <></>
         )}
-        <p className="">
-          <Link
-            to={`/scholarships/schp?name=${org.scholarship}`}
-            className="link"
-          >
-            <b>Click here to see scholarships!</b>
-          </Link>
-        </p>
         <ul className="list-group list-group-flush"></ul>
       </div>
     </div>

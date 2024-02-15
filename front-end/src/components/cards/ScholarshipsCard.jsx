@@ -24,14 +24,17 @@ const ScholarshipsCard = (props) => {
           </p>
           <p className="card-text">
             <b>Awarded by: </b>
-            <Link to={`/organizations/org?name=${props.organization}`} className="link">
-              <b>{props.organization}</b>
+            <Link
+              to={`/organizations/org?name=${props.organization}`}
+              className="link"
+            >
+              {props.organization}
             </Link>
           </p>
           <p className="card-text">
             <b>Eligible for students from: </b>
             <Link to={`/cities/city?name=${props.city}`} className="link">
-              <b>{props.city}</b>
+              {props.city}
             </Link>
           </p>
           <p className="card-text">

@@ -1,5 +1,5 @@
 import { React } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { cities } from "../data/cities.js";
 import { organizations } from "../data/organizations.js";
 import { scholarships } from "../data/scholarships.js";
@@ -56,7 +56,12 @@ function CitySubPage() {
               const org = organizations.find((o) => o.name === organization);
               return (
                 <p>
-                  <a href={`/organizations/org?name=${org.name}`}>{org.name}</a>
+                  <Link
+                    to={`/organizations/org?name=${org.name}`}
+                    className="link"
+                  >
+                    {org.name}
+                  </Link>
                 </p>
               );
             })}
@@ -73,9 +78,12 @@ function CitySubPage() {
               );
               return (
                 <p>
-                  <a href={`/scholarships/schp?name=${schp.name}`}>
+                  <Link
+                    to={`/scholarships/schp?name=${schp.name}`}
+                    className="link"
+                  >
                     {schp.name}
-                  </a>
+                  </Link>
                 </p>
               );
             })}

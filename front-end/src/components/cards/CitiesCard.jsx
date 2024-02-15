@@ -41,14 +41,9 @@ const CitiesCard = (props) => {
             <b>Percent of Adults College Educated:</b> {props.educated}%
           </p>
           <p>
-          <Link to={`/organizations/org?name=${props.organization}`} className="link">
-            <b>Click here to see organizations!</b>
-          </Link>
-          </p>
-          <p>
-          <Link to={`/scholarships/schp?name=${props.scholarship}`} className="link">
-            <b>Click here to see scholarships!</b>
-          </Link>
+            <Link to={`/cities/city?name=${props.name}`} className="link">
+              Click here to see organizations/scholarships!
+            </Link>
           </p>
           <ul className="list-group list-group-flush"></ul>
         </div>

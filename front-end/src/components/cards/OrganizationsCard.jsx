@@ -29,7 +29,7 @@ const OrganizationsCard = (props) => {
           <p className="card-text">
             <b>City: </b>
             <Link to={`/cities/city?name=${props.city}`} className="link">
-              <b>{props.city}</b>
+              {props.city}
             </Link>
           </p>
           <p className="card-text">
@@ -41,8 +41,8 @@ const OrganizationsCard = (props) => {
             {props.organizationType}
           </p>
           <p className="card-text">
-            <Link to={`/scholarships/schp?name=${props.scholarship}`} className="link">
-              <b>Click here to see scholarships!</b>
+            <Link to={`/organizations/org?name=${props.name}`} className="link">
+              Click here to see scholarships!
             </Link>
           </p>
         </div>
