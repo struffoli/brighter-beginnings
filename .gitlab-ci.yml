@@ -1,11 +1,11 @@
 image: node:latest
 
-stages: 
+stages:
   - build
 
 build:
   stage: build
-  script: 
-  - cd front-end
-  - npm ci 
-  - npm run build 
+  script:
+    - cd front-end
+    - npm install ci
+    - npm run build
