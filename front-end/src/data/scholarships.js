@@ -13,7 +13,7 @@ export const scholarships = [
     award: "$7,500",
     recipients: 10,
     description: "Nationwide need-based merit scholarship",
-    cities: ["Austin"],
+    city: "Austin",
     organization: "Texas Ace"
   },
   {
@@ -26,7 +26,7 @@ export const scholarships = [
     award: "$5000",
     recipients: 10,
     description: "For aspiring tech leaders",
-    cities: ["Dallas"],
+    city: "Dallas",
     organization: "Texas School Guide"
   },
   {
@@ -39,7 +39,7 @@ export const scholarships = [
     award: "$25,000",
     recipients: 75,
     description: "One of the largest need-based scholarships",
-    cities: ["Washington"],
+    city: "Washington",
     organization: "The Education Trust in Washington"
   }
 ];

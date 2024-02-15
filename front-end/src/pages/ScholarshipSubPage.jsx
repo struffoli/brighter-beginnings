@@ -1,5 +1,5 @@
 import { React }from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { scholarships } from "../data/scholarships";
 
 function ScholarshipsSubPage() {
@@ -27,7 +27,19 @@ function ScholarshipsSubPage() {
           {scholarship.name}
         </h5>
         <p className="">
-          <b>Awarded By:</b> {scholarship.donor}
+          <b>Donor:</b> {scholarship.donor}
+        </p>
+        <p className="">
+            <b>Awarded by: </b>
+            <Link to={`/organizations/org?name=${scholarship.organization}`} className="link">
+              <b>{scholarship.organization}</b>
+            </Link>
+        </p>
+        <p className="">
+            <b>Eligible for students from: </b>
+            <Link to={`/cities/city?name=${scholarship.city}`} className="link">
+              <b>{scholarship.city}</b>
+            </Link>
         </p>
         <p className="">
           <b>Area:</b> {scholarship.area}

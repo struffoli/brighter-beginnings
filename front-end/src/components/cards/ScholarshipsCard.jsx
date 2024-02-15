@@ -20,7 +20,19 @@ const ScholarshipsCard = (props) => {
             </Link>
           </h5>
           <p className="card-text">
-            <b>Awarded By:</b> {props.donor}
+            <b>Donor:</b> {props.donor}
+          </p>
+          <p className="card-text">
+            <b>Awarded by: </b>
+            <Link to={`/organizations/org?name=${props.organization}`} className="link">
+              <b>{props.organization}</b>
+            </Link>
+          </p>
+          <p className="card-text">
+            <b>Eligible for students from: </b>
+            <Link to={`/cities/city?name=${props.city}`} className="link">
+              <b>{props.city}</b>
+            </Link>
           </p>
           <p className="card-text">
             <b>Area:</b> {props.area}

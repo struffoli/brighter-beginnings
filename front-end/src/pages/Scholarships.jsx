@@ -20,6 +20,8 @@ const Scholarships = () => {
             award={scholarship.award}
             recipients={scholarship.recipients}
             description={scholarship.description}
+            city={scholarship.city}
+            organization={scholarship.organization}
           />
         ))}
       </div>
