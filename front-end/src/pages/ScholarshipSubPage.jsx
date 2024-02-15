@@ -1,7 +1,6 @@
 import { React } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { scholarships } from "../data/scholarships";
-import { cities } from "../data/cities";
 
 function ScholarshipsSubPage() {
   const [queryParameters] = useSearchParams();
