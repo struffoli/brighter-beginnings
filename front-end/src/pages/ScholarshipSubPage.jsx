@@ -63,7 +63,23 @@ function ScholarshipsSubPage() {
         <p className="">
           <b>Description:</b> {scholarship.description}
         </p>
+        <p className="">
+            <Link to={scholarship.link}><b>Link to Apply</b></Link>
+        </p>
         <ul className="list-group list-group-flush"></ul>
+      </div>
+      <div>
+      <div className="row justify-content-left">
+        <h5> Past Winners </h5>
+        <img
+            className=""
+            src={scholarship.winnerpic}
+            style={{height: "30%", width: "30%"}}
+            alt="Scholarship"
+        >
+
+        </img>
+      </div>
       </div>
     </div>
   );

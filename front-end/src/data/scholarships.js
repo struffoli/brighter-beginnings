@@ -2,6 +2,10 @@ import futureleaders from "../assets/futureleaders.png";
 import haganScholarship from "../assets/haganscholarship.jpg";
 import horatioalger from "../assets/horatioalger.png";
 
+import haganWinner from "../assets/haganwinner.png";
+import horatioWinner from "../assets/horatioalgerwinner.png";
+import kpmgWinner from "../assets/kpmgwinner.png";
+
 export const scholarships = [
   {
     img_src: haganScholarship,
@@ -15,6 +19,8 @@ export const scholarships = [
     description: "Nationwide need-based merit scholarship",
     city: "Austin",
     organization: "Texas ACE",
+    winnerpic: haganWinner,
+    link: "https://haganscholarships.org/application/",
   },
   {
     img_src: futureleaders,
@@ -28,6 +34,8 @@ export const scholarships = [
     description: "For aspiring tech leaders",
     city: "Dallas",
     organization: "Texas School Guide",
+    winnerpic: kpmgWinner,
+    link: "https://womensleadership.kpmg.us/charitable/developing-future-generations-women-leaders1.html",
   },
   {
     img_src: horatioalger,
@@ -41,5 +49,7 @@ export const scholarships = [
     description: "One of the largest need-based scholarships",
     city: "Washington",
     organization: "The Education Trust in Washington",
+    winnerpic: horatioWinner,
+    link: "https://app.smarterselect.com/programs/93417",
   },
 ];
