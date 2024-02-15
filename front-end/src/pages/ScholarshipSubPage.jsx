@@ -6,7 +6,7 @@ function ScholarshipsSubPage() {
   const [queryParameters] = useSearchParams();
 
   const getScholarship = (query) => {
-    return scholarships.find((s) => s.name === query);
+    return scholarships.find((s) => s.name === query); //find in the data
   };
 
   const scholarship_name = queryParameters.get("name");

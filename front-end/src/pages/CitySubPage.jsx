@@ -5,11 +5,11 @@ import { organizations } from "../data/organizations.js";
 import { scholarships } from "../data/scholarships.js";
 
 function CitySubPage() {
-  const [queryParameters] = useSearchParams();
+  const [queryParameters] = useSearchParams(); 
 
   const getCity = (query) => {
-    return cities.find((c) => c.name === query);
-  };
+    return cities.find((c) => c.name === query); //find in the data
+  }; 
 
   const city_name = queryParameters.get("name");
   const city = getCity(city_name);
