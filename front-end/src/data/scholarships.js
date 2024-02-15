@@ -1,5 +1,4 @@
 import futureleaders from "../assets/futureleaders.png";
-import acescholarship from "../assets/acescholarship.jpg"
 import haganScholarship from "../assets/haganscholarship.jpg";  
 import horatioalger from "../assets/horatioalger.png";
 
