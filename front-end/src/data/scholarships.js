@@ -2,6 +2,10 @@ import futureleaders from "../assets/futureleaders.png";
 import haganScholarship from "../assets/haganscholarship.jpg";
 import horatioalger from "../assets/horatioalger.png";
 
+import haganWinner from "../assets/haganwinner.png";
+import horatioWinner from "../assets/horatioalgerwinner.png";
+import kpmgWinner from "../assets/kpmgwinner.png";
+
 export const scholarships = [
   {
     img_src: haganScholarship,
@@ -15,6 +19,7 @@ export const scholarships = [
     description: "Nationwide need-based merit scholarship",
     city: "Austin",
     organization: "Texas ACE",
+    winnerpic: haganWinner,
   },
   {
     img_src: futureleaders,
@@ -28,6 +33,7 @@ export const scholarships = [
     description: "For aspiring tech leaders",
     city: "Dallas",
     organization: "Texas School Guide",
+    winnerpic: kpmgWinner,
   },
   {
     img_src: horatioalger,
@@ -41,5 +47,6 @@ export const scholarships = [
     description: "One of the largest need-based scholarships",
     city: "Washington",
     organization: "The Education Trust in Washington",
+    winnerpic: horatioWinner,
   },
 ];
