@@ -7,6 +7,8 @@ Kevin Xu, Joshua Yu, Tyler Kubecka, Ben Yu, Bryan Lee
 ## Project Name
 BrighterBeginnings
 
+https://brighterbeginnings.me
+
 ## Project Description
 For K-12 students in low income areas around Texas, we hope to provide easy access to information about resources in particular areas dedicated to helping them, such as free tutoring programs, counseling services, etc. as well as spreading awareness for scholarship programs that can be applied for, centralized in one place.
 
@@ -18,7 +20,7 @@ For K-12 students in low income areas around Texas, we hope to provide easy acce
 	- [more (public school universe survey)](https://nces.ed.gov/ccd/pubschuniv.asp)
 - [search for nonprofits by keyword](https://www.guidestar.org/search)
 - [RESTful api to interact with Google Maps](https://tryapis.com/googlemaps)
-## at least three models
+## At least three models
 Cities: Cities in Texas
 
 School Support Orgs/Resources: local tutoring, counseling, etc
