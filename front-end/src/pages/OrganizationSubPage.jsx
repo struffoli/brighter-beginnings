@@ -1,21 +1,21 @@
-import { React }from "react";
+import { React } from "react";
 import { useSearchParams } from "react-router-dom";
 import { organizations } from "../data/organizations";
+import { scholarships } from "../data/scholarships";
 
 function OrganizationSubPage() {
   const [queryParameters] = useSearchParams();
 
   const getOrg = (query) => {
-    return organizations.find(o => o.name === query);
+    return organizations.find((o) => o.name === query);
   };
 
   const org_name = queryParameters.get("name");
   const org = getOrg(org_name);
-  
+
   return (
     <div className="container" style={{ marginTop: "3%" }}>
       <div className="row justify-content-center">
-
         <img
           className=""
           src={org.img_src}
@@ -39,6 +39,25 @@ function OrganizationSubPage() {
         <p className="">
           <b>Organization Type:</b> {org.organizationType}
         </p>
+        {org.scholarships.length > 0 ? (
+          <p className="">
+            <b>Scholarships:</b>
+            {org.scholarships.map((scholarship) => {
+              const schp = scholarships.find(
+                (schp) => schp.name === scholarship
+              );
+              return (
+                <p>
+                  <a href={`/scholarships/schp?name=${schp.name}`}>
+                    {schp.name}
+                  </a>
+                </p>
+              );
+            })}
+          </p>
+        ) : (
+          <></>
+        )}
         <ul className="list-group list-group-flush"></ul>
       </div>
     </div>

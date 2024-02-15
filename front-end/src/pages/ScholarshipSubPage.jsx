@@ -1,17 +1,18 @@
-import { React }from "react";
+import { React } from "react";
 import { useSearchParams } from "react-router-dom";
 import { scholarships } from "../data/scholarships";
+import { cities } from "../data/cities";
 
 function ScholarshipsSubPage() {
   const [queryParameters] = useSearchParams();
 
   const getScholarship = (query) => {
-    return scholarships.find(s => s.name === query);
+    return scholarships.find((s) => s.name === query);
   };
 
   const scholarship_name = queryParameters.get("name");
   const scholarship = getScholarship(scholarship_name);
-  
+
   return (
     <div className="container" style={{ marginTop: "3%" }}>
       <div className="row justify-content-center">
@@ -44,6 +45,33 @@ function ScholarshipsSubPage() {
         <p className="">
           <b>Description:</b> {scholarship.description}
         </p>
+        {scholarship.cities.length > 0 ? (
+          <p className="">
+            <b>Cities:</b>
+            {scholarship.cities.map((cty) => {
+              const city = cities.find((city) => city.name === cty);
+              return (
+                <p>
+                  <a href={`/cities/city?name=${city.name}`}>{city.name}</a>
+                </p>
+              );
+            })}
+          </p>
+        ) : (
+          <></>
+        )}
+        {scholarship.organization !== "" ? (
+          <p className="">
+            <b>Organization:</b>
+            <p>
+              <a href={`/organizations/org?name=${scholarship.organization}`}>
+                {scholarship.organization}
+              </a>
+            </p>
+          </p>
+        ) : (
+          <></>
+        )}
         <ul className="list-group list-group-flush"></ul>
       </div>
     </div>

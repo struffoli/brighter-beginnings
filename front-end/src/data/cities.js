@@ -14,9 +14,8 @@ export const cities = [
     percentUnemployment: 3.1,
     freeLunch: 35,
     educated: 55,
-    organizations: ["Texas Ace"],
-    scholarships: ["The Hagan Scholarship"]
-
+    organizations: ["Texas ACE"],
+    scholarships: ["The Hagan Scholarship"],
   },
   {
     img_src: dallas,
@@ -30,7 +29,7 @@ export const cities = [
     freeLunch: 40,
     educated: 50,
     organizations: ["Texas School Guide"],
-    scholarships: ["Future Leaders Scholarship"]
+    scholarships: ["Future Leaders Scholarship"],
   },
   {
     img_src: washington,
@@ -44,6 +43,6 @@ export const cities = [
     freeLunch: 32,
     educated: 58,
     organizations: ["The Education Trust in Washington"],
-    scholarships: ["Horatio Alger National Scholarship"]
-  }
+    scholarships: ["Horatio Alger National Scholarship"],
+  },
 ];
