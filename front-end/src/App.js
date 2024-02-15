@@ -21,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/about/dev" element={<AboutSubPage />}></Route>
           <Route path="/cities" element={<Cities />}></Route>
+          {/* add subpages */}
           <Route path="/cities/city" element={<CitiesSubPage />}></Route>
           <Route path="/organizations" element={<Organizations />}></Route>
           <Route

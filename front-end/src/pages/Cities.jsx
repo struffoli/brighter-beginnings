@@ -1,6 +1,7 @@
 import React from "react";
 import CitiesCard from "../components/cards/CitiesCard";
 import { cities } from "../data/cities.js"; // Importing cities data
+import mapPage from "../assets/maptemp.png";
 
 const Cities = () => {
   return (
@@ -8,6 +9,14 @@ const Cities = () => {
       <h2 className="mx-4 my-4 px-2">
         <b>Cities</b>
       </h2>
+      <div className="row justify-content-center pb-4">
+        <img
+          className=""
+          src={mapPage}
+          style={{ height: "50%", width: "50%" }}
+          alt="Scholarship"
+        />
+      </div>
       <div className="row justify-content-center mb-5 mx-4">
         {cities.map((city, index) => (
           <CitiesCard

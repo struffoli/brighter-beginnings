@@ -19,27 +19,27 @@ const OrganizationsCard = (props) => {
               <b>{props.name}</b>
             </Link>
           </h5>
-          <p className="card-text">
+          {/* <p className="card-text">
             <b>Description: </b> {props.description}
           </p>
           <p className="card-text">
             <b>Location: </b>
             {props.location}
-          </p>
+          </p> */}
           <p className="card-text">
             <b>City: </b>
             <Link to={`/cities/city?name=${props.city}`} className="link">
               {props.city}
             </Link>
           </p>
-          <p className="card-text">
+          {/* <p className="card-text">
             <b>Contact: </b>
             {props.contactInfo}
           </p>
           <p className="card-text">
             <b>Organization Type: </b>
             {props.organizationType}
-          </p>
+          </p> */}
           <p className="card-text">
             <Link to={`/organizations/org?name=${props.name}`} className="link">
               Click here to see scholarships!

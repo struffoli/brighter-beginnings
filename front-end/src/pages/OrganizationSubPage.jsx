@@ -7,7 +7,7 @@ function OrganizationSubPage() {
   const [queryParameters] = useSearchParams();
 
   const getOrg = (query) => {
-    return organizations.find((o) => o.name === query);
+    return organizations.find((o) => o.name === query); //find in the data
   };
 
   const org_name = queryParameters.get("name");

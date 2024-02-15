@@ -19,9 +19,9 @@ const ScholarshipsCard = (props) => {
               <b>{props.name}</b>
             </Link>
           </h5>
-          <p className="card-text">
+          {/* <p className="card-text">
             <b>Donor:</b> {props.donor}
-          </p>
+          </p> */}
           <p className="card-text">
             <b>Awarded by: </b>
             <Link
@@ -37,20 +37,17 @@ const ScholarshipsCard = (props) => {
               {props.city}
             </Link>
           </p>
-          <p className="card-text">
+          {/* <p className="card-text">
             <b>Area:</b> {props.area}
           </p>
           <p className="card-text">
             <b>Age Group:</b> {props.ageGroup}
-          </p>
+          </p> */}
           <p className="card-text">
             <b>Award:</b> {props.award}
           </p>
           <p className="card-text">
-            <b>Number of Recipients:</b> {props.recipients}
-          </p>
-          <p className="card-text">
-            <b>Description:</b> {props.description}
+            <Link to={`/cities/city?name=${props.city}`} className="link">Learn More </Link>
           </p>
         </div>
       </div>
