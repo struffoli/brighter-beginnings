@@ -19,6 +19,7 @@ const Organizations = () => {
             description={org.description}
             contactInfo={org.contactInfo}
             organizationType={org.organizationType}
+            scholarship={org.scholarship}
           />
         ))}
       </div>

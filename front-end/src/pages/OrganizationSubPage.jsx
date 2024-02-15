@@ -1,5 +1,5 @@
 import { React } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { organizations } from "../data/organizations";
 import { scholarships } from "../data/scholarships";
 
@@ -31,7 +31,10 @@ function OrganizationSubPage() {
           <b>Location:</b> {org.location}
         </p>
         <p className="">
-          <b>City:</b> {org.city}
+          <b>City: </b>
+          <Link to={`/cities/city?name=${org.city}`} className="link">
+            <b>{org.city}</b>
+          </Link>
         </p>
         <p className="">
           <b>Contact Info:</b> {org.contactInfo}
@@ -58,6 +61,14 @@ function OrganizationSubPage() {
         ) : (
           <></>
         )}
+        <p className="">
+          <Link
+            to={`/scholarships/schp?name=${org.scholarship}`}
+            className="link"
+          >
+            <b>Click here to see scholarships!</b>
+          </Link>
+        </p>
         <ul className="list-group list-group-flush"></ul>
       </div>
     </div>

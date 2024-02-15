@@ -21,6 +21,8 @@ const Cities = () => {
             percentUnemployment={city.percentUnemployment}
             freeLunch={city.freeLunch}
             educated={city.educated}
+            organization={city.organization}
+            scholarship={city.scholarship}
           />
         ))}
       </div>

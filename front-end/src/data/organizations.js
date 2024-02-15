@@ -12,7 +12,7 @@ export const organizations = [
     distance: "5 miles",
     contactInfo: "512-463-9734",
     organizationType: "Government",
-    scholarships: ["Future Leaders Scholarship"]
+    scholarship: "The Hagan Scholarship"
   },
   {
     img_src: educationTrust,
@@ -23,7 +23,7 @@ export const organizations = [
     distance: "5 miles",
     contactInfo: "202-293-1217",
     organizationType: "Non-profit",
-    scholarships: ["Horatio Alger National Scholarship"]
+    scholarship: "Horatio Alger National Scholarship"
   },
   {
     img_src: texasSchoolGuide,
@@ -33,6 +33,6 @@ export const organizations = [
     location: "2900 Live Oak St., Dallas, TX 75204",
     contactInfo: "214-599-0072",
     organizationType: "Educational",
-    scholarships: ["Future Leaders Scholarship"]
+    scholarship: "Future Leaders Scholarship"
   }
 ];
