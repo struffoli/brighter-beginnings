@@ -102,8 +102,16 @@ What are some of the ways that I can help support these low income k-12 students
 https://documenter.getpostman.com/view/32954458/2sA2r6WPJG
 
 ## Completion time
-Estimated time to complete phase 1: 12 hours
-Actual time: 20 hours
+Estimated time to complete phase 1: 15 hours
+
+Actual time: 25 hours
+- Kevin: 5 hours
+- Josh: 5 hours
+- Tyler: 5 hours
+- Ben: 5 hours
+- Bryan: 5 hours
+
+Phase leader (Kevin for phase 1) keeps track of current status, watches issues closely, and maintains list of what is left to do.
 
 ## Pipeline
 https://gitlab.com/kxut/cs373-group-01/-/pipelines
