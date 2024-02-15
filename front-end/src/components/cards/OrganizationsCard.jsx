@@ -10,6 +10,7 @@ const OrganizationsCard = (props) => {
             className="card-img-top"
             src={props.img_src}
             style={{ objectFit: "cover", height: "300px" }}
+            alt={`A logo/icon of the organization ${props.name}.`}
           />
         </Link>
         <div className="card-body">
@@ -27,13 +28,16 @@ const OrganizationsCard = (props) => {
           </p>
           <p className="card-text">
             <b>City: </b>
-            {props.city}</p>
+            {props.city}
+          </p>
           <p className="card-text">
             <b>Contact: </b>
-            {props.contactInfo}</p>
+            {props.contactInfo}
+          </p>
           <p className="card-text">
             <b>Organization Type: </b>
-            {props.organizationType}</p>
+            {props.organizationType}
+          </p>
         </div>
       </div>
     </div>

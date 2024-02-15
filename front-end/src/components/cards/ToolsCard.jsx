@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const ToolsCard = (props) => {
   return (
@@ -9,6 +8,7 @@ const ToolsCard = (props) => {
           className="card-img-top"
           src={props.img_src}
           style={{ objectFit: "contain", height: "200px" }}
+          alt={`A logo/icon of the tool ${props.name}.`}
         />
         <div className="card-body">
           <h4 className="card-title text-center" style={{ marginBottom: "3%" }}>

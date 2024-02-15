@@ -10,6 +10,7 @@ const CitiesCard = (props) => {
             className="card-img-top"
             src={props.img_src}
             style={{ objectFit: "cover", height: "300px" }}
+            alt={`An scenic view of the city of ${props.name}.`}
           />
         </Link>
         <div className="card-body">

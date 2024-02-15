@@ -10,6 +10,7 @@ const ScholarshipsCard = (props) => {
             className="card-img-top"
             src={props.img_src}
             style={{ objectFit: "cover", height: "300px" }}
+            alt={`A logo/icon of the scholarship ${props.name}.`}
           />
         </Link>
         <div className="card-body">

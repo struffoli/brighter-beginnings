@@ -9,7 +9,10 @@ const Home = () => {
       <div
         style={{ textAlign: "center", width: "100%", justifyContent: "center" }}
       >
-        <img src={splash} />
+        <img
+          src={splash}
+          alt="A bright classroom where a smiling teacher interacts with her students."
+        />
         <h4
           style={{
             width: "50%",
@@ -19,9 +22,9 @@ const Home = () => {
           }}
         >
           Empowering today's students and tomorrow's leaders by providing
-          information for accessible sources of aid for low-income students. 
-          Use the NavBar to navigate through our database of cities,
-          scholarships, and organizations providing aid.
+          information for accessible sources of aid for low-income students. Use
+          the NavBar to navigate through our database of cities, scholarships,
+          and organizations providing aid.
         </h4>
       </div>
     </div>
