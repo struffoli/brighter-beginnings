@@ -95,3 +95,7 @@ How can schools and organizations effectively support the educational and academ
   
 
 What are some of the ways that I can help support these low income k-12 students?
+
+## Completion time
+Estimated time to complete phase 1: 12 hours
+Actual time: 20 hours
