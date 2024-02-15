@@ -96,6 +96,9 @@ How can schools and organizations effectively support the educational and academ
 
 What are some of the ways that I can help support these low income k-12 students?
 
+##API documentation
+https://documenter.getpostman.com/view/32954458/2sA2r6WPJG
+
 ## Completion time
 Estimated time to complete phase 1: 12 hours
 Actual time: 20 hours
