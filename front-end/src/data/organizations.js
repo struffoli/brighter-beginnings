@@ -2,6 +2,10 @@ import texasace from "../assets/texasace.png";
 import educationTrust from "../assets/theeducationtrust.png";
 import texasSchoolGuide from "../assets/texasschoolguide.jpg";
 
+import aceLocation from "../assets/texasaceloc.png";
+import trustLocation from "../assets/washingtonloc.png";
+import guideLocation from "../assets/dallasloci.png";
+
 export const organizations = [
   {
     img_src: texasace,
@@ -13,6 +17,7 @@ export const organizations = [
     contactInfo: "512-463-9734",
     organizationType: "Government",
     scholarships: ["The Hagan Scholarship"],
+    locationPic: aceLocation,
   },
   {
     img_src: educationTrust,
@@ -24,6 +29,7 @@ export const organizations = [
     contactInfo: "202-293-1217",
     organizationType: "Non-profit",
     scholarships: ["Horatio Alger National Scholarship"],
+    locationPic: trustLocation,
   },
   {
     img_src: texasSchoolGuide,
@@ -34,5 +40,6 @@ export const organizations = [
     contactInfo: "214-599-0072",
     organizationType: "Educational",
     scholarships: ["Future Leaders Scholarship"],
+    locationPic: guideLocation,
   },
 ];

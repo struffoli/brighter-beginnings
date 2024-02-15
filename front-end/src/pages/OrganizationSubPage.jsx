@@ -65,6 +65,17 @@ function OrganizationSubPage() {
           <></>
         )}
         <ul className="list-group list-group-flush"></ul>
+        <div className="row justify-content-left">
+        <h5> Location Map </h5>
+        <img
+            className=""
+            src={org.locationPic}
+            style={{height: "30%", width: "30%"}}
+            alt="Organization Location"
+        >
+
+        </img>
+      </div>
       </div>
     </div>
   );
