@@ -117,4 +117,4 @@ Phase leader (Kevin for phase 1) keeps track of current status, watches issues c
 https://gitlab.com/kxut/cs373-group-01/-/pipelines
 
 ## SHA
-Phase 1: 
+Phase 1: a1584d7587415c4e2293578c6dc67e0ff8b8dfd2
