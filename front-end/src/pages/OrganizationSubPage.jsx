@@ -33,7 +33,7 @@ function OrganizationSubPage() {
         <p className="">
           <b>City: </b>
           <Link to={`/cities/city?name=${org.city}`} className="link">
-            <b>{org.city}</b>
+            {org.city}
           </Link>
         </p>
         <p className="">
