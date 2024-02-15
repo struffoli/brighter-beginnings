@@ -31,7 +31,6 @@ export const organizations = [
     id: 3,
     city: "Dallas",
     location: "2900 Live Oak St., Dallas, TX 75204",
-    city: "Dallas",
     contactInfo: "214-599-0072",
     organizationType: "Educational",
     scholarships: ["Future Leaders Scholarship"]
