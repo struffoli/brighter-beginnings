@@ -1,4 +1,3 @@
-import pfp from "../assets/pfp.png";
 import bryan from "../assets/bryan.png";
 import kevin from "../assets/kevin.png";
 import tyler from "../assets/tyler.png";
