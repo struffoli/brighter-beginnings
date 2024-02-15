@@ -6,6 +6,7 @@ import gitlab from "../assets/gitlab.png";
 import bootstrap from "../assets/bootstrap.jpg";
 import npm from "../assets/npm.png";
 import nodejs from "../assets/nodejs.png";
+import yarn from "../assets/yarn.png";
 
 export const tools = [
   {
@@ -39,5 +40,9 @@ export const tools = [
   {
     name: "Node.js",
     img_src: nodejs,
+  },
+  {
+    name: "Yarn",
+    img_src: yarn,
   },
 ];

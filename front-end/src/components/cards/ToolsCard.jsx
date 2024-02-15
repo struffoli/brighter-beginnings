@@ -5,7 +5,7 @@ const ToolsCard = (props) => {
     <div key={props.index} className="col-md-2 mb-4">
       <div className="card">
         <img
-          className="card-img-top"
+          className="card-img-top pt-2 px-2"
           src={props.img_src}
           style={{ objectFit: "contain", height: "200px" }}
           alt={`A logo/icon of the tool ${props.name}.`}
