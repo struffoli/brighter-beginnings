@@ -5,17 +5,6 @@ import horatioalger from "../assets/horatioalger.png";
 
 export const scholarships = [
   {
-    img_src: acescholarship,
-    name: "ACE Scholarship",
-    id: 2,
-    donor: "Alex Cranberg, Charlie Gallagher, Ralph Nagel, John Saeman",
-    area: "Low-income students",
-    ageGroup: "K-12",
-    award: "$2000-$3,000",
-    recipients: 10,
-    description: "To provide children of lower-income families with scholarships to private schools in grades K-12, and to advocate for expanded school choice",
-  },
-  {
     img_src: haganScholarship,
     name: "The Hagan Scholarship",
     id: 1,
