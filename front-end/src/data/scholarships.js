@@ -20,6 +20,7 @@ export const scholarships = [
     city: "Austin",
     organization: "Texas ACE",
     winnerpic: haganWinner,
+    link: "https://haganscholarships.org/application/",
   },
   {
     img_src: futureleaders,
@@ -34,6 +35,7 @@ export const scholarships = [
     city: "Dallas",
     organization: "Texas School Guide",
     winnerpic: kpmgWinner,
+    link: "https://womensleadership.kpmg.us/charitable/developing-future-generations-women-leaders1.html",
   },
   {
     img_src: horatioalger,
@@ -48,5 +50,6 @@ export const scholarships = [
     city: "Washington",
     organization: "The Education Trust in Washington",
     winnerpic: horatioWinner,
+    link: "https://app.smarterselect.com/programs/93417",
   },
 ];

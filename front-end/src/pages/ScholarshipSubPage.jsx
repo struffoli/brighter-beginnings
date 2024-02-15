@@ -63,6 +63,9 @@ function ScholarshipsSubPage() {
         <p className="">
           <b>Description:</b> {scholarship.description}
         </p>
+        <p className="">
+            <Link to={scholarship.link}><b>Link to Apply</b></Link>
+        </p>
         <ul className="list-group list-group-flush"></ul>
       </div>
       <div>
