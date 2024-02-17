@@ -42,6 +42,7 @@ function OrganizationSubPage() {
         <p className="">
           <b>Organization Type:</b> {org.organizationType}
         </p>
+        {/* only display if this organization has scholarships */}
         {org.scholarships.length > 0 ? (
           <p className="">
             <b>Scholarships:</b>
