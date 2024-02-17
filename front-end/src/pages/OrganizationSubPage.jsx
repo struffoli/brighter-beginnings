@@ -7,11 +7,11 @@ function OrganizationSubPage() {
   const [queryParameters] = useSearchParams();
 
   const getOrg = (query) => {
-    return organizations.find((o) => o.name === query); //find in the data
+    return organizations.find((o) => o.id === query); //find in the data
   };
 
-  const org_name = queryParameters.get("name");
-  const org = getOrg(org_name);
+  const org_id = parseInt(queryParameters.get("id"));
+  const org = getOrg(org_id);
 
   return (
     <div className="container" style={{ marginTop: "3%" }}>

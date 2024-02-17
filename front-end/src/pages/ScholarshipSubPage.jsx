@@ -6,11 +6,11 @@ function ScholarshipsSubPage() {
   const [queryParameters] = useSearchParams();
 
   const getScholarship = (query) => {
-    return scholarships.find((s) => s.name === query); //find in the data
+    return scholarships.find((s) => s.id === query); //find in the data
   };
 
-  const scholarship_name = queryParameters.get("name");
-  const scholarship = getScholarship(scholarship_name);
+  const scholarship_id = parseInt(queryParameters.get("id"));
+  const scholarship = getScholarship(scholarship_id);
 
   return (
     <div className="container" style={{ marginTop: "3%" }}>

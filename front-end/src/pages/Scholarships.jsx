@@ -14,6 +14,7 @@ const Scholarships = () => {
             key={index}
             img_src={scholarship.img_src}
             name={scholarship.name}
+            id={scholarship.id}
             donor={scholarship.donor}
             area={scholarship.area}
             ageGroup={scholarship.ageGroup}

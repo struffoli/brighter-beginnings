@@ -5,7 +5,7 @@ const OrganizationsCard = (props) => {
   return (
     <div key={props.index} className="col-md-4 mb-4">
       <div className="card">
-        <Link to={`/organizations/org?name=${props.name}`} className="link">
+        <Link to={`/organizations/org?id=${props.id}`} className="link">
           <img
             className="card-img-top"
             src={props.img_src}
@@ -15,7 +15,7 @@ const OrganizationsCard = (props) => {
         </Link>
         <div className="card-body">
           <h5 className="card-title" style={{ paddingBottom: "4px" }}>
-            <Link to={`/organizations/org?name=${props.name}`} className="link">
+            <Link to={`/organizations/org?id=${props.id}`} className="link">
               <b>{props.name}</b>
             </Link>
           </h5>

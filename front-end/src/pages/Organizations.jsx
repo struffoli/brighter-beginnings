@@ -14,6 +14,7 @@ const Organizations = () => {
             key={index}
             img_src={org.img_src}
             name={org.name}
+            id={org.id}
             location={org.location}
             city={org.city}
             description={org.description}
