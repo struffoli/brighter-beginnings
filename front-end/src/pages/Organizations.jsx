@@ -1,11 +1,12 @@
 import React from "react";
 import OrganizationsCard from "../components/cards/OrganizationsCard";
 import { organizations } from "../data/organizations";
+import "./Organizations.css";
 
 const Organizations = () => {
   return (
     <div>
-      <h2 className="mx-4 my-4 px-2">
+      <h2 className="title">
         <b>Organizations</b>
       </h2>
       <div className="row justify-content-center mb-5 mx-4">

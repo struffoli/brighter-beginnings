@@ -2,11 +2,12 @@ import React from "react";
 import CitiesCard from "../components/cards/CitiesCard";
 import { cities } from "../data/cities.js"; // Importing cities data
 import mapPage from "../assets/maptemp.png";
+import "./Cities.css"
 
 const Cities = () => {
   return (
     <div>
-      <h2 className="mx-4 my-4 px-2">
+      <h2 className="title">
         <b>Cities</b>
       </h2>
       <div className="row justify-content-center pb-4">
