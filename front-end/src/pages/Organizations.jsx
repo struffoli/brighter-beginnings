@@ -6,7 +6,7 @@ import "./Organizations.css";
 
 const Organizations = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(3); // Set the number of items per page
+  const [itemsPerPage] = useState(1); // Set the number of items per page
 
   // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;

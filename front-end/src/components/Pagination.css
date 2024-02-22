@@ -1,6 +1,19 @@
 .pagination-container {
+    list-style-type: none;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+}
+
+.pagination {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;           /* Resets any default padding */
+    display: flex;        /* Enables flexbox layout */
+    align-items: center;  /* Aligns items vertically in the center */
+}
+
+.pagination li {
+    margin-right: 5px; /* Adds some space between items */
 }
