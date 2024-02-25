@@ -6,9 +6,9 @@
 }
 
 .pagination {
-    list-style-type: none; /* Removes default list bullets */
-    padding: 0; /* Removes default padding */
-    display: flex; /* This is crucial for horizontal alignment */
-    justify-content: center; /* Center the pagination items horizontally */
-    align-items: center; /* Center the pagination items vertically */
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
