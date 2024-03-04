@@ -1,21 +1,22 @@
-import { React }from "react";
-import { useSearchParams } from "react-router-dom";
+import { React } from "react";
+import { useSearchParams, Link } from "react-router-dom";
 import { cities } from "../data/cities.js";
+import { organizations } from "../data/organizations.js";
+import { scholarships } from "../data/scholarships.js";
 
 function CitySubPage() {
-  const [queryParameters] = useSearchParams();
+  const [queryParameters] = useSearchParams(); 
 
   const getCity = (query) => {
-    return cities.find(c => c.name === query);
-  };
+    return cities.find((c) => c.name === query); //find in the data
+  }; 
 
   const city_name = queryParameters.get("name");
   const city = getCity(city_name);
-  
+
   return (
     <div className="container" style={{ marginTop: "3%" }}>
       <div className="row justify-content-center">
-
         <img
           className=""
           src={city.img_src}
@@ -48,6 +49,50 @@ function CitySubPage() {
         <p className="">
           <b>Percent of Adults College Educated:</b> {city.educated}%
         </p>
+        {/* only display if this city has organizations */}
+        {city.organizations.length > 0 ? (
+          <p className="">
+            <b>Organizations:</b>
+            {city.organizations.map((organization) => {
+              const org = organizations.find((o) => o.name === organization);
+              return (
+                <p>
+                  <Link
+                    to={`/organizations/org?id=${org.id}`}
+                    className="link"
+                  >
+                    {org.name}
+                  </Link>
+                </p>
+              );
+            })}
+          </p>
+        ) : (
+          <></>
+        )}
+        {/* only display if this city has scholarships */}
+        {city.scholarships.length > 0 ? (
+          <p className="">
+            <b>Scholarships:</b>
+            {city.scholarships.map((scholarship) => {
+              const schp = scholarships.find(
+                (schp) => schp.name === scholarship
+              );
+              return (
+                <p>
+                  <Link
+                    to={`/scholarships/schp?id=${schp.id}`}
+                    className="link"
+                  >
+                    {schp.name}
+                  </Link>
+                </p>
+              );
+            })}
+          </p>
+        ) : (
+          <></>
+        )}
         <ul className="list-group list-group-flush"></ul>
       </div>
     </div>

@@ -5,9 +5,11 @@ import ToolsCard from "../components/cards/ToolsCard";
 import { developers } from "../data/about";
 import { tools } from "../data/tools";
 
-export async function getDeveloperInfo (){
+export async function getDeveloperInfo() {
   let contributors = [];
   let issues = [];
+  let totalCommits = 0;
+  let totalClosedIssues = 0;
 
   try {
     const response = await fetch(
@@ -19,7 +21,9 @@ export async function getDeveloperInfo (){
         },
       }
     );
-    contributors = await response.json();
+    const allContributors = await response.json();
+    contributors = allContributors.filter(contributor => developers.some(developer => developer.emails.includes(contributor.email)));
+    totalCommits = contributors.reduce((acc, contributor) => acc + contributor.commits, 0);
   } catch (error) {
     console.log(error);
   }
@@ -34,20 +38,21 @@ export async function getDeveloperInfo (){
         },
       }
     );
-    issues = await response.json();
+    const allIssues = await response.json();
+    issues = allIssues.filter(issue => issue.closed_by && developers.some(developer => developer.gitlab_username === issue.closed_by.username));
+    totalClosedIssues = issues.length;
   } catch (error) {
     console.log(error);
   }
 
-  return { contributors, issues }
+  return { contributors, issues, totalCommits, totalClosedIssues };
 }
 
 function About() {
-
   const [devInfo, setDevInfo] = useState({ contributors: [], issues: [] });
 
   useEffect(() => {
-    getDeveloperInfo().then(data => setDevInfo(data));
+    getDeveloperInfo().then((data) => setDevInfo(data));
   }, []);
 
   return (
@@ -75,8 +80,9 @@ function About() {
 
       <div className="row justify-content-center mb-5 mx-5 mt-4">
         {developers.map((developer, index) => {
-          const developers_res = devInfo.contributors.filter((contributor_api) =>
-            developer.emails.includes(contributor_api.email)
+          const developers_res = devInfo.contributors.filter(
+            (contributor_api) =>
+              developer.emails.includes(contributor_api.email)
           );
           let numCommits = 0;
 
@@ -98,6 +104,12 @@ function About() {
         })}
       </div>
 
+      <div className="text-center my-3">
+        <h2>Totals</h2>
+        <p><b>Total Commits: </b> {devInfo.totalCommits}</p>
+        <p><b>Total Issues Closed: </b> {devInfo.totalClosedIssues}</p>
+      </div>
+
       <h1 className="text-center my-3 mb-4">
         <b>Tools Used</b>
       </h1>
@@ -112,31 +124,57 @@ function About() {
           <b>Data Sources</b>
         </h2>
         <h4 className="mx-4 my-3 pt-1 w-75 text-center">
-          <a href="https://github.com/jasminevasandani/ACT_SAT_Data_Recommendations/tree/master/data">
+          <a
+            href="https://github.com/jasminevasandani/ACT_SAT_Data_Recommendations/tree/master/data"
+            target="_blank"
+            rel="noreferrer"
+          >
             ACT/SAT Data by State
           </a>
         </h4>
         <h4 className="mx-4 my-3 pt-1 w-75 text-center">
-          <a href="https://educationdata.urban.org/documentation/index.html">
+          <a
+            href="https://educationdata.urban.org/documentation/index.html"
+            target="_blank"
+            rel="noreferrer"
+          >
             US School/District Data
           </a>
         </h4>
         <h4 className="mx-4 my-3 pt-1 w-75 text-center">
-          <a href="https://www.census.gov/data/developers/data-sets.html">
+          <a
+            href="https://www.census.gov/data/developers/data-sets.html"
+            target="_blank"
+            rel="noreferrer"
+          >
             Census Data API
           </a>
         </h4>
         <h4 className="mx-4 my-3 pt-1 w-75 text-center">
-          <a href="https://www.guidestar.org/search">Search for Nonprofits</a>
+          <a
+            href="https://www.guidestar.org/search"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Search for Nonprofits
+          </a>
         </h4>
         <h4 className="mx-4 my-3 pt-1 w-75 text-center">
-          <a href="https://tryapis.com/googlemaps">Google Maps</a>
+          <a
+            href="https://tryapis.com/googlemaps"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Google Maps
+          </a>
         </h4>
       </div>
 
       <div className="text-center my-5 align-items-center">
         <a
-          href="OUR LINK HERE"
+          href="https://documenter.getpostman.com/view/32954458/2sA2r6WPJG"
+          target="_blank"
+          rel="noreferrer"
           className="btn p-3"
           style={{ backgroundColor: "#d8f9ff" }}
         >

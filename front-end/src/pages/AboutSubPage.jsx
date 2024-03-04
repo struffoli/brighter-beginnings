@@ -8,7 +8,7 @@ function AboutSubPage() {
   
 
   const getDev = (query) => {
-    return developers.find(developers => developers.name === query);
+    return developers.find(developers => developers.name === query); //find in the data
   };
 
   const dev_name = queryParameters.get("name");

@@ -1,19 +1,12 @@
-import acescholarship from "../assets/acescholarship.jpg"
-import haganScholarship from "../assets/haganscholarship.jpg";  
+import futureleaders from "../assets/futureleaders.png";
+import haganScholarship from "../assets/haganscholarship.jpg";
 import horatioalger from "../assets/horatioalger.png";
 
+import haganWinner from "../assets/haganwinner.png";
+import horatioWinner from "../assets/horatioalgerwinner.png";
+import kpmgWinner from "../assets/kpmgwinner.png";
+
 export const scholarships = [
-  {
-    img_src: acescholarship,
-    name: "ACE Scholarship",
-    id: 2,
-    donor: "Alex Cranberg, Charlie Gallagher, Ralph Nagel, John Saeman",
-    area: "Low-income students",
-    ageGroup: "K-12",
-    award: "$2000-$3,000",
-    recipients: 10,
-    description: "To provide children of lower-income families with scholarships to private schools in grades K-12, and to advocate for expanded school choice",
-  },
   {
     img_src: haganScholarship,
     name: "The Hagan Scholarship",
@@ -24,6 +17,27 @@ export const scholarships = [
     award: "$7,500",
     recipients: 10,
     description: "Nationwide need-based merit scholarship",
+    city: "Austin",
+    organization: "Texas ACE",
+    organization_id: 1,
+    winnerpic: haganWinner,
+    link: "https://haganscholarships.org/application/",
+  },
+  {
+    img_src: futureleaders,
+    name: "Future Leaders Scholarship",
+    id: 2,
+    donor: "Tech Innovators Inc.",
+    area: "Technology",
+    ageGroup: "18-24",
+    award: "$5000",
+    recipients: 10,
+    description: "For aspiring tech leaders",
+    city: "Dallas",
+    organization: "Texas School Guide",
+    organization_id: 3,
+    winnerpic: kpmgWinner,
+    link: "https://womensleadership.kpmg.us/charitable/developing-future-generations-women-leaders1.html",
   },
   {
     img_src: horatioalger,
@@ -35,5 +49,10 @@ export const scholarships = [
     award: "$25,000",
     recipients: 75,
     description: "One of the largest need-based scholarships",
-  }
+    city: "Washington",
+    organization: "The Education Trust in Washington",
+    organization_id: 2,
+    winnerpic: horatioWinner,
+    link: "https://app.smarterselect.com/programs/93417",
+  },
 ];

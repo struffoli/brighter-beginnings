@@ -10,6 +10,7 @@ const StatsCard = (props) => {
             className="card-img-top"
             src={props.img_src}
             style={{ objectFit: "cover", height: "300px" }}
+            alt={`${props.name}'s face. How cool!`}
           />
         </Link>
         <div className="card-body">

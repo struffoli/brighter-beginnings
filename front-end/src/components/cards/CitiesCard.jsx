@@ -10,6 +10,7 @@ const CitiesCard = (props) => {
             className="card-img-top"
             src={props.img_src}
             style={{ objectFit: "cover", height: "300px" }}
+            alt={`An scenic view of the city of ${props.name}.`}
           />
         </Link>
         <div className="card-body">
@@ -21,7 +22,7 @@ const CitiesCard = (props) => {
           <p className="card-text">
             <b>Population:</b> {props.population}
           </p>
-          <p className="card-text">
+          {/* <p className="card-text">
             <b>Number of Schools:</b> {props.numSchools}
           </p>
           <p className="card-text">
@@ -38,6 +39,11 @@ const CitiesCard = (props) => {
           </p>
           <p className="card-text">
             <b>Percent of Adults College Educated:</b> {props.educated}%
+          </p> */}
+          <p>
+            <Link to={`/cities/city?name=${props.name}`} className="link">
+              Click here to see organizations/scholarships!
+            </Link>
           </p>
           <ul className="list-group list-group-flush"></ul>
         </div>

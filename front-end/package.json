@@ -41,5 +41,11 @@
   "devDependencies": {
     "eslint": "^8.56.0",
     "prettier": "3.2.5"
+  },
+  "resolutions": {
+    "autoprefixer": "10.4.5"
+  },
+  "overrides": {
+    "autoprefixer": "10.4.5"
   }
 }
