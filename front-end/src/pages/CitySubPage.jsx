@@ -58,7 +58,7 @@ function CitySubPage() {
               return (
                 <p>
                   <Link
-                    to={`/organizations/org?name=${org.name}`}
+                    to={`/organizations/org?id=${org.id}`}
                     className="link"
                   >
                     {org.name}
@@ -81,7 +81,7 @@ function CitySubPage() {
               return (
                 <p>
                   <Link
-                    to={`/scholarships/schp?name=${schp.name}`}
+                    to={`/scholarships/schp?id=${schp.id}`}
                     className="link"
                   >
                     {schp.name}

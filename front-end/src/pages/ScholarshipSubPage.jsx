@@ -32,7 +32,7 @@ function ScholarshipsSubPage() {
         <p className="">
           <b>Awarded by: </b>
           <Link
-            to={`/organizations/org?name=${scholarship.organization}`}
+            to={`/organizations/org?id=${scholarship.organization_id}`}
             className="link"
           >
             {scholarship.organization}
