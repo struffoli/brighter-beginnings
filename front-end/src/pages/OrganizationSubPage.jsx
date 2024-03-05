@@ -53,7 +53,7 @@ function OrganizationSubPage() {
               return (
                 <p>
                   <Link
-                    to={`/scholarships/schp?name=${schp.name}`}
+                    to={`/scholarships/schp?id=${schp.id}`}
                     className="link"
                   >
                     {schp.name}
