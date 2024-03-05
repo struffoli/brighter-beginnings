@@ -7,6 +7,9 @@ import bootstrap from "../assets/bootstrap.jpg";
 import npm from "../assets/npm.png";
 import nodejs from "../assets/nodejs.png";
 import yarn from "../assets/yarn.png";
+import flask from "../assets/flask.jpg";
+import sqla from "../assets/sqla.png";
+import pandas from "../assets/pandas.png";
 
 export const tools = [
   {
@@ -44,5 +47,17 @@ export const tools = [
   {
     name: "Yarn",
     img_src: yarn,
+  },
+  {
+    name: "Flask",
+    img_src: flask,
+  },
+  {
+    name: "SQLAlchemy",
+    img_src: sqla,
+  },
+  {
+    name: "pandas",
+    img_src: pandas,
   },
 ];
