@@ -41,7 +41,7 @@ const CitiesCard = (props) => {
             <b>Percent of Adults College Educated:</b> {props.educated}%
           </p> */}
           <p>
-            <Link to={`/cities/city?name=${props.name}`} className="link">
+            <Link to={`/cities/city?id=${props.id}`} className="link">
               Click here to see organizations/scholarships!
             </Link>
           </p>
