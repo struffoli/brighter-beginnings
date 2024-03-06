@@ -4,23 +4,7 @@ from schema import city_schema, organization_schema, scholarship_schema
 
 @app.route('/')
 def home():
-    return ("<h1>BrighterBeginnings API</h1>" + 
-    "<p>Welcome to the BrighterBeginnings API! Our website serves as an information hub for facilitating " +
-    "access to organizations and scholarships for underserved students across different cities.<br><br/>" + 
-    "Our API has endpoints to get all instances of cities, organizations, and scholarships within our " +
-    "database, as well as specific instances of these models. To make a get all instances request, add " +
-    "<q>/cities</q>, <q>/organizations</q>, or <q>/scholarships</q> to the path accordingly. " +
-    "Additionally, the specific page number and number of results to display per page can be specificed " +
-    "as query parameters by adding <q>?page={int}&per_page={int}</q> to the aforementioned endpoints. To make a " +
-    "get single instance request for any of the models, simply add /id to the endpoints, which is the unique " +
-    "identifier of the specific instance being looked for.</p>" +
-    "<p>For example, to get all instances of cities, the endpoint would be /cities such that the URL looks like the following: " + 
-    "<A href=https://api.brighterbeginnings.me/cities>https://api.brighterbeginnings.me/cities</A>" +
-    "<p>To get a specific page of cities with a given amount of results, e.g. second page with six results, the endpoint " + 
-    "would be /cities?page=2&per_page=6 such that the URL looks like the following: " + 
-    "<A href=https://api.brighterbeginnings.me/cities?page=2&per_page=6>https://api.brighterbeginnings.me/cities?page=2&per_page=6</A>"
-    "<p>In order to get a specific instance of a city, e.g. the first city, the endpoint would be /cities/1 such that the URL looks like the following: " + 
-    "<A href=https://api.brighterbeginnings.me/cities/1>https://api.brighterbeginnings.me/cities/1</A>")
+    return "<h1>BrighterBeginnings API</h1>"
 
 # return page of all cities
 @app.route('/cities',  methods=['GET'])

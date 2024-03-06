@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const ToolsCard = (props) => {
   return (
     <div key={props.index} className="col-md-2 mb-4">
@@ -14,6 +15,9 @@ const ToolsCard = (props) => {
           <h4 className="card-title text-center" style={{ marginBottom: "3%" }}>
             <b>{props.name}</b>
           </h4>
+          <p>
+            {props.description}
+          </p>
         </div>
       </div>
     </div>
