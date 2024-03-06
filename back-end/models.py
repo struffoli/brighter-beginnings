@@ -67,28 +67,28 @@ class Scholarship(db.Model):
     org_id = db.Column(db.Integer, ForeignKey('organizations.id'))
 
 
-with app.app_context():
+# with app.app_context():
     
-#     create tables
-#     db.create_all()
+# #     create tables
+# #     db.create_all()
 
 
-    city_instance = City(name='City C', population='100000', num_schools=10, test_score='A', median_income='50000',
-                        percent_unemployment=5, percent_free_lunch=20, percent_educated=90, img_src='city_image.jpg')
+#     city_instance = City(name='City C', population='100000', num_schools=10, test_score='A', median_income='50000',
+#                         percent_unemployment=5, percent_free_lunch=20, percent_educated=90, img_src='city_image.jpg')
 
-    organization_instance = Organization(name='Org C', city='Example City', city_id=1, address='123 Main St',
-                                        distance='5 miles', contact_info='org@example.com', organization_type='Non-profit',
-                                        img_url='org_logo.jpg', location_img_url='org_location.jpg')
+#     organization_instance = Organization(name='Org C', city='Example City', city_id=1, address='123 Main St',
+#                                         distance='5 miles', contact_info='org@example.com', organization_type='Non-profit',
+#                                         img_url='org_logo.jpg', location_img_url='org_location.jpg')
 
-    scholarship_instance = Scholarship(name='Scholarship B', city='Example City', donor='Example Donor',
-                                    area='Science', age_group='High School', amount='5000', num_recipients=3,
-                                    description='Description of the scholarship', link='scholarship_link.com',
-                                    img_src='scholarship_image.jpg', city_id=1, org_id=1)
+#     scholarship_instance = Scholarship(name='Scholarship B', city='Example City', donor='Example Donor',
+#                                     area='Science', age_group='High School', amount='5000', num_recipients=3,
+#                                     description='Description of the scholarship', link='scholarship_link.com',
+#                                     img_src='scholarship_image.jpg', city_id=1, org_id=1)
 
-    # Add instances to the database session
-    db.session.add(city_instance)
-    db.session.add(organization_instance)
-    db.session.add(scholarship_instance)
+#     # Add instances to the database session
+#     db.session.add(city_instance)
+#     db.session.add(organization_instance)
+#     db.session.add(scholarship_instance)
 
-    # Commit the changes to persist the instances in the database
-    db.session.commit()
+#     # Commit the changes to persist the instances in the database
+#     db.session.commit()

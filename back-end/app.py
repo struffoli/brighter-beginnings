@@ -12,13 +12,10 @@ def get_cities():
     query = db.session.query(City)
     page = request.args.get('page', type=int, default=1)
     per_page = request.args.get('per_page', type=int, default=10)
-
     result = query.paginate(page=page, per_page=per_page, error_out=False)
     schema = city_schema.dump(result, many=True)
     total = query.count()
-    print(page)
-    print(per_page)
-    return jsonify({"cities":schema, "meta": {"count": total}})
+    return jsonify({"Cities":schema, "Total cities": total})
 
 # return instance of city
 @app.route('/cities/<int:city_id>', methods=['GET'])
@@ -26,7 +23,7 @@ def get_single_city(city_id):
     try:
         city = db.session.query(City).filter_by(id=city_id).one()
         city_data = city_schema.dump(city)
-        return jsonify({"city": city_data})
+        return jsonify({"City": city_data})
     except IndexError:
         return jsonify({"error": "City not found"}, 404)
     
@@ -35,11 +32,11 @@ def get_single_city(city_id):
 def get_organizations():
     query = db.session.query(Organization)
     page = request.args.get('page', type=int, default=1)
-    per_page = request.args.get('per_page', type=int, default=9)
+    per_page = request.args.get('per_page', type=int, default=10)
     result = query.paginate(page=page, per_page=per_page, error_out=False)
     schema = organization_schema.dump(result, many=True)
     total = query.count()
-    return jsonify({"organizations":schema, "meta": {"count": total}})
+    return jsonify({"Organizations":schema, "Total organizations": total})
 
 # return instance of organization
 @app.route('/organizations/<int:organization_id>', methods=['GET'])
@@ -47,7 +44,7 @@ def get_single_organization(organization_id):
     try:
         organization = db.session.query(Organization).filter_by(id=organization_id).one()
         organization_data = organization_schema.dump(organization)
-        return jsonify({"organization": organization_data})
+        return jsonify({"Organization": organization_data})
     except IndexError:
         return jsonify({"error": "Organization not found"}, 404)
     
@@ -56,19 +53,19 @@ def get_single_organization(organization_id):
 def get_scholarships():
     query = db.session.query(Scholarship)
     page = request.args.get('page', type=int, default=1)
-    per_page = request.args.get('per_page', type=int, default=9)
+    per_page = request.args.get('per_page', type=int, default=10)
     result = query.paginate(page=page, per_page=per_page, error_out=False)
     schema = scholarship_schema.dump(result, many=True)
     total = query.count()
-    return jsonify({"scholarships":schema, "meta": {"count": total}})
+    return jsonify({"Scholarships":schema, "Total scholarships": total})
 
 # return instance of scholarship
-@app.route('/scholarships/<int:_id>', methods=['GET'])
+@app.route('/scholarships/<int:scholarship_id>', methods=['GET'])
 def get_single_scholarship(scholarship_id):
     try:
         scholarship = db.session.query(Scholarship).filter_by(id=scholarship_id).one()
-        organization_data = organization_schema.dump(scholarship)
-        return jsonify({"scholarship": organization_data})
+        scholarship_data = scholarship_schema.dump(scholarship)
+        return jsonify({"Scholarship": scholarship_data})
     except IndexError:
         return jsonify({"error": "Scholarship not found"}, 404)
 
