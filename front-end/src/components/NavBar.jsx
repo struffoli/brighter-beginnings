@@ -1,7 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import "./NavBar.css"
 function NavBar() {
   return (
@@ -14,6 +13,7 @@ function NavBar() {
             <Nav.Link href="cities">Cities</Nav.Link>
             <Nav.Link href="organizations">Organizations</Nav.Link>
             <Nav.Link href="scholarships">Scholarships</Nav.Link>
+            <Nav.Link href="about">About Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
