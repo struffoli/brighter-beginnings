@@ -10,6 +10,8 @@ import yarn from "../assets/yarn.png";
 import flask from "../assets/flask.jpg";
 import sqla from "../assets/sqla.png";
 import pandas from "../assets/pandas.png";
+import python from "../assets/python.png";
+import mysql from "../assets/mysql.png";
 
 export const tools = [
   {
@@ -59,5 +61,13 @@ export const tools = [
   {
     name: "pandas",
     img_src: pandas,
+  },
+  {
+    name: "Python",
+    img_src: python,
+  },
+  {
+    name: "MySQL",
+    img_src: mysql,
   },
 ];

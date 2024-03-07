@@ -22,8 +22,15 @@ export async function getDeveloperInfo() {
       }
     );
     const allContributors = await response.json();
-    contributors = allContributors.filter(contributor => developers.some(developer => developer.emails.includes(contributor.email)));
-    totalCommits = contributors.reduce((acc, contributor) => acc + contributor.commits, 0);
+    contributors = allContributors.filter((contributor) =>
+      developers.some((developer) =>
+        developer.emails.includes(contributor.email)
+      )
+    );
+    totalCommits = contributors.reduce(
+      (acc, contributor) => acc + contributor.commits,
+      0
+    );
   } catch (error) {
     console.log(error);
   }
@@ -39,7 +46,13 @@ export async function getDeveloperInfo() {
       }
     );
     const allIssues = await response.json();
-    issues = allIssues.filter(issue => issue.closed_by && developers.some(developer => developer.gitlab_username === issue.closed_by.username));
+    issues = allIssues.filter(
+      (issue) =>
+        issue.closed_by &&
+        developers.some(
+          (developer) => developer.gitlab_username === issue.closed_by.username
+        )
+    );
     totalClosedIssues = issues.length;
   } catch (error) {
     console.log(error);
@@ -106,8 +119,12 @@ function About() {
 
       <div className="text-center my-3">
         <h2>Totals</h2>
-        <p><b>Total Commits: </b> {devInfo.totalCommits}</p>
-        <p><b>Total Issues Closed: </b> {devInfo.totalClosedIssues}</p>
+        <p>
+          <b>Total Commits: </b> {devInfo.totalCommits}
+        </p>
+        <p>
+          <b>Total Issues Closed: </b> {devInfo.totalClosedIssues}
+        </p>
       </div>
 
       <h1 className="text-center my-3 mb-4">
@@ -166,6 +183,15 @@ function About() {
             rel="noreferrer"
           >
             Google Maps
+          </a>
+        </h4>
+        <h4 className="mx-4 my-3 pt-1 w-75 text-center">
+          <a
+            href="https://www.mediawiki.org/wiki/API:Main_page"
+            target="_blank"
+            rel="noreferrer"
+          >
+            MediaWiki (Wikipedia API)
           </a>
         </h4>
       </div>
