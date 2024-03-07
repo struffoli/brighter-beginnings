@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
-from sqlalchemy import ForeignKey
+from sqlalchemy import ForeignKey, DECIMAL
 from sqlalchemy.orm import relationship
 
 # Configure app
@@ -20,14 +20,14 @@ class Scholarship(db.Model):
     __tablename__ = 'scholarships'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(255))
-    donor = db.Column(db.String(255))
-    area = db.Column(db.String(255))
-    age_group = db.Column(db.String(255))
-    amount = db.Column(db.String(255))
-    num_recipients = db.Column(db.Integer)
-    description = db.Column(db.String(255))
-    link = db.Column(db.String(255))
+    awarded_by = db.Column(db.String(255))
+    award_amount = db.Column(db.Integer)
+    merit_based = db.Column(db.Boolean)
+    need_based = db.Column(db.Boolean)
+    essay_based = db.Column(db.Boolean)
+    nationwide = db.Column(db.Boolean)
     img_src = db.Column(db.String(255))
+    link = db.Column(db.String(255))
     #Establishing relationship
     organizations = relationship('Organization', backref='scholarship_organization', lazy=True)
     cities = relationship('City', backref='scholarship_city', lazy=True)
@@ -37,13 +37,11 @@ class Organization(db.Model):
     __tablename__ = 'organizations'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(255))
-    scholarship_id = db.Column(db.Integer, ForeignKey('scholarships.id'))
-    address = db.Column(db.String(255))
-    distance = db.Column(db.String(255))
-    contact_info = db.Column(db.String(255))
+    email = db.Column(db.String(255))
+    phone = db.Column(db.String(255))
     organization_type = db.Column(db.String(255))
-    img_url = db.Column(db.String(255))
-    location_img_url = db.Column(db.String(255))
+    img_src = db.Column(db.String(255))
+    scholarship_id = db.Column(db.Integer, ForeignKey('scholarships.id'))
     # Establishing relationship
     cities = relationship('City', backref='organization', lazy=True)
 
@@ -52,21 +50,20 @@ class City(db.Model):
     __tablename__ = 'cities'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(255))
-    population = db.Column(db.String(255))
-    num_schools = db.Column(db.Integer)
-    test_score = db.Column(db.String(255))
+    population = db.Column(db.Integer)
+    state = db.Column(db.String(255))
     median_income = db.Column(db.String(255))
-    percent_unemployment = db.Column(db.Integer)
-    percent_free_lunch = db.Column(db.Integer)
-    percent_educated = db.Column(db.Integer)
+    percent_unemployment = db.Column(db.DECIMAL(4,3))
+    percent_free_lunch = db.Column(db.DECIMAL(4,3))
+    percent_educated = db.Column(db.DECIMAL(4,3))
     img_src = db.Column(db.String(255))
     scholarship_id = db.Column(db.Integer, ForeignKey('scholarships.id'))
-    org_id = db.Column(db.Integer, ForeignKey('organizations.id'))
+    organization_id = db.Column(db.Integer, ForeignKey('organizations.id'))
 
-# with app.app_context():
+with app.app_context():
     
     # create tables
-    # db.create_all()
+    db.create_all()
 
     # Dummy Data 
     # scholarship9 = Scholarship(name="Scholarship 9", donor="Donor 9", area="Business", age_group="College", amount="$2500", num_recipients=4, description="Description 9", link="http://example.com", img_src="img9.jpg")
