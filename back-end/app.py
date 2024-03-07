@@ -22,26 +22,26 @@ def home():
     "<p>In order to get a specific instance of a city, e.g. the first city, the endpoint would be /cities/1 such that the URL looks like the following: " + 
     "<A href=https://api.brighterbeginnings.me/cities/1>https://api.brighterbeginnings.me/cities/1</A>")
 
-# return page of all cities
-@app.route('/cities',  methods=['GET'])
-def get_cities():
-    query = db.session.query(City)
+# return page of all scholarships
+@app.route('/scholarships', methods=['GET'])
+def get_scholarships():
+    query = db.session.query(Scholarship)
     total = query.count()
     page = request.args.get('page', type=int, default=1)
     per_page = request.args.get('per_page', type=int, default=total)
     result = query.paginate(page=page, per_page=per_page, error_out=False)
-    schema = city_schema.dump(result, many=True)
-    return jsonify({"Cities":schema, "Total cities": total})
+    schema = scholarship_schema.dump(result, many=True)
+    return jsonify({"Scholarships":schema, "Total scholarships": total})
 
-# return instance of city
-@app.route('/cities/<int:city_id>', methods=['GET'])
-def get_single_city(city_id):
+# return instance of scholarship
+@app.route('/scholarships/<int:scholarship_id>', methods=['GET'])
+def get_single_scholarship(scholarship_id):
     try:
-        city = db.session.query(City).filter_by(id=city_id).one()
-        city_data = city_schema.dump(city)
-        return jsonify({"City": city_data})
+        scholarship = db.session.query(Scholarship).filter_by(id=scholarship_id).one()
+        scholarship_data = scholarship_schema.dump(scholarship)
+        return jsonify({"Scholarship": scholarship_data})
     except IndexError:
-        return jsonify({"error": "City not found"}, 404)
+        return jsonify({"error": "Scholarship not found"}, 404)
     
 # return page of all organizations
 @app.route('/organizations', methods=['GET'])
@@ -64,26 +64,26 @@ def get_single_organization(organization_id):
     except IndexError:
         return jsonify({"error": "Organization not found"}, 404)
     
-# return page of all scholarships
-@app.route('/scholarships', methods=['GET'])
-def get_scholarships():
-    query = db.session.query(Scholarship)
+# return page of all cities
+@app.route('/cities',  methods=['GET'])
+def get_cities():
+    query = db.session.query(City)
     total = query.count()
     page = request.args.get('page', type=int, default=1)
     per_page = request.args.get('per_page', type=int, default=total)
     result = query.paginate(page=page, per_page=per_page, error_out=False)
-    schema = scholarship_schema.dump(result, many=True)
-    return jsonify({"Scholarships":schema, "Total scholarships": total})
+    schema = city_schema.dump(result, many=True)
+    return jsonify({"Cities":schema, "Total cities": total})
 
-# return instance of scholarship
-@app.route('/scholarships/<int:scholarship_id>', methods=['GET'])
-def get_single_scholarship(scholarship_id):
+# return instance of city
+@app.route('/cities/<int:city_id>', methods=['GET'])
+def get_single_city(city_id):
     try:
-        scholarship = db.session.query(Scholarship).filter_by(id=scholarship_id).one()
-        scholarship_data = scholarship_schema.dump(scholarship)
-        return jsonify({"Scholarship": scholarship_data})
+        city = db.session.query(City).filter_by(id=city_id).one()
+        city_data = city_schema.dump(city)
+        return jsonify({"City": city_data})
     except IndexError:
-        return jsonify({"error": "Scholarship not found"}, 404)
+        return jsonify({"error": "City not found"}, 404)
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)

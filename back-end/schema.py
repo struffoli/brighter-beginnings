@@ -1,19 +1,18 @@
 from models import City, Organization, Scholarship
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 
-class CitySchema(SQLAlchemyAutoSchema):
+class ScholarshipSchema(SQLAlchemyAutoSchema):
     class Meta:
-        model = City
+        model = Scholarship
 
 class OrganizationSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Organization
 
-class ScholarshipSchema(SQLAlchemyAutoSchema):
+class CitySchema(SQLAlchemyAutoSchema):
     class Meta:
-        model = Scholarship
+        model = City
 
-city_schema = CitySchema()
-organization_schema = OrganizationSchema()
 scholarship_schema = ScholarshipSchema()
-
+organization_schema = OrganizationSchema()
+city_schema = CitySchema()
