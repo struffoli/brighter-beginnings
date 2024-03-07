@@ -1,0 +1,554 @@
+{
+	"info": {
+		"_postman_id": "319bb27b-46c6-4094-9f89-3986eb3f818b",
+		"name": "BrighterBeginnings",
+		"description": "**This API returns endpoints to GET specific and all instances of a model used in our BrighterBeginnings web application.**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32954458"
+	},
+	"item": [
+		{
+			"name": "All Scholarships",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Validate the response status code",
+							"pm.test(\"Status code is 200 OK\", () => {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// Validate the response content type is JSON",
+							"pm.test(\"Response should be in JSON format\", () => {",
+							"    pm.response.to.have.header('Content-Type', 'application/json');",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.brighterbeginnings.me/scholarships?page={int}&per_page={int}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"brighterbeginnings",
+						"me"
+					],
+					"path": [
+						"scholarships"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{int}",
+							"description": "The specific page of scholarships to retrieve"
+						},
+						{
+							"key": "per_page",
+							"value": "{int}",
+							"description": "The number of scholarships to display per page"
+						}
+					]
+				},
+				"description": "Retrieves information on every scholarship with the following attributes:\n\n- Name\n- City\n- Donor\n- Area\n- Age group\n- Award amount\n- Number of recipients\n- Description"
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.brighterbeginnings.me/scholarships",
+							"protocol": "https",
+							"host": [
+								"api",
+								"brighterbeginnings",
+								"me"
+							],
+							"path": [
+								"scholarships"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"Scholarships\": [\r\n        {\r\n            \"age_group\": \"18-25\",\r\n            \"amount\": \"$5000\",\r\n            \"area\": \"Science\",\r\n            \"description\": \"This scholarship is awarded based on academic merit.\",\r\n            \"donor\": \"ABC Foundation\",\r\n            \"id\": 1,\r\n            \"img_src\": \"https://example.com/scholarship1.jpg\",\r\n            \"link\": \"https://example.com/scholarship1\",\r\n            \"name\": \"Merit Scholarship\",\r\n            \"num_recipients\": 3\r\n        },\r\n        {\r\n            \"age_group\": \"25-30\",\r\n            \"amount\": \"$3000\",\r\n            \"area\": \"Arts\",\r\n            \"description\": \"This scholarship is awarded based on financial need.\",\r\n            \"donor\": \"XYZ Trust\",\r\n            \"id\": 2,\r\n            \"img_src\": \"https://example.com/scholarship2.jpg\",\r\n            \"link\": \"https://example.com/scholarship2\",\r\n            \"name\": \"Need-Based Scholarship\",\r\n            \"num_recipients\": 2\r\n        },\r\n        {\r\n            \"age_group\": \"Middle School\",\r\n            \"amount\": \"$800\",\r\n            \"area\": \"Arts\",\r\n            \"description\": \"Description 3\",\r\n            \"donor\": \"Donor 3\",\r\n            \"id\": 3,\r\n            \"img_src\": \"img3.jpg\",\r\n            \"link\": \"http://example.com\",\r\n            \"name\": \"Scholarship 3\",\r\n            \"num_recipients\": 7\r\n        },\r\n        {\r\n            \"age_group\": \"High School\",\r\n            \"amount\": \"$1200\",\r\n            \"area\": \"Engineering\",\r\n            \"description\": \"Description 4\",\r\n            \"donor\": \"Donor 4\",\r\n            \"id\": 4,\r\n            \"img_src\": \"img4.jpg\",\r\n            \"link\": \"http://example.com\",\r\n            \"name\": \"Scholarship 4\",\r\n            \"num_recipients\": 4\r\n        },\r\n        {\r\n            \"age_group\": \"College\",\r\n            \"amount\": \"$2000\",\r\n            \"area\": \"Literature\",\r\n            \"description\": \"Description 5\",\r\n            \"donor\": \"Donor 5\",\r\n            \"id\": 5,\r\n            \"img_src\": \"img5.jpg\",\r\n            \"link\": \"http://example.com\",\r\n            \"name\": \"Scholarship 5\",\r\n            \"num_recipients\": 2\r\n        },\r\n        {\r\n            \"age_group\": \"Graduate\",\r\n            \"amount\": \"$3000\",\r\n            \"area\": \"Computer Science\",\r\n            \"description\": \"Description 6\",\r\n            \"donor\": \"Donor 6\",\r\n            \"id\": 6,\r\n            \"img_src\": \"img6.jpg\",\r\n            \"link\": \"http://example.com\",\r\n            \"name\": \"Scholarship 6\",\r\n            \"num_recipients\": 1\r\n        },\r\n        {\r\n            \"age_group\": \"Undergraduate\",\r\n            \"amount\": \"$1800\",\r\n            \"area\": \"Social Sciences\",\r\n            \"description\": \"Description 7\",\r\n            \"donor\": \"Donor 7\",\r\n            \"id\": 7,\r\n            \"img_src\": \"img7.jpg\",\r\n            \"link\": \"http://example.com\",\r\n            \"name\": \"Scholarship 7\",\r\n            \"num_recipients\": 3\r\n        },\r\n        {\r\n            \"age_group\": \"High School\",\r\n            \"amount\": \"$1200\",\r\n            \"area\": \"Environmental Studies\",\r\n            \"description\": \"Description 8\",\r\n            \"donor\": \"Donor 8\",\r\n            \"id\": 8,\r\n            \"img_src\": \"img8.jpg\",\r\n            \"link\": \"http://example.com\",\r\n            \"name\": \"Scholarship 8\",\r\n            \"num_recipients\": 2\r\n        },\r\n        {\r\n            \"age_group\": \"College\",\r\n            \"amount\": \"$2500\",\r\n            \"area\": \"Business\",\r\n            \"description\": \"Description 9\",\r\n            \"donor\": \"Donor 9\",\r\n            \"id\": 9,\r\n            \"img_src\": \"img9.jpg\",\r\n            \"link\": \"http://example.com\",\r\n            \"name\": \"Scholarship 9\",\r\n            \"num_recipients\": 4\r\n        },\r\n        {\r\n            \"age_group\": \"Graduate\",\r\n            \"amount\": \"$4000\",\r\n            \"area\": \"Medicine\",\r\n            \"description\": \"Description 10\",\r\n            \"donor\": \"Donor 10\",\r\n            \"id\": 10,\r\n            \"img_src\": \"img10.jpg\",\r\n            \"link\": \"http://example.com\",\r\n            \"name\": \"Scholarship 10\",\r\n            \"num_recipients\": 1\r\n        }\r\n    ],\r\n    \"Total scholarships\": 10\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Single Scholarship",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Validate the response status code\r",
+							"pm.test(\"Status code is 200 OK\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Validate the response content type is JSON\r",
+							"pm.test(\"Response should be in JSON format\", () => {\r",
+							"    pm.response.to.have.header('Content-Type', 'application/json');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.brighterbeginnings.me/scholarships/:id",
+					"protocol": "https",
+					"host": [
+						"api",
+						"brighterbeginnings",
+						"me"
+					],
+					"path": [
+						"scholarships",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "The id for a specific scholarship"
+						}
+					]
+				},
+				"description": "Retrieves information on a single scholarship for the corresponding id"
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.brighterbeginnings.me/scholarships/1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"brighterbeginnings",
+								"me"
+							],
+							"path": [
+								"scholarships",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Scholarship\": {\n        \"age_group\": \"18-25\",\n        \"amount\": \"$5000\",\n        \"area\": \"Science\",\n        \"description\": \"This scholarship is awarded based on academic merit.\",\n        \"donor\": \"ABC Foundation\",\n        \"id\": 1,\n        \"img_src\": \"https://example.com/scholarship1.jpg\",\n        \"link\": \"https://example.com/scholarship1\",\n        \"name\": \"Merit Scholarship\",\n        \"num_recipients\": 3\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "All Organizations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Validate the response status code\r",
+							"pm.test(\"Status code is 200 OK\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Validate the response content type is JSON\r",
+							"pm.test(\"Response should be in JSON format\", () => {\r",
+							"    pm.response.to.have.header('Content-Type', 'application/json');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.brighterbeginnings.me/organizations?page={int}&per_page={int}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"brighterbeginnings",
+						"me"
+					],
+					"path": [
+						"organizations"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{int}",
+							"description": "The specific page of organizations to retrieve"
+						},
+						{
+							"key": "per_page",
+							"value": "{int}",
+							"description": "The number of organizations to display per page"
+						}
+					]
+				},
+				"description": "Retrieves every organization with information on the following attributes:\n\n- Name\n- City\n- Address\n- Distance from user\n- Contact information\n- Type of organization (educational, non-profit, etc.)"
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.brighterbeginnings.me/organizations",
+							"protocol": "https",
+							"host": [
+								"api",
+								"brighterbeginnings",
+								"me"
+							],
+							"path": [
+								"organizations"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"Organizations\": [\r\n        {\r\n            \"address\": \"123 Main St\",\r\n            \"contact_info\": \"info@example.org\",\r\n            \"distance\": \"5 miles\",\r\n            \"id\": 1,\r\n            \"img_url\": \"https://example.com/org1.jpg\",\r\n            \"location_img_url\": \"https://example.com/org1_location.jpg\",\r\n            \"name\": \"Education Foundation\",\r\n            \"organization_type\": \"Non-Profit\"\r\n        },\r\n        {\r\n            \"address\": \"456 Oak St\",\r\n            \"contact_info\": \"contact@example.org\",\r\n            \"distance\": \"10 miles\",\r\n            \"id\": 2,\r\n            \"img_url\": \"https://example.com/org2.jpg\",\r\n            \"location_img_url\": \"https://example.com/org2_location.jpg\",\r\n            \"name\": \"Youth Empowerment\",\r\n            \"organization_type\": \"Community\"\r\n        },\r\n        {\r\n            \"address\": \"789 Elm St\",\r\n            \"contact_info\": \"org3@example.com\",\r\n            \"distance\": \"15 miles\",\r\n            \"id\": 3,\r\n            \"img_url\": \"org_img3.jpg\",\r\n            \"location_img_url\": \"location_img3.jpg\",\r\n            \"name\": \"Organization 3\",\r\n            \"organization_type\": \"Non-profit\"\r\n        },\r\n        {\r\n            \"address\": \"101 Pine St\",\r\n            \"contact_info\": \"org4@example.com\",\r\n            \"distance\": \"8 miles\",\r\n            \"id\": 4,\r\n            \"img_url\": \"org_img4.jpg\",\r\n            \"location_img_url\": \"location_img4.jpg\",\r\n            \"name\": \"Organization 4\",\r\n            \"organization_type\": \"Government\"\r\n        },\r\n        {\r\n            \"address\": \"222 Maple St\",\r\n            \"contact_info\": \"org5@example.com\",\r\n            \"distance\": \"12 miles\",\r\n            \"id\": 5,\r\n            \"img_url\": \"org_img5.jpg\",\r\n            \"location_img_url\": \"location_img5.jpg\",\r\n            \"name\": \"Organization 5\",\r\n            \"organization_type\": \"For-profit\"\r\n        },\r\n        {\r\n            \"address\": \"333 Birch St\",\r\n            \"contact_info\": \"org6@example.com\",\r\n            \"distance\": \"6 miles\",\r\n            \"id\": 6,\r\n            \"img_url\": \"org_img6.jpg\",\r\n            \"location_img_url\": \"location_img6.jpg\",\r\n            \"name\": \"Organization 6\",\r\n            \"organization_type\": \"Non-profit\"\r\n        },\r\n        {\r\n            \"address\": \"444 Oak St\",\r\n            \"contact_info\": \"org7@example.com\",\r\n            \"distance\": \"8 miles\",\r\n            \"id\": 7,\r\n            \"img_url\": \"org_img7.jpg\",\r\n            \"location_img_url\": \"location_img7.jpg\",\r\n            \"name\": \"Organization 7\",\r\n            \"organization_type\": \"Government\"\r\n        },\r\n        {\r\n            \"address\": \"555 Elm St\",\r\n            \"contact_info\": \"org8@example.com\",\r\n            \"distance\": \"12 miles\",\r\n            \"id\": 8,\r\n            \"img_url\": \"org_img8.jpg\",\r\n            \"location_img_url\": \"location_img8.jpg\",\r\n            \"name\": \"Organization 8\",\r\n            \"organization_type\": \"Non-profit\"\r\n        },\r\n        {\r\n            \"address\": \"666 Pine St\",\r\n            \"contact_info\": \"org9@example.com\",\r\n            \"distance\": \"10 miles\",\r\n            \"id\": 9,\r\n            \"img_url\": \"org_img9.jpg\",\r\n            \"location_img_url\": \"location_img9.jpg\",\r\n            \"name\": \"Organization 9\",\r\n            \"organization_type\": \"For-profit\"\r\n        },\r\n        {\r\n            \"address\": \"777 Birch St\",\r\n            \"contact_info\": \"org10@example.com\",\r\n            \"distance\": \"15 miles\",\r\n            \"id\": 10,\r\n            \"img_url\": \"org_img10.jpg\",\r\n            \"location_img_url\": \"location_img10.jpg\",\r\n            \"name\": \"Organization 10\",\r\n            \"organization_type\": \"Non-profit\"\r\n        }\r\n    ],\r\n    \"Total organizations\": 10\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Single Organization",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Validate the response status code\r",
+							"pm.test(\"Status code is 200 OK\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Validate the response content type is JSON\r",
+							"pm.test(\"Response should be in JSON format\", () => {\r",
+							"    pm.response.to.have.header('Content-Type', 'application/json');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.brighterbeginnings.me/organizations/:id",
+					"protocol": "https",
+					"host": [
+						"api",
+						"brighterbeginnings",
+						"me"
+					],
+					"path": [
+						"organizations",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2",
+							"description": "The id for a specific organization"
+						}
+					]
+				},
+				"description": "Retrieves information on a single organization for the corresponding id"
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.brighterbeginnings.me/organizations/2",
+							"protocol": "https",
+							"host": [
+								"api",
+								"brighterbeginnings",
+								"me"
+							],
+							"path": [
+								"organizations",
+								"2"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"Organization\": {\r\n        \"address\": \"456 Oak St\",\r\n        \"contact_info\": \"contact@example.org\",\r\n        \"distance\": \"10 miles\",\r\n        \"id\": 2,\r\n        \"img_url\": \"https://example.com/org2.jpg\",\r\n        \"location_img_url\": \"https://example.com/org2_location.jpg\",\r\n        \"name\": \"Youth Empowerment\",\r\n        \"organization_type\": \"Community\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "All Cities",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Validate the response status code\r",
+							"pm.test(\"Status code is 200 OK\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Validate the response content type is JSON\r",
+							"pm.test(\"Response should be in JSON format\", () => {\r",
+							"    pm.response.to.have.header('Content-Type', 'application/json');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.brighterbeginnings.me/cities?page={int}&per_page={int}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"brighterbeginnings",
+						"me"
+					],
+					"path": [
+						"cities"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{int}",
+							"description": "The specific page of cities to retrieve"
+						},
+						{
+							"key": "per_page",
+							"value": "{int}",
+							"description": "The number of cities to display per page"
+						}
+					]
+				},
+				"description": "Retrieves every city with information on the following attributes:\n\n- Name\n- Population\n- Number of schools\n- Average test score\n- Median household income\n- Percentage of unemployment\n- Percentage of students on free lunch\n- Percentage of adults with a college education"
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.brighterbeginnings.me/cities",
+							"protocol": "https",
+							"host": [
+								"api",
+								"brighterbeginnings",
+								"me"
+							],
+							"path": [
+								"cities"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Cities\": [\n        {\n            \"id\": 1,\n            \"img_src\": \"https://example.com/city1.jpg\",\n            \"median_income\": \"$60,000\",\n            \"name\": \"Cityville\",\n            \"num_schools\": 15,\n            \"percent_educated\": 80,\n            \"percent_free_lunch\": 20,\n            \"percent_unemployment\": 5,\n            \"population\": \"100000\",\n            \"test_score\": \"A\"\n        },\n        {\n            \"id\": 2,\n            \"img_src\": \"https://example.com/city2.jpg\",\n            \"median_income\": \"$50,000\",\n            \"name\": \"Townsville\",\n            \"num_schools\": 8,\n            \"percent_educated\": 75,\n            \"percent_free_lunch\": 15,\n            \"percent_unemployment\": 8,\n            \"population\": \"50000\",\n            \"test_score\": \"B\"\n        },\n        {\n            \"id\": 3,\n            \"img_src\": \"city_img3.jpg\",\n            \"median_income\": \"$55,000\",\n            \"name\": \"City 3\",\n            \"num_schools\": 12,\n            \"percent_educated\": 75,\n            \"percent_free_lunch\": 18,\n            \"percent_unemployment\": 6,\n            \"population\": \"150,000\",\n            \"test_score\": \"A-\"\n        },\n        {\n            \"id\": 4,\n            \"img_src\": \"city_img4.jpg\",\n            \"median_income\": \"$70,000\",\n            \"name\": \"City 4\",\n            \"num_schools\": 20,\n            \"percent_educated\": 88,\n            \"percent_free_lunch\": 12,\n            \"percent_unemployment\": 8,\n            \"population\": \"180,000\",\n            \"test_score\": \"B+\"\n        },\n        {\n            \"id\": 5,\n            \"img_src\": \"city_img5.jpg\",\n            \"median_income\": \"$45,000\",\n            \"name\": \"City 5\",\n            \"num_schools\": 8,\n            \"percent_educated\": 70,\n            \"percent_free_lunch\": 25,\n            \"percent_unemployment\": 4,\n            \"population\": \"120,000\",\n            \"test_score\": \"B-\"\n        },\n        {\n            \"id\": 6,\n            \"img_src\": \"city_img6.jpg\",\n            \"median_income\": \"$80,000\",\n            \"name\": \"City 6\",\n            \"num_schools\": 25,\n            \"percent_educated\": 90,\n            \"percent_free_lunch\": 10,\n            \"percent_unemployment\": 10,\n            \"population\": \"250,000\",\n            \"test_score\": \"A+\"\n        },\n        {\n            \"id\": 7,\n            \"img_src\": \"city_img7.jpg\",\n            \"median_income\": \"$60,000\",\n            \"name\": \"City 7\",\n            \"num_schools\": 15,\n            \"percent_educated\": 80,\n            \"percent_free_lunch\": 18,\n            \"percent_unemployment\": 6,\n            \"population\": \"180,000\",\n            \"test_score\": \"A-\"\n        },\n        {\n            \"id\": 8,\n            \"img_src\": \"city_img8.jpg\",\n            \"median_income\": \"$55,000\",\n            \"name\": \"City 8\",\n            \"num_schools\": 10,\n            \"percent_educated\": 75,\n            \"percent_free_lunch\": 20,\n            \"percent_unemployment\": 5,\n            \"population\": \"140,000\",\n            \"test_score\": \"B+\"\n        },\n        {\n            \"id\": 9,\n            \"img_src\": \"city_img9.jpg\",\n            \"median_income\": \"$70,000\",\n            \"name\": \"City 9\",\n            \"num_schools\": 20,\n            \"percent_educated\": 85,\n            \"percent_free_lunch\": 15,\n            \"percent_unemployment\": 8,\n            \"population\": \"200,000\",\n            \"test_score\": \"A\"\n        },\n        {\n            \"id\": 10,\n            \"img_src\": \"city_img10.jpg\",\n            \"median_income\": \"$50,000\",\n            \"name\": \"City 10\",\n            \"num_schools\": 12,\n            \"percent_educated\": 78,\n            \"percent_free_lunch\": 22,\n            \"percent_unemployment\": 5,\n            \"population\": \"120,000\",\n            \"test_score\": \"B\"\n        }\n    ],\n    \"Total cities\": 10\n}"
+				}
+			]
+		},
+		{
+			"name": "Single City",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Validate the response status code\r",
+							"pm.test(\"Status code is 200 OK\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Validate the response content type is JSON\r",
+							"pm.test(\"Response should be in JSON format\", () => {\r",
+							"    pm.response.to.have.header('Content-Type', 'application/json');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.brighterbeginnings.me/cities/:id",
+					"protocol": "https",
+					"host": [
+						"api",
+						"brighterbeginnings",
+						"me"
+					],
+					"path": [
+						"cities",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3",
+							"description": "The id for a specific city"
+						}
+					]
+				},
+				"description": "Retrieves information on a single city for the corresponding id"
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.brighterbeginnings.me/cities/3",
+							"protocol": "https",
+							"host": [
+								"api",
+								"brighterbeginnings",
+								"me"
+							],
+							"path": [
+								"cities",
+								"3"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"City\": {\n        \"id\": 3,\n        \"img_src\": \"city_img3.jpg\",\n        \"median_income\": \"$55,000\",\n        \"name\": \"City 3\",\n        \"num_schools\": 12,\n        \"percent_educated\": 75,\n        \"percent_free_lunch\": 18,\n        \"percent_unemployment\": 6,\n        \"population\": \"150,000\",\n        \"test_score\": \"A-\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://farming-simulator.pstmn.io"
+		}
+	]
+}

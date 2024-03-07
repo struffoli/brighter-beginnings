@@ -43,6 +43,5 @@ class Tests(unittest.TestCase):
         city = response.json
         self.assertIsNotNone(city)
 
-
 if __name__ == "__main__":
     unittest.main()

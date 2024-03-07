@@ -2,6 +2,7 @@ image: node:latest
 
 stages:
   - build
+  - test
 
 build:
   stage: build
@@ -9,3 +10,14 @@ build:
     - cd front-end
     - npm install ci
     - npm run build
+  
+postman_tests:
+  stage: test
+  image:
+    name: postman/newman_alpine33
+    entrypoint: [""]
+  script:
+    - cd back-end
+    - newman --version
+    - newman run postman_tests.json
+
