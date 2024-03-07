@@ -1,21 +1,24 @@
-import React from "react";
-import "./NavBar.css";
-import { Link } from "react-router-dom";
-
-const NavBar = () => {
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import "./NavBar.css"
+function NavBar() {
   return (
-    <nav className="navbar">
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <h1>BrighterBeginnings</h1>
-      </Link>
-      <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/cities">Cities</Link>
-        <Link to="/organizations">Organizations</Link>
-        <Link to="/scholarships">Scholarships</Link>
-      </div>
-    </nav>
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="/" color="#3cdfff">Brighter Beginnings</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="cities">Cities</Nav.Link>
+            <Nav.Link href="organizations">Organizations</Nav.Link>
+            <Nav.Link href="scholarships">Scholarships</Nav.Link>
+            <Nav.Link href="about">About Us</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
+}
+
 export default NavBar;

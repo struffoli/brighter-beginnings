@@ -28,7 +28,7 @@ const OrganizationsCard = (props) => {
           </p> */}
           <p className="card-text">
             <b>City: </b>
-            <Link to={`/cities/city?name=${props.city}`} className="link">
+            <Link to={`/cities/city?id=${props.city_id}`} className="link">
               {props.city}
             </Link>
           </p>
@@ -41,7 +41,7 @@ const OrganizationsCard = (props) => {
             {props.organizationType}
           </p> */}
           <p className="card-text">
-            <Link to={`/organizations/org?name=${props.name}`} className="link">
+            <Link to={`/organizations/org?id=${props.id}`} className="link">
               Click here to see scholarships!
             </Link>
           </p>

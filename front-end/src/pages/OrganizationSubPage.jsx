@@ -1,17 +1,24 @@
-import { React } from "react";
+import React, { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import { organizations } from "../data/organizations";
+// import { organizations } from "../data/organizations";
 import { scholarships } from "../data/scholarships";
+import { getOrganizationById } from "./Organizations";
 
 function OrganizationSubPage() {
   const [queryParameters] = useSearchParams();
 
-  const getOrg = (query) => {
-    return organizations.find((o) => o.id === query); //find in the data
-  };
+  // const getOrg = (query) => {
+  //   return organizations.find((o) => o.id === query); //find in the data
+  // };
 
-  const org_id = parseInt(queryParameters.get("id"));
-  const org = getOrg(org_id);
+  // const org_id = parseInt(queryParameters.get("id"));
+  // const org = getOrg(org_id);
+
+  const org_id = queryParameters.get("id");
+  const [org, setApiOrg] = useState({ organization: {} });
+  useEffect(() => {
+    getOrganizationById(org_id).then((data) => setApiOrg(data));
+  }, []);
 
   return (
     <div className="container" style={{ marginTop: "3%" }}>

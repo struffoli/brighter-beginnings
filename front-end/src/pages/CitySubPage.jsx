@@ -1,18 +1,23 @@
-import { React } from "react";
+import React, { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import { cities } from "../data/cities.js";
-import { organizations } from "../data/organizations.js";
+// import { cities } from "../data/cities.js";
+// import { organizations } from "../data/organizations.js";
 import { scholarships } from "../data/scholarships.js";
+import { getCityById } from "./Cities.jsx";
 
 function CitySubPage() {
   const [queryParameters] = useSearchParams(); 
 
-  const getCity = (query) => {
-    return cities.find((c) => c.name === query); //find in the data
-  }; 
+  // const getCity = (query) => {
+    // return cities.find((c) => c.id === query); //find in the data
+  // }; 
 
-  const city_name = queryParameters.get("name");
-  const city = getCity(city_name);
+  const city_id = queryParameters.get("id");
+  // const city = getCity(city_id);
+  const [city, setApiCity] = useState({city: {}});
+  useEffect(() => {
+    getCityById(city_id).then((data) => setApiCity(data));
+  }, []);
 
   return (
     <div className="container" style={{ marginTop: "3%" }}>
@@ -50,7 +55,7 @@ function CitySubPage() {
           <b>Percent of Adults College Educated:</b> {city.educated}%
         </p>
         {/* only display if this city has organizations */}
-        {city.organizations.length > 0 ? (
+        {/* {city.organizations.length > 0 ? (
           <p className="">
             <b>Organizations:</b>
             {city.organizations.map((organization) => {
@@ -69,7 +74,7 @@ function CitySubPage() {
           </p>
         ) : (
           <></>
-        )}
+        )} */}
         {/* only display if this city has scholarships */}
         {city.scholarships.length > 0 ? (
           <p className="">

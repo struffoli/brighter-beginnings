@@ -16,6 +16,38 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://admin:cc0518Kl$@brighterbeginni
 # Create db linked to app
 db = SQLAlchemy(app)
 
+class Scholarship(db.Model):
+    __tablename__ = 'scholarships'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(255))
+    donor = db.Column(db.String(255))
+    area = db.Column(db.String(255))
+    age_group = db.Column(db.String(255))
+    amount = db.Column(db.String(255))
+    num_recipients = db.Column(db.Integer)
+    description = db.Column(db.String(255))
+    link = db.Column(db.String(255))
+    img_src = db.Column(db.String(255))
+    #Establishing relationship
+    organizations = relationship('Organization', backref='scholarship_organization', lazy=True)
+    cities = relationship('City', backref='scholarship_city', lazy=True)
+
+
+class Organization(db.Model):
+    __tablename__ = 'organizations'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(255))
+    scholarship_id = db.Column(db.Integer, ForeignKey('scholarships.id'))
+    address = db.Column(db.String(255))
+    distance = db.Column(db.String(255))
+    contact_info = db.Column(db.String(255))
+    organization_type = db.Column(db.String(255))
+    img_url = db.Column(db.String(255))
+    location_img_url = db.Column(db.String(255))
+    # Establishing relationship
+    cities = relationship('City', backref='organization', lazy=True)
+
+
 class City(db.Model):
     __tablename__ = 'cities'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -28,67 +60,35 @@ class City(db.Model):
     percent_free_lunch = db.Column(db.Integer)
     percent_educated = db.Column(db.Integer)
     img_src = db.Column(db.String(255))
-
-    # Establish relationships
-    organizations = relationship('Organization', backref='city_organization', lazy=True)
-    scholarships = relationship('Scholarship', backref='city_scholarship', lazy=True)
-
-
-class Organization(db.Model):
-    __tablename__ = 'organizations'
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    name = db.Column(db.String(255))
-    city = db.Column(db.String(255))
-    city_id = db.Column(db.Integer, ForeignKey('cities.id'))
-    address = db.Column(db.String(255))
-    distance = db.Column(db.String(255))
-    contact_info = db.Column(db.String(255))
-    organization_type = db.Column(db.String(255))
-    img_url = db.Column(db.String(255))
-    location_img_url = db.Column(db.String(255))
-
-    # Establishing relationship
-    scholarships = relationship('Scholarship', backref='organization', lazy=True)
-
-class Scholarship(db.Model):
-    __tablename__ = 'scholarships'
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    name = db.Column(db.String(255))
-    city = db.Column(db.String(255))
-    donor = db.Column(db.String(255))
-    area = db.Column(db.String(255))
-    age_group = db.Column(db.String(255))
-    amount = db.Column(db.String(255))
-    num_recipients = db.Column(db.Integer)
-    description = db.Column(db.String(255))
-    link = db.Column(db.String(255))
-    img_src = db.Column(db.String(255))
-    city_id = db.Column(db.Integer, ForeignKey('cities.id'))
+    scholarship_id = db.Column(db.Integer, ForeignKey('scholarships.id'))
     org_id = db.Column(db.Integer, ForeignKey('organizations.id'))
 
-
-with app.app_context():
+# with app.app_context():
     
-#     create tables
-#     db.create_all()
+    # create tables
+    # db.create_all()
+
+    # Dummy Data 
+    # scholarship9 = Scholarship(name="Scholarship 9", donor="Donor 9", area="Business", age_group="College", amount="$2500", num_recipients=4, description="Description 9", link="http://example.com", img_src="img9.jpg")
+    # scholarship10 = Scholarship(name="Scholarship 10", donor="Donor 10", area="Medicine", age_group="Graduate", amount="$4000", num_recipients=1, description="Description 10", link="http://example.com", img_src="img10.jpg")
+    # # Add more scholarships...
+
+    # # Creating instances for the Organization model
+    # organization9 = Organization(name="Organization 9", address="666 Pine St", distance="10 miles", contact_info="org9@example.com", organization_type="For-profit", img_url="org_img9.jpg", location_img_url="location_img9.jpg")
+    # organization10 = Organization(name="Organization 10", address="777 Birch St", distance="15 miles", contact_info="org10@example.com", organization_type="Non-profit", img_url="org_img10.jpg", location_img_url="location_img10.jpg")
+    # # Add more organizations...
+
+    # # Creating instances for the City model
+    # city9 = City(name="City 9", population="200,000", num_schools=20, test_score="A", median_income="$70,000", percent_unemployment=8, percent_free_lunch=15, percent_educated=85, img_src="city_img9.jpg")
+    # city10 = City(name="City 10", population="120,000", num_schools=12, test_score="B", median_income="$50,000", percent_unemployment=5, percent_free_lunch=22, percent_educated=78, img_src="city_img10.jpg")
+    # # Add more cities...
+
+    # # Commit the instances to the database
+    # db.session.add_all([scholarship9, scholarship10, organization9, organization10, city9, city10])
+    # db.session.commit()    
+    
 
 
-    city_instance = City(name='City C', population='100000', num_schools=10, test_score='A', median_income='50000',
-                        percent_unemployment=5, percent_free_lunch=20, percent_educated=90, img_src='city_image.jpg')
 
-    organization_instance = Organization(name='Org C', city='Example City', city_id=1, address='123 Main St',
-                                        distance='5 miles', contact_info='org@example.com', organization_type='Non-profit',
-                                        img_url='org_logo.jpg', location_img_url='org_location.jpg')
 
-    scholarship_instance = Scholarship(name='Scholarship B', city='Example City', donor='Example Donor',
-                                    area='Science', age_group='High School', amount='5000', num_recipients=3,
-                                    description='Description of the scholarship', link='scholarship_link.com',
-                                    img_src='scholarship_image.jpg', city_id=1, org_id=1)
 
-    # Add instances to the database session
-    db.session.add(city_instance)
-    db.session.add(organization_instance)
-    db.session.add(scholarship_instance)
-
-    # Commit the changes to persist the instances in the database
-    db.session.commit()
