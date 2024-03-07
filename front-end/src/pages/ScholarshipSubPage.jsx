@@ -1,16 +1,23 @@
-import { React } from "react";
+import React, { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import { scholarships } from "../data/scholarships";
+// import { scholarships } from "../data/scholarships";
+import { getScholarshipById } from "./Scholarships";
 
 function ScholarshipsSubPage() {
   const [queryParameters] = useSearchParams();
 
-  const getScholarship = (query) => {
-    return scholarships.find((s) => s.id === query); //find in the data
-  };
+  // const getScholarship = (query) => {
+  //   return scholarships.find((s) => s.id === query); //find in the data
+  // };
 
-  const scholarship_id = parseInt(queryParameters.get("id"));
-  const scholarship = getScholarship(scholarship_id);
+  // const scholarship_id = parseInt(queryParameters.get("id"));
+  // const scholarship = getScholarship(scholarship_id);
+
+  const scholarship_id = queryParameters.get("id");
+  const [scholarship, setApiScholarship] = useState({ scholarship: {} });
+  useEffect(() => {
+    getScholarshipById(scholarship_id).then((data) => setApiScholarship(data));
+  }, []);
 
   return (
     <div className="container" style={{ marginTop: "3%" }}>
