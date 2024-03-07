@@ -1,0 +1,151 @@
+,population,state,median income,unemployment rate,adults college educated,poverty rate,image_src
+New York,8335897,New York,"74,694",6.4%,41.4%,18.3%,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg/2000px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg
+Los Angeles,3822238,California,"76,135",6.7%,38.2%,16.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Hollywood_Sign_%28Zuschnitt%29.jpg/2000px-Hollywood_Sign_%28Zuschnitt%29.jpg
+Chicago,2665039,Illinois,"70,386",6.4%,43.7%,17.2%,https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Chicago_River_Morning_%2844455011711%29.jpg/2000px-Chicago_River_Morning_%2844455011711%29.jpg
+Houston,2302878,Texas,"60,426",5.9%,35.6%,20.7%,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Texas_medical_center.jpg/2000px-Texas_medical_center.jpg
+Phoenix,1644409,Arizona,"75,969",4.3%,32.7%,13.9%,https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/2014%2C_Last_Light_on_a_Papago_Park_Pond_-_panoramio.jpg/2000px-2014%2C_Last_Light_on_a_Papago_Park_Pond_-_panoramio.jpg
+Philadelphia,1567258,Pennsylvania,"56,517",7.0%,36.3%,21.7%,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Independence_National_Historical_Park_INDE0004_b.jpg/2000px-Independence_National_Historical_Park_INDE0004_b.jpg
+San Antonio,1472909,Texas,"58,829",5.0%,29.1%,18.7%,https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Alamo_Mission_San_Antonio_at_Night.jpg/2000px-Alamo_Mission_San_Antonio_at_Night.jpg
+San Diego,1381162,California,"100,010",4.8%,51.2%,11.3%,https://upload.wikimedia.org/wikipedia/commons/e/ea/La_Jolla_Shores_view_%28cropped%29.jpg
+Dallas,1299544,Texas,"65,400",4.0%,38.1%,17.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/View_of_Dallas_from_Reunion_Tower_August_2015_13.jpg/2000px-View_of_Dallas_from_Reunion_Tower_August_2015_13.jpg
+Austin,974447,Texas,"89,415",3.0%,59.9%,11.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/View_of_Downtown_Austin_from_Pfluger_Pedestrian_Bridge_October_2022.jpg/2000px-View_of_Downtown_Austin_from_Pfluger_Pedestrian_Bridge_October_2022.jpg
+Jacksonville,971319,Florida,"69,309",4.2%,33.0%,14.1%,https://upload.wikimedia.org/wikipedia/commons/9/90/Eclips_at_Talleyrand_Marine_Terminal.jpg
+San Jose,971233,California,"133,835",3.6%,47.6%,9.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Valencia_Hotel%2C_Santana_Row_%28cropped%29.jpg/2000px-Valencia_Hotel%2C_Santana_Row_%28cropped%29.jpg
+Fort Worth,956709,Texas,"71,527",4.0%,31.8%,12.0%,https://upload.wikimedia.org/wikipedia/commons/b/bb/Downtown_Fort_Worth_Sunset.jpg
+Columbus,202616,Georgia,"53,750",5.8%,31.8%,17.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Downtown_Columbus%2C_Georgia_skyline.jpg/2000px-Downtown_Columbus%2C_Georgia_skyline.jpg
+Charlotte,897720,North Carolina,"74,401",3.3%,48.8%,11.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Uptown_Charlotte_2018_taking_by_DJI_Phantom_4_pro.jpg/2000px-Uptown_Charlotte_2018_taking_by_DJI_Phantom_4_pro.jpg
+Indianapolis,880621,Indiana,"61,501",4.9%,35.9%,15.9%,https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Indianapolis-1872528.jpg/2000px-Indianapolis-1872528.jpg
+San Francisco,808437,California,"136,692",3.7%,61.4%,10.4%,https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/San_Francisco_from_the_Marin_Headlands_in_August_2022.jpg/2000px-San_Francisco_from_the_Marin_Headlands_in_August_2022.jpg
+Seattle,749256,Washington,"115,409",3.3%,67.3%,10.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Seattle_Center_as_night_falls.jpg/2000px-Seattle_Center_as_night_falls.jpg
+Denver,713252,Colorado,"88,213",3.7%,57.1%,11.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Coloradocapitolhill2.JPG/2000px-Coloradocapitolhill2.JPG
+Oklahoma City,694800,Oklahoma,"63,713",4.1%,35.8%,15.5%,https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Downtown_Oklahoma_City_skyline_at_twilight.jpg/2000px-Downtown_Oklahoma_City_skyline_at_twilight.jpg
+Nashville,683622,Tennessee,"71,767",3.4%,48.7%,14.1%,https://upload.wikimedia.org/wikipedia/commons/e/e4/Parthenon_Nashville.png
+El Paso,677456,Texas,"52,645",6.0%,28.1%,21.7%,https://upload.wikimedia.org/wikipedia/commons/6/6d/Downtown_El_Paso_at_sunset.jpeg
+Washington,671803,District of Columbia,"101,027",5.1%,65.4%,13.3%,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/US_Capitol_west_side.JPG/2000px-US_Capitol_west_side.JPG
+Las Vegas,656274,Nevada,"68,905",5.4%,26.7%,14.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/DowntownLasVegas.jpg/2000px-DowntownLasVegas.jpg
+Boston,650706,Massachusetts,"86,331",5.2%,54.2%,17.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/ISH_WC_Boston4.jpg/2000px-ISH_WC_Boston4.jpg
+Portland,635067,Oregon,"81,119",4.5%,52.5%,12.7%,https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Portland_and_Mt._Hood_from_Pittock_Mansion.jpg/2000px-Portland_and_Mt._Hood_from_Pittock_Mansion.jpg
+Louisville,624444,Kentucky,"63,049",5.2%,35.3%,16.3%,https://upload.wikimedia.org/wikipedia/commons/5/55/Louisville_Skyline_2021_%283%29.jpg
+Memphis,621056,Tennessee,"50,622",6.1%,30.5%,21.4%,https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Memphis_from_the_water_2022j_%28cropped%29.jpg/2000px-Memphis_from_the_water_2022j_%28cropped%29.jpg
+Detroit,620376,Michigan,"36,453",12.4%,17.0%,33.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Detroit_Skyline_%28123143197%29.jpeg/2000px-Detroit_Skyline_%28123143197%29.jpeg
+Baltimore,569931,Maryland,"55,198",5.5%,34.8%,18.5%,https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Fell%27s_Point_Aerial_2022.jpg/2000px-Fell%27s_Point_Aerial_2022.jpg
+Milwaukee,563305,Wisconsin,"49,270",5.0%,27.7%,22.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Milwaukee_Skyline_2023.jpg/2000px-Milwaukee_Skyline_2023.jpg
+Albuquerque,561008,New Mexico,"64,757",4.2%,40.1%,14.2%,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Abqdowntown.jpg/2000px-Abqdowntown.jpg
+Tucson,546574,Arizona,"51,281",5.8%,31.7%,19.2%,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/View_of_Tucson_from_Sentinel_Peak_2.jpg/2000px-View_of_Tucson_from_Sentinel_Peak_2.jpg
+Fresno,545567,California,"64,196",7.9%,25.2%,20.6%,https://upload.wikimedia.org/wikipedia/commons/c/c5/Fresno_Bee_Building_Dec_2012_%28cropped%29.jpg
+Sacramento,528001,California,"80,254",5.0%,36.9%,13.7%,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sacramento%2C-California---State-Capitol_%28cropped%29.jpg/2000px-Sacramento%2C-California---State-Capitol_%28cropped%29.jpg
+Mesa,512498,Arizona,"79,496",3.7%,30.1%,9.5%,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Mesa_Arts_Center_-_West_-_2009-09-16.JPG/2000px-Mesa_Arts_Center_-_West_-_2009-09-16.JPG
+Kansas City,509297,Missouri,"62,175",3.5%,38.5%,14.6%,https://upload.wikimedia.org/wikipedia/commons/7/79/Kansas_City_-_Downtown_-_panoramio_%2815%29.jpg
+Atlanta,499127,Georgia,"83,251",4.8%,59.3%,17.3%,https://upload.wikimedia.org/wikipedia/commons/7/70/Atlanta_cityscape.jpg
+Colorado Springs,486248,Colorado,"78,568",4.1%,43.8%,9.5%,https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/CC_COSPRINGS.jpg/2000px-CC_COSPRINGS.jpg
+Omaha,485153,Nebraska,"67,450",3.3%,40.9%,13.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/City_of_Omaha%2C_Nebraska_Skyline_on_the_Missouri_River_%2830899969517%29.jpg/2000px-City_of_Omaha%2C_Nebraska_Skyline_on_the_Missouri_River_%2830899969517%29.jpg
+Raleigh,476587,North Carolina,"75,424",3.2%,53.5%,11.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Raleigh_Skyline.jpg/2000px-Raleigh_Skyline.jpg
+Virginia Beach,455618,Virginia,"83,245",3.4%,40.3%,10.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/VB_Oceanfront.jpg/2000px-VB_Oceanfront.jpg
+Long Beach,451307,California,"80,493",4.9%,36.2%,13.8%,https://upload.wikimedia.org/wikipedia/commons/c/c8/Long_beach3_%28cropped%29.jpg
+Miami,449514,Florida,"60,989",4.0%,38.7%,18.7%,https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Villa_Vizcaya_20110228.jpg/2000px-Villa_Vizcaya_20110228.jpg
+Oakland,430553,California,"93,146",4.2%,50.7%,13.9%,https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/OAKLAND%2C_CA%2C_USA_-_Skyline_and_Bridge_%28cropped%29.JPG/2000px-OAKLAND%2C_CA%2C_USA_-_Skyline_and_Bridge_%28cropped%29.JPG
+Minneapolis,425096,Minnesota,"74,473",4.6%,55.9%,17.2%,https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Minneapolis_Skyline_looking_south.jpg/2000px-Minneapolis_Skyline_looking_south.jpg
+Tulsa,411867,Oklahoma,"54,040",4.8%,34.3%,20.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Skyline_Tulsa.jpg/2000px-Skyline_Tulsa.jpg
+Bakersfield,410647,California,"72,017",7.4%,23.1%,16.3%,https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/2009-0726-CA-Bakersfield-FoxTheater_%28cropped%29.jpg/2000px-2009-0726-CA-Bakersfield-FoxTheater_%28cropped%29.jpg
+Tampa,398173,Florida,"71,089",4.3%,46.2%,16.3%,https://upload.wikimedia.org/wikipedia/commons/c/c4/Downtown_Tampa_Skyline.jpg
+Wichita,396192,Kansas,"59,277",6.0%,33.1%,18.3%,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Wichita_Skyline_2021.jpg/2000px-Wichita_Skyline_2021.jpg
+Arlington,394602,Texas,"70,433",4.2%,31.0%,11.7%,https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Arlington_June_2020_4_%28AT%26T_Stadium%29.jpg/2000px-Arlington_June_2020_4_%28AT%26T_Stadium%29.jpg
+Aurora,177866,Illinois,"84,578",4.5%,36.5%,8.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Aurora%2C_Illinois_skyline.jpg/2000px-Aurora%2C_Illinois_skyline.jpg
+New Orleans,369749,Louisiana,"52,322",6.8%,43.5%,22.2%,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/New_Orleans_skyline-02.jpg/2000px-New_Orleans_skyline-02.jpg
+Cleveland,361607,Ohio,"37,351",8.9%,23.7%,31.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/CLE_skyline.png/2000px-CLE_skyline.png
+Anaheim,344461,California,"85,133",3.8%,28.3%,14.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Sleeping_beauty_castle_dlr_2019.jpg/2000px-Sleeping_beauty_castle_dlr_2019.jpg
+Honolulu,343421,Hawaii,"82,006",3.7%,40.9%,12.4%,https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Downtown_Honolulu_from_P%C5%ABowaina_%28Punchbowl_Crater%29.jpg/2000px-Downtown_Honolulu_from_P%C5%ABowaina_%28Punchbowl_Crater%29.jpg
+Henderson,331415,Nevada,"81,695",4.6%,36.0%,10.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Lake_Las_Vegas_aerial_view.jpg/2000px-Lake_Las_Vegas_aerial_view.jpg
+Stockton,321819,California,"76,231",6.8%,20.5%,14.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Downtown_Stockton_California.jpg/2000px-Downtown_Stockton_California.jpg
+Riverside,320764,California,"81,228",4.9%,26.7%,12.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/MissionInn_SpanishWing.jpg/2000px-MissionInn_SpanishWing.jpg
+Lexington,320347,Kentucky,"62,908",5.4%,48.1%,14.7%,https://upload.wikimedia.org/wikipedia/commons/5/52/Lexington_montage.jpg
+Corpus Christi,316239,Texas,"60,958",4.8%,24.4%,16.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Corpus_Christi_bay.jpg/2000px-Corpus_Christi_bay.jpg
+Orlando,316081,Florida,"65,354",4.1%,45.0%,14.2%,https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Lake_Eola_Park_in_Orlando_02.jpg/2000px-Lake_Eola_Park_in_Orlando_02.jpg
+Irvine,313685,California,"123,003",4.6%,70.4%,11.2%,https://upload.wikimedia.org/wikipedia/commons/9/9f/Irvine_City_Hall.jpg
+Cincinnati,309513,Ohio,"48,130",5.3%,40.8%,26.6%,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Downtown_Cincinnati_viewed_from_Mt._Adams_%28cropped%29.jpg/2000px-Downtown_Cincinnati_viewed_from_Mt._Adams_%28cropped%29.jpg
+Santa Ana,308189,California,"79,351",4.7%,17.8%,11.3%,https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/California_-_Santora_Building_-_20180915152902_%28cropped%29.jpg/2000px-California_-_Santora_Building_-_20180915152902_%28cropped%29.jpg
+Newark,305344,New Jersey,"49,688",9.2%,20.0%,24.0%,https://upload.wikimedia.org/wikipedia/commons/6/64/Newark_Skyline_Northwest_View.jpg
+St. Paul,303176,Minnesota,"67,725",4.1%,45.0%,16.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/James_J._Hill_House_%28cropped%29.jpg/2000px-James_J._Hill_House_%28cropped%29.jpg
+Pittsburgh,302898,Pennsylvania,"63,380",5.3%,50.4%,19.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Phipps_Conservatory_%26_Botanical_Gardens_132.jpg/2000px-Phipps_Conservatory_%26_Botanical_Gardens_132.jpg
+Greensboro,301115,North Carolina,"55,120",3.2%,40.8%,21.9%,https://upload.wikimedia.org/wikipedia/commons/e/e5/Greensboro_Skyline.jpg
+Lincoln,292627,Nebraska,"62,391",2.7%,40.6%,14.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Nebraska_State_Capitol_Building%2C_Lincoln_%2844016962335%29.jpg/2000px-Nebraska_State_Capitol_Building%2C_Lincoln_%2844016962335%29.jpg
+Durham,291928,North Carolina,"78,105",2.9%,56.4%,11.2%,https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Carolina_Theatre_%28Durham_Auditorium_1924%29.jpg/2000px-Carolina_Theatre_%28Durham_Auditorium_1924%29.jpg
+Plano,289547,Texas,"103,916",3.3%,59.1%,4.9%,https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Legacy_town_center_plano.jpg/2000px-Legacy_town_center_plano.jpg
+Anchorage,287145,Alaska,"95,731",4.0%,37.0%,9.6%,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Anchorage_Skyline_in_Winter_-_Hotel_Captain_Cook_-_Anchorage_Alaska.jpg/2000px-Anchorage_Skyline_in_Winter_-_Hotel_Captain_Cook_-_Anchorage_Alaska.jpg
+Jersey City,286670,New Jersey,"94,080",3.7%,53.6%,12.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Jersey_City_Skyline_sunset_%28cropped%29.jpg/2000px-Jersey_City_Skyline_sunset_%28cropped%29.jpg
+St. Louis,286578,Missouri,"52,847",4.4%,41.9%,20.4%,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Runner_Fountain_and_Old_Courthouse_and_Arch_%285618845531%29.jpg/2000px-Runner_Fountain_and_Old_Courthouse_and_Arch_%285618845531%29.jpg
+Chandler,280711,Arizona,"98,664",2.6%,46.5%,7.6%,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Neighborhoods_in_the_City_of_Chandler.jpg/2000px-Neighborhoods_in_the_City_of_Chandler.jpg
+North Las Vegas,280543,Nevada,"75,459",7.6%,19.9%,12.0%,https://upload.wikimedia.org/wikipedia/commons/c/cd/Northlasv.jpg
+Chula Vista,279170,California,"101,190",6.7%,34.2%,10.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Chula_Vista_Skyline.jpg/2000px-Chula_Vista_Skyline.jpg
+Buffalo,276486,New York,"48,904",4.3%,31.9%,23.6%,https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Peace_Bridge.jpg/2000px-Peace_Bridge.jpg
+Gilbert,275346,Arizona,"111,393",3.0%,47.8%,4.8%,https://upload.wikimedia.org/wikipedia/commons/c/cb/Gilbert-Gilbert_Heritage_District_as_viewed_from_Gilbert_Rd..jpg
+Reno,273448,Nevada,"72,103",5.6%,33.9%,12.3%,https://upload.wikimedia.org/wikipedia/commons/e/e1/Reno%2C_Nevada_%2816931715632%29.jpg
+Madison,272903,Wisconsin,"73,647",2.2%,60.1%,17.2%,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Wisconsin_State_Capitol_Aerial.jpg/2000px-Wisconsin_State_Capitol_Aerial.jpg
+Fort Wayne,267927,Indiana,"58,439",4.1%,27.7%,14.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Historic_Fort_Wayne%2C_Fort_Wayne%2C_Indiana%2C_May_2014.jpg/2000px-Historic_Fort_Wayne%2C_Fort_Wayne%2C_Indiana%2C_May_2014.jpg
+Toledo,266301,Ohio,"47,365",5.6%,23.3%,23.3%,https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/University_Hall_UToledo.JPG/2000px-University_Hall_UToledo.JPG
+Lubbock,263930,Texas,"56,910",5.3%,36.0%,19.3%,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/LubbockSkyline2013.jpg/2000px-LubbockSkyline2013.jpg
+St. Petersburg,261256,Florida,"69,941",5.1%,43.9%,13.5%,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/St_Pete_Skyline_from_Pier.jpg/2000px-St_Pete_Skyline_from_Pier.jpg
+Laredo,256187,Texas,"59,751",3.7%,22.6%,20.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Laredo_Downtown.JPG/2000px-Laredo_Downtown.JPG
+Irving,254715,Texas,"78,326",3.5%,42.4%,11.3%,https://upload.wikimedia.org/wikipedia/commons/3/3d/Irving_Montage.jpg
+Chesapeake,252488,Virginia,"87,749",4.3%,35.0%,8.4%,https://upload.wikimedia.org/wikipedia/commons/9/97/Great_Dismal_Swamp_Canal.jpg
+Glendale,189221,California,"77,483",6.5%,43.5%,13.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PacificTheatresGlendale.jpg/2000px-PacificTheatresGlendale.jpg
+Winston-Salem,251350,North Carolina,"54,195",5.8%,39.9%,18.2%,https://upload.wikimedia.org/wikipedia/commons/a/a5/UpperQuad_ACB.jpg
+Scottsdale,243050,Arizona,"100,636",2.6%,63.7%,7.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Scottsdale_waterfront.jpg/2000px-Scottsdale_waterfront.jpg
+Garland,240854,Texas,"71,191",4.3%,26.9%,12.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Downtown_Garland.jpg/2000px-Downtown_Garland.jpg
+Boise City,236634,Idaho,"81,425",1.9%,50.3%,11.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Idaho_Capitol_Building.JPG/2000px-Idaho_Capitol_Building.JPG
+Norfolk,232995,Virginia,"61,090",5.2%,32.1%,17.7%,https://upload.wikimedia.org/wikipedia/commons/2/2e/Chryslermuseum.jpg
+Port St. Lucie,231790,Florida,"70,613",4.7%,26.2%,7.4%,https://upload.wikimedia.org/wikipedia/commons/1/19/Psl_golf_course.jpg
+Spokane,230160,Washington,"62,287",4.2%,35.0%,11.8%,https://upload.wikimedia.org/wikipedia/commons/9/90/Spokane_aerial%2C_May_2023_%28cropped%29.png
+Richmond,229395,Virginia,"58,988",6.6%,45.8%,21.7%,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/A_downtown_view_of_Richmond%2C_VA.jpg/2000px-A_downtown_view_of_Richmond%2C_VA.jpg
+Fremont,223871,California,"162,336",3.5%,64.3%,7.0%,https://upload.wikimedia.org/wikipedia/commons/a/ac/Mission_Peak_over_Lake_Elizabeth%2C_in_Fremont%2C_California_%28cropped%29.JPG
+Huntsville,221933,Alabama,"68,930",4.3%,48.2%,13.9%,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Art_Museam.jpg/2000px-Art_Museam.jpg
+Tacoma,221776,Washington,"80,784",6.5%,34.9%,14.2%,https://upload.wikimedia.org/wikipedia/commons/6/60/Tacoma_aerial%2C_May_2023.png
+Baton Rouge,221453,Louisiana,"50,304",5.5%,36.6%,22.4%,https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Louisiana_Old_State_Capitol_recolorized.jpg/2000px-Louisiana_Old_State_Capitol_recolorized.jpg
+Santa Clarita,221345,California,"111,236",4.6%,39.4%,7.5%,https://upload.wikimedia.org/wikipedia/commons/a/a0/2000_0820_TowncenterFountain.jpg
+San Bernardino,220328,California,"62,801",5.3%,12.8%,17.5%,https://upload.wikimedia.org/wikipedia/commons/9/98/SanBernardinoStationStreetside_%28cropped%29.jpg
+Hialeah,220292,Florida,"52,674",3.1%,21.4%,17.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Hialeah_-_Flickr_-_Phillip_Pessar.jpg/2000px-Hialeah_-_Flickr_-_Phillip_Pessar.jpg
+Frisco,219587,Texas,"145,914",2.4%,66.7%,2.9%,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Frisco_June_2019_05_%28George_A._Purefoy_Municipal_Center_and_Frisco_Square%29.jpg/2000px-Frisco_June_2019_05_%28George_A._Purefoy_Municipal_Center_and_Frisco_Square%29.jpg
+Modesto,218069,California,"73,275",6.8%,20.5%,16.2%,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Gallo_Center_for_the_Arts_Modesto_%28cropped%29.JPG/2000px-Gallo_Center_for_the_Arts_Modesto_%28cropped%29.JPG
+Cape Coral,216992,Florida,"76,991",3.4%,26.7%,8.4%,https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Cape_Coral%2C_Florida.jpg/2000px-Cape_Coral%2C_Florida.jpg
+Fontana,212475,California,"93,581",6.3%,22.9%,8.5%,https://upload.wikimedia.org/wikipedia/commons/7/77/Fontana_Center_Stage_Theater_-_panoramio_%28cropped2%29.jpg
+Moreno Valley,211924,California,"86,909",5.6%,17.3%,12.1%,https://upload.wikimedia.org/wikipedia/commons/a/ad/Sunnymead_Ranch_Lake.jpg
+Des Moines,211034,Iowa,"58,018",4.8%,29.0%,14.7%,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Morning_Skyline_-_Des_Moines%2C_Iowa_-_Winter_on_the_Des_Moines_River_%2824805016620%29.jpg/2000px-Morning_Skyline_-_Des_Moines%2C_Iowa_-_Winter_on_the_Des_Moines_River_%2824805016620%29.jpg
+Rochester,209352,New York,"43,631",7.2%,29.3%,26.3%,https://upload.wikimedia.org/wikipedia/commons/e/e9/Downtown_Rochester%2C_NY_HDR_by_patrickashley.jpg
+Fayetteville,208873,North Carolina,"56,685",8.4%,29.4%,16.6%,https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Fayetteville%2C_NC_Downtown_Skyline.jpg/2000px-Fayetteville%2C_NC_Downtown_Skyline.jpg
+Yonkers,208121,New York,"67,456",5.2%,34.1%,15.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Yonkers%2C_NY_%2853566551424%29.jpg/2000px-Yonkers%2C_NY_%2853566551424%29.jpg
+McKinney,207507,Texas,"104,619",2.6%,56.1%,4.6%,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/McKinney%2C_Texas.jpg/2000px-McKinney%2C_Texas.jpg
+Worcester,205319,Massachusetts,"61,935",6.8%,34.8%,19.9%,https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Downtown_Worcester%2C_Massachusetts.jpg/2000px-Downtown_Worcester%2C_Massachusetts.jpg
+Salt Lake City,204657,Utah,"75,529",3.0%,50.3%,13.7%,https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Salt_Lake_City%2C_August_2012_%287707261420%29_%28cropped%29.jpg/2000px-Salt_Lake_City%2C_August_2012_%287707261420%29_%28cropped%29.jpg
+Little Rock,202864,Arkansas,"55,065",2.3%,41.0%,18.5%,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/William_J._Clinton_Presidential_Library%2C_Little_Rock%2C_Arkansas_LCCN2011633870.tif/lossy-page1-2000px-William_J._Clinton_Presidential_Library%2C_Little_Rock%2C_Arkansas_LCCN2011633870.tif.jpg
+Augusta,202096,Georgia,"49,838",7.3%,25.5%,16.7%,https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Augusta%2C_GA_Downtown_Skyline_2017.jpg/2000px-Augusta%2C_GA_Downtown_Skyline_2017.jpg
+Sioux Falls,202078,South Dakota,"71,246",2.4%,39.4%,10.1%,https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Falls_Park_and_Downtown_09-17-23.jpg/2000px-Falls_Park_and_Downtown_09-17-23.jpg
+Grand Prairie,201843,Texas,"72,271",3.3%,28.7%,9.9%,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Grand_Prairie_May_2019_27_%28Market_Square_water_tower%29.jpg/2000px-Grand_Prairie_May_2019_27_%28Market_Square_water_tower%29.jpg
+Tallahassee,201731,Florida,"53,867",4.8%,51.9%,23.2%,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Florida_Supreme_Court_2022.jpg/2000px-Florida_Supreme_Court_2022.jpg
+Amarillo,201291,Texas,"62,260",3.3%,25.8%,13.2%,https://upload.wikimedia.org/wikipedia/commons/f/f3/Amarillo_Skyline.jpg
+Oxnard,200415,California,"84,941",3.7%,20.4%,12.8%,https://upload.wikimedia.org/wikipedia/commons/e/ea/Embassy_Suites_Lobby_Front%2C_Oxnard%2C_CA%2CUSA_May_2009_-_panoramio_%28cropped%29.jpg
+Peoria,197866,Arizona,"86,948",2.8%,35.2%,7.2%,https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Peoria_High_School%2C_Old_Main_Building.jpg/2000px-Peoria_High_School%2C_Old_Main_Building.jpg
+Overland Park,197726,Kansas,"96,694",3.1%,66.0%,5.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/OP_Skyline.jpg/2000px-OP_Skyline.jpg
+Montgomery,196986,Alabama,"55,108",6.3%,35.4%,18.5%,https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Aerial_view_of_Montgomery%2C_Alabama_LCCN2011646683.tif/lossy-page1-2000px-Aerial_view_of_Montgomery%2C_Alabama_LCCN2011646683.tif.jpg
+Birmingham,196910,Alabama,"39,326",6.3%,30.5%,26.6%,https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Birmingham_cityscape_view_2010.jpg/2000px-Birmingham_cityscape_view_2010.jpg
+Grand Rapids,196908,Michigan,"65,660",3.6%,41.4%,15.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Meyer_May_House.jpg/2000px-Meyer_May_House.jpg
+Knoxville,195889,Tennessee,"52,826",2.3%,32.7%,17.5%,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Tennessee_Amphitheater%2C_World%E2%80%99s_Fair_Park%2C_Knoxville%2C_TN_-_52473476511.jpg/2000px-Tennessee_Amphitheater%2C_World%E2%80%99s_Fair_Park%2C_Knoxville%2C_TN_-_52473476511.jpg
+Vancouver,194512,Washington,"76,799",6.9%,31.2%,10.0%,https://upload.wikimedia.org/wikipedia/commons/a/ad/Vancouver_WA_Collage.jpg
+Huntington Beach,194310,California,"111,122",4.2%,50.4%,7.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Huntington_Beach_CA_USA_%28cropped%29.jpg/2000px-Huntington_Beach_CA_USA_%28cropped%29.jpg
+Providence,189563,Rhode Island,"64,184",4.5%,36.9%,21.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Weybosset_Street_view%2C_Providence%2C_Rhode_Island.jpg/2000px-Weybosset_Street_view%2C_Providence%2C_Rhode_Island.jpg
+Brownsville,189382,Texas,"46,912",5.8%,22.5%,24.2%,https://upload.wikimedia.org/wikipedia/commons/5/5a/Brownsville_Skyline.jpg
+Akron,188509,Ohio,"45,534",5.1%,24.8%,24.4%,https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/AkronArtmues.jpg/2000px-AkronArtmues.jpg
+Tempe,185950,Arizona,"76,007",3.3%,50.3%,15.0%,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Tempe_AZ_Skyline_August_2023.jpg/2000px-Tempe_AZ_Skyline_August_2023.jpg
+Newport News,184306,Virginia,"64,102",6.1%,28.4%,16.9%,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Victory_Arch%2C_Newport_News-2.jpg/2000px-Victory_Arch%2C_Newport_News-2.jpg
+Chattanooga,184086,Tennessee,"64,340",2.7%,39.8%,15.3%,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Chattanooga%2C_Tennessee_%282023%29.jpg/2000px-Chattanooga%2C_Tennessee_%282023%29.jpg
+Mobile,183289,Alabama,"50,051",5.6%,31.0%,22.9%,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Mobile%2C_Alabama_Skyline_%282022%29.jpg/2000px-Mobile%2C_Alabama_Skyline_%282022%29.jpg
+Fort Lauderdale,183146,Florida,"81,544",2.7%,43.0%,18.5%,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Skyline_of_Fort_Lauderdale%2C_Nov-15.jpg/2000px-Skyline_of_Fort_Lauderdale%2C_Nov-15.jpg
+Cary,180388,North Carolina,"125,414",1.6%,71.9%,3.8%,https://upload.wikimedia.org/wikipedia/commons/7/78/Cary%2C_North_Carolina._Cary%2C_NC.jpg
+Shreveport,180153,Louisiana,"43,643",8.3%,27.3%,24.3%,https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Shreveport_LA%2C_USA_-_panoramio_%286%29.jpg/2000px-Shreveport_LA%2C_USA_-_panoramio_%286%29.jpg
+Ontario,179061,California,"79,129",4.9%,18.5%,12.6%,https://upload.wikimedia.org/wikipedia/commons/0/0f/Ontario_City_Library05apr2006_%28cropped%29.jpg
+Eugene,177923,Oregon,"61,288",5.5%,46.5%,17.0%,https://upload.wikimedia.org/wikipedia/commons/2/29/Photocollageofeugene.png
+Elk Grove,177558,California,"106,572",4.9%,37.8%,8.4%,https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Sunset_Laguna_Blvd_%28cropped%29.jpg/2000px-Sunset_Laguna_Blvd_%28cropped%29.jpg
+Salem,177487,Oregon,"70,220",5.4%,33.4%,16.9%,https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Salem_Oregon_downtown.JPG/2000px-Salem_Oregon_downtown.JPG
+Santa Rosa,177181,California,"95,403",3.6%,35.6%,9.5%,https://upload.wikimedia.org/wikipedia/commons/a/a6/Old_Santa_Rosa_Post_Office%2C_Downtown_Santa_Rosa%2C2.jpg
+Clarksville,176974,Tennessee,"63,723",6.0%,28.3%,12.8%,https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Downtown_Clarksville_TN.jpg/2000px-Downtown_Clarksville_TN.jpg
+Rancho Cucamonga,176336,California,"108,345",6.4%,39.9%,7.3%,https://upload.wikimedia.org/wikipedia/commons/3/37/Virginia_Dare_Winery_Office_Park_-_panoramio.jpg
+Oceanside,172199,California,"83,271",3.6%,37.5%,9.7%,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Oceanside_SW01_%28cropped%29.jpg/2000px-Oceanside_SW01_%28cropped%29.jpg
