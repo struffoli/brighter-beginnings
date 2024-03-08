@@ -43,4 +43,5 @@ selenium:
     - cd front-end
     - cd selenium-tests
     - pip3 install selenium
+    - pip3 install selenium-firefox
     - python3 -m navbarTests
