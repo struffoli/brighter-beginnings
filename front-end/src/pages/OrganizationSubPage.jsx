@@ -19,7 +19,6 @@ function OrganizationSubPage() {
   useEffect(() => {
     getOrganizationById(org_id).then((data) => setApiOrg(data));
   }, [org_id]);
-  }, [org_id]);
 
   return (
     <div className="container" style={{ marginTop: "3%" }}>
