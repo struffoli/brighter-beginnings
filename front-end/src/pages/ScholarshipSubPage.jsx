@@ -17,7 +17,7 @@ function ScholarshipsSubPage() {
   const [scholarship, setApiScholarship] = useState({ scholarship: {} });
   useEffect(() => {
     getScholarshipById(scholarship_id).then((data) => setApiScholarship(data));
-  }, []);
+  }, [scholarship_id]);
 
   return (
     <div className="container" style={{ marginTop: "3%" }}>
@@ -72,22 +72,22 @@ function ScholarshipsSubPage() {
           <b>Description:</b> {scholarship.description}
         </p>
         <p className="">
-            <Link to={scholarship.link}><b>Link to Apply</b></Link>
+          <Link to={scholarship.link}>
+            <b>Link to Apply</b>
+          </Link>
         </p>
         <ul className="list-group list-group-flush"></ul>
       </div>
       <div>
-      <div className="row justify-content-left">
-        <h5> Past Winners </h5>
-        <img
+        <div className="row justify-content-left">
+          <h5> Past Winners </h5>
+          <img
             className=""
             src={scholarship.winnerpic}
-            style={{height: "30%", width: "30%"}}
+            style={{ height: "30%", width: "30%" }}
             alt="Scholarship"
-        >
-
-        </img>
-      </div>
+          ></img>
+        </div>
       </div>
     </div>
   );
