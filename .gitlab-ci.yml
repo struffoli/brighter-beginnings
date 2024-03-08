@@ -29,3 +29,20 @@ postman_tests:
     - newman --version
     - newman run postman_tests.json
 
+frontend_tests:
+  stage: test
+  script:
+    - cd front-end
+    - npm test
+  
+selenium:
+  stage: test
+  image: python:latest
+  script:
+    - cd front-end
+    - cd selenium
+    - pip3 install selenium
+    - pip3 install webdriver
+    - wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
+    - apt-get update && sudo apt-get install firefox
+    - python3 -m navbarTests.py
