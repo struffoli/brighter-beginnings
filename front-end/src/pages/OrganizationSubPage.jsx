@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams} from "react-router-dom";
 // import { organizations } from "../data/organizations";
 // import { scholarships } from "../data/scholarships";
 import { getOrganizationById } from "./Organizations";

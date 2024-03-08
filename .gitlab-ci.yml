@@ -29,3 +29,19 @@ postman_tests:
     - newman --version
     - newman run postman_tests.json
 
+frontend_tests:
+  stage: test
+  script:
+    - cd front-end
+    - npm install react-scripts
+    - npm test
+  
+selenium:
+  stage: test
+  image: python:latest
+  script:
+    - cd front-end
+    - cd selenium-tests
+    - pip3 install selenium
+    - pip3 install selenium-firefox
+    - python3 -m navbarTests
