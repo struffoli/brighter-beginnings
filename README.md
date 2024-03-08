@@ -8,9 +8,9 @@ Kevin Xu, Joshua Yu, Tyler Kubecka, Ben Yu, Bryan Lee
 BrighterBeginnings
 
 ## Links
-Website: https://brighterbeginnings.me
-API: https://api.brighterbeginnings.me/
-API Documentation: https://documenter.getpostman.com/view/32954458/2sA2r6WPJG
+- Website: https://brighterbeginnings.me
+- API: https://api.brighterbeginnings.me/
+- API Documentation: https://documenter.getpostman.com/view/32954458/2sA2r6WPJG
 
 ## Project Description
 For K-12 students in low income areas around Texas, we hope to provide easy access to information about resources in particular areas dedicated to helping them, such as free tutoring programs, counseling services, etc. as well as spreading awareness for scholarship programs that can be applied for, centralized in one place.
