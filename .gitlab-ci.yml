@@ -27,7 +27,7 @@ postman_tests:
   script:
     - cd back-end
     - newman --version
-    - newman run postman_tests.json
+    - newman run postman_collection.json
 
 frontend_tests:
   stage: test
