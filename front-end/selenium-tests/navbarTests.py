@@ -40,11 +40,37 @@ class SeleniumTests(unittest.TestCase):
 
     def test_5(self) -> None:
         self.driver.get(url + "/cities")
-        self.driver.implicitly_wait(20)
-        self.driver.find_element(By.LINK_TEXT, "New York").click()
-        self.assertEqual(self.driver_current_url, url + "/cities/city?id=1")
+        self.driver.implicitly_wait(5)
+        self.driver.find_element(By.LINK_TEXT, "Organizations").click()
+        self.assertEqual(self.driver.current_url, url + "/organizations")
     
+    def test_6(self) -> None:
+        self.driver.get(url + "/about")
+        self.driver.implicitly_wait(5)
+        self.assertIn("VS Code", self.driver.page_source)
+        
+    def test_7(self) -> None:
+        self.driver.get(url + "/about")
+        self.driver.implicitly_wait(5)
+        self.assertIn("Josh Yu", self.driver.page_source)
+        self.assertIn("Bryan Lee", self.driver.page_source)
     
-    
+    def test_8(self) -> None:
+        self.driver.get(url)
+        self.driver.implicitly_wait(5)
+        self.assertIn("Financial constraints should never hinder the pursuit of knowledge. BrighterBeginnings aims to empower low-income K-12 students to reach for the stars by connecting them with knowledge about scholarship opportunities and organizations providing aid, whether financial or otherwise.", self.driver.page_source)
+        
+    def test_9(self) -> None:
+        self.driver.get(url + "/cities")
+        self.assertIn("New York", self.driver.page_source)
+        
+    def test_10(self) -> None:
+        self.driver.get(url + "/organizations")
+        self.assertIn("Texas Ace", self.driver.page_source)
+        
+    def test_11(self) -> None:
+        self.driver.get(url + "/scholarships")
+        self.assertIn("Women in STEM")
+        
 if __name__ == "__main__":
     unittest.main()
