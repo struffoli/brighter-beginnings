@@ -27,5 +27,30 @@ postman_tests:
   script:
     - cd back-end
     - newman --version
-    - newman run postman_tests.json
+    - newman run postman_collection.json
 
+frontend_tests:
+  stage: test
+  script:
+    - cd front-end
+    - npm install react-scripts
+    - npm test
+  
+selenium:
+  stage: test
+  image: python:3
+  variables:
+    FF_NETWORK_PER_BUILD: 1
+  services:
+    - name: vulnerables/web-dvwa:latest
+      alias: dvwa
+    - name: selenium/standalone-firefox:latest
+      alias: selenium
+  before_script:
+    - cd front-end/selenium-tests
+    - apt-get install -y firefox-esr
+    - apt install chromium-chromedriver pip
+    - install selenium
+    
+  script:
+    - python navbarTests.py
