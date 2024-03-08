@@ -3,7 +3,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
-import time
+
 url = 'https://www.brighterbeginnings.me'
 class SeleniumTests(unittest.TestCase):
     def setUp(self) -> None:
