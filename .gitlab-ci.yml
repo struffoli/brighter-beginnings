@@ -48,6 +48,7 @@ selenium:
       alias: selenium
   before_script:
     - pip install selenium
+    - apt install libgtk-3-dev
   script:
     - cd front-end
     - cd selenium-tests
