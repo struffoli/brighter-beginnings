@@ -25,6 +25,15 @@ const CitiesCard = (props) => {
           <p className="card-text">
             <b>Population:</b> {props.population}
           </p>
+          <p className="card-text">
+            <b>Median Income:</b> {props.median_income}
+          </p>
+          <p className="card-text">
+            <b>Unemployment Rate:</b> {props.unemployment_rate}%
+          </p>
+          <p className="card-text">
+            <b>Poverty Rate:</b> {props.poverty_rate}%
+          </p>
           <p>
             <Link to={`/cities/city?id=${props.id}`} className="link">
               Click here to see organizations/scholarships!

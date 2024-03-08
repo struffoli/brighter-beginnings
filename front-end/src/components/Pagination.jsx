@@ -9,8 +9,10 @@ const Pagination = ({itemsPerPage, totalItems, paginate, currentPage}) => {
     }
 
     return (
-        <div className = "pagination-container">
-            <nav>
+
+        <div>
+            <p className="text-center">Showing {itemsPerPage} of {totalItems} items</p>
+            <nav className="pagination-container">
                 <ul className='pagination'>
                     <li>
                         <button onClick={() => paginate(1)} disabled = {currentPage === 1}>

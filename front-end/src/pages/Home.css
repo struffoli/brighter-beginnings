@@ -1,8 +1,15 @@
 .video {
     z-index: -1;
     width: 100%;
-    margin-bottom: -52.5%;
-    height: auto;
+    margin-bottom: -50%;
+    /* margin-top: -3%; */
+    object-fit: cover;
+    /* height: auto; */
+    height: 100vh;
+}
+
+.down-arrow {
+  margin-top: 2%;
 }
 
 .explore {
@@ -26,7 +33,7 @@
   }
 
   .explore-info {
-    margin-top: 15%;
+    margin-top: 7.5%;
   }
 
 .fade-first {

@@ -19,19 +19,21 @@ const OrganizationsCard = (props) => {
               <b>{props.name}</b>
             </Link>
           </h5>
-          {/* <p className="card-text">
-            <b>Description: </b> {props.description}
+          <p className="card-text">
+            <b>Email:</b> {props.email}
           </p>
           <p className="card-text">
-            <b>Location: </b>
-            {props.location}
-          </p> */}
+            <b>Phone:</b> {props.phone}
+          </p>
           <p className="card-text">
+            <b>Organization Type:</b> {props.organization_type}
+          </p>
+          {/* <p className="card-text">
             <b>City: </b>
-            <Link to={`/cities/city?id=${props.city_id}`} className="link">
+            <Link to={`/cities/city?id=${props.city}`} className="link">
               {props.city}
             </Link>
-          </p>
+          </p> */}
           {/* <p className="card-text">
             <b>Contact: </b>
             {props.contactInfo}
