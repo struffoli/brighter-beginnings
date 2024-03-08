@@ -130,7 +130,7 @@ function About() {
       <h1 className="text-center my-3 mb-4">
         <b>Tools Used</b>
       </h1>
-      <div className="row justify-content-center mb-5 mx-5 mt-4">
+      <div className="row justify-content-center mb-5 mx-5 mt-4 align-items-center">
         {tools.map((tool, index) => {
           return <ToolsCard {...{ ...tool, index }} />;
         })}

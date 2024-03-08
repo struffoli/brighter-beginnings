@@ -15,13 +15,9 @@ function CitySubPage() {
   const city_id = queryParameters.get("id");
   // const city = getCity(city_id);
   const [city, setApiCity] = useState();
-  const [isBusy, setBusy] = useState(true);
   useEffect(() => {
-    setBusy(true);
     getCityById(city_id).then((data) => setApiCity(data));
-    setBusy(false);
   }, []);
-  console.log(city);
 
   if (city) {
     return (
@@ -29,26 +25,26 @@ function CitySubPage() {
         <div className="row justify-content-center">
           <img
             className=""
-            src={city.img_src}
-            style={{ height: "30%", width: "30%" }}
+            src={city.City.img_src}
+            style={{ height: "50%", width: "50%" }}
             alt="City"
           />
         </div>
         <div className="">
           <h5 className="" style={{ paddingBottom: "4px" }}>
-            {city.name}
+            {city.City.name}
           </h5>
           <p className="">
-            <b>Population:</b> {city.population}
+            <b>Population:</b> {city.City.population}
           </p>
           <p className="card-text">
-            <b>Median Income:</b> {city.median_income}
+            <b>Median Income:</b> {city.City.median_income}
           </p>
           <p className="card-text">
-            <b>Unemployment Rate:</b> {city.unemployment_rate}%
+            <b>Unemployment Rate:</b> {city.City.unemployment_rate}%
           </p>
           <p className="card-text">
-            <b>Poverty Rate:</b> {city.poverty_rate}%
+            <b>Poverty Rate:</b> {city.City.poverty_rate}%
           </p>
           {/* only display if this city has organizations */}
           {/* {city.organizations.length > 0 ? (

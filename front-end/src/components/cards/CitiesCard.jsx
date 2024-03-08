@@ -16,7 +16,7 @@ const CitiesCard = (props) => {
         <div className="card-body">
           <h5 className="card-title" style={{ paddingBottom: "4px" }}>
             <Link to={`/cities/city?id=${props.id}`} className="link">
-              <b>{props.id}</b>
+              <b>{props.name}</b>
             </Link>
           </h5>
           <p className="card-text">
