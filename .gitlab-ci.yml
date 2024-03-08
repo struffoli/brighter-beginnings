@@ -49,7 +49,6 @@ selenium:
   before_script:
     - cd front-end/selenium-tests
     - apt-get update && apt-cache search firefox && apt-get install -y firefox-esr
-    - apt install chromium-chromedriver pip
     - pip install selenium
     
   script:
