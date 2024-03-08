@@ -40,7 +40,7 @@ const Home = () => {
           </h3>
         </div>
         <div className="explore">
-          <div class="col-sm-12 text-center fade-third down-arrow">
+          <div className="col-sm-12 text-center fade-third down-arrow">
             <img
               className="text-center bounce mb-5"
               src={downarrow}

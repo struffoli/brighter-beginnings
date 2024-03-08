@@ -20,6 +20,9 @@ const OrganizationsCard = (props) => {
             </Link>
           </h5>
           <p className="card-text">
+            <b>Org Number:</b> {props.id}
+          </p>
+          <p className="card-text">
             <b>Email:</b> {props.email}
           </p>
           <p className="card-text">
