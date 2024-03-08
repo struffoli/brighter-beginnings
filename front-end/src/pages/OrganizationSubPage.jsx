@@ -18,7 +18,7 @@ function OrganizationSubPage() {
   const [org, setApiOrg] = useState({ organization: {} });
   useEffect(() => {
     getOrganizationById(org_id).then((data) => setApiOrg(data));
-  }, []);
+  }, [org_id]);
 
   return (
     <div className="container" style={{ marginTop: "3%" }}>
@@ -74,16 +74,14 @@ function OrganizationSubPage() {
         )}
         <ul className="list-group list-group-flush"></ul>
         <div className="row justify-content-left">
-        <h5> Location Map </h5>
-        <img
+          <h5> Location Map </h5>
+          <img
             className=""
             src={org.locationPic}
-            style={{height: "30%", width: "30%"}}
+            style={{ height: "30%", width: "30%" }}
             alt="Organization Location"
-        >
-
-        </img>
-      </div>
+          ></img>
+        </div>
       </div>
     </div>
   );
