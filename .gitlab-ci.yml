@@ -47,9 +47,10 @@ selenium:
     - name: selenium/standalone-firefox:latest
       alias: selenium
   before_script:
-    - pip install selenium
-    - apt install libgtk-3-dev
+    - cd front-end/selenium-tests
+    - apt-get install -y firefox-esr
+    - apt install chromium-chromedriver pip
+    - install selenium
+    
   script:
-    - cd front-end
-    - cd selenium-tests
     - python navbarTests.py
