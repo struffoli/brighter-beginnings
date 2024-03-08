@@ -59,11 +59,10 @@ const Organizations = () => {
             img_src={org.img_src}
             name={org.name}
             id={org.id}
-            location={org.location}
+            email={org.email}
+            phone={org.phone}
+            organization_type={org.organization_type}
             city={org.city}
-            description={org.description}
-            contactInfo={org.contactInfo}
-            organizationType={org.organizationType}
             scholarship={org.scholarship}
           />
         ))}
