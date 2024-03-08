@@ -62,7 +62,3 @@ class City(db.Model):
     img_src = db.Column(db.String(255))
     scholarships = db.relationship('Scholarship', secondary=scholarship_city_association, back_populates='cities')
 
-
-
-
-
