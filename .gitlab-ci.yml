@@ -49,4 +49,6 @@ selenium:
   before_script:
     - pip install selenium
   script:
-    - python tests.py
+    - cd front-end
+    - cd selenium-tests
+    - python navbarTests.py
