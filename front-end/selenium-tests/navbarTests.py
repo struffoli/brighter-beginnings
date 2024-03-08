@@ -62,15 +62,17 @@ class SeleniumTests(unittest.TestCase):
         
     def test_9(self) -> None:
         self.driver.get(url + "/cities")
-        self.assertIn("New York", self.driver.page_source)
+        self.assertIn("Showing 15", self.driver.page_source)
         
     def test_10(self) -> None:
-        self.driver.get(url + "/organizations")
-        self.assertIn("Texas Ace", self.driver.page_source)
+        self.driver.get(url + "/scholarships")
+        self.driver.find_element(By.LINK_TEXT, "Cities").click()
+        self.assertEqual(self.driver.current_url, url + "/cities")
         
     def test_11(self) -> None:
         self.driver.get(url + "/scholarships")
-        self.assertIn("Women in STEM")
+        self.driver.find_element(By.LINK_TEXT, "Organizations").click()
+        self.assertEqual(self.driver.current_url, url + "/organizations")
         
 if __name__ == "__main__":
     unittest.main()
