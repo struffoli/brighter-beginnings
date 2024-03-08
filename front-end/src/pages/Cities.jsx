@@ -21,7 +21,7 @@ async function getCities() {
 }
 
 export async function getCityById(id) {
-  let city = {};
+  let city = null;
   try {
     const response = await fetch(`https://api.brighterbeginnings.me/cities/${id}`);
     city = await response.json();
@@ -64,19 +64,16 @@ const Cities = () => {
       </div>
       <div className="row justify-content-center mb-5 mx-4">
         {currentItems.map((city, index) => (
-          // THESE PARAMS NEED TO BE CHANGED TO WHAT FIELDS ARE IN THE DATABASE
           <CitiesCard
             key={index}
             id={city.id}
             img_src={city.img_src}
             name={city.name}
             population={city.population}
-            numSchools={city.numSchools}
-            testScore={city.testScore}
-            medianIncome={city.medianIncome}
-            percentUnemployment={city.percentUnemployment}
-            freeLunch={city.freeLunch}
-            educated={city.educated}
+            median_income={city.median_income}
+            poverty_rate={city.poverty_rate}
+            state={city.state}
+            unemployment_rate={city.unemployment_rate}
             organization={city.organization}
             scholarship={city.scholarship}
           />
