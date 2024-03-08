@@ -19,6 +19,7 @@ function OrganizationSubPage() {
   useEffect(() => {
     getOrganizationById(org_id).then((data) => setApiOrg(data));
   }, [org_id]);
+  }, [org_id]);
 
   return (
     <div className="container" style={{ marginTop: "3%" }}>
@@ -81,7 +82,7 @@ function OrganizationSubPage() {
         <img
             className=""
             src={org.locationPic}
-            style={{height: "30%", width: "30%"}}
+            style={{ height: "30%", width: "30%" }}
             alt="Organization Location"
         >
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 // import { cities } from "../data/cities.js";
 // import { organizations } from "../data/organizations.js";
 // import { scholarships } from "../data/scholarships.js";
@@ -17,7 +17,7 @@ function CitySubPage() {
   const [city, setApiCity] = useState();
   useEffect(() => {
     getCityById(city_id).then((data) => setApiCity(data));
-  }, []);
+  }, [city_id]);
 
   if (city) {
     return (
@@ -26,7 +26,7 @@ function CitySubPage() {
           <img
             className=""
             src={city.City.img_src}
-            style={{ height: "50%", width: "50%" }}
+            style={{ height: "29.5rem", width: "50%", objectFit: "cover" }}
             alt="City"
           />
           <div className="px-5 w-100">
@@ -46,6 +46,7 @@ function CitySubPage() {
               <b>Poverty Rate:</b> {city.City.poverty_rate}%
             </p>
             <iframe
+              title="google map of this page's city"
               className="my-3"
               width="100%"
               height="53%"

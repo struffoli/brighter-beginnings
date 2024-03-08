@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import CitiesCard from "../components/cards/CitiesCard";
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvv this should no longer be needed !!!!!!!!
 // import { cities } from "../data/cities.js"; // Importing cities data
-import mapPage from "../assets/maptemp.png";
+// import mapPage from "../assets/maptemp.png";
 import Pagination from "../components/Pagination.jsx";
 import "./Cities.css";
 
