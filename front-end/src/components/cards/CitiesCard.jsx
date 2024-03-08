@@ -16,7 +16,7 @@ const CitiesCard = (props) => {
         <div className="card-body">
           <h5 className="card-title" style={{ paddingBottom: "4px" }}>
             <Link to={`/cities/city?id=${props.id}`} className="link">
-              <b>{props.id}</b>
+              <b>{props.name}</b>
             </Link>
           </h5>
           <p className="card-text">
@@ -24,6 +24,15 @@ const CitiesCard = (props) => {
           </p>
           <p className="card-text">
             <b>Population:</b> {props.population}
+          </p>
+          <p className="card-text">
+            <b>Median Income:</b> {props.median_income}
+          </p>
+          <p className="card-text">
+            <b>Unemployment Rate:</b> {props.unemployment_rate}%
+          </p>
+          <p className="card-text">
+            <b>Poverty Rate:</b> {props.poverty_rate}%
           </p>
           <p>
             <Link to={`/cities/city?id=${props.id}`} className="link">

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import CitiesCard from "../components/cards/CitiesCard";
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvv this should no longer be needed !!!!!!!!
 // import { cities } from "../data/cities.js"; // Importing cities data
-import mapPage from "../assets/maptemp.png";
+// import mapPage from "../assets/maptemp.png";
 import Pagination from "../components/Pagination.jsx";
-import "./Cities.css"
+import "./Cities.css";
 
 async function getCities() {
   let cities = [];
@@ -17,13 +17,15 @@ async function getCities() {
   } catch (error) {
     console.log(error);
   }
-  return { cities, total_cities }
+  return { cities, total_cities };
 }
 
 export async function getCityById(id) {
   let city = null;
   try {
-    const response = await fetch(`https://api.brighterbeginnings.me/cities/${id}`);
+    const response = await fetch(
+      `https://api.brighterbeginnings.me/cities/${id}`
+    );
     city = await response.json();
   } catch (error) {
     console.log(error);
@@ -45,23 +47,18 @@ const Cities = () => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   // const currentItems = cities.slice(indexOfFirstItem, indexOfLastItem);
-  const currentItems = apiCities.cities.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = apiCities.cities.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
 
   // Change page
-  const paginate = pageNumber => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
     <div>
       <h2 className="title">
         <b>Cities</b>
       </h2>
-      <div className="row justify-content-center pb-4">
-        <img
-          className=""
-          src={mapPage}
-          style={{ height: "50%", width: "50%" }}
-          alt="Scholarship"
-        />
-      </div>
       <div className="row justify-content-center mb-5 mx-4">
         {currentItems.map((city, index) => (
           <CitiesCard

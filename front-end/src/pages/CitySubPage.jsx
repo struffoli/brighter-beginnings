@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 // import { cities } from "../data/cities.js";
 // import { organizations } from "../data/organizations.js";
 // import { scholarships } from "../data/scholarships.js";
@@ -10,48 +10,60 @@ function CitySubPage() {
 
   // const getCity = (query) => {
   // return cities.find((c) => c.id === query); //find in the data
-  // }; 
+  // };
 
   const city_id = queryParameters.get("id");
   // const city = getCity(city_id);
   const [city, setApiCity] = useState();
-  const [isBusy, setBusy] = useState(true);
   useEffect(() => {
-    setBusy(true);
     getCityById(city_id).then((data) => setApiCity(data));
-    setBusy(false);
-  }, []);
-  console.log(city);
+  }, [city_id]);
 
   if (city) {
     return (
       <div className="container" style={{ marginTop: "3%" }}>
-        <div className="row justify-content-center">
+        <div className="d-flex justify-content-around">
           <img
             className=""
-            src={city.img_src}
-            style={{ height: "30%", width: "30%" }}
+            src={city.City.img_src}
+            style={{ height: "29.5rem", width: "50%", objectFit: "cover" }}
             alt="City"
           />
-        </div>
-        <div className="">
-          <h5 className="" style={{ paddingBottom: "4px" }}>
-            {city.name}
-          </h5>
-          <p className="">
-            <b>Population:</b> {city.population}
-          </p>
-          <p className="card-text">
-            <b>Median Income:</b> {city.median_income}
-          </p>
-          <p className="card-text">
-            <b>Unemployment Rate:</b> {city.unemployment_rate}%
-          </p>
-          <p className="card-text">
-            <b>Poverty Rate:</b> {city.poverty_rate}%
-          </p>
-          {/* only display if this city has organizations */}
-          {/* {city.organizations.length > 0 ? (
+          <div className="px-5 w-100">
+            <h3 className="" style={{ paddingBottom: "4px" }}>
+              <b>{city.City.name}</b>
+            </h3>
+            <p className="">
+              <b>Population:</b> {city.City.population}
+            </p>
+            <p className="card-text">
+              <b>Median Income:</b> {city.City.median_income}
+            </p>
+            <p className="card-text">
+              <b>Unemployment Rate:</b> {city.City.unemployment_rate}%
+            </p>
+            <p className="card-text">
+              <b>Poverty Rate:</b> {city.City.poverty_rate}%
+            </p>
+            <iframe
+              title="google map of this page's city"
+              className="my-3"
+              width="100%"
+              height="53%"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src={
+                "https://www.google.com/maps/embed/v1/place?key=AIzaSyCN-0OitT1TAcITWdYcLeHnqGgqbA9eriQ&q=" +
+                city.City.name +
+                ", " +
+                city.City.state +
+                ", USA"
+              }
+            ></iframe>
+            {/* only display if this city has organizations */}
+            {/* {city.organizations.length > 0 ? (
             <p className="">
               <b>Organizations:</b>
               {city.organizations.map((organization) => {
@@ -72,7 +84,7 @@ function CitySubPage() {
             <></>
           )} }
           {/* only display if this city has scholarships */}
-          {/* {city.scholarships.length > 0 ? (
+            {/* {city.scholarships.length > 0 ? (
             <p className="">
               <b>Scholarships:</b>
               {city.scholarships.map((scholarship) => {
@@ -94,7 +106,8 @@ function CitySubPage() {
           ) : (
             <></>
           )} */}
-          <ul className="list-group list-group-flush"></ul>
+            <ul className="list-group list-group-flush"></ul>
+          </div>
         </div>
       </div>
     );

@@ -10,10 +10,10 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="cities">Cities</Nav.Link>
-            <Nav.Link href="organizations">Organizations</Nav.Link>
-            <Nav.Link href="scholarships">Scholarships</Nav.Link>
-            <Nav.Link href="about">About Us</Nav.Link>
+            <Nav.Link href="/cities">Cities</Nav.Link>
+            <Nav.Link href="/organizations">Organizations</Nav.Link>
+            <Nav.Link href="/scholarships">Scholarships</Nav.Link>
+            <Nav.Link href="/about">About Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
