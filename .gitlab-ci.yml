@@ -38,10 +38,18 @@ frontend_tests:
   
 selenium:
   stage: test
-  image: python:latest
+  image: python:3
+  variables:
+    FF_NETWORK_PER_BUILD: 1
+  services:
+    - name: vulnerables/web-dvwa:latest
+      alias: dvwa
+    - name: selenium/standalone-firefox:latest
+      alias: selenium
+  before_script:
+    - pip install selenium
+    - apt install libgtk-3-dev
   script:
     - cd front-end
     - cd selenium-tests
-    - pip3 install selenium
-    - pip3 install selenium-firefox
-    - python3 -m navbarTests
+    - python navbarTests.py
