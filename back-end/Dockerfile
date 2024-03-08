@@ -7,8 +7,3 @@ COPY ./requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080
 CMD ["bin/bash"]
-# #WORKDIR /back-end
-# #COPY . ./
-# #EXPOSE 5000
-# #CMD ["python", "app.py"]
-# #CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:8000", "app:app"]

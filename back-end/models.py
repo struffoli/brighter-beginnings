@@ -11,11 +11,10 @@ CORS(app)
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 # Set URI to establish a connection with database
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://admin:cc0518Kl$@brighterbeginnings.c3kg6s42amyv.us-east-2.rds.amazonaws.com:3306/brighterbeginnings"
-# app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:letitgrow@localhost/idb"
 # Create db linked to app
 db = SQLAlchemy(app)
 
-# Association table
+# Association table between scholarships and cities
 scholarship_city_association = db.Table(
     'scholarship_city_association',
     db.Column('scholarship', db.ForeignKey('scholarship.id'), primary_key=True),
@@ -61,4 +60,3 @@ class City(db.Model):
     poverty_rate = db.Column(db.Float)
     img_src = db.Column(db.String(255))
     scholarships = db.relationship('Scholarship', secondary=scholarship_city_association, back_populates='cities')
-
