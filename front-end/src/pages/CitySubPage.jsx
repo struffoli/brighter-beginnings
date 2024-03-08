@@ -26,7 +26,7 @@ function CitySubPage() {
           <img
             className=""
             src={city.City.img_src}
-            style={{ height: "50%", width: "50%" }}
+            style={{ height: "29.5rem", width: "50%", objectFit: "cover" }}
             alt="City"
           />
           <div className="px-5 w-100">
