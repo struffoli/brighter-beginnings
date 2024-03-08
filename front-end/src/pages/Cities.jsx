@@ -81,6 +81,7 @@ const Cities = () => {
         totalItems={apiCities.total_cities}
         paginate={paginate}
         currentPage={currentPage}
+        currentItems={currentItems}
       />
     </div>
   );

@@ -19,32 +19,26 @@ const ScholarshipsCard = (props) => {
               <b>{props.name}</b>
             </Link>
           </h5>
-          {/* <p className="card-text">
-            <b>Donor:</b> {props.donor}
-          </p> */}
           <p className="card-text">
-            <b>Awarded by: </b>
-            <Link
-              to={`/organizations/org?name=${props.organization}`}
-              className="link"
-            >
-              {props.organization}
-            </Link>
+            <b>Award by:</b> {props.awarded_by}
           </p>
           <p className="card-text">
-            <b>Eligible for students from: </b>
-            <Link to={`/cities/city?name=${props.city}`} className="link">
-              {props.city}
-            </Link>
-          </p>
-          {/* <p className="card-text">
-            <b>Area:</b> {props.area}
+            <b>Award Amount:</b> {props.award_amount.toLocaleString("en-US", {
+              style: "currency",
+              currency: "USD",
+            })}
           </p>
           <p className="card-text">
-            <b>Age Group:</b> {props.ageGroup}
-          </p> */}
+            <b>Nationwide:</b> {props.nationwide ? "Yes" : "No"}
+          </p>
           <p className="card-text">
-            <b>Award:</b> {props.award}
+            <b>Need-based:</b> {props.need_based ? "Yes" : "No"}
+          </p>
+          <p className="card-text">
+            <b>Merit-based:</b> {props.merit_based ? "Yes" : "No"}
+          </p>
+          <p className="card-text">
+            <b>Essay Required:</b> {props.essay_based ? "Yes" : "No"}
           </p>
           <p className="card-text">
             <Link to={`/cities/city?name=${props.city}`} className="link">Learn More </Link>
