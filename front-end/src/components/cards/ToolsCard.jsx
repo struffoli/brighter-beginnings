@@ -12,12 +12,12 @@ const ToolsCard = (props) => {
         alt={`A logo/icon of the tool ${props.name}.`}
       />
       <div className="card-body">
-        <h4 className="card-title text-center">
+        <h4 className="card-title-tool text-center">
           <p>
             <b>{props.name}</b>
           </p>
         </h4>
-        <h4 className="card-description text-center">
+        <h4 className="card-description-tool text-center">
           <p>{props.description}</p>
         </h4>
       </div>
