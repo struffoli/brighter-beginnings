@@ -1,0 +1,58 @@
+.video {
+    z-index: -1;
+    width: 100%;
+    margin-bottom: -52.5%;
+    height: auto;
+}
+
+.explore {
+    margin-top: 5%;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .explore-info {
+    margin-top: 15%;
+  }
+
+.fade-first {
+    opacity: 0;
+    animation: fadeInAnimation 2s; 
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+.fade-second {
+    opacity: 0;
+    animation: fadeInAnimation 2s; 
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+.fade-third {
+    opacity: 0;
+    animation: fadeInAnimation 2s; 
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
