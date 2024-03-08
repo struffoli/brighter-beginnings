@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSearchParams} from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 // import { organizations } from "../data/organizations";
 // import { scholarships } from "../data/scholarships";
 import { getOrganizationById } from "./Organizations";
@@ -47,47 +47,13 @@ function OrganizationSubPage() {
             <p className="card-text">
               <b>Organization Type:</b> {org.Organization.organization_type}
             </p>
-          {/* <p className="">
-            <b>City: </b>
-            <Link to={`/cities/city?name=${org.Organization.city}`} className="link">
-              {org.city}
-            </Link>
-          </p> */}
-          {/* only display if this organization has scholarships */}
-          {/* {org.scholarships.length > 0 ? (
             <p className="">
-              <b>Scholarships:</b>
-              {org.scholarships.map((scholarship) => {
-                const schp = scholarships.find(
-                  (schp) => schp.name === scholarship
-                );
-                return (
-                  <p>
-                    <Link
-                      to={`/scholarships/schp?id=${schp.id}`}
-                      className="link"
-                    >
-                      {schp.name}
-                    </Link>
-                  </p>
-                );
-              })}
+              <b>Scholarship: </b>
+                <Link to={`/scholarships/schp?id=${org.Organization.scholarship_id}`}>
+                {org.Organization.scholarship.name}
+                </Link>
             </p>
-          ) : (
-            <></>
-          )} */}
-          <ul className="list-group list-group-flush"></ul>
-          <div className="row justify-content-left">
-          {/* <h5> Location Map </h5>
-          <img
-              className=""
-              src={org.locationPic}
-              style={{ height: "30%", width: "30%" }}
-              alt="Organization Location"
-          >
-
-          </img> */}
-        </div>
+            
         </div>
       </div>
     );

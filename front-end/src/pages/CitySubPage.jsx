@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 // import { cities } from "../data/cities.js";
 // import { organizations } from "../data/organizations.js";
 // import { scholarships } from "../data/scholarships.js";
@@ -62,50 +62,18 @@ function CitySubPage() {
                 ", USA"
               }
             ></iframe>
-            {/* only display if this city has organizations */}
-            {/* {city.organizations.length > 0 ? (
             <p className="">
-              <b>Organizations:</b>
-              {city.organizations.map((organization) => {
-                const org = organizations.find((o) => o.name === organization);
-                return (
-                  <p>
-                    <Link
-                      to={`/organizations/org?id=${org.id}`}
-                      className="link"
-                    >
-                      {org.name}
-                    </Link>
-                  </p>
-                );
-              })}
+              <b>Scholarship: </b>
+                <Link to={`/scholarships/schp?id=${city.City.scholarships[0].id}`}>
+                {city.City.scholarships[0].name}
+                </Link>
             </p>
-          ) : (
-            <></>
-          )} }
-          {/* only display if this city has scholarships */}
-            {/* {city.scholarships.length > 0 ? (
             <p className="">
-              <b>Scholarships:</b>
-              {city.scholarships.map((scholarship) => {
-                const schp = scholarships.find(
-                  (schp) => schp.name === scholarship
-                );
-                return (
-                  <p>
-                    <Link
-                      to={`/scholarships/schp?id=${schp.id}`}
-                      className="link"
-                    >
-                      {schp.name}
-                    </Link>
-                  </p>
-                );
-              })}
+              <b>Organizations: </b>
+                <Link to={`/organizations/org?id=${city.City.scholarships[0].id}`}>
+                {city.City.scholarships[0].name}
+                </Link>
             </p>
-          ) : (
-            <></>
-          )} */}
             <ul className="list-group list-group-flush"></ul>
           </div>
         </div>
