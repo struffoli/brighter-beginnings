@@ -48,9 +48,9 @@ selenium:
       alias: selenium
   before_script:
     - cd front-end/selenium-tests
-    - apt-get install -y firefox-esr
+    - apt-get update && apt-cache search firefox && apt-get install -y firefox-esr
     - apt install chromium-chromedriver pip
-    - install selenium
+    - pip install selenium
     
   script:
     - python navbarTests.py
