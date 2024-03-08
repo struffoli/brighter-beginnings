@@ -14,6 +14,7 @@
     "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1",
     "selenium": "^2.20.0",
+    "selenium-webdriver": "^4.18.1",
     "web-vitals": "^2.1.4",
     "webdriver-manager": "^12.1.9"
   },
