@@ -67,4 +67,3 @@ class City(db.Model):
 
 
 
-
