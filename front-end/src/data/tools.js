@@ -17,69 +17,71 @@ export const tools = [
   {
     name: "React",
     img_src: react,
-    description: "wow",
+    description: "Frontend",
   },
   {
     name: "AWS Amplify",
     img_src: amplify,
-    description: "wow",
+    description: "Hosting",
   },
   {
     name: "Postman",
     img_src: postman,
-    description: "wow",
+    description: "API",
   },
   {
     name: "VS Code",
     img_src: vscode,
-    description: "wow",
+    description: "IDE",
   },
   {
     name: "GitLab",
     img_src: gitlab,
-    description: "wow",
+    description: "Repo, CI/CD",
   },
   {
     name: "Bootstrap",
     img_src: bootstrap,
-    description: "wow",
+    description: "CSS",
   },
   {
     name: "npm",
     img_src: npm,
-    description: "wow",
+    description: "Packages",
   },
   {
     name: "Node.js",
     img_src: nodejs,
-    description: "wow",
+    description: "Runtime",
   },
   {
     name: "Yarn",
     img_src: yarn,
-    description: "wow",
+    description: "Packages",
   },
   {
     name: "Flask",
     img_src: flask,
-    description: "wow",
+    description: "Backend",
   },
   {
     name: "SQLAlchemy",
     img_src: sqla,
-    description: "wow",
+    description: "Database",
   },
   {
     name: "pandas",
     img_src: pandas,
-    description: "wow",
+    description: "Data",
   },
   {
     name: "Python",
     img_src: python,
+    description: "Backend",
   },
   {
     name: "MySQL",
     img_src: mysql,
+    description: "Database",
   },
 ];
