@@ -5,14 +5,19 @@ import ExploreCard from "../components/cards/ExploreCard";
 import cityicon from "../assets/cityicon.png";
 import orgicon from "../assets/orgicon.png";
 import schpicon from "../assets/schpicon.png";
-import splash_video from "../assets/splash_video.mp4";
+// import splash_video from "../assets/splash_video.mp4";
 import downarrow from "../assets/downarrow.png";
 
 const Home = () => {
   return (
     <div>
       <video autoPlay muted id="splash-video" className="video">
-        <source src={splash_video} type="video/mp4" />
+        <source
+          src={
+            "https://gitlab.com/kxut/cs373-group-01/-/raw/main/front-end/src/assets/splash_video.mp4?ref_type=heads"
+          }
+          type="video/mp4"
+        />
       </video>
       <div className="d-flex flex-column align-items-center">
         <h1 className="title mx-4 my-5 fade-first">
