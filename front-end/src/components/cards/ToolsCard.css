@@ -1,0 +1,14 @@
+.card:hover .card-description {
+    display: block;
+  }
+.card-description {
+    display: none;
+    max-height: 10%;
+  }
+
+.card:hover .card-title {
+    display: none;
+  }
+.card-title {
+    display: block;
+  }
