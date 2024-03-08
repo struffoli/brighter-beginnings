@@ -1,6 +1,6 @@
 import React from "react";
 import "./Pagination.css"
-const Pagination = ({itemsPerPage, totalItems, paginate, currentPage}) => {
+const Pagination = ({itemsPerPage, totalItems, paginate, currentPage, currentItems}) => {
     const pageNumber = [];
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
@@ -11,7 +11,7 @@ const Pagination = ({itemsPerPage, totalItems, paginate, currentPage}) => {
     return (
 
         <div>
-            <p className="text-center">Showing {itemsPerPage} of {totalItems} items</p>
+            <p className="text-center">Showing items {itemsPerPage * (currentPage-1) + 1}-{itemsPerPage * (currentPage-1) + currentItems.length} of {totalItems} items</p>
             <nav className="pagination-container">
                 <ul className='pagination'>
                     <li>

@@ -72,6 +72,7 @@ const Organizations = () => {
         totalItems={apiOrganizations.total_organizations}
         paginate={paginate}
         currentPage={currentPage}
+        currentItems={currentItems}
       />
     </div>
   );

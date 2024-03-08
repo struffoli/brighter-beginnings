@@ -31,7 +31,7 @@ export async function getScholarshipById(id) {
 
 const Scholarships = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(3); // Set the number of items per page
+  const [itemsPerPage] = useState(15); // Set the number of items per page
 
   // Get scholarships from API
   const [apiScholarships, setApiScholarships] = useState({ scholarships: [], total_scholarships: 0 });
@@ -58,14 +58,13 @@ const Scholarships = () => {
             img_src={scholarship.img_src}
             name={scholarship.name}
             id={scholarship.id}
-            donor={scholarship.donor}
-            area={scholarship.area}
-            ageGroup={scholarship.ageGroup}
-            award={scholarship.award}
-            recipients={scholarship.recipients}
-            description={scholarship.description}
-            city={scholarship.city}
-            organization={scholarship.organization}
+            awarded_by={scholarship.awarded_by}
+            award_amount={scholarship.award_amount}
+            nationwide={scholarship.nationwide}
+            need_based={scholarship.need_based}
+            merit_based={scholarship.merit_based}
+            essay_based={scholarship.essay_based}
+            link={scholarship.link}
           />
         ))}
       </div>
@@ -74,6 +73,7 @@ const Scholarships = () => {
         totalItems={apiScholarships.total_scholarships}
         paginate={paginate}
         currentPage={currentPage}
+        currentItems={currentItems}
       />
     </div>
   );
