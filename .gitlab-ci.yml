@@ -33,6 +33,7 @@ frontend_tests:
   stage: test
   script:
     - cd front-end
+    - npm install react-scripts
     - npm test
   
 selenium:
@@ -40,7 +41,7 @@ selenium:
   image: python:latest
   script:
     - cd front-end
-    - cd selenium
+    - cd selenium-tests
     - pip3 install selenium
     - pip3 install webdriver
     - wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
