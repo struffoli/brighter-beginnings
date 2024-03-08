@@ -41,7 +41,7 @@ const ScholarshipsCard = (props) => {
             <b>Essay Required:</b> {props.essay_based ? "Yes" : "No"}
           </p>
           <p className="card-text">
-            <Link to={`/cities/city?name=${props.city}`} className="link">Learn More </Link>
+            <Link to={`/scholarships/schp?id=${props.id}`} className="link">Learn More </Link>
           </p>
         </div>
       </div>

@@ -61,15 +61,15 @@ function ScholarshipsSubPage() {
             <b>Eligible for students from: </b>
             {/* show "many cities" if scholarship has blank city field */}
             {scholarship.city !== "" ? (
-              <Link to={`/cities/city?name=${scholarship.city}`} className="link">
-                {scholarship.city}
+              <Link to={`/cities/city?name=${scholarship.Scholarship.city}`} className="link">
+                {scholarship.Scholarship.city}
               </Link>
             ) : (
               `Many Cities`
             )}
           </p>
           <p className="">
-            <Link to={scholarship.link}>
+            <Link to={scholarship.Scholarship.link}>
               <b>Link to Apply</b>
             </Link>
           </p>
