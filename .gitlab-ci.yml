@@ -43,5 +43,7 @@ selenium:
     - cd front-end
     - cd selenium-tests
     - pip3 install selenium-firefox
+    - pip3 install webdriver-manager
+    - webdrivermanager firefox --linkpath /usr/local/bin
     - apt-get update && apt-get install -y wget bzip2 libxtst6 libgtk-3-0 libx11-xcb-dev libdbus-glib-1-2 libxt6 libpci-dev && rm -rf /var/lib/apt/lists/*
     - python3 -m navbarTests
