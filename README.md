@@ -9,14 +9,14 @@
 | Kevin Xu | @kxut | kx749 |
 | Joshua Yu | @struffoli | jty357 |
 | Tyler Kubecka | @tyandkub | tak2433 |
-| Ben Yu | @benyu14141 | by1414 |
+| Ben Yu | @benyu14141 | hy7333 |
 | Bryan Lee | @blee02 | bl27862 |  
 
 ## GitSha
 | Phase # | GitSha ID|
 | :------ | :----- |
 | Phase 1 | a1584d75 |
-| Phase 2 |  |
+| Phase 2 | 0ac41bfc |
 | Phase 3|  |
 | Phase 4 |  |
 
