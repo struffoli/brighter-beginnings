@@ -47,7 +47,3 @@
 | Tyler Kubecka | 15 | 20 |
 | Ben Yu | 15 | 20 |
 | Bryan Lee | 20 |40 |  
-
-
-Comments:
-gitlab-ci.yml, acceptance test from MetroNYC to get chrome driver to work in pipelines
