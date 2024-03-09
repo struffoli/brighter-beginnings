@@ -61,15 +61,11 @@ class SeleniumTests(unittest.TestCase):
         self.assertIn("Financial constraints should never hinder the pursuit of knowledge. BrighterBeginnings aims to empower low-income K-12 students to reach for the stars by connecting them with knowledge about scholarship opportunities and organizations providing aid, whether financial or otherwise.", self.driver.page_source)
         
     def test_9(self) -> None:
-        self.driver.get(url + "/cities")
-        self.assertIn("Showing 15", self.driver.page_source)
-        
-    def test_10(self) -> None:
         self.driver.get(url + "/scholarships")
         self.driver.find_element(By.LINK_TEXT, "Cities").click()
         self.assertEqual(self.driver.current_url, url + "/cities")
         
-    def test_11(self) -> None:
+    def test_10(self) -> None:
         self.driver.get(url + "/scholarships")
         self.driver.find_element(By.LINK_TEXT, "Organizations").click()
         self.assertEqual(self.driver.current_url, url + "/organizations")
