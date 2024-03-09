@@ -19,8 +19,6 @@ function ScholarshipsSubPage() {
     getScholarshipById(scholarship_id).then((data) => setApiScholarship(data));
   }, [scholarship_id]);
 
-  console.log(scholarship)
-
   if (scholarship) {
     return (
       <div className="container" style={{ marginTop: "3%" }}>
@@ -57,18 +55,27 @@ function ScholarshipsSubPage() {
           <p className="card-text">
             <b>Essay Required:</b> {scholarship.Scholarship.essay_based ? "Yes" : "No"}
           </p>
-          <p className="">
+          <p className="card-text">
             <b>Eligible for students from: </b>
-            {/* show "many cities" if scholarship has blank city field */}
-            {scholarship.city !== "" ? (
-              <Link to={`/cities/city?name=${scholarship.Scholarship.city}`} className="link">
-                {scholarship.Scholarship.city}
-              </Link>
-            ) : (
-              `Many Cities`
-            )}
           </p>
-          <p className="">
+            {scholarship.Scholarship.cities.map((city, index) => (
+              <p>
+                <Link to={`/cities/city?id=${city.id}`} key={index}>
+                  {city.name}
+                </Link>
+              </p>
+            ))}
+          <p className="card-text">
+            <b>Relevant Organizations: </b>
+          </p>
+            {scholarship.Scholarship.organizations.map((org, index) => (
+              <p>
+                <Link to={`/organizations/org?id=${org.id}`} key={index}>
+                  {org.name}
+                </Link>
+              </p>
+            ))}
+          <p className="card-text">
             <Link to={scholarship.Scholarship.link}>
               <b>Link to Apply</b>
             </Link>
