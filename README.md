@@ -1,7 +1,7 @@
 # BrighterBeginnings
-**Website Link:** https://brighterbeginnings.me
-**API Link:** https://api.brighterbeginnings.me/
-**Postman API Documentation:** https://documenter.getpostman.com/view/32954458/2sA2r6WPJG
+**Website Link:** https://brighterbeginnings.me 
+**API Link:** https://api.brighterbeginnings.me  
+**Postman API Documentation:** https://documenter.getpostman.com/view/32954458/2sA2r6WPJG  
 
 ## Group Number:  01
 | Team Member | GitLabID    | EID         |
