@@ -6,10 +6,10 @@
 ## Group Number:  01
 | Team Member | GitLabID    | EID         |
 | :---------- | :---------- | :---------- |
-| Kevin Xu |  |  |
-| Joshua Yu |  |  |
-| Tyler Kubecka |  |  |
-| Ben Yu |  |  |
+| Kevin Xu | @kxut | kx749 |
+| Joshua Yu | @struffoli | jty357 |
+| Tyler Kubecka | @tyandkub | tak2433 |
+| Ben Yu | @benyu14141 | by1414 |
 | Bryan Lee | @blee02 | bl27862 |  
 
 ## GitSha
