@@ -30,6 +30,14 @@ def get_scholarships():
     page = request.args.get('page', type=int, default=1)
     per_page = request.args.get('per_page', type=int, default=total)
     result = query.paginate(page=page, per_page=per_page, error_out=False)
+    
+    # searh scholarships
+    search = request.args.get("search")
+    if search != None:
+        query = query.filter(Scholarship.name.ilike(f"%{search}%"))
+        total = query.count()
+        result = query.paginate(page=page, per_page=per_page, error_out=False)
+    
     schema = ScholarshipSchema().dump(result, many=True)
     return jsonify({"Scholarships":schema, "Total scholarships": total})
 
