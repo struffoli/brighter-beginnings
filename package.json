@@ -19,6 +19,7 @@
   "homepage": "https://gitlab.com/kxut/cs373-group-01#readme",
   "dependencies": {
     "dependencies": "0.0.1",
+    "flask": "^0.2.10",
     "react-scripts": "^5.0.1"
   }
 }

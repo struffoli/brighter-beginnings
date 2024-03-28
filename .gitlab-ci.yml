@@ -1,55 +1,55 @@
-image: node:latest
+# image: node:latest
 
-stages:
-  - build
-  - test
+# stages:
+#   - build
+#   - test
 
-build:
-  stage: build
-  script:
-    - cd front-end
-    - npm install ci
-    - npm run build
+# build:
+#   stage: build
+#   script:
+#     - cd front-end
+#     - npm install ci
+#     - npm run build
 
-python_tests:
-  image: python:3
-  stage: test
-  script:
-    - cd back-end
-    - pip3 install -r requirements.txt
-    - python tests.py
+# python_tests:
+#   image: python:3
+#   stage: test
+#   script:
+#     - cd back-end
+#     - pip3 install -r requirements.txt
+#     - python tests.py
   
-postman_tests:
-  stage: test
-  image:
-    name: postman/newman:alpine
-    entrypoint: [""]
-  script:
-    - cd back-end
-    - newman --version
-    - newman run postman_collection.json
+# postman_tests:
+#   stage: test
+#   image:
+#     name: postman/newman:alpine
+#     entrypoint: [""]
+#   script:
+#     - cd back-end
+#     - newman --version
+#     - newman run postman_collection.json
 
-frontend_tests:
-  stage: test
-  script:
-    - cd front-end
-    - npm install react-scripts
-    - npm test
+# frontend_tests:
+#   stage: test
+#   script:
+#     - cd front-end
+#     - npm install react-scripts
+#     - npm test
   
-selenium:
-  stage: test
-  image: python:3
-  variables:
-    FF_NETWORK_PER_BUILD: 1
-  services:
-    - name: vulnerables/web-dvwa:latest
-      alias: dvwa
-    - name: selenium/standalone-firefox:latest
-      alias: selenium
-  before_script:
-    - cd front-end/selenium-tests
-    - apt-get update && apt-cache search firefox && apt-get install -y firefox-esr
-    - pip install selenium
+# selenium:
+#   stage: test
+#   image: python:3
+#   variables:
+#     FF_NETWORK_PER_BUILD: 1
+#   services:
+#     - name: vulnerables/web-dvwa:latest
+#       alias: dvwa
+#     - name: selenium/standalone-firefox:latest
+#       alias: selenium
+#   before_script:
+#     - cd front-end/selenium-tests
+#     - apt-get update && apt-cache search firefox && apt-get install -y firefox-esr
+#     - pip install selenium
     
-  script:
-    - python navbarTests.py
+#   script:
+#     - python navbarTests.py

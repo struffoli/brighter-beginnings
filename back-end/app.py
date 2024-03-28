@@ -53,6 +53,14 @@ def get_scholarships():
             query = query.filter(Scholarship.nationwide == True)
 
     result = query.paginate(page=page, per_page=per_page, error_out=False)
+    
+    # searh scholarships
+    search = request.args.get("search")
+    if search != None:
+        query = query.filter(Scholarship.name.ilike(f"%{search}%") | Scholarship.awarded_by.ilike(f"%{search}%") | Scholarship.award_amount.ilike(f"%{search}%"))
+        total = query.count()
+        result = query.paginate(page=page, per_page=per_page, error_out=False)
+    
     schema = ScholarshipSchema().dump(result, many=True)
     return jsonify({"Scholarships":schema, "Total scholarships": total})
 
@@ -93,6 +101,14 @@ def get_organizations():
             query = query.filter(Scholarship.phone != 'N/A')
 
     result = query.paginate(page=page, per_page=per_page, error_out=False)
+    
+    # searh organizations
+    search = request.args.get("search")
+    if search != None:
+        query = query.filter(Organization.name.ilike(f"%{search}%") | Organization.organization_type.ilike(f"%{search}%"))
+        total = query.count()
+        result = query.paginate(page=page, per_page=per_page, error_out=False)
+    
     schema = OrganizationSchema().dump(result, many=True)
     return jsonify({"Organizations":schema, "Total organizations": total})
 
@@ -133,6 +149,12 @@ def get_cities():
             query = query.order_by(City.poverty_rate)
 
     result = query.paginate(page=page, per_page=per_page, error_out=False)
+    # searh cities
+    search = request.args.get("search")
+    if search != None:
+        query = query.filter(City.name.ilike(f"%{search}%") | City.state.ilike(f"%{search}%") | City.population.ilike(f"%{search}%"))
+        total = query.count()
+        result = query.paginate(page=page, per_page=per_page, error_out=False)
     schema = CitySchema().dump(result, many=True)
     return jsonify({"Cities":schema, "Total cities": total})
 

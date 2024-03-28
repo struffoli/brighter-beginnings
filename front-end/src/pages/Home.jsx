@@ -11,33 +11,38 @@ import downarrow from "../assets/downarrow.png";
 const Home = () => {
   return (
     <div>
-      <video autoPlay muted id="splash-video" className="video">
+      <video autoPlay loop muted id="splash-video" className="video">
         <source
           src={
-            "https://gitlab.com/kxut/cs373-group-01/-/raw/main/front-end/src/assets/splash_video.mp4?ref_type=heads"
+            "https://gitlab.com/kxut/cs373-group-01/-/raw/main/front-end/src/assets/splash_video2.mp4?ref_type=heads"
           }
           type="video/mp4"
         />
       </video>
       <div className="d-flex flex-column align-items-center">
-        <h1 className="title mx-4 my-5 fade-first">
-          {/* <b style={{ color: "3cdfff" }}>Brighter Beginnings</b> */}
-          <b style={{ color: "white" }}>Brighter Beginnings</b>
-        </h1>
-        <div className="d-flex flex-row align-items-center justify-content-center my-1 mb-5 w-75 fade-second">
-          <img
-            src={splash}
-            style={{ objectFit: "cover", height: "325px" }}
-            alt={`Clipart of a student next to a lit lightbulb.`}
-            className="mx-4"
-          ></img>
-          <h3 className="mx-5 fade-second" style={{ color: "white" }}>
-            Financial constraints should never hinder the pursuit of knowledge.
-            BrighterBeginnings aims to empower low-income K-12 students to reach
-            for the stars by connecting them with knowledge about scholarship
-            opportunities and organizations providing aid, whether financial or
-            otherwise.
-          </h3>
+        <div className="splash-box fade-first d-flex flex-column align-items-center">
+          <h1 className="mx-4 my-5 fade-first title-text">
+            {/* <b style={{ color: "3cdfff" }}>Brighter Beginnings</b> */}
+            <b style={{ color: "white" }}>Brighter Beginnings</b>
+          </h1>
+          <div className="d-flex flex-row align-items-center justify-content-center my-1 mb-5 w-75 fade-second">
+            <img
+              src={splash}
+              style={{ objectFit: "cover", height: "20vw" }}
+              alt={`Clipart of a student next to a lit lightbulb.`}
+              className="mx-4"
+            ></img>
+            <h3
+              className="mx-4 fade-second description-text"
+              style={{ color: "white" }}
+            >
+              Financial constraints should never hinder the pursuit of
+              knowledge. BrighterBeginnings aims to empower low-income K-12
+              students to reach for the stars by connecting them with knowledge
+              about scholarship opportunities and organizations providing aid,
+              whether financial or otherwise.
+            </h3>
+          </div>
         </div>
         <div className="explore">
           <div className="col-sm-12 text-center fade-third down-arrow">
