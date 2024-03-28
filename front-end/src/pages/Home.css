@@ -1,19 +1,19 @@
 .video {
     z-index: -1;
     width: 100%;
-    margin-bottom: -50%;
+    margin-bottom: -85vh;
     /* margin-top: -3%; */
     object-fit: cover;
     /* height: auto; */
-    height: 100vh;
+    height: 94vh;
 }
 
 .down-arrow {
-  margin-top: 2%;
+  margin-top: 10vh;
 }
 
 .explore {
-    margin-top: 5%;
+    margin-top: 0%;
 }
 
 .bounce {
@@ -35,6 +35,21 @@
   .explore-info {
     margin-top: 7.5%;
   }
+
+.title-text {
+  font-size: calc(12px + 4vw);
+}
+
+.description-text {
+  font-size: calc(16px + 0.8vw);
+}
+
+.splash-box {
+  background-color: rgba(0,0,0,.5);
+  width: 80%;
+  border-radius: 2rem;
+  height: 70vh;
+}
 
 .fade-first {
     opacity: 0;
