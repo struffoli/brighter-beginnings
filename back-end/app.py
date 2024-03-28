@@ -29,6 +29,29 @@ def get_scholarships():
     total = query.count()
     page = request.args.get('page', type=int, default=1)
     per_page = request.args.get('per_page', type=int, default=total)
+    sort = request.args.get('sort', default=None)
+    filter = request.args.get('filter', default=None)
+
+    # sorting
+    if sort is not None:
+        if sort == 'name':
+            query = query.order_by(Scholarship.name)
+        elif sort == 'awarded_by':
+            query = query.order_by(Scholarship.awarded_by)
+        elif sort == 'award_amount':
+            query = query.order_by(Scholarship.award_amount)
+
+    # filtering 
+    if filter is not None:
+        if filter == 'merit_based':
+            query = query.filter(Scholarship.merit_based == True)
+        elif filter == 'need_based':
+            query = query.filter(Scholarship.need_based == True)
+        elif filter == 'essay_based':
+            query = query.filter(Scholarship.essay_based == True)
+        elif filter == 'nationwide':
+            query = query.filter(Scholarship.nationwide == True)
+
     result = query.paginate(page=page, per_page=per_page, error_out=False)
     schema = ScholarshipSchema().dump(result, many=True)
     return jsonify({"Scholarships":schema, "Total scholarships": total})
@@ -50,6 +73,25 @@ def get_organizations():
     total = query.count()
     page = request.args.get('page', type=int, default=1)
     per_page = request.args.get('per_page', type=int, default=total)
+    sort = request.args.get('sort', default=None)
+    filter = request.args.get('filter', default=None)
+
+    # sorting
+    if sort is not None:
+        if sort == 'id':
+            query = query.order_by(Organization.id)
+        elif sort == 'name':
+            query = query.order_by(Organization.name)
+        elif sort == 'organization_type':
+            query = query.order_by(Organization.organization_type)
+
+    # filtering 
+    if filter is not None:
+        if filter == 'email':
+            query = query.filter(Scholarship.email != 'N/A')
+        if filter == 'phone':
+            query = query.filter(Scholarship.phone != 'N/A')
+
     result = query.paginate(page=page, per_page=per_page, error_out=False)
     schema = OrganizationSchema().dump(result, many=True)
     return jsonify({"Organizations":schema, "Total organizations": total})
@@ -71,6 +113,25 @@ def get_cities():
     total = query.count()
     page = request.args.get('page', type=int, default=1)
     per_page = request.args.get('per_page', type=int, default=total)
+    sort = request.args.get('sort', default=None)
+
+    # sorting
+    if sort is not None:
+        if sort == 'name':
+            query = query.order_by(City.name)
+        elif sort == 'population':
+            query = query.order_by(City.population)
+        elif sort == 'state':
+            query = query.order_by(City.state)
+        elif sort == 'median_income':
+            query = query.order_by(City.median_income)
+        elif sort == 'unemployment_rate':
+            query = query.order_by(City.unemployment_rate)
+        elif sort == 'college_educated_rate':
+            query = query.order_by(City.college_educated_rate)
+        elif sort == 'poverty_rate':
+            query = query.order_by(City.poverty_rate)
+
     result = query.paginate(page=page, per_page=per_page, error_out=False)
     schema = CitySchema().dump(result, many=True)
     return jsonify({"Cities":schema, "Total cities": total})
