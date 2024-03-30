@@ -10,6 +10,7 @@ import NavBar from "./components/NavBar";
 import CitiesSubPage from "./pages/CitySubPage";
 import OrganizationSubPage from "./pages/OrganizationSubPage";
 import ScholarshipsSubPage from "./pages/ScholarshipSubPage";
+import SearchResultsPage from "./components/SearchResultsPage";
 
 function App() {
   return (
@@ -24,15 +25,10 @@ function App() {
           {/* add subpages */}
           <Route path="/cities/city" element={<CitiesSubPage />}></Route>
           <Route path="/organizations" element={<Organizations />}></Route>
-          <Route
-            path="/organizations/org"
-            element={<OrganizationSubPage />}
-          ></Route>
+          <Route path="/organizations/org"element={<OrganizationSubPage />}></Route>
           <Route path="/scholarships" element={<Scholarships />}></Route>
-          <Route
-            path="/scholarships/schp"
-            element={<ScholarshipsSubPage />}
-          ></Route>
+          <Route path="/scholarships/schp"element={<ScholarshipsSubPage />}></Route>
+          <Route path="/search" element={<SearchResultsPage />}></Route>
         </Routes>
       </Router>
     </div>
