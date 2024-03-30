@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function SearchBar({ getSearchResults }) {
+function SearchBar({ onSearch }) {
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleChange = (event) => {
@@ -9,7 +9,7 @@ function SearchBar({ getSearchResults }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        getSearchResults(searchTerm);
+        onSearch(searchTerm);
     };
 
     return (
