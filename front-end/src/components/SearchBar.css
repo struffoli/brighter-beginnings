@@ -1,0 +1,34 @@
+.search {
+    width: 95%;
+    border: 2px solid #000;
+    border-radius: 2em;
+    overflow: hidden;
+    font-size: 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
+  .search:focus-within {
+    box-shadow: 2px 2px 5px #000;
+  }
+  
+  .searchButton,
+  .searchInput {
+    background-color: #fff;
+    border: none;
+    outline: none;
+  }
+  
+  .searchInput {
+    padding: 1em;
+    width: 85%;
+  }
+  
+  .searchButton {
+    width: 50%;
+    font-size: 1.5rem;
+    padding-right: 0.5em;
+    color: gray;
+    display: grid;
+    place-content: center;
+  }

@@ -1,21 +1,25 @@
-const SearchBar = ({posts, getSearchResults}) => {
-    const handleSubmit = (e) => e.preventDefault();
-    const handleSearchChnage = (e) => {
-        if (!e.target.value) return setSearchResults(posts);
+import React, { useState } from "react";
 
-        const resultsArray = posts.filter(post => post.title.includes(e.target.value) || post.body.includes(e.target.value))
-        setSearchResults(restulsArray);
-    }
+function SearchBar({ getSearchResults }) {
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        getSearchResults(searchTerm);
+    };
 
     return (
         <header>
-            <form className = "search" onSubmit = {handleSubmit}>
-                <input className = "searchInput" type = "text" id = "search" onChange={handleSearchChnage}/>
-                <button className = "searchButton"/>
+            <form className="search" onSubmit={handleSubmit}>
+                <input className="searchInput" type="text" id="search" onChange={handleChange}/>
+                <button className="searchButton"/>
             </form>
         </header>
-    )
+    );
 }
 
 export default SearchBar;
-

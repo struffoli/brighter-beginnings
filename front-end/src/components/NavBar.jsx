@@ -1,8 +1,15 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import SearchBar from "./SearchBar";
 import "./NavBar.css"
+
 function NavBar() {
+  const handleSearch = (searchTerm) => {
+    // Implement your search logic here
+    console.log(`Search for: ${searchTerm}`);
+  };
+
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
@@ -15,6 +22,9 @@ function NavBar() {
             <Nav.Link href="/scholarships">Scholarships</Nav.Link>
             <Nav.Link href="/about">About Us</Nav.Link>
           </Nav>
+          <div className="ms-auto">
+            <SearchBar onSearch={handleSearch} />
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
