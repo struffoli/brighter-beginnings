@@ -168,5 +168,27 @@ def get_single_city(city_id):
     except IndexError:
         return jsonify({"error": "City not found"}, 404)
 
+ 
+# searches through all the models    
+@app.route('/search', methods=['GET'])
+def search():
+    search_term = request.args.get('query', '')
+    search_term = f"%{search_term}%"
+
+    city_results = City.query.filter(City.name.ilike(search_term)).all()
+    organization_results = Organization.query.filter(Organization.name.ilike(search_term)).all()
+    scholarship_results = Scholarship.query.filter(Scholarship.name.ilike(search_term)).all()
+    
+    # serialize the data
+    city_schema = CitySchema(many=True)
+    organization_schema = OrganizationSchema(many=True)
+    scholarship_schema = ScholarshipSchema(many=True)
+
+    return jsonify({
+        'cities': city_schema.dump(city_results),
+        'organizations': organization_schema.dump(organization_results),
+        'scholarships': scholarship_schema.dump(scholarship_results)
+    })
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
