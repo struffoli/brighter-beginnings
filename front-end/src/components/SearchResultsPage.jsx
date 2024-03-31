@@ -17,18 +17,15 @@ function SearchResultsPage() {
         if (searchTerm) {
             const lowerCaseSearchTerm = searchTerm.toLowerCase();
             const filteredCities = cities.filter(city =>
-                city.name?.toLowerCase().includes(lowerCaseSearchTerm) || 
-                city.info?.toLowerCase().includes(lowerCaseSearchTerm)
+                city.name?.toLowerCase().includes(lowerCaseSearchTerm)
             );
     
             const filteredOrganizations = organizations.filter(org =>
-                org.name?.toLowerCase().includes(lowerCaseSearchTerm) ||
-                org.info?.toLowerCase().includes(lowerCaseSearchTerm)
+                org.name?.toLowerCase().includes(lowerCaseSearchTerm)
             );
           
             const filteredScholarships = scholarships.filter(scholarship =>
-                scholarship.name?.toLowerCase().includes(lowerCaseSearchTerm) ||
-                scholarship.info?.toLowerCase().includes(lowerCaseSearchTerm)
+                scholarship.name?.toLowerCase().includes(lowerCaseSearchTerm)
             );
     
             const combinedResults = {
@@ -47,36 +44,30 @@ function SearchResultsPage() {
                 <div>
                     <h3>Cities</h3>
                     {searchResults.cities && searchResults.cities.length > 0 ? (
-                        <ul>
-                            {searchResults.cities.map((city, index) => (
-                                <li key={index}>{city.name} - {city.info}</li>
-                            ))}
+                        <ul> 
+                            {searchResults.cities.map((city, index) => ( 
+                                <li key={index}>{city.name}</li>
+                            ))} 
                         </ul>
-                    ) : (
-                        <p>No cities found</p>
-                    )}
+                    ) : ( <p>No cities found!</p>)}
 
                     <h3>Organizations</h3>
                     {searchResults.organizations && searchResults.organizations.length > 0 ? (
                         <ul>
                             {searchResults.organizations.map((org, index) => (
-                                <li key={index}>{org.name} - {org.info}</li>
+                                <li key={index}>{org.name}</li>
                             ))}
                         </ul>
-                    ) : (
-                        <p>No organizations found</p>
-                    )}
+                    ) : ( <p>No organizations found!</p>)}
 
                     <h3>Scholarships</h3>
                     {searchResults.scholarships && searchResults.scholarships.length > 0 ? (
                         <ul>
                             {searchResults.scholarships.map((scholarship, index) => (
-                                <li key={index}>{scholarship.name} - {scholarship.info}</li>
+                                <li key={index}>{scholarship.name}</li>
                             ))}
                         </ul>
-                    ) : (
-                        <p>No scholarships found</p>
-                    )}
+                    ) : (<p>No scholarships found!</p> )}
                 </div>
             )}
         </div>
