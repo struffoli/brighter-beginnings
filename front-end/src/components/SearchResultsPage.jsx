@@ -22,19 +22,36 @@ function SearchResultsPage() {
                     const citiesResponse = await fetch(`https://api.brighterbeginnings.me/cities`);
                     const citiesData = await citiesResponse.json();
                     setCitiesResults(citiesData.Cities.filter(city =>
-                        city.name.toLowerCase().includes(searchTerm.toLowerCase())
+                        city.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                        city.state.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        city.population.toString().toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        city.median_income.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                        city.unemployment_rate.toString().toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        city.poverty_rate.toString().toLowerCase().includes(searchTerm.toLowerCase())
                     ));
 
                     const scholarshipsResponse = await fetch(`https://api.brighterbeginnings.me/scholarships`);
                     const scholarshipsData = await scholarshipsResponse.json();
-                    setScholarshipsResults(scholarshipsData.Scholarships.filter(scholarship =>
-                        scholarship.name.toLowerCase().includes(searchTerm.toLowerCase())
-                    ));
+                    setScholarshipsResults(scholarshipsData.Scholarships.filter(scholarship => {
+                        const nameMatch = scholarship.name && scholarship.name.toLowerCase().includes(searchTerm.toLowerCase());
+                        const awardedByMatch = scholarship.awarded_by && scholarship.awarded_by.toLowerCase().includes(searchTerm.toLowerCase());
+                        const amountMatch = scholarship.award_amount !== undefined && scholarship.award_amount.toString().toLowerCase().includes(searchTerm.toLowerCase());
+                        const meritBasedMatch = scholarship.merit_based === true && searchTerm.toLowerCase() === 'yes';
+                        const needBasedMatch = scholarship.need_based === true && searchTerm.toLowerCase() === 'yes';
+                        const essayBasedMatch = scholarship.essay_based === true && searchTerm.toLowerCase() === 'yes';
+                        const nationwideMatch = scholarship.nationwide === true && searchTerm.toLowerCase() === 'yes';
+                        
+                        return nameMatch || awardedByMatch || amountMatch || meritBasedMatch || needBasedMatch || essayBasedMatch || nationwideMatch;
+                    }));
+
+
 
                     const organizationsResponse = await fetch(`https://api.brighterbeginnings.me/organizations`);
                     const organizationsData = await organizationsResponse.json();
                     setOrganizationsResults(organizationsData.Organizations.filter(organization =>
-                        organization.name.toLowerCase().includes(searchTerm.toLowerCase())
+                        organization.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        organization.organization_type.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        organization.phone.toString().toLowerCase().includes(searchTerm.toLowerCase())
                     ));
                 } catch (error) {
                     console.error('Error fetching search data:', error);
