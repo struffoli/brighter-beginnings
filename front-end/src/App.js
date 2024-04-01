@@ -10,7 +10,7 @@ import NavBar from "./components/NavBar";
 import CitiesSubPage from "./pages/CitySubPage";
 import OrganizationSubPage from "./pages/OrganizationSubPage";
 import ScholarshipsSubPage from "./pages/ScholarshipSubPage";
-import SearchResultsPage from "./components/SearchResultsPage";
+import SearchResultsPage from "./pages/SearchResultsPage";
 
 function App() {
   return (

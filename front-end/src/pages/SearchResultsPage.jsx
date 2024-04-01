@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import CitiesCard from "./cards/CitiesCard";
-import ScholarshipsCard from "./cards/ScholarshipsCard";
-import OrganizationsCard from "./cards/OrganizationsCard";
+import CitiesCard from "../components/cards/CitiesCard";
+import ScholarshipsCard from "../components/cards/ScholarshipsCard";
+import OrganizationsCard from "../components/cards/OrganizationsCard";
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -43,8 +43,6 @@ function SearchResultsPage() {
                         
                         return nameMatch || awardedByMatch || amountMatch || meritBasedMatch || needBasedMatch || essayBasedMatch || nationwideMatch;
                     }));
-
-
 
                     const organizationsResponse = await fetch(`https://api.brighterbeginnings.me/organizations`);
                     const organizationsData = await organizationsResponse.json();
