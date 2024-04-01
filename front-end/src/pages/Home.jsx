@@ -58,6 +58,7 @@ const Home = () => {
               <b>Explore</b>
             </h1>
           </div>
+
           {/* <div className="d-flex flex-row align-items-center justify-content-center w-75 my-1 mb-5"> */}
           <div className="row justify-content-center mb-5 mx-5 mt-4">
             {/* Icon by tuhlpan */}

@@ -5,6 +5,8 @@ import CitiesCard from "../components/cards/CitiesCard";
 // import mapPage from "../assets/maptemp.png";
 import Pagination from "../components/Pagination.jsx";
 import "./Cities.css";
+import AwesomeSearch from "../components/AwesomeSearch.jsx";
+import states from "../data/states.js";
 
 async function getCities() {
   let cities = [];
@@ -43,23 +45,50 @@ const Cities = () => {
     getCities().then((data) => setApiCities(data));
   }, []);
 
+  const [searchCities, setSearchCities] = useState({
+    cities: [],
+    total_cities: 0,
+  });
+  useEffect(() => {
+    setSearchCities(apiCities);
+  }, [apiCities]);
+
   // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   // const currentItems = cities.slice(indexOfFirstItem, indexOfLastItem);
-  const currentItems = apiCities.cities.slice(
+  const currentItems = searchCities.cities.slice(
     indexOfFirstItem,
     indexOfLastItem
   );
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const handleCitiesSearch = (searchText) => {
+    if (searchText === "") {
+      setSearchCities(apiCities);
+    } else {
+      setSearchCities({
+        cities: apiCities.cities.filter(
+          (city) =>
+            city.name.toLowerCase().includes(searchText.toLowerCase()) ||
+            city.state.toLowerCase().includes(searchText.toLowerCase()) ||
+            states[city.state].abbreviation
+              .toLowerCase()
+              .includes(searchText.toLowerCase())
+        ),
+      });
+    }
+  };
+
   return (
     <div>
       <h2 className="title">
         <b>Cities</b>
       </h2>
-      <div className="row justify-content-center mb-5 mx-4">
+      <AwesomeSearch handleSearch={handleCitiesSearch} />
+      <div className="row justify-content-start mb-5 mx-4">
         {currentItems.map((city, index) => (
           <CitiesCard
             key={index}
@@ -78,7 +107,7 @@ const Cities = () => {
       </div>
       <Pagination
         itemsPerPage={itemsPerPage}
-        totalItems={apiCities.total_cities}
+        totalItems={searchCities.cities.length}
         paginate={paginate}
         currentPage={currentPage}
         currentItems={currentItems}
