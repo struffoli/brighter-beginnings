@@ -22,6 +22,7 @@ class OrganizationSchema(Schema):
     organization_type = fields.Str()
     img_src = fields.Str()
     scholarship_id = fields.Int()
+    address = fields.Str()
     scholarship = fields.Nested(lambda: ScholarshipSchema(only=("id", "name")), exclude=("organizations",))
 
 class CitySchema(Schema):

@@ -45,6 +45,7 @@ class Organization(db.Model):
     organization_type = db.Column(db.String(255))
     img_src = db.Column(db.String(255))
     scholarship_id = db.Column(db.Integer, db.ForeignKey('scholarship.id'))
+    address = db.Column(db.String(255))
     # Establishing relationship
     scholarship = db.relationship('Scholarship', back_populates='organizations')
 

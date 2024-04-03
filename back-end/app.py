@@ -92,6 +92,8 @@ def get_organizations():
             query = query.order_by(Organization.name)
         elif sort == 'organization_type':
             query = query.order_by(Organization.organization_type)
+        elif sort == 'address':
+            query = query.order_by(Organization.address)
 
     # filtering 
     if filter is not None:
