@@ -5,13 +5,18 @@ import Pagination from "../components/Pagination";
 import "./Organizations.css";
 import AwesomeSearch from "../components/AwesomeSearch";
 
-async function getOrganizations() {
+async function getOrganizations(search, sort, filter) {
   let organizations = [];
   let total_organizations = 0;
   try {
+    let sorts = ["id", "name", "organization_type"];
+    let filters = [null, "email", "phone"];
     const response = await fetch(
-      "https://api.brighterbeginnings.me/organizations"
-    );
+      "https://api.brighterbeginnings.me/organizations" +
+        (search === "" ? "?" : "?search=" + search + "&") +
+        (sorts[sort] ? "sort=" + sorts[sort] + "&" : "") +
+        (filters[filter] ? "filter=" + filters[filter] + "&" : "")
+    ); // also need to paginate using api instead
     const result = await response.json();
     organizations = result["Organizations"];
     total_organizations = result["Total organizations"];
@@ -44,22 +49,22 @@ const Organizations = () => {
     total_organizations: 0,
   });
   useEffect(() => {
-    getOrganizations().then((data) => setApiOrganizations(data));
+    getOrganizations("", null, null).then((data) => setApiOrganizations(data));
   }, []);
 
-  const [searchOrganizations, setSearchOrganizations] = useState({
-    organizations: [],
-    total_organizations: 0,
-  });
-  useEffect(() => {
-    setSearchOrganizations(apiOrganizations);
-  }, [apiOrganizations]);
+  // const [searchOrganizations, setSearchOrganizations] = useState({
+  //   organizations: [],
+  //   total_organizations: 0,
+  // });
+  // useEffect(() => {
+  //   setSearchOrganizations(apiOrganizations);
+  // }, [apiOrganizations]);
 
   // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   // const currentItems = organizations.slice(indexOfFirstItem, indexOfLastItem);
-  const currentItems = searchOrganizations.organizations.slice(
+  const currentItems = apiOrganizations.organizations.slice(
     indexOfFirstItem,
     indexOfLastItem
   );
@@ -67,24 +72,16 @@ const Organizations = () => {
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  const handleOrganizationsSearch = (searchText) => {
-    if (searchText === "") {
-      setSearchText("");
-      setSearchOrganizations(apiOrganizations);
-    } else {
-      setSearchText(searchText);
-      setSearchOrganizations({
-        organizations: apiOrganizations.organizations.filter(
-          (organization) =>
-            organization.name
-              .toLowerCase()
-              .includes(searchText.toLowerCase()) ||
-            organization.organization_type
-              .toLowerCase()
-              .includes(searchText.toLowerCase())
-        ),
-      });
-    }
+  let sorts = ["ID", "Name", "Organization Type"];
+  let filters = ["None", "Has Email", "Has phone number"];
+
+  const handleOrganizationsSearch = (searchText, sort, filter) => {
+    setSearchText(searchText);
+    getOrganizations(
+      searchText,
+      sorts.indexOf(sort),
+      filters.indexOf(filter)
+    ).then((data) => setApiOrganizations(data));
   };
 
   return (
@@ -92,7 +89,11 @@ const Organizations = () => {
       <h2 className="title">
         <b>Organizations</b>
       </h2>
-      <AwesomeSearch handleSearch={handleOrganizationsSearch} />
+      <AwesomeSearch
+        handleSearch={handleOrganizationsSearch}
+        sorts={sorts}
+        filters={filters}
+      />
       <div className="row justify-content-start mb-5 mx-4">
         {currentItems.map((org, index) => (
           <OrganizationsCard
@@ -111,7 +112,7 @@ const Organizations = () => {
       </div>
       <Pagination
         itemsPerPage={itemsPerPage}
-        totalItems={searchOrganizations.organizations.length}
+        totalItems={apiOrganizations.organizations.length}
         paginate={paginate}
         currentPage={currentPage}
         currentItems={currentItems}

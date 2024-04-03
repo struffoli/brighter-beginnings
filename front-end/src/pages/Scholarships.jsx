@@ -5,13 +5,24 @@ import Pagination from "../components/Pagination";
 import "./Scholarships.css";
 import AwesomeSearch from "../components/AwesomeSearch";
 
-async function getScholarships() {
+async function getScholarships(search, sort, filter) {
   let scholarships = [];
   let total_scholarships = 0;
   try {
+    let sorts = [null, "name", "awarded_by", "award_amount"];
+    let filters = [
+      null,
+      "merit_based",
+      "need_based",
+      "essay_based",
+      "nationwide",
+    ];
     const response = await fetch(
-      "https://api.brighterbeginnings.me/scholarships"
-    );
+      "https://api.brighterbeginnings.me/scholarships" +
+        (search === "" ? "?" : "?search=" + search + "&") +
+        (sorts[sort] ? "sort=" + sorts[sort] + "&" : "") +
+        (filters[filter] ? "filter=" + filters[filter] + "&" : "")
+    ); // also need to paginate using api instead
     const result = await response.json();
     scholarships = result["Scholarships"];
     total_scholarships = result["Total scholarships"];
@@ -45,21 +56,21 @@ const Scholarships = () => {
     total_scholarships: 0,
   });
   useEffect(() => {
-    getScholarships().then((data) => setApiScholarships(data));
+    getScholarships("", null, null).then((data) => setApiScholarships(data));
   }, []);
 
-  const [searchScholarships, setSearchScholarships] = useState({
-    scholarships: [],
-    total_scholarships: 0,
-  });
-  useEffect(() => {
-    setSearchScholarships(apiScholarships);
-  }, [apiScholarships]);
+  // const [searchScholarships, setSearchScholarships] = useState({
+  //   scholarships: [],
+  //   total_scholarships: 0,
+  // });
+  // useEffect(() => {
+  //   setSearchScholarships(apiScholarships);
+  // }, [apiScholarships]);
 
   // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = searchScholarships.scholarships.slice(
+  const currentItems = apiScholarships.scholarships.slice(
     indexOfFirstItem,
     indexOfLastItem
   );
@@ -67,26 +78,22 @@ const Scholarships = () => {
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  const handleScholarshipsSearch = (searchText) => {
-    if (searchText === "") {
-      setSearchText("");
-      setSearchScholarships(apiScholarships);
-    } else {
-      setSearchText(searchText);
-      setSearchScholarships({
-        scholarships: apiScholarships.scholarships.filter(
-          (scholarship) =>
-            (scholarship.name &&
-              scholarship.name
-                .toLowerCase()
-                .includes(searchText.toLowerCase())) ||
-            (scholarship.awarded_by &&
-              scholarship.awarded_by
-                .toLowerCase()
-                .includes(searchText.toLowerCase()))
-        ),
-      });
-    }
+  let sorts = ["None", "Name", "Awarded By", "Award Amount"];
+  let filters = [
+    "None",
+    "Merit based",
+    "Need based",
+    "Essay based",
+    "Nationwide",
+  ];
+
+  const handleScholarshipsSearch = (searchText, sort, filter) => {
+    setSearchText(searchText);
+    getScholarships(
+      searchText,
+      sorts.indexOf(sort),
+      filters.indexOf(filter)
+    ).then((data) => setApiScholarships(data));
   };
 
   return (
@@ -94,7 +101,11 @@ const Scholarships = () => {
       <h2 className="title">
         <b>Scholarships</b>
       </h2>
-      <AwesomeSearch handleSearch={handleScholarshipsSearch} />
+      <AwesomeSearch
+        handleSearch={handleScholarshipsSearch}
+        sorts={sorts}
+        filters={filters}
+      />
       <div className="row justify-content-start mb-5 mx-4">
         {currentItems.map((scholarship, index) => (
           <ScholarshipsCard
