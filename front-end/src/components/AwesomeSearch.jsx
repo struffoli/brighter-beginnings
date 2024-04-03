@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function AwesomeSearch({ handleSearch }) {
+function AwesomeSearch({ handleSearch, sorts, filters}) {
   const [searchText, setSearchText] = useState("");
 
   const searchInputHandler = (enteredText) => {
@@ -12,12 +12,52 @@ function AwesomeSearch({ handleSearch }) {
   };
 
   useEffect(() => {
+    let selectedSort = document.querySelector('input[name="sort"]:checked');
+    selectedSort = selectedSort ? selectedSort.nextSibling.textContent : "";
+    let selectedFilter = document.querySelector('input[name="filter"]:checked');
+    selectedFilter = selectedFilter ? selectedFilter.nextSibling.textContent : "";
     const getData = setTimeout(() => {
-      handleSearch(searchText);
+      handleSearch(searchText, selectedSort, selectedFilter);
     }, 300);
 
     return () => clearTimeout(getData);
   }, [searchText, handleSearch]);
+
+  let sortChoices = sorts ? [<h6 class="dropdown-header">Sorting</h6>] : [];
+  for (let sort in sorts) {
+    sortChoices.push(
+      <div className="ms-3 form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id={"radio" + sorts[sort]}
+          name="sort"
+          onChange={(event) => searchInputHandler(searchText)}
+        />
+        <label class="form-check-label" for={"radio" + sorts[sort]}>
+          {sorts[sort]}
+        </label>
+      </div>
+    );
+  }
+
+  let filterChoices = filters ? [<h6 class="dropdown-header">Filtering</h6>] : [];
+  for (let filter in filters) {
+    filterChoices.push(
+      <div className="ms-3 form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          id={"radio" + filters[filter]}
+          name="filter"
+          onChange={(event) => searchInputHandler(searchText)}
+        />
+        <label class="form-check-label" for={"checkbox" + filters[filter]}>
+          {filters[filter]}
+        </label>
+      </div>
+    );
+  }
 
   return (
     <div className="d-flex justify-content-between">
@@ -74,17 +114,13 @@ function AwesomeSearch({ handleSearch }) {
           className="btn btn-primary dropdown-toggle"
           type="button"
           data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Filter
+          data-bs-auto-close="outside"
+          aria-expanded="false">
+          Sort / Filter
         </button>
         <ul className="dropdown-menu">
-          <li>
-            <div className="dropdown-item btn">Name (Ascending)</div>
-          </li>
-          <li>
-            <div className="dropdown-item btn">Name (Descending)</div>
-          </li>
+            {sortChoices}
+            {filterChoices}
         </ul>
       </div>
     </div>

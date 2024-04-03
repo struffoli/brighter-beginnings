@@ -8,11 +8,12 @@ import "./Cities.css";
 import AwesomeSearch from "../components/AwesomeSearch.jsx";
 import states from "../data/states.js";
 
-async function getCities() {
+async function getCities(search, sort) {
   let cities = [];
   let total_cities = 0;
   try {
-    const response = await fetch("https://api.brighterbeginnings.me/cities");
+    let sorts = [null, "population", "name", "state", "median_income", "unemployment_rate", "college_educated_rate", "poverty_rate"]
+    const response = await fetch("https://api.brighterbeginnings.me/cities" + (search === "" ? "?" : "?search=" + search + "&") + (sorts[sort] ? "sort=" + sorts[sort] : "")); // also need to paginate using api instead
     const result = await response.json();
     cities = result["Cities"];
     total_cities = result["Total cities"];
@@ -42,22 +43,22 @@ const Cities = () => {
   // Get cities from API
   const [apiCities, setApiCities] = useState({ cities: [], total_cities: 0 });
   useEffect(() => {
-    getCities().then((data) => setApiCities(data));
+    getCities("", null).then((data) => setApiCities(data));
   }, []);
 
-  const [searchCities, setSearchCities] = useState({
-    cities: [],
-    total_cities: 0,
-  });
-  useEffect(() => {
-    setSearchCities(apiCities);
-  }, [apiCities]);
+  // const [searchCities, setSearchCities] = useState({
+  //   cities: [],
+  //   total_cities: 0,
+  // });
+  // useEffect(() => {
+  //   setSearchCities(apiCities);
+  // }, [apiCities]);
 
   // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   // const currentItems = cities.slice(indexOfFirstItem, indexOfLastItem);
-  const currentItems = searchCities.cities.slice(
+  const currentItems = apiCities.cities.slice(
     indexOfFirstItem,
     indexOfLastItem
   );
@@ -65,21 +66,11 @@ const Cities = () => {
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  const handleCitiesSearch = (searchText) => {
-    if (searchText === "") {
-      setSearchCities(apiCities);
-    } else {
-      setSearchCities({
-        cities: apiCities.cities.filter(
-          (city) =>
-            city.name.toLowerCase().includes(searchText.toLowerCase()) ||
-            city.state.toLowerCase().includes(searchText.toLowerCase()) ||
-            states[city.state].abbreviation
-              .toLowerCase()
-              .includes(searchText.toLowerCase())
-        ),
-      });
-    }
+  let sorts = ["Population (↓)", "Population (↑)", "Name", "State", "Median Income","Unemployment Rate", "College Educated Rate", "Poverty Rate"];
+  let filters = null;
+
+  const handleCitiesSearch = (searchText, searchSort, searchFilters) => {
+    getCities(searchText, sorts.indexOf(searchSort)).then((data) => setApiCities(data))
   };
 
   return (
@@ -87,7 +78,7 @@ const Cities = () => {
       <h2 className="title">
         <b>Cities</b>
       </h2>
-      <AwesomeSearch handleSearch={handleCitiesSearch} />
+      <AwesomeSearch handleSearch={handleCitiesSearch} sorts={sorts} filters={filters}/>
       <div className="row justify-content-start mb-5 mx-4">
         {currentItems.map((city, index) => (
           <CitiesCard
@@ -107,7 +98,7 @@ const Cities = () => {
       </div>
       <Pagination
         itemsPerPage={itemsPerPage}
-        totalItems={searchCities.cities.length}
+        totalItems={apiCities.cities.length}
         paginate={paginate}
         currentPage={currentPage}
         currentItems={currentItems}
