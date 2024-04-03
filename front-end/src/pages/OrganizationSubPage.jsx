@@ -62,8 +62,8 @@ function OrganizationSubPage() {
               referrerpolicy="no-referrer-when-downgrade"
               src={
                 "https://www.google.com/maps/embed/v1/place?key=AIzaSyCN-0OitT1TAcITWdYcLeHnqGgqbA9eriQ&q=" +
-                (org.Organization.location
-                  ? org.Organization.location
+                (org.Organization.address
+                  ? org.Organization.address
                   : "United States")
               }
             ></iframe>
