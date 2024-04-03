@@ -37,6 +37,7 @@ export async function getScholarshipById(id) {
 const Scholarships = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(15); // Set the number of items per page
+  const [searchText, setSearchText] = useState("");
 
   // Get scholarships from API
   const [apiScholarships, setApiScholarships] = useState({
@@ -68,8 +69,10 @@ const Scholarships = () => {
 
   const handleScholarshipsSearch = (searchText) => {
     if (searchText === "") {
+      setSearchText("");
       setSearchScholarships(apiScholarships);
     } else {
+      setSearchText(searchText);
       setSearchScholarships({
         scholarships: apiScholarships.scholarships.filter(
           (scholarship) =>
@@ -106,6 +109,7 @@ const Scholarships = () => {
             merit_based={scholarship.merit_based}
             essay_based={scholarship.essay_based}
             link={scholarship.link}
+            searchText={searchText}
           />
         ))}
       </div>

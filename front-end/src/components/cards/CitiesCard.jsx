@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import states from "../../data/states";
+import HighlightedText from "../HighlightedText";
 
 const CitiesCard = (props) => {
   return (
@@ -18,7 +19,14 @@ const CitiesCard = (props) => {
           <div className="d-flex flex-row justify-content-between">
             <h5 className="card-title" style={{ paddingBottom: "4px" }}>
               <Link to={`/cities/city?id=${props.id}`} className="link">
-                <b>{props.name}</b>, {states[props.state]["abbreviation"]}
+                <b>
+                  <HighlightedText
+                    searchText={props.searchText}
+                    text={
+                      props.name + ", " + states[props.state]["abbreviation"]
+                    }
+                  />
+                </b>
               </Link>
             </h5>
             <img

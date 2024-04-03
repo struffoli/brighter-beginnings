@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import HighlightedText from "../HighlightedText";
 
 const OrganizationsCard = (props) => {
   return (
@@ -16,7 +17,12 @@ const OrganizationsCard = (props) => {
         <div className="card-body">
           <h5 className="card-title" style={{ paddingBottom: "4px" }}>
             <Link to={`/organizations/org?id=${props.id}`} className="link">
-              <b>{props.name}</b>
+              <b>
+                <HighlightedText
+                  searchText={props.searchText}
+                  text={props.name}
+                />
+              </b>
             </Link>
           </h5>
           <p className="card-text">
@@ -29,7 +35,11 @@ const OrganizationsCard = (props) => {
             <b>Phone:</b> {props.phone}
           </p>
           <p className="card-text">
-            <b>Organization Type:</b> {props.organization_type}
+            <b>Organization Type:</b>{" "}
+            <HighlightedText
+              searchText={props.searchText}
+              text={props.organization_type}
+            />
           </p>
           {/* <p className="card-text">
             <b>City: </b>

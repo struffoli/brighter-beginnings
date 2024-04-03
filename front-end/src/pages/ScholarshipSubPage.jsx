@@ -38,45 +38,54 @@ function ScholarshipsSubPage() {
             <b>Award by:</b> {scholarship.Scholarship.awarded_by}
           </p>
           <p className="card-text">
-            <b>Award Amount:</b> {scholarship.Scholarship.award_amount.toLocaleString("en-US", {
+            <b>Award Amount:</b>{" "}
+            {scholarship.Scholarship.award_amount.toLocaleString("en-US", {
               style: "currency",
               currency: "USD",
             })}
           </p>
           <p className="card-text">
-            <b>Nationwide:</b> {scholarship.Scholarship.nationwide ? "Yes" : "No"}
+            <b>Nationwide:</b>{" "}
+            {scholarship.Scholarship.nationwide ? "Yes" : "No"}
           </p>
           <p className="card-text">
-            <b>Need-based:</b> {scholarship.Scholarship.need_based ? "Yes" : "No"}
+            <b>Need-based:</b>{" "}
+            {scholarship.Scholarship.need_based ? "Yes" : "No"}
           </p>
           <p className="card-text">
-            <b>Merit-based:</b> {scholarship.Scholarship.merit_based ? "Yes" : "No"}
+            <b>Merit-based:</b>{" "}
+            {scholarship.Scholarship.merit_based ? "Yes" : "No"}
           </p>
           <p className="card-text">
-            <b>Essay Required:</b> {scholarship.Scholarship.essay_based ? "Yes" : "No"}
+            <b>Essay Required:</b>{" "}
+            {scholarship.Scholarship.essay_based ? "Yes" : "No"}
           </p>
           <p className="card-text">
             <b>Eligible for students from: </b>
           </p>
-            {scholarship.Scholarship.cities.map((city, index) => (
-              <p>
-                <Link to={`/cities/city?id=${city.id}`} key={index}>
-                  {city.name}
-                </Link>
-              </p>
-            ))}
+          {scholarship.Scholarship.cities.map((city, index) => (
+            <p>
+              <Link to={`/cities/city?id=${city.id}`} key={index}>
+                {city.name}
+              </Link>
+            </p>
+          ))}
           <p className="card-text">
             <b>Relevant Organizations: </b>
           </p>
-            {scholarship.Scholarship.organizations.map((org, index) => (
-              <p>
-                <Link to={`/organizations/org?id=${org.id}`} key={index}>
-                  {org.name}
-                </Link>
-              </p>
-            ))}
+          {scholarship.Scholarship.organizations.map((org, index) => (
+            <p>
+              <Link to={`/organizations/org?id=${org.id}`} key={index}>
+                {org.name}
+              </Link>
+            </p>
+          ))}
           <p className="card-text">
-            <Link to={scholarship.Scholarship.link}>
+            <Link
+              to={scholarship.Scholarship.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <b>Link to Apply</b>
             </Link>
           </p>

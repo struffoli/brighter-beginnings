@@ -38,6 +38,7 @@ export async function getCityById(id) {
 const Cities = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(15); // Set the number of items per page
+  const [searchText, setSearchText] = useState("");
 
   // Get cities from API
   const [apiCities, setApiCities] = useState({ cities: [], total_cities: 0 });
@@ -67,8 +68,10 @@ const Cities = () => {
 
   const handleCitiesSearch = (searchText) => {
     if (searchText === "") {
+      setSearchText("");
       setSearchCities(apiCities);
     } else {
+      setSearchText(searchText);
       setSearchCities({
         cities: apiCities.cities.filter(
           (city) =>
@@ -102,6 +105,7 @@ const Cities = () => {
             unemployment_rate={city.unemployment_rate}
             organization={city.organization}
             scholarship={city.scholarship}
+            searchText={searchText}
           />
         ))}
       </div>

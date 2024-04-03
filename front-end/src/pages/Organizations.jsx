@@ -37,6 +37,7 @@ export async function getOrganizationById(id) {
 const Organizations = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(15); // Set the number of items per page
+  const [searchText, setSearchText] = useState("");
 
   const [apiOrganizations, setApiOrganizations] = useState({
     organizations: [],
@@ -68,8 +69,10 @@ const Organizations = () => {
 
   const handleOrganizationsSearch = (searchText) => {
     if (searchText === "") {
+      setSearchText("");
       setSearchOrganizations(apiOrganizations);
     } else {
+      setSearchText(searchText);
       setSearchOrganizations({
         organizations: apiOrganizations.organizations.filter(
           (organization) =>
@@ -102,6 +105,7 @@ const Organizations = () => {
             organization_type={org.organization_type}
             city={org.city}
             scholarship={org.scholarship}
+            searchText={searchText}
           />
         ))}
       </div>

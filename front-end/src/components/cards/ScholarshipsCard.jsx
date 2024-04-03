@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import HighlightedText from "../HighlightedText";
 
 const ScholarshipsCard = (props) => {
   return (
@@ -16,14 +17,24 @@ const ScholarshipsCard = (props) => {
         <div className="card-body">
           <h5 className="card-title" style={{ paddingBottom: "4px" }}>
             <Link to={`/scholarships/schp?id=${props.id}`} className="link">
-              <b>{props.name}</b>
+              <b>
+                <HighlightedText
+                  searchText={props.searchText}
+                  text={props.name}
+                />
+              </b>
             </Link>
           </h5>
           <p className="card-text">
-            <b>Award by:</b> {props.awarded_by}
+            <b>Award by:</b>{" "}
+            <HighlightedText
+              searchText={props.searchText}
+              text={props.awarded_by}
+            />
           </p>
           <p className="card-text">
-            <b>Award Amount:</b> {props.award_amount.toLocaleString("en-US", {
+            <b>Award Amount:</b>{" "}
+            {props.award_amount.toLocaleString("en-US", {
               style: "currency",
               currency: "USD",
             })}
@@ -41,7 +52,9 @@ const ScholarshipsCard = (props) => {
             <b>Essay Required:</b> {props.essay_based ? "Yes" : "No"}
           </p>
           <p className="card-text">
-            <Link to={`/scholarships/schp?id=${props.id}`} className="link">Learn More </Link>
+            <Link to={`/scholarships/schp?id=${props.id}`} className="link">
+              Learn More{" "}
+            </Link>
           </p>
         </div>
       </div>
