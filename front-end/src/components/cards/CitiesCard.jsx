@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import states from "../../data/states";
 
 const CitiesCard = (props) => {
   return (
@@ -14,14 +15,22 @@ const CitiesCard = (props) => {
           />
         </Link>
         <div className="card-body">
-          <h5 className="card-title" style={{ paddingBottom: "4px" }}>
-            <Link to={`/cities/city?id=${props.id}`} className="link">
-              <b>{props.name}</b>
-            </Link>
-          </h5>
-          <p className="card-text">
+          <div className="d-flex flex-row justify-content-between">
+            <h5 className="card-title" style={{ paddingBottom: "4px" }}>
+              <Link to={`/cities/city?id=${props.id}`} className="link">
+                <b>{props.name}</b>, {states[props.state]["abbreviation"]}
+              </Link>
+            </h5>
+            <img
+              className=""
+              src={states[props.state].flag}
+              style={{ objectFit: "cover", width: "15%" }}
+              alt={`The flag of ${props.state}.`}
+            />
+          </div>
+          {/* <p className="card-text">
             <b>State:</b> {props.state}
-          </p>
+          </p> */}
           <p className="card-text">
             <b>Population:</b> {props.population}
           </p>

@@ -1,7 +1,10 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import "./NavBar.css"
+import SearchBar from "./SearchBar";
+import React from 'react';
+import "./NavBar.css";
+
 function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
@@ -15,6 +18,9 @@ function NavBar() {
             <Nav.Link href="/scholarships">Scholarships</Nav.Link>
             <Nav.Link href="/about">About Us</Nav.Link>
           </Nav>
+          <div className="ms-auto">
+            <SearchBar />
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
