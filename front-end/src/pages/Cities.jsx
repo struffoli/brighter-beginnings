@@ -119,6 +119,7 @@ const Cities = () => {
             population={city.population}
             median_income={city.median_income}
             poverty_rate={city.poverty_rate}
+            college_educated_rate={city.college_educated_rate}
             state={city.state}
             unemployment_rate={city.unemployment_rate}
             organization={city.organization}
