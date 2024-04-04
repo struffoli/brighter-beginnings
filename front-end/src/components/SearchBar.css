@@ -12,7 +12,6 @@
   box-shadow: 2px 2px 5px #000;
 }
 
-.search__button,
 .search__input {
   background-color: #fff;
   border: none;
@@ -24,11 +23,6 @@
   width: 85%;
 }
 
-.search__button {
-  width: 25%;
-  font-size: 1.0rem;
-  padding-right: 1.0em;
+.searchInput::placeholder {
   color: gray;
-  display: grid;
-  place-content: center;
 }
