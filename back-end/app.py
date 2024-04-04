@@ -51,6 +51,7 @@ def get_scholarships():
             query = query.filter(Scholarship.essay_based == True)
         elif filter == 'nationwide':
             query = query.filter(Scholarship.nationwide == True)
+        total = query.count()
 
     result = query.paginate(page=page, per_page=per_page, error_out=False)
     
@@ -101,6 +102,7 @@ def get_organizations():
             query = query.filter(Scholarship.email != 'N/A')
         if filter == 'phone':
             query = query.filter(Scholarship.phone != 'N/A')
+        total = query.count()
 
     result = query.paginate(page=page, per_page=per_page, error_out=False)
     

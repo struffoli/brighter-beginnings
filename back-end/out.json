@@ -1,0 +1,1149 @@
+{
+  "Organizations": [
+    {
+      "email": "N/A",
+      "id": 1,
+      "img_src": "https://cissouthplains.org/wp-content/uploads/2023/02/Texas-ACE-Logo-1024x623.png",
+      "name": "Texas Ace",
+      "organization_type": "Government",
+      "phone": "512-463-9734",
+      "scholarship": {
+        "id": 1,
+        "name": "C. Burke Morris Scholarship"
+      },
+      "scholarship_id": 1
+    },
+    {
+      "email": "N/A",
+      "id": 2,
+      "img_src": "https://static.wixstatic.com/media/1a1197_ac26f6ce05ef4436a307586655dcfe1c~mv2.png/v1/fill/w_500,h_330,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo.png",
+      "name": "Morris Mountaineer",
+      "organization_type": "Corporate",
+      "phone": "304-848-7472",
+      "scholarship": {
+        "id": 1,
+        "name": "C. Burke Morris Scholarship"
+      },
+      "scholarship_id": 1
+    },
+    {
+      "email": "N/A",
+      "id": 3,
+      "img_src": "https://imgur.com/Ak1NDzV.png",
+      "name": "Texas School Guide",
+      "organization_type": "Educational",
+      "phone": "214-599-0072",
+      "scholarship": {
+        "id": 2,
+        "name": "Women in STEM Scholarship"
+      },
+      "scholarship_id": 2
+    },
+    {
+      "email": "denise@coloradoafterschoolpartnership.org",
+      "id": 4,
+      "img_src": "https://upload.wikimedia.org/wikipedia/en/d/d7/Afterschool_Alliance_Logo.png",
+      "name": "Afterschool Alliance",
+      "organization_type": "Program",
+      "phone": "720-580-2271",
+      "scholarship": {
+        "id": 2,
+        "name": "Women in STEM Scholarship"
+      },
+      "scholarship_id": 2
+    },
+    {
+      "email": "info@collegepossible.org",
+      "id": 5,
+      "img_src": "https://collegepossible.org/wp-content/uploads/2020/11/college-possible-washington-square-500x400.png",
+      "name": "College Possible",
+      "organization_type": "Program",
+      "phone": "651-288-9455",
+      "scholarship": {
+        "id": 3,
+        "name": "Niche $10,000 No-Essay Scholarship"
+      },
+      "scholarship_id": 3
+    },
+    {
+      "email": "N/A",
+      "id": 7,
+      "img_src": "https://www.madison-park.org/wp-content/uploads/2019/09/EVkids-logo-tag-color.jpg",
+      "name": "EVkids",
+      "organization_type": "Program",
+      "phone": "(617) 297-2239",
+      "scholarship": {
+        "id": 4,
+        "name": "Lisa and Josh World Scholarship"
+      },
+      "scholarship_id": 4
+    },
+    {
+      "email": "fgcb@fgcb.org",
+      "id": 8,
+      "img_src": "https://fgcb.org/images/first-generation-college-bound-logo.png",
+      "name": "First Generation College Bound",
+      "organization_type": "Non-profit",
+      "phone": "(301) 490-0911",
+      "scholarship": {
+        "id": 4,
+        "name": "Lisa and Josh World Scholarship"
+      },
+      "scholarship_id": 4
+    },
+    {
+      "email": "natalefoundation@gmail.com",
+      "id": 9,
+      "img_src": "https://static.wixstatic.com/media/2dbdc2_79dea35de019404ba5c969fcfca6aed8~mv2.jpg/v1/fill/w_1096,h_234,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/2dbdc2_79dea35de019404ba5c969fcfca6aed8~mv2.jpg",
+      "name": "The Natale Foundation",
+      "organization_type": "Non-profit",
+      "phone": "N/A",
+      "scholarship": {
+        "id": 5,
+        "name": "Ward Green Scholarship for the Arts & Sciences"
+      },
+      "scholarship_id": 5
+    },
+    {
+      "email": "support@text-em-all.com",
+      "id": 11,
+      "img_src": "https://www.text-em-all.com/hubfs/text-em-all-web-logo.svg",
+      "name": "Text-em-all",
+      "organization_type": "Corporate",
+      "phone": "(877) 226-3080",
+      "scholarship": {
+        "id": 6,
+        "name": "West Family Scholarship"
+      },
+      "scholarship_id": 6
+    },
+    {
+      "email": "info@igniteartsandstem.org",
+      "id": 12,
+      "img_src": "https://igniteartsandstem.org/wp-content/uploads/2017/09/ignite-logo-white-color.png",
+      "name": "Ignite Arts & STEM",
+      "organization_type": "Non-profit",
+      "phone": "818-863-6035",
+      "scholarship": {
+        "id": 6,
+        "name": "West Family Scholarship"
+      },
+      "scholarship_id": 6
+    },
+    {
+      "email": "schoolassist@salliemae.com",
+      "id": 13,
+      "img_src": "https://cdn.cookielaw.org/logos/4eda47c4-ae52-480f-a8df-aa84367df894/af5a5e55-7988-4707-8bb2-215855ac6f3a/9956157c-7d57-4538-a4e7-a4852c50a184/SM_Blue_Horizontal.jpg",
+      "name": "Sallie Mae",
+      "organization_type": "Corporate",
+      "phone": "844-827-7478",
+      "scholarship": {
+        "id": 7,
+        "name": "Commitment to Excellence Scholarship"
+      },
+      "scholarship_id": 7
+    },
+    {
+      "email": "treesfortuition+contact@gmail.com",
+      "id": 14,
+      "img_src": "https://treesfortuition.com/wp-content/uploads/2023/08/Trees-for-Tuition-Logo.png",
+      "name": "Trees for Tuition",
+      "organization_type": "Non-profit",
+      "phone": "404-576-8945",
+      "scholarship": {
+        "id": 7,
+        "name": "Commitment to Excellence Scholarship"
+      },
+      "scholarship_id": 7
+    },
+    {
+      "email": "N/A",
+      "id": 15,
+      "img_src": "https://i0.wp.com/libertyandprosperity.com/wp-content/uploads/2022/10/cropped-Untitled-1.jpg?w=512&ssl=1",
+      "name": "Liberty and Prosperity",
+      "organization_type": "Non-profit",
+      "phone": "(609) 927-7333",
+      "scholarship": {
+        "id": 8,
+        "name": "Disability in Social Work Scholarship"
+      },
+      "scholarship_id": 8
+    },
+    {
+      "email": "N/A",
+      "id": 16,
+      "img_src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Advantech_logo.svg/1280px-Advantech_logo.svg.png",
+      "name": "Advantech",
+      "organization_type": "Corporate",
+      "phone": "888-576-9668",
+      "scholarship": {
+        "id": 8,
+        "name": "Disability in Social Work Scholarship"
+      },
+      "scholarship_id": 8
+    },
+    {
+      "email": "info@lvwa.org",
+      "id": 17,
+      "img_src": "https://lvwa.org/wp-content/uploads/2020/01/LOGO2.png",
+      "name": "Literacy Volunteers",
+      "organization_type": "Non-profit",
+      "phone": "540-536-1648",
+      "scholarship": {
+        "id": 9,
+        "name": "Text-Em-All Founders Scholarship"
+      },
+      "scholarship_id": 9
+    },
+    {
+      "email": "info@sevendreams.org",
+      "id": 18,
+      "img_src": "https://images.squarespace-cdn.com/content/v1/5e601fbaefbc602da681fc23/1587764620461-BNLCS37E46546VPQIL0I/SEVEN-DREAMS-logo.png?format=1500w",
+      "name": "Seven Dreams Foundation",
+      "organization_type": "Non-profit",
+      "phone": "763-504-4088",
+      "scholarship": {
+        "id": 9,
+        "name": "Text-Em-All Founders Scholarship"
+      },
+      "scholarship_id": 9
+    },
+    {
+      "email": "info@hopbe.org",
+      "id": 19,
+      "img_src": "https://hopbe.org/wp-content/themes/elevation_theme/assets/images/logo-white.svg",
+      "name": "Hopbe Inc.",
+      "organization_type": "Non-profit",
+      "phone": "678-695-6688",
+      "scholarship": {
+        "id": 10,
+        "name": "Kristie's Kids - Loving Arms Around Those Impacted By Cancer Scholarship"
+      },
+      "scholarship_id": 10
+    },
+    {
+      "email": "info@alvn.org",
+      "id": 20,
+      "img_src": "https://www.assistanceleague.org/northern-virginia/wp-content/uploads/sites/70/2024/01/20thAnniv-Logo-1.jpg",
+      "name": "Assisstance League of Northern Virginia",
+      "organization_type": "Non-profit",
+      "phone": "571-500-3002",
+      "scholarship": {
+        "id": 10,
+        "name": "Kristie's Kids - Loving Arms Around Those Impacted By Cancer Scholarship"
+      },
+      "scholarship_id": 10
+    },
+    {
+      "email": "cise@cisekids.org",
+      "id": 21,
+      "img_src": "https://cisekids.org/wp-content/uploads/2023/03/cropped-cropped-CISEonlyLogoOnBlue-copy.png",
+      "name": "CISE",
+      "organization_type": "Non-profit",
+      "phone": "513-263-3471",
+      "scholarship": {
+        "id": 11,
+        "name": "I Matter Scholarship"
+      },
+      "scholarship_id": 11
+    },
+    {
+      "email": "team@community-matters.org",
+      "id": 22,
+      "img_src": "https://cdn.greatnonprofits.org/images/logos/CM_logo_stacked0.jpg",
+      "name": "Community Matters",
+      "organization_type": "Non-profit",
+      "phone": "707-823-6159",
+      "scholarship": {
+        "id": 11,
+        "name": "I Matter Scholarship"
+      },
+      "scholarship_id": 11
+    },
+    {
+      "email": "info@rcef.org",
+      "id": 23,
+      "img_src": "https://static.wixstatic.com/media/6679e5_2f9228cccc7348a1bde68e613921c023~mv2.png/v1/fill/w_416,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/rcef-logo-white.png",
+      "name": "Redwood City Education Foundation",
+      "organization_type": "Non-profit",
+      "phone": "N/A",
+      "scholarship": {
+        "id": 12,
+        "name": "Gomez Family Legacy Scholarship"
+      },
+      "scholarship_id": 12
+    },
+    {
+      "email": "bessthebookbus@gmail.com",
+      "id": 24,
+      "img_src": "https://bessthebookbus.org/wp-content/uploads/2016/10/besslogo251.png",
+      "name": "Bess the Book Bus",
+      "organization_type": "Non-profit",
+      "phone": "813-545-6321",
+      "scholarship": {
+        "id": 12,
+        "name": "Gomez Family Legacy Scholarship"
+      },
+      "scholarship_id": 12
+    },
+    {
+      "email": "info@peakliteracy.org",
+      "id": 25,
+      "img_src": "https://images.squarespace-cdn.com/content/v1/641b148b4fa2a87bb65dce7d/3d080b33-fc77-4767-a2c6-ff65f611ef43/PEAK.png?format=1500w",
+      "name": "Peak Literacy",
+      "organization_type": "Non-profit",
+      "phone": "3522343172",
+      "scholarship": {
+        "id": 13,
+        "name": "WTFintech? No-Essay Scholarship"
+      },
+      "scholarship_id": 13
+    },
+    {
+      "email": "N/A",
+      "id": 26,
+      "img_src": "https://littlefreelibrary.org/wp-content/uploads/2022/05/cropped-LFL_RGB_HorizonalTaglineLogo@2x.png",
+      "name": "Little Free Library",
+      "organization_type": "Non-profit",
+      "phone": "715-690-2488",
+      "scholarship": {
+        "id": 13,
+        "name": "WTFintech? No-Essay Scholarship"
+      },
+      "scholarship_id": 13
+    },
+    {
+      "email": "questions@tabs.org",
+      "id": 27,
+      "img_src": "https://www.boardingschools.com/wp-content/uploads/TABS-ReadyForMore-white-logo-horiz.png",
+      "name": "The Association of Boarding Schools",
+      "organization_type": "Private Company",
+      "phone": "828-258-5354",
+      "scholarship": {
+        "id": 14,
+        "name": "Margalie Jean-Baptiste Scholarship"
+      },
+      "scholarship_id": 14
+    },
+    {
+      "email": "N/A",
+      "id": 28,
+      "img_src": "https://www.teachforamerica.org/themes/custom/polaris/dist/img/logo-footer.svg",
+      "name": "Teach for America",
+      "organization_type": "Non-profit",
+      "phone": "212-279-2080",
+      "scholarship": {
+        "id": 14,
+        "name": "Margalie Jean-Baptiste Scholarship"
+      },
+      "scholarship_id": 14
+    },
+    {
+      "email": "N/A",
+      "id": 29,
+      "img_src": "https://upload.wikimedia.org/wikipedia/commons/e/ee/DonorsChoose-Logo.png?download",
+      "name": "Donors Choose",
+      "organization_type": "Non-profit",
+      "phone": "212-239-3615",
+      "scholarship": {
+        "id": 15,
+        "name": "Bubba Wallace Live to Be Different Scholarship"
+      },
+      "scholarship_id": 15
+    },
+    {
+      "email": "N/A",
+      "id": 31,
+      "img_src": "https://austinpartners.org/wp-content/uploads/2020/03/Austin-Partners-In-Education-Logo-300x116.png",
+      "name": "Austin Partners in Education (APIE)",
+      "organization_type": "Non-profit",
+      "phone": "512-637-0900",
+      "scholarship": {
+        "id": 16,
+        "name": "WCEJ Thornton Foundation Low-Income Scholarship"
+      },
+      "scholarship_id": 16
+    },
+    {
+      "email": "N/A",
+      "id": 32,
+      "img_src": "https://scholarshipamerica.org/wp-content/uploads/2019/04/scholarship-america-logo-2019.png",
+      "name": "Scholarship America",
+      "organization_type": "Non-profit",
+      "phone": "507-931-1682",
+      "scholarship": {
+        "id": 16,
+        "name": "WCEJ Thornton Foundation Low-Income Scholarship"
+      },
+      "scholarship_id": 16
+    },
+    {
+      "email": "N/A",
+      "id": 33,
+      "img_src": "https://www.neafoundation.org/wp-content/uploads/2022/03/logo@2x.png",
+      "name": "NEA Foundation",
+      "organization_type": "Government",
+      "phone": "202-822-7840",
+      "scholarship": {
+        "id": 17,
+        "name": "3Wishes Women\u2019s Empowerment Scholarship"
+      },
+      "scholarship_id": 17
+    },
+    {
+      "email": "leda@ledascholars.org",
+      "id": 34,
+      "img_src": "https://newsroom.unl.edu/announce/files/file141558.jpg",
+      "name": "Leadership Enterprise for a Diverse Ameria",
+      "organization_type": "Non-profit",
+      "phone": "212-672-9750",
+      "scholarship": {
+        "id": 17,
+        "name": "3Wishes Women\u2019s Empowerment Scholarship"
+      },
+      "scholarship_id": 17
+    },
+    {
+      "email": "info@mindsmatterportland.org",
+      "id": 35,
+      "img_src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3q1lU_e_MpGGi71k5H3UTMNrP5-lLkEHX_rfFz4Zh2GKoIfdUliSJPRmkh3fLQvSQnQ&usqp=CAU",
+      "name": "Minds Matter Portland Chapter",
+      "organization_type": "Non-profit",
+      "phone": "N/A",
+      "scholarship": {
+        "id": 18,
+        "name": "Cody Cochlin Memorial Scholarship"
+      },
+      "scholarship_id": 18
+    },
+    {
+      "email": "N/A",
+      "id": 36,
+      "img_src": "https://higherlogicdownload.s3.amazonaws.com/AISAP/d8f8fa63-7504-4e46-8d7e-2e4673662c8e/UploadedImages/Corp%20Partner%20Logo/logo-national-partnership-for-educational-access-600x300.png",
+      "name": "National Partnership for Educational Access",
+      "organization_type": "Corporate",
+      "phone": "617-423-6300",
+      "scholarship": {
+        "id": 18,
+        "name": "Cody Cochlin Memorial Scholarship"
+      },
+      "scholarship_id": 18
+    },
+    {
+      "email": "collegeplanning@nhheaf.org",
+      "id": 37,
+      "img_src": "https://www.mvsb.com/wp-content/uploads/2024/01/Granite_Edvance_Logo.jpg",
+      "name": "Granite Edvance",
+      "organization_type": "Non-profit",
+      "phone": "603-225-6612",
+      "scholarship": {
+        "id": 19,
+        "name": "Code Breakers & Changemakers Scholarship"
+      },
+      "scholarship_id": 19
+    },
+    {
+      "email": "pcgonzalez@onemilliondegrees.org",
+      "id": 38,
+      "img_src": "https://www.harpercollege.edu/registration/financialaid/scholarships/images/onemilliondegreeslogo.png",
+      "name": "One Million Degrees",
+      "organization_type": "Program",
+      "phone": "312-920-9605",
+      "scholarship": {
+        "id": 19,
+        "name": "Code Breakers & Changemakers Scholarship"
+      },
+      "scholarship_id": 19
+    },
+    {
+      "email": "N/A",
+      "id": 39,
+      "img_src": "https://www.proinspire.org/wp-content/uploads/2019/03/PeerForward-Logo-Vertical-300x118.png",
+      "name": "PeerFoward",
+      "organization_type": "Program",
+      "phone": "202.319.1763",
+      "scholarship": {
+        "id": 20,
+        "name": "Loreen K. Odemu Memorial Nursing Scholarship"
+      },
+      "scholarship_id": 20
+    },
+    {
+      "email": "prepaid.foundation@myfloridaprepaid.com",
+      "id": 40,
+      "img_src": "https://www.floridaprepaidcollegefoundation.com/wp-content/uploads/2024/01/logo-Florida-Prepaid-Foundation-Logo-RGB_Stacked_Accent.svg",
+      "name": "Florida Prepaid College Foundation",
+      "organization_type": "Non-profit",
+      "phone": "(850) 922-6740",
+      "scholarship": {
+        "id": 20,
+        "name": "Loreen K. Odemu Memorial Nursing Scholarship"
+      },
+      "scholarship_id": 20
+    },
+    {
+      "email": "N/A",
+      "id": 41,
+      "img_src": "https://www.silverliningmentoring.org/wp-content/uploads/2019/08/silver-lining-mentoring-logo-100.png",
+      "name": "Silver Lining Mentoring",
+      "organization_type": "Program",
+      "phone": "617.224.1300",
+      "scholarship": {
+        "id": 21,
+        "name": "Stitt Family Aeronautics, Aerospace & Aviation Scholarship"
+      },
+      "scholarship_id": 21
+    },
+    {
+      "email": "jhasner@tsic.org",
+      "id": 42,
+      "img_src": "https://static.wixstatic.com/media/f800c7_04715ab0431942bea3fdc04f41cdf1b4~mv2.png/v1/fill/w_525,h_323,al_c,lg_1,q_85,enc_auto/f800c7_04715ab0431942bea3fdc04f41cdf1b4~mv2.png",
+      "name": "Take Stock in Children",
+      "organization_type": "Non-profit",
+      "phone": "(786) 369-5130",
+      "scholarship": {
+        "id": 21,
+        "name": "Stitt Family Aeronautics, Aerospace & Aviation Scholarship"
+      },
+      "scholarship_id": 21
+    },
+    {
+      "email": "info@teensharp.org",
+      "id": 43,
+      "img_src": "https://assets.delawarebusinesstimes.com/2023/06/teensharp-logo-300x168.png",
+      "name": "TeenSHARP",
+      "organization_type": "Program",
+      "phone": "302-827-7477",
+      "scholarship": {
+        "id": 22,
+        "name": "Sallie Mae Scholarship"
+      },
+      "scholarship_id": 22
+    },
+    {
+      "email": "caeopct@gmail.com",
+      "id": 44,
+      "img_src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyhE9PadSSIkQHul3FHzTxeRSehnnS9aLO3vT0mQj6G0kzkzaNVsA-fNmH6iADWn3Xn3I&usqp=CAU",
+      "name": "The Connecticut Associate of Educational Opportunity Programs",
+      "organization_type": "Non-profit",
+      "phone": "N/A",
+      "scholarship": {
+        "id": 22,
+        "name": "Sallie Mae Scholarship"
+      },
+      "scholarship_id": 22
+    },
+    {
+      "email": "N/A",
+      "id": 45,
+      "img_src": "https://www.cityyear.org/wp-content/themes/CityYear/dist/assets/images/logo.svg",
+      "name": "City Year",
+      "organization_type": "Non-profit",
+      "phone": "617-927-2500",
+      "scholarship": {
+        "id": 23,
+        "name": "Mark Suren Melkonian Memorial Scholarship"
+      },
+      "scholarship_id": 23
+    },
+    {
+      "email": "N/A",
+      "id": 46,
+      "img_src": "https://edtrust.org/wp-content/uploads/2017/11/EdTrust-Logo-@2x.png",
+      "name": "The Education Trust",
+      "organization_type": "Non-profit",
+      "phone": "202.293.1217",
+      "scholarship": {
+        "id": 23,
+        "name": "Mark Suren Melkonian Memorial Scholarship"
+      },
+      "scholarship_id": 23
+    },
+    {
+      "email": "info@hopepartners.org",
+      "id": 47,
+      "img_src": "https://hopepartners.org/wp-content/uploads/2017/09/New-HPI-Logo-v5-L_VectorBS.png",
+      "name": "Hope Partners International",
+      "organization_type": "Non-profit",
+      "phone": "888-345-4673",
+      "scholarship": {
+        "id": 24,
+        "name": "Coach Ray Memorial Athletic Scholarship"
+      },
+      "scholarship_id": 24
+    },
+    {
+      "email": "outreachworks@outreachworks.org",
+      "id": 48,
+      "img_src": "https://outreachworks.org/wp-content/uploads/2022/06/cropped-site-icon-2.jpg",
+      "name": "Employment Opportunity & Training Center of Northeastern Pennsylvania",
+      "organization_type": "Non-profit",
+      "phone": "570-348-6484",
+      "scholarship": {
+        "id": 24,
+        "name": "Coach Ray Memorial Athletic Scholarship"
+      },
+      "scholarship_id": 24
+    },
+    {
+      "email": "N/A",
+      "id": 49,
+      "img_src": "https://www.yearup.org/sites/default/files/styles/crop_image_style_16_6/public/2021-07/lead-video%402x.jpg?h=24cf7364&itok=qc95A69d",
+      "name": "Year Up",
+      "organization_type": "Non-profit",
+      "phone": "855-932-7871",
+      "scholarship": {
+        "id": 25,
+        "name": "Anti-Racism Daily Scholarship"
+      },
+      "scholarship_id": 25
+    },
+    {
+      "email": "info@themindtrust.org",
+      "id": 52,
+      "img_src": "https://www.themindtrust.org/wp-content/themes/themindtrust/img/logo.svg",
+      "name": "The Mind Trust",
+      "organization_type": "Non-profit",
+      "phone": "(317) 822-8102",
+      "scholarship": {
+        "id": 26,
+        "name": "Rev. Frank W. Steward Memorial Scholarship"
+      },
+      "scholarship_id": 26
+    },
+    {
+      "email": "hello@leavenkids.org",
+      "id": 53,
+      "img_src": "https://www.leavenkids.org/hubfs/Anniversary%20Logo%20White2.svg",
+      "name": "Leaven Program",
+      "organization_type": "Non-profit",
+      "phone": "707-422-5439",
+      "scholarship": {
+        "id": 27,
+        "name": "Pinki Promise Scholarship"
+      },
+      "scholarship_id": 27
+    },
+    {
+      "email": "N/A",
+      "id": 54,
+      "img_src": "https://theliteracylab.org/wp-content/uploads/2021/05/the_literacy_lab_logos_for_export-01-300x183-1.png",
+      "name": "Literacy Lab",
+      "organization_type": "Non-profit",
+      "phone": "202-643-3794",
+      "scholarship": {
+        "id": 27,
+        "name": "Pinki Promise Scholarship"
+      },
+      "scholarship_id": 27
+    },
+    {
+      "email": "info@barbarabush.org",
+      "id": 55,
+      "img_src": "https://www.barbarabush.org/wp-content/uploads/2020/03/BbAvatar.png",
+      "name": "Barbara Bush Foundation for Literacy",
+      "organization_type": "Non-profit",
+      "phone": "850-562-5300",
+      "scholarship": {
+        "id": 28,
+        "name": "Trees for Tuition Scholarship Fund"
+      },
+      "scholarship_id": 28
+    },
+    {
+      "email": "info@girlswhocode.com",
+      "id": 56,
+      "img_src": "https://girlswhocode.com/assets/images/craft-prod/images/seo/_1200x630_crop_center-center_82_none/GWC_SEO_Logo.png?mtime=1588335912",
+      "name": "Girls Who Code",
+      "organization_type": "Non-profit",
+      "phone": "646-300-1984",
+      "scholarship": {
+        "id": 28,
+        "name": "Trees for Tuition Scholarship Fund"
+      },
+      "scholarship_id": 28
+    },
+    {
+      "email": "scholars@empowerillinois.org",
+      "id": 57,
+      "img_src": "https://empowerillinois.org/wp-content/uploads/EI-R-Logo-e1657644204922.png",
+      "name": "Empower Illinois",
+      "organization_type": "Non-profit",
+      "phone": "312-392-0220",
+      "scholarship": {
+        "id": 29,
+        "name": "Sandra West ALS Foundation Scholarship"
+      },
+      "scholarship_id": 29
+    },
+    {
+      "email": "N/A",
+      "id": 58,
+      "img_src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/National_Geographic_Society_logo.svg/640px-National_Geographic_Society_logo.svg.png",
+      "name": "National Geographic Society",
+      "organization_type": "Non-profit",
+      "phone": "202-857-7000",
+      "scholarship": {
+        "id": 29,
+        "name": "Sandra West ALS Foundation Scholarship"
+      },
+      "scholarship_id": 29
+    },
+    {
+      "email": "solutioncenter@pltw.org",
+      "id": 59,
+      "img_src": "https://www.pltw.org/hubfs/mjtw-assets/logos/logo-full-color.svg",
+      "name": "Project Lead the Way Inc.",
+      "organization_type": "Non-profit",
+      "phone": "877-335-7589",
+      "scholarship": {
+        "id": 30,
+        "name": "Polly Addison Art Scholarship"
+      },
+      "scholarship_id": 30
+    },
+    {
+      "email": "membership@iie.org",
+      "id": 60,
+      "img_src": "https://www.iie.org/wp-content/uploads/2022/12/iie-logo.png",
+      "name": "Institute of International Education",
+      "organization_type": "Non-profit",
+      "phone": "212-984-5372",
+      "scholarship": {
+        "id": 30,
+        "name": "Polly Addison Art Scholarship"
+      },
+      "scholarship_id": 30
+    },
+    {
+      "email": "N/A",
+      "id": 61,
+      "img_src": "https://www.guidestar.org/ViewEdoc.aspx?eDocId=7100861&approved=True",
+      "name": "World Learning Inc.",
+      "organization_type": "Non-profit",
+      "phone": "202-408-5420",
+      "scholarship": {
+        "id": 31,
+        "name": "Ruth Hazel Scruggs King Scholarship"
+      },
+      "scholarship_id": 31
+    },
+    {
+      "email": "info@9dots.org",
+      "id": 62,
+      "img_src": "https://static1.squarespace.com/static/59f3934d90bcce7f65f5302e/t/5a0b87cf08522994a0e7ebd7/1709246349933/",
+      "name": "9 Dots Community Learning Center",
+      "organization_type": "Non-profit",
+      "phone": "323-524-8328",
+      "scholarship": {
+        "id": 31,
+        "name": "Ruth Hazel Scruggs King Scholarship"
+      },
+      "scholarship_id": 31
+    },
+    {
+      "email": "N/A",
+      "id": 63,
+      "img_src": "https://upload.wikimedia.org/wikipedia/commons/7/7d/After_School_Matters_Logo_%28R%29.jpg",
+      "name": "After School Matters Inc.",
+      "organization_type": "Non-profit",
+      "phone": "312-768-5200",
+      "scholarship": {
+        "id": 32,
+        "name": "Thomas Tatum Memorial Scholarship"
+      },
+      "scholarship_id": 32
+    },
+    {
+      "email": "contact@edc.org",
+      "id": 64,
+      "img_src": "https://www.edc.org/sites/all/themes/edc/logo.png?78728732828",
+      "name": "Education Development Center Inc.",
+      "organization_type": "Non-profit",
+      "phone": "617-969-7100",
+      "scholarship": {
+        "id": 32,
+        "name": "Thomas Tatum Memorial Scholarship"
+      },
+      "scholarship_id": 32
+    },
+    {
+      "email": "info@youthopportunity.org",
+      "id": 65,
+      "img_src": "https://cdn.filestackcontent.com/resize=width:600,height:315,fit:max/quality=value:90/1e1cyzOkQK6TH2dy2MJL",
+      "name": "Youth & Opportunity United",
+      "organization_type": "Non-profit",
+      "phone": "847-866-1200",
+      "scholarship": {
+        "id": 33,
+        "name": "Dr. Robert M. Fleisher Liberty and Prosperity Award"
+      },
+      "scholarship_id": 33
+    },
+    {
+      "email": "N/A",
+      "id": 67,
+      "img_src": "https://avatars.githubusercontent.com/u/15455?s=200&v=4",
+      "name": "Khan Academy",
+      "organization_type": "Non-profit",
+      "phone": "650-336-5426",
+      "scholarship": {
+        "id": 34,
+        "name": "Samantha S. Roberts Memorial Scholarship"
+      },
+      "scholarship_id": 34
+    },
+    {
+      "email": "seminoleboosters@fsu.edu",
+      "id": 69,
+      "img_src": "https://pbs.twimg.com/profile_images/1369378011292839949/VxJDxxeb_400x400.jpg",
+      "name": "Seminole Boosters",
+      "organization_type": "Non-profit",
+      "phone": "(850) 644-3484",
+      "scholarship": {
+        "id": 35,
+        "name": "Advantech Intelligent Planet Scholarship"
+      },
+      "scholarship_id": 35
+    },
+    {
+      "email": "N/A",
+      "id": 70,
+      "img_src": "https://images.squarespace-cdn.com/content/v1/60c764fb72a7d1000f34a5c8/88545457-01c3-436d-89ed-971dd7662fde/Ampact_Horizontal_FullColor_Tagline.png?format=1500w",
+      "name": "Reading & Math Inc.",
+      "organization_type": "Non-profit",
+      "phone": "612-206-3030",
+      "scholarship": {
+        "id": 35,
+        "name": "Advantech Intelligent Planet Scholarship"
+      },
+      "scholarship_id": 35
+    },
+    {
+      "email": "N/A",
+      "id": 71,
+      "img_src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXJmFrqWGSdm36Ih8DLJwCyrXmJMBlPd7nDQzNqz3A3TZ0I5NL2TjegywLwV_7-rd9yA&usqp=CAU",
+      "name": "Bottom Line",
+      "organization_type": "Non-profit",
+      "phone": "857.415.4810",
+      "scholarship": {
+        "id": 36,
+        "name": "Tim Watabe Doing Hard Things Scholarship"
+      },
+      "scholarship_id": 36
+    },
+    {
+      "email": "N/A",
+      "id": 72,
+      "img_src": "https://assets.classy.org/12866900/9491ef2e-fd09-11ea-9881-0ad753ba5529.jpg",
+      "name": "Global Glimpse",
+      "organization_type": "Non-profit",
+      "phone": "800-499-0656",
+      "scholarship": {
+        "id": 36,
+        "name": "Tim Watabe Doing Hard Things Scholarship"
+      },
+      "scholarship_id": 36
+    },
+    {
+      "email": "info@btny.org",
+      "id": 74,
+      "img_src": "https://btny.org/wp-content/uploads/logo.png",
+      "name": "Breakthrough New York",
+      "organization_type": "Non-profit",
+      "phone": "646-747-BTNY",
+      "scholarship": {
+        "id": 37,
+        "name": "Ray's Supply Scholarship"
+      },
+      "scholarship_id": 37
+    },
+    {
+      "email": "info@obama.org",
+      "id": 75,
+      "img_src": "https://images.ctfassets.net/l7h59hfnlxjx/6W1kPmHAazNSfqC1E2MU9W/f495bb934d7b9c595c53e590617c9d53/OF_whitebox_250x65_Horizontal.svg?q=75&w=500&fm=",
+      "name": "The Barack Obama Foundation",
+      "organization_type": "Non-profit",
+      "phone": "773-420-1700",
+      "scholarship": {
+        "id": 38,
+        "name": "Susann Reitan's Future Biology Teacher Scholarship"
+      },
+      "scholarship_id": 38
+    },
+    {
+      "email": "info@globalfundforchildren.org",
+      "id": 77,
+      "img_src": "https://globalfundforchildren.org/wp-content/uploads/2020/03/GFC-logo-blue-600px.jpg",
+      "name": "Global Fund for Children",
+      "organization_type": "Non-profit",
+      "phone": "202-331-9003",
+      "scholarship": {
+        "id": 39,
+        "name": "A Heroes Family Scholarship"
+      },
+      "scholarship_id": 39
+    },
+    {
+      "email": "N/A",
+      "id": 78,
+      "img_src": "https://www.kinf.org/wp-content/uploads/2022/12/KINF-Logos_Horizontal-e1680403359579.png",
+      "name": "Kids In Need Foundation",
+      "organization_type": "Non-profit",
+      "phone": "612-465-0135",
+      "scholarship": {
+        "id": 39,
+        "name": "A Heroes Family Scholarship"
+      },
+      "scholarship_id": 39
+    },
+    {
+      "email": "receptionist@yesprep.org",
+      "id": 79,
+      "img_src": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1559733425/yespreporg/azeimgm17n7kyhgbcfkq/yes_prep_public_horiz_navy.png",
+      "name": "Yes Prep Public Schools Inc.",
+      "organization_type": "Non-profit",
+      "phone": "713-967-9000",
+      "scholarship": {
+        "id": 40,
+        "name": "Iliana Arie Scholarship"
+      },
+      "scholarship_id": 40
+    },
+    {
+      "email": "N/A",
+      "id": 81,
+      "img_src": "https://accessacademies.org/wp-content/uploads/2019/11/xcropped-Access_Logo_Endurance.480x150.jpg.pagespeed.ic.K3bZ1UpYLC.webp",
+      "name": "Access Academies",
+      "organization_type": "Non-profit",
+      "phone": "314-898-0430",
+      "scholarship": {
+        "id": 41,
+        "name": "Overcoming Adversity Cari\u00f1o Scholarship"
+      },
+      "scholarship_id": 41
+    },
+    {
+      "email": "N/A",
+      "id": 83,
+      "img_src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa66lASOAf92MGhLf19Cuw5qxGgCohJxI52PKzG--YQQiBjUonQtNe8aCXFdgrCTfnlVg&usqp=CAU",
+      "name": "Philadelphia Futures",
+      "organization_type": "Non-profit",
+      "phone": "215-790-1666",
+      "scholarship": {
+        "id": 42,
+        "name": "EJS Foundation Minority Scholarship"
+      },
+      "scholarship_id": 42
+    },
+    {
+      "email": "info@educationisfreedom.org",
+      "id": 84,
+      "img_src": "https://www.educationisfreedom.org/images/logo_eif.png",
+      "name": "Education is Freedom Foundation",
+      "organization_type": "Non-profit",
+      "phone": "214-432-8550",
+      "scholarship": {
+        "id": 42,
+        "name": "EJS Foundation Minority Scholarship"
+      },
+      "scholarship_id": 42
+    },
+    {
+      "email": "N/A",
+      "id": 85,
+      "img_src": "https://cdn.firespring.com/images/d4f1aae5-bd13-4c74-84aa-5a0758eeaa92.png",
+      "name": "Nebraska Children and Families Foundation",
+      "organization_type": "Non-profit",
+      "phone": "402-476-9401",
+      "scholarship": {
+        "id": 43,
+        "name": "Sammy Meckley Memorial Scholarship"
+      },
+      "scholarship_id": 43
+    },
+    {
+      "email": "information@phoenixscholars.org",
+      "id": 87,
+      "img_src": "https://www.phoenixscholars.org/uploads/5/3/8/6/53864399/full-logo1-orange-1.png",
+      "name": "The Phoenix Scholars",
+      "organization_type": "Non-profit",
+      "phone": "(650) 701-7877",
+      "scholarship": {
+        "id": 44,
+        "name": "Go Blue Crew Scholarship"
+      },
+      "scholarship_id": 44
+    },
+    {
+      "email": "N/A",
+      "id": 88,
+      "img_src": "https://www.stepupforstudents.org/wp-content/uploads/2022/10/cropped-favicon.png",
+      "name": "Step Up For Students",
+      "organization_type": "Non-profit",
+      "phone": "877-735-7837",
+      "scholarship": {
+        "id": 44,
+        "name": "Go Blue Crew Scholarship"
+      },
+      "scholarship_id": 44
+    },
+    {
+      "email": "info@realitychangers.org",
+      "id": 89,
+      "img_src": "https://realitychangers.org/wp-content/uploads/2022/06/reality-winners-logo.svg",
+      "name": "LEAP",
+      "organization_type": "Non-profit",
+      "phone": "619-516-2222",
+      "scholarship": {
+        "id": 45,
+        "name": "Persephone Scholarship in Memory of Kirstie Campbell"
+      },
+      "scholarship_id": 45
+    },
+    {
+      "email": "N/A",
+      "id": 90,
+      "img_src": "https://resources.finalsite.net/images/f_auto,q_auto/v1699028449/sppsorg/tofxuvja5s6kcq2zfwpt/belvidere.jpg",
+      "name": "Belvedere Early Learning Center",
+      "organization_type": "Non-profit",
+      "phone": "(803)-754-4027",
+      "scholarship": {
+        "id": 45,
+        "name": "Persephone Scholarship in Memory of Kirstie Campbell"
+      },
+      "scholarship_id": 45
+    },
+    {
+      "email": "info@pelotonu.org",
+      "id": 91,
+      "img_src": "https://pelotonu.org/wp-content/uploads/2021/11/pelotonU-logo2.svg",
+      "name": "Pelotonu",
+      "organization_type": "Non-profit",
+      "phone": "512-553-2338",
+      "scholarship": {
+        "id": 46,
+        "name": "Tim Gjoraas Science and Education Scholarship"
+      },
+      "scholarship_id": 46
+    },
+    {
+      "email": "vfowles@bowdoin.edu",
+      "id": 92,
+      "img_src": "https://www.meeoa.org/images/1%20Transparent%20Background.png",
+      "name": "Maine Educational Opportunity Association",
+      "organization_type": "Corporate",
+      "phone": "N/A",
+      "scholarship": {
+        "id": 46,
+        "name": "Tim Gjoraas Science and Education Scholarship"
+      },
+      "scholarship_id": 46
+    },
+    {
+      "email": "N/A",
+      "id": 93,
+      "img_src": "https://media.licdn.com/dms/image/C560BAQFBsj6H69pfgQ/company-logo_200_200/0/1630671139552/dramaticresults_logo?e=2147483647&v=beta&t=ckhfXrOknLxjMkdtcepQqZi3gtub2ZXHTSfzbzVQwE4",
+      "name": "Dramatic Results",
+      "organization_type": "Non-profit",
+      "phone": "562-595-4600",
+      "scholarship": {
+        "id": 47,
+        "name": "Keith D. Abens Memorial Scholarship"
+      },
+      "scholarship_id": 47
+    },
+    {
+      "email": "N/A",
+      "id": 94,
+      "img_src": "https://www.guidestar.org/ViewEdoc.aspx?eDocId=9434557&approved=True",
+      "name": "Kids Alive International",
+      "organization_type": "Non-profit",
+      "phone": "800-543-7330",
+      "scholarship": {
+        "id": 47,
+        "name": "Keith D. Abens Memorial Scholarship"
+      },
+      "scholarship_id": 47
+    },
+    {
+      "email": "literacy@open-books.org",
+      "id": 95,
+      "img_src": "https://www.open-books.org/wp-content/uploads/2017/11/logo.png",
+      "name": "Open Books",
+      "organization_type": "Non-profit",
+      "phone": "312-475-1355",
+      "scholarship": {
+        "id": 48,
+        "name": "Mary D. Scholarship"
+      },
+      "scholarship_id": 48
+    },
+    {
+      "email": "N/A",
+      "id": 96,
+      "img_src": "https://www.technovation.org/wp-content/themes/technovation_1.0.6_HC/assets/img/logo.png",
+      "name": "Technovation",
+      "organization_type": "Non-profit",
+      "phone": "213-746-4453",
+      "scholarship": {
+        "id": 48,
+        "name": "Mary D. Scholarship"
+      },
+      "scholarship_id": 48
+    },
+    {
+      "email": "info@wearedream.org",
+      "id": 97,
+      "img_src": "https://wearedream.org/wp-content/uploads/2021/07/logo.svg",
+      "name": "DREAM",
+      "organization_type": "Non-profit",
+      "phone": "212-722-0232",
+      "scholarship": {
+        "id": 49,
+        "name": "Cat Zingano Overcoming Loss Scholarship"
+      },
+      "scholarship_id": 49
+    },
+    {
+      "email": "office@achanceinlife.org",
+      "id": 98,
+      "img_src": "https://achanceinlife.org/wp-content/themes/acil/images/logo.svg",
+      "name": "A Chance In Life",
+      "organization_type": "Non-profit",
+      "phone": "212-980-8770",
+      "scholarship": {
+        "id": 49,
+        "name": "Cat Zingano Overcoming Loss Scholarship"
+      },
+      "scholarship_id": 49
+    },
+    {
+      "email": "N/A",
+      "id": 99,
+      "img_src": "https://static.wixstatic.com/media/980550_3a86a541fde643468c4a0478480ffcc8~mv2.jpg/v1/fill/w_362,h_216,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/LEAP-Horizontal-Full-Color.jpg",
+      "name": "LEAP",
+      "organization_type": "Non-profit",
+      "phone": "203-773-0770",
+      "scholarship": {
+        "id": 50,
+        "name": "Holden William Bettis Memorial Scholarship"
+      },
+      "scholarship_id": 50
+    },
+    {
+      "email": "info@forthechildrenfirst.org",
+      "id": 100,
+      "img_src": "https://forthechildrenfirst.org/wp-content/uploads/2018/05/logo1.jpg",
+      "name": "For the Children Inc.",
+      "organization_type": "Non-profit",
+      "phone": "561-493-1190",
+      "scholarship": {
+        "id": 50,
+        "name": "Holden William Bettis Memorial Scholarship"
+      },
+      "scholarship_id": 50
+    }
+  ],
+  "Total organizations": 88
+}

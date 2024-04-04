@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang=en>
+  <head>
+    <title>sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (1305, &#39;FUNCTION brighterbeginnings.levenshtein does not exist&#39;)
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT scholarship.id AS scholarship_id, scholarship.name AS scholarship_name, scholarship.awarded_by AS scholarship_awarded_by, scholarship.award_amount AS scholarship_award_amount, scholarship.merit_based AS scholarship_merit_based, scholarship.need_based AS scholarship_need_based, scholarship.essay_based AS scholarship_essay_based, scholarship.nationwide AS scholarship_nationwide, scholarship.img_src AS scholarship_img_src, scholarship.link AS scholarship_link 
+FROM scholarship 
+WHERE lower(scholarship.name) LIKE lower(%s) OR lower(scholarship.awarded_by) LIKE lower(%s) ORDER BY levenshtein(left(lower(scholarship.name), %s), %s), levenshtein(left(lower(scholarship.awarded_by), %s), %s)) AS anon_1]
+[parameters: (&#39;%mor%&#39;, &#39;%mor%&#39;, 255, &#39;mor&#39;, 255, &#39;mor&#39;)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+ // Werkzeug Debugger</title>
+    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+    <link rel="shortcut icon"
+        href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+    <script>
+      var CONSOLE_MODE = false,
+          EVALEX = true,
+          EVALEX_TRUSTED = false,
+          SECRET = "ygHUfc3Hl36F65bdg6vq";
+    </script>
+  </head>
+  <body style="background-color: #fff">
+    <div class="debugger">
+<h1>OperationalError</h1>
+<div class="detail">
+  <p class="errormsg">sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (1305, &#39;FUNCTION brighterbeginnings.levenshtein does not exist&#39;)
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT scholarship.id AS scholarship_id, scholarship.name AS scholarship_name, scholarship.awarded_by AS scholarship_awarded_by, scholarship.award_amount AS scholarship_award_amount, scholarship.merit_based AS scholarship_merit_based, scholarship.need_based AS scholarship_need_based, scholarship.essay_based AS scholarship_essay_based, scholarship.nationwide AS scholarship_nationwide, scholarship.img_src AS scholarship_img_src, scholarship.link AS scholarship_link 
+FROM scholarship 
+WHERE lower(scholarship.name) LIKE lower(%s) OR lower(scholarship.awarded_by) LIKE lower(%s) ORDER BY levenshtein(left(lower(scholarship.name), %s), %s), levenshtein(left(lower(scholarship.awarded_by), %s), %s)) AS anon_1]
+[parameters: (&#39;%mor%&#39;, &#39;%mor%&#39;, 255, &#39;mor&#39;, 255, &#39;mor&#39;)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+</p>
+</div>
+<h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+<div class="traceback">
+  <h3></h3>
+  <ul><li><div class="frame" id="frame-4412009792">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1969</em>,
+      in <code class="function">_exec_single_context</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">                            </span>context,</pre>
+<pre class="line before"><span class="ws">                        </span>):</pre>
+<pre class="line before"><span class="ws">                            </span>evt_handled = True</pre>
+<pre class="line before"><span class="ws">                            </span>break</pre>
+<pre class="line before"><span class="ws">                </span>if not evt_handled:</pre>
+<pre class="line current"><span class="ws">                    </span>self.dialect.do_execute(
+<span class="ws">                    </span>^</pre>
+<pre class="line after"><span class="ws">                        </span>cursor, str_statement, effective_parameters, context</pre>
+<pre class="line after"><span class="ws">                    </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">            </span>if self._has_events or self.engine._has_events:</pre>
+<pre class="line after"><span class="ws">                </span>self.dispatch.after_cursor_execute(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412009936">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/default.py"</cite>,
+      line <em class="line">922</em>,
+      in <code class="function">do_execute</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def do_executemany(self, cursor, statement, parameters, context=None):</pre>
+<pre class="line before"><span class="ws">        </span>cursor.executemany(statement, parameters)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def do_execute(self, cursor, statement, parameters, context=None):</pre>
+<pre class="line current"><span class="ws">        </span>cursor.execute(statement, parameters)
+<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def do_execute_no_params(self, cursor, statement, context=None):</pre>
+<pre class="line after"><span class="ws">        </span>cursor.execute(statement)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def is_disconnect(self, e, connection, cursor):</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412010080">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/cursors.py"</cite>,
+      line <em class="line">179</em>,
+      in <code class="function">execute</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>self._discard()</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>mogrified_query = self._mogrify(query, args)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>assert isinstance(mogrified_query, (bytes, bytearray))</pre>
+<pre class="line current"><span class="ws">        </span>res = self._query(mogrified_query)
+<span class="ws">        </span>      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>return res</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def _mogrify(self, query, args=None):</pre>
+<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Return query after binding args.&#34;&#34;&#34;</pre>
+<pre class="line after"><span class="ws">        </span>db = self._get_db()</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412010224">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/cursors.py"</cite>,
+      line <em class="line">330</em>,
+      in <code class="function">_query</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">    </span>def _query(self, q):</pre>
+<pre class="line before"><span class="ws">        </span>db = self._get_db()</pre>
+<pre class="line before"><span class="ws">        </span>self._result = None</pre>
+<pre class="line before"><span class="ws">        </span>self.rowcount = None</pre>
+<pre class="line before"><span class="ws">        </span>self.lastrowid = None</pre>
+<pre class="line current"><span class="ws">        </span>db.query(q)
+<span class="ws">        </span>^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>self._do_get_result(db)</pre>
+<pre class="line after"><span class="ws">        </span>self._post_get_result()</pre>
+<pre class="line after"><span class="ws">        </span>self._executed = q</pre>
+<pre class="line after"><span class="ws">        </span>return self.rowcount</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412010368">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/connections.py"</cite>,
+      line <em class="line">261</em>,
+      in <code class="function">query</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def query(self, query):</pre>
+<pre class="line before"><span class="ws">        </span># Since _mysql releases GIL while querying, we need immutable buffer.</pre>
+<pre class="line before"><span class="ws">        </span>if isinstance(query, bytearray):</pre>
+<pre class="line before"><span class="ws">            </span>query = bytes(query)</pre>
+<pre class="line current"><span class="ws">        </span>_mysql.connection.query(self, query)
+<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def _bytes_literal(self, bs):</pre>
+<pre class="line after"><span class="ws">        </span>assert isinstance(bs, (bytes, bytearray))</pre>
+<pre class="line after"><span class="ws">        </span>x = self.string_literal(bs)  # x is escaped and quoted bytes</pre>
+<pre class="line after"><span class="ws">        </span>if self._binary_prefix:</pre></div>
+</div>
+
+<li><div class="exc-divider">The above exception was the direct cause of the following exception:</div>
+<li><div class="frame" id="frame-4405356880">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py"</cite>,
+      line <em class="line">1488</em>,
+      in <code class="function">__call__</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">    </span>) -&gt; cabc.Iterable[bytes]:</pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;The WSGI server calls the Flask application object as the</pre>
+<pre class="line before"><span class="ws">        </span>WSGI application. This calls :meth:`wsgi_app`, which can be</pre>
+<pre class="line before"><span class="ws">        </span>wrapped to apply middleware.</pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
+<pre class="line current"><span class="ws">        </span>return self.wsgi_app(environ, start_response)
+<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4405361200">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py"</cite>,
+      line <em class="line">1466</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+<pre class="line before"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+<pre class="line before"><span class="ws">            </span>except Exception as e:</pre>
+<pre class="line before"><span class="ws">                </span>error = e</pre>
+<pre class="line current"><span class="ws">                </span>response = self.handle_exception(e)
+<span class="ws">                </span>           ^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre>
+<pre class="line after"><span class="ws">                </span>raise</pre>
+<pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
+<pre class="line after"><span class="ws">        </span>finally:</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4405361344">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask_cors/extension.py"</cite>,
+      line <em class="line">176</em>,
+      in <code class="function">wrapped_function</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span># Wrap exception handlers with cross_origin</pre>
+<pre class="line before"><span class="ws">        </span># These error handlers will still respect the behavior of the route</pre>
+<pre class="line before"><span class="ws">        </span>if options.get(&#39;intercept_exceptions&#39;, True):</pre>
+<pre class="line before"><span class="ws">            </span>def _after_request_decorator(f):</pre>
+<pre class="line before"><span class="ws">                </span>def wrapped_function(*args, **kwargs):</pre>
+<pre class="line current"><span class="ws">                    </span>return cors_after_request(app.make_response(f(*args, **kwargs)))
+<span class="ws">                    </span>                                            ^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">                </span>return wrapped_function</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">            </span>if hasattr(app, &#39;handle_exception&#39;):</pre>
+<pre class="line after"><span class="ws">                </span>app.handle_exception = _after_request_decorator(</pre>
+<pre class="line after"><span class="ws">                    </span>app.handle_exception)</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410949840">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py"</cite>,
+      line <em class="line">1463</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>ctx = self.request_context(environ)</pre>
+<pre class="line before"><span class="ws">        </span>error: BaseException | None = None</pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+<pre class="line current"><span class="ws">                </span>response = self.full_dispatch_request()
+<span class="ws">                </span>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">                </span>error = e</pre>
+<pre class="line after"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+<pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410949984">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py"</cite>,
+      line <em class="line">872</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>request_started.send(self, _async_wrapper=self.ensure_sync)</pre>
+<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+<pre class="line before"><span class="ws">                </span>rv = self.dispatch_request()</pre>
+<pre class="line before"><span class="ws">        </span>except Exception as e:</pre>
+<pre class="line current"><span class="ws">            </span>rv = self.handle_user_exception(e)
+<span class="ws">            </span>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(</pre>
+<pre class="line after"><span class="ws">        </span>self,</pre>
+<pre class="line after"><span class="ws">        </span>rv: ft.ResponseReturnValue | HTTPException,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410950128">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask_cors/extension.py"</cite>,
+      line <em class="line">176</em>,
+      in <code class="function">wrapped_function</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span># Wrap exception handlers with cross_origin</pre>
+<pre class="line before"><span class="ws">        </span># These error handlers will still respect the behavior of the route</pre>
+<pre class="line before"><span class="ws">        </span>if options.get(&#39;intercept_exceptions&#39;, True):</pre>
+<pre class="line before"><span class="ws">            </span>def _after_request_decorator(f):</pre>
+<pre class="line before"><span class="ws">                </span>def wrapped_function(*args, **kwargs):</pre>
+<pre class="line current"><span class="ws">                    </span>return cors_after_request(app.make_response(f(*args, **kwargs)))
+<span class="ws">                    </span>                                            ^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">                </span>return wrapped_function</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">            </span>if hasattr(app, &#39;handle_exception&#39;):</pre>
+<pre class="line after"><span class="ws">                </span>app.handle_exception = _after_request_decorator(</pre>
+<pre class="line after"><span class="ws">                    </span>app.handle_exception)</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410950272">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py"</cite>,
+      line <em class="line">870</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>request_started.send(self, _async_wrapper=self.ensure_sync)</pre>
+<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+<pre class="line current"><span class="ws">                </span>rv = self.dispatch_request()
+<span class="ws">                </span>     ^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410950416">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py"</cite>,
+      line <em class="line">855</em>,
+      in <code class="function">dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>and req.method == &#34;OPTIONS&#34;</pre>
+<pre class="line before"><span class="ws">        </span>):</pre>
+<pre class="line before"><span class="ws">            </span>return self.make_default_options_response()</pre>
+<pre class="line before"><span class="ws">        </span># otherwise dispatch to the handler for that endpoint</pre>
+<pre class="line before"><span class="ws">        </span>view_args: dict[str, t.Any] = req.view_args  # type: ignore[assignment]</pre>
+<pre class="line current"><span class="ws">        </span>return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def full_dispatch_request(self) -&gt; Response:</pre>
+<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Dispatches the request and on top of that performs request</pre>
+<pre class="line after"><span class="ws">        </span>pre and postprocessing as well as HTTP exception catching and</pre>
+<pre class="line after"><span class="ws">        </span>error handling.</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410950560">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/cs373-group-01/back-end/app.py"</cite>,
+      line <em class="line">64</em>,
+      in <code class="function">get_scholarships</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">            </span>func.levenshtein(</pre>
+<pre class="line before"><span class="ws">                </span>func.left(func.lower(Scholarship.awarded_by), 255), search</pre>
+<pre class="line before"><span class="ws">            </span>)</pre>
+<pre class="line before"><span class="ws">        </span>)</pre>
+<pre class="line before"><span class="ws">        </span>#query = Scholarship.query.msearch(search, fields=[&#39;name&#39;, &#39;awarded_by&#39;])</pre>
+<pre class="line current"><span class="ws">        </span>total = query.count()
+<span class="ws">        </span>        ^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>result = query.paginate(page=page, per_page=per_page, error_out=False)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>schema = ScholarshipSchema().dump(result, many=True)</pre>
+<pre class="line after"><span class="ws">    </span>return jsonify({&#34;Scholarships&#34;:schema, &#34;Total scholarships&#34;: total})</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410951424">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/query.py"</cite>,
+      line <em class="line">3132</em>,
+      in <code class="function">count</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>:ref:`migration_20_query_usage`</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
+<pre class="line before"><span class="ws">        </span>col = sql.func.count(sql.literal_column(&#34;*&#34;))</pre>
+<pre class="line before"><span class="ws">        </span>return (  # type: ignore</pre>
+<pre class="line current"><span class="ws">            </span>self._legacy_from_self(col).enable_eagerloads(False).scalar()
+<span class="ws">            </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def delete(</pre>
+<pre class="line after"><span class="ws">        </span>self, synchronize_session: SynchronizeSessionArgument = &#34;auto&#34;</pre>
+<pre class="line after"><span class="ws">    </span>) -&gt; int:</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410954592">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/query.py"</cite>,
+      line <em class="line">2825</em>,
+      in <code class="function">scalar</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>:meth:`_engine.Result.scalar` - v2 comparable method.</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
+<pre class="line before"><span class="ws">        </span># TODO: not sure why we can&#39;t use result.scalar() here</pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line current"><span class="ws">            </span>ret = self.one()
+<span class="ws">            </span>      ^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>if not isinstance(ret, collections_abc.Sequence):</pre>
+<pre class="line after"><span class="ws">                </span>return ret</pre>
+<pre class="line after"><span class="ws">            </span>return ret[0]</pre>
+<pre class="line after"><span class="ws">        </span>except sa_exc.NoResultFound:</pre>
+<pre class="line after"><span class="ws">            </span>return None</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410954736">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/query.py"</cite>,
+      line <em class="line">2798</em>,
+      in <code class="function">one</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>:meth:`_engine.Result.one` - v2 comparable method.</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">            </span>:meth:`_engine.Result.scalar_one` - v2 comparable method.</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
+<pre class="line current"><span class="ws">        </span>return self._iter().one()  # type: ignore
+<span class="ws">        </span>       ^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def scalar(self) -&gt; Any:</pre>
+<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Return the first element of the first result or None</pre>
+<pre class="line after"><span class="ws">        </span>if no rows present.  If multiple rows are returned,</pre>
+<pre class="line after"><span class="ws">        </span>raises MultipleResultsFound.</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410954880">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/query.py"</cite>,
+      line <em class="line">2847</em>,
+      in <code class="function">_iter</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">    </span>def _iter(self) -&gt; Union[ScalarResult[_T], Result[_T]]:</pre>
+<pre class="line before"><span class="ws">        </span># new style execution.</pre>
+<pre class="line before"><span class="ws">        </span>params = self._params</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>statement = self._statement_20()</pre>
+<pre class="line current"><span class="ws">        </span>result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+<span class="ws">        </span>                                              </pre>
+<pre class="line after"><span class="ws">            </span>statement,</pre>
+<pre class="line after"><span class="ws">            </span>params,</pre>
+<pre class="line after"><span class="ws">            </span>execution_options={&#34;_sa_orm_load_options&#34;: self.load_options},</pre>
+<pre class="line after"><span class="ws">        </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410955024">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/session.py"</cite>,
+      line <em class="line">2308</em>,
+      in <code class="function">execute</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>:return: a :class:`_engine.Result` object.</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
+<pre class="line current"><span class="ws">        </span>return self._execute_internal(
+<span class="ws">        </span>       </pre>
+<pre class="line after"><span class="ws">            </span>statement,</pre>
+<pre class="line after"><span class="ws">            </span>params,</pre>
+<pre class="line after"><span class="ws">            </span>execution_options=execution_options,</pre>
+<pre class="line after"><span class="ws">            </span>bind_arguments=bind_arguments,</pre>
+<pre class="line after"><span class="ws">            </span>_parent_execute_state=_parent_execute_state,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410960928">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/session.py"</cite>,
+      line <em class="line">2190</em>,
+      in <code class="function">_execute_internal</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>return conn.scalar(</pre>
+<pre class="line before"><span class="ws">                </span>statement, params or {}, execution_options=execution_options</pre>
+<pre class="line before"><span class="ws">            </span>)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>if compile_state_cls:</pre>
+<pre class="line current"><span class="ws">            </span>result: Result[Any] = compile_state_cls.orm_execute_statement(
+<span class="ws">            </span>                      </pre>
+<pre class="line after"><span class="ws">                </span>self,</pre>
+<pre class="line after"><span class="ws">                </span>statement,</pre>
+<pre class="line after"><span class="ws">                </span>params or {},</pre>
+<pre class="line after"><span class="ws">                </span>execution_options,</pre>
+<pre class="line after"><span class="ws">                </span>bind_arguments,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410961072">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/context.py"</cite>,
+      line <em class="line">293</em>,
+      in <code class="function">orm_execute_statement</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>params,</pre>
+<pre class="line before"><span class="ws">        </span>execution_options,</pre>
+<pre class="line before"><span class="ws">        </span>bind_arguments,</pre>
+<pre class="line before"><span class="ws">        </span>conn,</pre>
+<pre class="line before"><span class="ws">    </span>) -&gt; Result:</pre>
+<pre class="line current"><span class="ws">        </span>result = conn.execute(
+<span class="ws">        </span>         </pre>
+<pre class="line after"><span class="ws">            </span>statement, params or {}, execution_options=execution_options</pre>
+<pre class="line after"><span class="ws">        </span>)</pre>
+<pre class="line after"><span class="ws">        </span>return cls.orm_setup_cursor_result(</pre>
+<pre class="line after"><span class="ws">            </span>session,</pre>
+<pre class="line after"><span class="ws">            </span>statement,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4410963088">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1416</em>,
+      in <code class="function">execute</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>meth = statement._execute_on_connection</pre>
+<pre class="line before"><span class="ws">        </span>except AttributeError as err:</pre>
+<pre class="line before"><span class="ws">            </span>raise exc.ObjectNotExecutableError(statement) from err</pre>
+<pre class="line before"><span class="ws">        </span>else:</pre>
+<pre class="line current"><span class="ws">            </span>return meth(
+<span class="ws">            </span>       </pre>
+<pre class="line after"><span class="ws">                </span>self,</pre>
+<pre class="line after"><span class="ws">                </span>distilled_parameters,</pre>
+<pre class="line after"><span class="ws">                </span>execution_options or NO_OPTIONS,</pre>
+<pre class="line after"><span class="ws">            </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412002016">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/sql/elements.py"</cite>,
+      line <em class="line">517</em>,
+      in <code class="function">_execute_on_connection</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>execution_options: CoreExecuteOptionsParameter,</pre>
+<pre class="line before"><span class="ws">    </span>) -&gt; Result[Any]:</pre>
+<pre class="line before"><span class="ws">        </span>if self.supports_execution:</pre>
+<pre class="line before"><span class="ws">            </span>if TYPE_CHECKING:</pre>
+<pre class="line before"><span class="ws">                </span>assert isinstance(self, Executable)</pre>
+<pre class="line current"><span class="ws">            </span>return connection._execute_clauseelement(
+<span class="ws">            </span>       </pre>
+<pre class="line after"><span class="ws">                </span>self, distilled_params, execution_options</pre>
+<pre class="line after"><span class="ws">            </span>)</pre>
+<pre class="line after"><span class="ws">        </span>else:</pre>
+<pre class="line after"><span class="ws">            </span>raise exc.ObjectNotExecutableError(self)</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412005040">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1639</em>,
+      in <code class="function">_execute_clauseelement</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>column_keys=keys,</pre>
+<pre class="line before"><span class="ws">            </span>for_executemany=for_executemany,</pre>
+<pre class="line before"><span class="ws">            </span>schema_translate_map=schema_translate_map,</pre>
+<pre class="line before"><span class="ws">            </span>linting=self.dialect.compiler_linting | compiler.WARN_LINTING,</pre>
+<pre class="line before"><span class="ws">        </span>)</pre>
+<pre class="line current"><span class="ws">        </span>ret = self._execute_context(
+<span class="ws">        </span>      </pre>
+<pre class="line after"><span class="ws">            </span>dialect,</pre>
+<pre class="line after"><span class="ws">            </span>dialect.execution_ctx_cls._init_compiled,</pre>
+<pre class="line after"><span class="ws">            </span>compiled_sql,</pre>
+<pre class="line after"><span class="ws">            </span>distilled_parameters,</pre>
+<pre class="line after"><span class="ws">            </span>execution_options,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412005184">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1848</em>,
+      in <code class="function">_execute_context</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>return self._exec_insertmany_context(</pre>
+<pre class="line before"><span class="ws">                </span>dialect,</pre>
+<pre class="line before"><span class="ws">                </span>context,</pre>
+<pre class="line before"><span class="ws">            </span>)</pre>
+<pre class="line before"><span class="ws">        </span>else:</pre>
+<pre class="line current"><span class="ws">            </span>return self._exec_single_context(
+<span class="ws">            </span>       </pre>
+<pre class="line after"><span class="ws">                </span>dialect, context, statement, parameters</pre>
+<pre class="line after"><span class="ws">            </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def _exec_single_context(</pre>
+<pre class="line after"><span class="ws">        </span>self,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412005328">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1988</em>,
+      in <code class="function">_exec_single_context</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>context.post_exec()</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">            </span>result = context._setup_result_proxy()</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>except BaseException as e:</pre>
+<pre class="line current"><span class="ws">            </span>self._handle_dbapi_exception(
+<span class="ws">            </span>^</pre>
+<pre class="line after"><span class="ws">                </span>e, str_statement, effective_parameters, cursor, context</pre>
+<pre class="line after"><span class="ws">            </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>return result</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412005472">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">2344</em>,
+      in <code class="function">_handle_dbapi_exception</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">            </span>if newraise:</pre>
+<pre class="line before"><span class="ws">                </span>raise newraise.with_traceback(exc_info[2]) from e</pre>
+<pre class="line before"><span class="ws">            </span>elif should_wrap:</pre>
+<pre class="line before"><span class="ws">                </span>assert sqlalchemy_exception is not None</pre>
+<pre class="line current"><span class="ws">                </span>raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+<span class="ws">                </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>else:</pre>
+<pre class="line after"><span class="ws">                </span>assert exc_info[1] is not None</pre>
+<pre class="line after"><span class="ws">                </span>raise exc_info[1].with_traceback(exc_info[2])</pre>
+<pre class="line after"><span class="ws">        </span>finally:</pre>
+<pre class="line after"><span class="ws">            </span>del self._reentrant_error</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412005616">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1969</em>,
+      in <code class="function">_exec_single_context</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">                            </span>context,</pre>
+<pre class="line before"><span class="ws">                        </span>):</pre>
+<pre class="line before"><span class="ws">                            </span>evt_handled = True</pre>
+<pre class="line before"><span class="ws">                            </span>break</pre>
+<pre class="line before"><span class="ws">                </span>if not evt_handled:</pre>
+<pre class="line current"><span class="ws">                    </span>self.dialect.do_execute(
+<span class="ws">                    </span>^</pre>
+<pre class="line after"><span class="ws">                        </span>cursor, str_statement, effective_parameters, context</pre>
+<pre class="line after"><span class="ws">                    </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">            </span>if self._has_events or self.engine._has_events:</pre>
+<pre class="line after"><span class="ws">                </span>self.dispatch.after_cursor_execute(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412005760">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/default.py"</cite>,
+      line <em class="line">922</em>,
+      in <code class="function">do_execute</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def do_executemany(self, cursor, statement, parameters, context=None):</pre>
+<pre class="line before"><span class="ws">        </span>cursor.executemany(statement, parameters)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def do_execute(self, cursor, statement, parameters, context=None):</pre>
+<pre class="line current"><span class="ws">        </span>cursor.execute(statement, parameters)
+<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def do_execute_no_params(self, cursor, statement, context=None):</pre>
+<pre class="line after"><span class="ws">        </span>cursor.execute(statement)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def is_disconnect(self, e, connection, cursor):</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412008640">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/cursors.py"</cite>,
+      line <em class="line">179</em>,
+      in <code class="function">execute</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>self._discard()</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>mogrified_query = self._mogrify(query, args)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>assert isinstance(mogrified_query, (bytes, bytearray))</pre>
+<pre class="line current"><span class="ws">        </span>res = self._query(mogrified_query)
+<span class="ws">        </span>      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>return res</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def _mogrify(self, query, args=None):</pre>
+<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Return query after binding args.&#34;&#34;&#34;</pre>
+<pre class="line after"><span class="ws">        </span>db = self._get_db()</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412009360">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/cursors.py"</cite>,
+      line <em class="line">330</em>,
+      in <code class="function">_query</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">    </span>def _query(self, q):</pre>
+<pre class="line before"><span class="ws">        </span>db = self._get_db()</pre>
+<pre class="line before"><span class="ws">        </span>self._result = None</pre>
+<pre class="line before"><span class="ws">        </span>self.rowcount = None</pre>
+<pre class="line before"><span class="ws">        </span>self.lastrowid = None</pre>
+<pre class="line current"><span class="ws">        </span>db.query(q)
+<span class="ws">        </span>^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>self._do_get_result(db)</pre>
+<pre class="line after"><span class="ws">        </span>self._post_get_result()</pre>
+<pre class="line after"><span class="ws">        </span>self._executed = q</pre>
+<pre class="line after"><span class="ws">        </span>return self.rowcount</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4412009504">
+  <h4>File <cite class="filename">"/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/connections.py"</cite>,
+      line <em class="line">261</em>,
+      in <code class="function">query</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def query(self, query):</pre>
+<pre class="line before"><span class="ws">        </span># Since _mysql releases GIL while querying, we need immutable buffer.</pre>
+<pre class="line before"><span class="ws">        </span>if isinstance(query, bytearray):</pre>
+<pre class="line before"><span class="ws">            </span>query = bytes(query)</pre>
+<pre class="line current"><span class="ws">        </span>_mysql.connection.query(self, query)
+<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def _bytes_literal(self, bs):</pre>
+<pre class="line after"><span class="ws">        </span>assert isinstance(bs, (bytes, bytearray))</pre>
+<pre class="line after"><span class="ws">        </span>x = self.string_literal(bs)  # x is escaped and quoted bytes</pre>
+<pre class="line after"><span class="ws">        </span>if self._binary_prefix:</pre></div>
+</div>
+</ul>
+  <blockquote>sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (1305, &#39;FUNCTION brighterbeginnings.levenshtein does not exist&#39;)
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT scholarship.id AS scholarship_id, scholarship.name AS scholarship_name, scholarship.awarded_by AS scholarship_awarded_by, scholarship.award_amount AS scholarship_award_amount, scholarship.merit_based AS scholarship_merit_based, scholarship.need_based AS scholarship_need_based, scholarship.essay_based AS scholarship_essay_based, scholarship.nationwide AS scholarship_nationwide, scholarship.img_src AS scholarship_img_src, scholarship.link AS scholarship_link 
+FROM scholarship 
+WHERE lower(scholarship.name) LIKE lower(%s) OR lower(scholarship.awarded_by) LIKE lower(%s) ORDER BY levenshtein(left(lower(scholarship.name), %s), %s), levenshtein(left(lower(scholarship.awarded_by), %s), %s)) AS anon_1]
+[parameters: (&#39;%mor%&#39;, &#39;%mor%&#39;, 255, &#39;mor&#39;, 255, &#39;mor&#39;)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+</blockquote>
+</div>
+
+<div class="plain">
+    <p>
+      This is the Copy/Paste friendly version of the traceback.
+    </p>
+    <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/default.py&#34;, line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/cursors.py&#34;, line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/cursors.py&#34;, line 330, in _query
+    db.query(q)
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/connections.py&#34;, line 261, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1305, &#39;FUNCTION brighterbeginnings.levenshtein does not exist&#39;)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py&#34;, line 1488, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py&#34;, line 1466, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask_cors/extension.py&#34;, line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py&#34;, line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py&#34;, line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask_cors/extension.py&#34;, line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py&#34;, line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py&#34;, line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/cs373-group-01/back-end/app.py&#34;, line 64, in get_scholarships
+    total = query.count()
+            ^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/query.py&#34;, line 3132, in count
+    self._legacy_from_self(col).enable_eagerloads(False).scalar()
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/query.py&#34;, line 2825, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/query.py&#34;, line 2798, in one
+    return self._iter().one()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/query.py&#34;, line 2847, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/session.py&#34;, line 2308, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/session.py&#34;, line 2190, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/context.py&#34;, line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 1416, in execute
+    return meth(
+           ^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/sql/elements.py&#34;, line 517, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 1848, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 2344, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/default.py&#34;, line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/cursors.py&#34;, line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/cursors.py&#34;, line 330, in _query
+    db.query(q)
+  File &#34;/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/connections.py&#34;, line 261, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (1305, &#39;FUNCTION brighterbeginnings.levenshtein does not exist&#39;)
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT scholarship.id AS scholarship_id, scholarship.name AS scholarship_name, scholarship.awarded_by AS scholarship_awarded_by, scholarship.award_amount AS scholarship_award_amount, scholarship.merit_based AS scholarship_merit_based, scholarship.need_based AS scholarship_need_based, scholarship.essay_based AS scholarship_essay_based, scholarship.nationwide AS scholarship_nationwide, scholarship.img_src AS scholarship_img_src, scholarship.link AS scholarship_link 
+FROM scholarship 
+WHERE lower(scholarship.name) LIKE lower(%s) OR lower(scholarship.awarded_by) LIKE lower(%s) ORDER BY levenshtein(left(lower(scholarship.name), %s), %s), levenshtein(left(lower(scholarship.awarded_by), %s), %s)) AS anon_1]
+[parameters: (&#39;%mor%&#39;, &#39;%mor%&#39;, 255, &#39;mor&#39;, 255, &#39;mor&#39;)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+</textarea>
+</div>
+<div class="explanation">
+  The debugger caught an exception in your WSGI application.  You can now
+  look at the traceback which led to the error.  <span class="nojavascript">
+  If you enable JavaScript you can also use additional features such as code
+  execution (if the evalex feature is enabled), automatic pasting of the
+  exceptions and much more.</span>
+</div>
+      <div class="footer">
+        Brought to you by <strong class="arthur">DON'T PANIC</strong>, your
+        friendly Werkzeug powered traceback interpreter.
+      </div>
+    </div>
+
+    <div class="pin-prompt">
+      <div class="inner">
+        <h3>Console Locked</h3>
+        <p>
+          The console is locked and needs to be unlocked by entering the PIN.
+          You can find the PIN printed out on the standard output of your
+          shell that runs the server.
+        <form>
+          <p>PIN:
+            <input type=text name=pin size=14>
+            <input type=submit name=btn value="Confirm Pin">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+
+Traceback (most recent call last):
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1305, 'FUNCTION brighterbeginnings.levenshtein does not exist')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1488, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1466, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/cs373-group-01/back-end/app.py", line 64, in get_scholarships
+    total = query.count()
+            ^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 3132, in count
+    self._legacy_from_self(col).enable_eagerloads(False).scalar()
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2825, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2798, in one
+    return self._iter().one()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2847, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2308, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2190, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 517, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2344, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/tylerkubecka/anaconda3/lib/python3.11/site-packages/MySQLdb/connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.OperationalError: (MySQLdb.OperationalError) (1305, 'FUNCTION brighterbeginnings.levenshtein does not exist')
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT scholarship.id AS scholarship_id, scholarship.name AS scholarship_name, scholarship.awarded_by AS scholarship_awarded_by, scholarship.award_amount AS scholarship_award_amount, scholarship.merit_based AS scholarship_merit_based, scholarship.need_based AS scholarship_need_based, scholarship.essay_based AS scholarship_essay_based, scholarship.nationwide AS scholarship_nationwide, scholarship.img_src AS scholarship_img_src, scholarship.link AS scholarship_link 
+FROM scholarship 
+WHERE lower(scholarship.name) LIKE lower(%s) OR lower(scholarship.awarded_by) LIKE lower(%s) ORDER BY levenshtein(left(lower(scholarship.name), %s), %s), levenshtein(left(lower(scholarship.awarded_by), %s), %s)) AS anon_1]
+[parameters: ('%mor%', '%mor%', 255, 'mor', 255, 'mor')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+
+-->
