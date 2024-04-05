@@ -203,6 +203,10 @@ export const states = {
     abbreviation: "DC",
     flag: "https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Washington%2C_D.C.svg",
   },
+  "United States of America": {
+    abbreviation: "USA",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png",
+  },
 };
 
 export default states;
