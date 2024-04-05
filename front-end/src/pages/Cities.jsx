@@ -6,7 +6,7 @@ import CitiesCard from "../components/cards/CitiesCard";
 import Pagination from "../components/Pagination.jsx";
 import "./Cities.css";
 import AwesomeSearch from "../components/AwesomeSearch.jsx";
-import states from "../data/states.js";
+// import states from "../data/states.js";
 
 async function getCities(search, sort) {
   let cities = [];
