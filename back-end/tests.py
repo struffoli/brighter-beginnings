@@ -35,6 +35,8 @@ class Tests(unittest.TestCase):
         organization = response.json["Organization"]
         self.assertIsNotNone(organization)
         self.assertEqual(organization["id"], 1)
+        #check that the fields are returned
+        self.assertIsNotNone(organization["name"])
 
     def testAllCities(self):
         response = self.client.get("/cities")
