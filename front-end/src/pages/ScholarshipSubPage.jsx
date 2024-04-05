@@ -8,13 +8,6 @@ import { getCityById } from "./Cities";
 function ScholarshipsSubPage() {
   const [queryParameters] = useSearchParams();
 
-  // const getScholarship = (query) => {
-  //   return scholarships.find((s) => s.id === query); //find in the data
-  // };
-
-  // const scholarship_id = parseInt(queryParameters.get("id"));
-  // const scholarship = getScholarship(scholarship_id);
-
   const [cities, setApiCities] = useState([]);
   const scholarship_id = queryParameters.get("id");
   const [scholarship, setApiScholarship] = useState();
@@ -32,21 +25,7 @@ function ScholarshipsSubPage() {
     });
   }, [scholarship_id, cities]);
 
-  console.log(cities);
-
-  // console.log(scholarship);
-
-  // const [cities, setApiCities] = useState([]);
-  // useEffect(() => {
-  //   scholarship.Scholarship.cities.map((city, index) =>
-  //     getCityById(city.id).then((data) => setApiCities([...cities, data]))
-  //   );
-  // }, [cities, scholarship.Scholarship.cities]);
-
-  // console.log(cities);
-
   if (scholarship) {
-    console.log(scholarship.Scholarship.nationwide);
     return (
       <div className="container" style={{ marginTop: "3%" }}>
         <div className="d-flex justify-content-around">
@@ -140,18 +119,6 @@ function ScholarshipsSubPage() {
           </div>
         </div>
       </div>
-      // <div className="container" style={{ marginTop: "3%" }}>
-      //   <div className="row justify-content-center">
-
-      //   </div>
-      //   <div className="">
-      //     <h5 className="" style={{ paddingBottom: "4px" }}>
-      //       {scholarship.Scholarship.name}
-      //     </h5>
-
-      //     <ul className="list-group list-group-flush"></ul>
-      //   </div>
-      // </div>
     );
   }
 }
