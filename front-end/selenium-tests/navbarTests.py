@@ -25,6 +25,7 @@ class SeleniumTests(unittest.TestCase):
     def test_1(self) -> None:
         self.driver.find_element(By.LINK_TEXT, "Organizations").click()
         self.assertEqual(self.driver.current_url, url + "/organizations")
+        self.driver.find_element(By.XPATH, "//div[contains(text(), 'Ace')]").click()
         
     def test_2(self) -> None:
         self.driver.find_element(By.LINK_TEXT, "Cities").click()
