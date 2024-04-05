@@ -35,6 +35,15 @@ function ScholarshipsSubPage() {
             {scholarship.Scholarship.name}
           </h5>
           <p className="card-text">
+            <Link
+              to={scholarship.Scholarship.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <b>Link to Apply</b>
+            </Link>
+          </p>
+          <p className="card-text">
             <b>Award by:</b> {scholarship.Scholarship.awarded_by}
           </p>
           <p className="card-text">
@@ -80,15 +89,6 @@ function ScholarshipsSubPage() {
               </Link>
             </p>
           ))}
-          <p className="card-text">
-            <Link
-              to={scholarship.Scholarship.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <b>Link to Apply</b>
-            </Link>
-          </p>
           <ul className="list-group list-group-flush"></ul>
         </div>
       </div>
