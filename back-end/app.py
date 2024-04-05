@@ -99,9 +99,9 @@ def get_organizations():
     # filtering 
     if filter is not None:
         if filter == 'email':
-            query = query.filter(Scholarship.email != 'N/A')
+            query = query.filter(Organization.email != 'N/A')
         if filter == 'phone':
-            query = query.filter(Scholarship.phone != 'N/A')
+            query = query.filter(Organization.phone != 'N/A')
         total = query.count()
 
     result = query.paginate(page=page, per_page=per_page, error_out=False)
