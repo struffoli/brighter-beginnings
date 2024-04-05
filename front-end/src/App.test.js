@@ -20,7 +20,7 @@ test('navbar renders', () => {
 });
 
 test('navbar has links', () => {
-    render(<NavBar />);
+    render(<App />);
     const homeLink = screen.getAllByText("Brighter Beginnings");
     const aboutUsLink = screen.getAllByText("About Us");
     const citiesLink = screen.getAllByText("Cities");
