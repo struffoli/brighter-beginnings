@@ -198,6 +198,15 @@ const Home = () => {
             <AwesomeSearch handleSearch={handleSitewideSearch} />
           </div>
 
+          {searchText.length !== 0 &&
+            searchCities.cities.length === 0 &&
+            searchOrganizations.organizations.length === 0 &&
+            searchScholarships.scholarships.length === 0 && (
+              <div className="text-center mt-2 pt-1">
+                <h4>No items found!</h4>
+              </div>
+            )}
+
           {searchCities.cities.length !== 0 && (
             <>
               <div className="w-100">

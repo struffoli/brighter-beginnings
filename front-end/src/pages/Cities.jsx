@@ -99,6 +99,8 @@ const Cities = () => {
     );
   };
 
+  console.log(apiCities);
+
   return (
     <div>
       <h2 className="title">
@@ -109,7 +111,14 @@ const Cities = () => {
         sorts={sorts}
         filters={filters}
       />
+
       <div className="row justify-content-start mb-5 mx-4">
+        {apiCities.cities.length === 0 && (
+          <div className="text-center mt-5">
+            <h4>No items found!</h4>
+          </div>
+        )}
+
         {currentItems.map((city, index) => (
           <CitiesCard
             key={index}

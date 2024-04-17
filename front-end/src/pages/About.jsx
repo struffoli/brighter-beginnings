@@ -201,10 +201,19 @@ function About() {
           href="https://documenter.getpostman.com/view/32954458/2sA2r6WPJG"
           target="_blank"
           rel="noreferrer"
-          className="btn p-3"
+          className="btn p-3 btnHover mx-3"
           style={{ backgroundColor: "#d8f9ff" }}
         >
           <h4 style={{ marginBottom: "0" }}>API Documentation</h4>
+        </a>
+        <a
+          href="https://gitlab.com/kxut/cs373-group-01"
+          target="_blank"
+          rel="noreferrer"
+          className="btn p-3 btnHover mx-3"
+          style={{ backgroundColor: "#d8f9ff" }}
+        >
+          <h4 style={{ marginBottom: "0" }}>GitLab Repository</h4>
         </a>
       </div>
     </div>

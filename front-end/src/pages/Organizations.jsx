@@ -95,6 +95,11 @@ const Organizations = () => {
         filters={filters}
       />
       <div className="row justify-content-start mb-5 mx-4">
+        {apiOrganizations.organizations.length === 0 && (
+          <div className="text-center mt-5">
+            <h4>No items found!</h4>
+          </div>
+        )}
         {currentItems.map((org, index) => (
           <OrganizationsCard
             key={index}
