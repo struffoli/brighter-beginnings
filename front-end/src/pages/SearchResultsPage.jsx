@@ -67,7 +67,7 @@ function SearchResultsPage() {
             <div className="row">
                 {citiesResults.length > 0 ? (
                     citiesResults.map((city, index) => (
-                        <CitiesCard key={index} {...city} />
+                        <CitiesCard key={index} {...city} searchText={searchTerm}/>
                     ))
                 ) : ( <p>No cities found!</p> )}
             </div>
@@ -76,7 +76,7 @@ function SearchResultsPage() {
             <div className="row">
                 {scholarshipsResults.length > 0 ? (
                     scholarshipsResults.map((scholarship, index) => (
-                        <ScholarshipsCard key={index} {...scholarship} />
+                        <ScholarshipsCard key={index} {...scholarship} searchText={searchTerm}/>
                     ))
                 ) : ( <p>No scholarships found!</p> )}
             </div>
@@ -85,7 +85,7 @@ function SearchResultsPage() {
             <div className="row">
                 {organizationsResults.length > 0 ? (
                     organizationsResults.map((organization, index) => (
-                        <OrganizationsCard key={index} {...organization} />
+                        <OrganizationsCard key={index} {...organization} searchText={searchTerm}/>
                     ))
                 ) : ( <p>No organizations found!</p> )}
             </div>
