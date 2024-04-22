@@ -1,7 +1,8 @@
 from flask import jsonify, request
 from models import app, db, City, Organization, Scholarship
 from schema import CitySchema, OrganizationSchema, ScholarshipSchema
-from sqlalchemy import or_
+from sqlalchemy import or_, func
+from collections import OrderedDict as ordered_dict
 
 @app.route('/')
 def home():
@@ -83,10 +84,11 @@ def get_scholarships():
 
         itemsList = list(scholarshipCount.items())
         sortedItemsByCount = sorted(itemsList, key=lambda item: scholarshipCount.get(item[0], 0), reverse=True)
+        sortedLisst = (item[0] for item in sortedItemsByCount)
         uniqueSearchResults = {item[0] : item[1]  for item in sortedItemsByCount}
             
         total = len(uniqueSearchResults)
-        query = Scholarship.query.filter(Scholarship.id.in_(uniqueSearchResults.keys()))    
+        query = Scholarship.query.filter(Scholarship.id.in_(uniqueSearchResults.keys())).order_by(func.field(Scholarship.id, *sortedLisst))   
             
         result = query.paginate(page=page, per_page=per_page, error_out=False)
     
@@ -162,14 +164,16 @@ def get_organizations():
 
         itemsList = list(scholarshipCount.items())
         sortedItemsByCount = sorted(itemsList, key=lambda item: scholarshipCount.get(item[0], 0), reverse=True)
+        sortedLisst = (item[0] for item in sortedItemsByCount)
         uniqueSearchResults = {item[0] : item[1]  for item in sortedItemsByCount}
             
         total = len(uniqueSearchResults)
-        query = Organization.query.filter(Organization.id.in_(uniqueSearchResults.keys()))    
+        query = Organization.query.filter(Organization.id.in_(uniqueSearchResults.keys())).order_by(func.field(Organization.id, *sortedLisst))
             
         result = query.paginate(page=page, per_page=per_page, error_out=False)
     
     schema = OrganizationSchema().dump(result, many=True)
+    
     return jsonify({"Organizations":schema, "Total organizations": total})
 
 # return instance of organization
@@ -236,10 +240,11 @@ def get_cities():
 
         itemsList = list(scholarshipCount.items())
         sortedItemsByCount = sorted(itemsList, key=lambda item: scholarshipCount.get(item[0], 0), reverse=True)
+        sortedLisst = (item[0] for item in sortedItemsByCount)
         uniqueSearchResults = {item[0] : item[1]  for item in sortedItemsByCount}
             
         total = len(uniqueSearchResults)
-        query = City.query.filter(City.id.in_(uniqueSearchResults.keys()))    
+        query = City.query.filter(City.id.in_(uniqueSearchResults.keys())).order_by(func.field(City.id, *sortedLisst))  
             
         result = query.paginate(page=page, per_page=per_page, error_out=False)
     schema = CitySchema().dump(result, many=True)
