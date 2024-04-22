@@ -1,6 +1,7 @@
 from flask import jsonify, request
 from models import app, db, City, Organization, Scholarship
 from schema import CitySchema, OrganizationSchema, ScholarshipSchema
+from sqlalchemy import or_
 
 @app.route('/')
 def home():
@@ -58,8 +59,35 @@ def get_scholarships():
     # searh scholarships
     search = request.args.get("search")
     if search != None:
-        query = query.filter(Scholarship.name.ilike(f"%{search}%") | Scholarship.awarded_by.ilike(f"%{search}%") | Scholarship.award_amount.ilike(f"%{search}%"))
-        total = query.count()
+        search = search.split()
+        scholarshipCount = {}
+        uniqueSearchResults = {}
+        for word in search:
+            data_condition = or_(
+                Scholarship.name.ilike(f"%{word}%"),
+                Scholarship.awarded_by.ilike(f"%{word}%"),
+                Scholarship.award_amount.ilike(f"%{word}%")
+            )
+            data = Scholarship.query.filter(data_condition).all()
+            for result in data:
+                if result.id in scholarshipCount:
+                    scholarshipCount[result.id] += 1
+                else:
+                    scholarshipCount[result.id] = 1
+            res = {
+                "count": len(data),
+                "scholarships": [scholarship.to_dict() for scholarship in data]
+            }
+            for result in res['scholarships']:
+                uniqueSearchResults[result['id']] = result
+
+        itemsList = list(scholarshipCount.items())
+        sortedItemsByCount = sorted(itemsList, key=lambda item: scholarshipCount.get(item[0], 0), reverse=True)
+        uniqueSearchResults = {item[0] : item[1]  for item in sortedItemsByCount}
+            
+        total = len(uniqueSearchResults)
+        query = Scholarship.query.filter(Scholarship.id.in_(uniqueSearchResults.keys()))    
+            
         result = query.paginate(page=page, per_page=per_page, error_out=False)
     
     schema = ScholarshipSchema().dump(result, many=True)
@@ -109,8 +137,36 @@ def get_organizations():
     # searh organizations
     search = request.args.get("search")
     if search != None:
-        query = query.filter(Organization.name.ilike(f"%{search}%") | Organization.organization_type.ilike(f"%{search}%"))
-        total = query.count()
+        search = search.split()
+        scholarshipCount = {}
+        uniqueSearchResults = {}
+        for word in search:
+            data_condition = or_(
+                Organization.name.ilike(f"%{word}%"),
+                Organization.email.ilike(f"%{word}%"),
+                Organization.organization_type.ilike(f"%{word}%"),
+                Organization.address.ilike(f"%{word}%")
+            )
+            data = Organization.query.filter(data_condition).all()
+            for result in data:
+                if result.id in scholarshipCount:
+                    scholarshipCount[result.id] += 1
+                else:
+                    scholarshipCount[result.id] = 1
+            res = {
+                "count": len(data),
+                "scholarships": [scholarship.to_dict() for scholarship in data]
+            }
+            for result in res['scholarships']:
+                uniqueSearchResults[result['id']] = result
+
+        itemsList = list(scholarshipCount.items())
+        sortedItemsByCount = sorted(itemsList, key=lambda item: scholarshipCount.get(item[0], 0), reverse=True)
+        uniqueSearchResults = {item[0] : item[1]  for item in sortedItemsByCount}
+            
+        total = len(uniqueSearchResults)
+        query = Organization.query.filter(Organization.id.in_(uniqueSearchResults.keys()))    
+            
         result = query.paginate(page=page, per_page=per_page, error_out=False)
     
     schema = OrganizationSchema().dump(result, many=True)
@@ -156,8 +212,35 @@ def get_cities():
     # searh cities
     search = request.args.get("search")
     if search != None:
-        query = query.filter(City.name.ilike(f"%{search}%") | City.state.ilike(f"%{search}%") | City.population.ilike(f"%{search}%"))
-        total = query.count()
+        search = search.split()
+        scholarshipCount = {}
+        uniqueSearchResults = {}
+        for word in search:
+            data_condition = or_(
+                City.name.ilike(f"%{word}%"),
+                City.state.ilike(f"%{word}%"),
+                City.population.ilike(f"%{word}%"),
+            )
+            data = City.query.filter(data_condition).all()
+            for result in data:
+                if result.id in scholarshipCount:
+                    scholarshipCount[result.id] += 1
+                else:
+                    scholarshipCount[result.id] = 1
+            res = {
+                "count": len(data),
+                "scholarships": [scholarship.to_dict() for scholarship in data]
+            }
+            for result in res['scholarships']:
+                uniqueSearchResults[result['id']] = result
+
+        itemsList = list(scholarshipCount.items())
+        sortedItemsByCount = sorted(itemsList, key=lambda item: scholarshipCount.get(item[0], 0), reverse=True)
+        uniqueSearchResults = {item[0] : item[1]  for item in sortedItemsByCount}
+            
+        total = len(uniqueSearchResults)
+        query = City.query.filter(City.id.in_(uniqueSearchResults.keys()))    
+            
         result = query.paginate(page=page, per_page=per_page, error_out=False)
     schema = CitySchema().dump(result, many=True)
     return jsonify({"Cities":schema, "Total cities": total})

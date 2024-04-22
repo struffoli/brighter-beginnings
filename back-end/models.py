@@ -35,6 +35,20 @@ class Scholarship(db.Model):
     #Establishing relationships
     cities = db.relationship('City', secondary=scholarship_city_association, back_populates='scholarships')
     organizations = db.relationship('Organization', back_populates='scholarship')
+    
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "awarded_by": self.awarded_by,
+            "award_amount": self.award_amount,
+            "merit_based": self.merit_based,
+            "need_based": self.need_based,
+            "essay_based": self.essay_based,
+            "nationwide": self.nationwide,
+            "img_src": self.img_src,
+            "link": self.link
+        }
 
 
 class Organization(db.Model):
@@ -48,6 +62,18 @@ class Organization(db.Model):
     address = db.Column(db.String(255))
     # Establishing relationship
     scholarship = db.relationship('Scholarship', back_populates='organizations')
+    
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "email": self.email,
+            "phone": self.phone,
+            "organization_type": self.organization_type,
+            "img_src": self.img_src,
+            "scholarship_id": self.scholarship_id,
+            "address": self.address
+        }  
 
 
 class City(db.Model):
@@ -61,3 +87,16 @@ class City(db.Model):
     poverty_rate = db.Column(db.Float)
     img_src = db.Column(db.String(255))
     scholarships = db.relationship('Scholarship', secondary=scholarship_city_association, back_populates='cities')
+    
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "population": self.population,
+            "state": self.state,
+            "median_income": self.median_income,
+            "unemployment_rate": self.unemployment_rate,
+            "college_educated_rate": self.college_educated_rate,
+            "poverty_rate": self.poverty_rate,
+            "img_src": self.img_src
+        }
