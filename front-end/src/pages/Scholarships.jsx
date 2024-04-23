@@ -5,7 +5,7 @@ import Pagination from "../components/Pagination";
 import "./Scholarships.css";
 import AwesomeSearch from "../components/AwesomeSearch";
 
-async function getScholarships(search, sort, filter) {
+export async function getScholarships(search, sort, filter) {
   let scholarships = [];
   let total_scholarships = 0;
   try {

@@ -7,61 +7,18 @@ import orgicon from "../assets/orgicon.png";
 import schpicon from "../assets/schpicon.png";
 import downarrow from "../assets/downarrow.png";
 import AwesomeSearch from "../components/AwesomeSearch";
-import states from "../data/states";
+// import states from "../data/states";
 import CitiesCard from "../components/cards/CitiesCard";
 import OrganizationsCard from "../components/cards/OrganizationsCard";
 import ScholarshipsCard from "../components/cards/ScholarshipsCard";
-
-async function getCities() {
-  let cities = [];
-  let total_cities = 0;
-  try {
-    const response = await fetch("https://api.brighterbeginnings.me/cities");
-    const result = await response.json();
-    cities = result["Cities"];
-    total_cities = result["Total cities"];
-  } catch (error) {
-    console.log(error);
-  }
-  return { cities, total_cities };
-}
-
-async function getOrganizations() {
-  let organizations = [];
-  let total_organizations = 0;
-  try {
-    const response = await fetch(
-      "https://api.brighterbeginnings.me/organizations"
-    );
-    const result = await response.json();
-    organizations = result["Organizations"];
-    total_organizations = result["Total organizations"];
-  } catch (error) {
-    console.log(error);
-  }
-  return { organizations, total_organizations };
-}
-
-async function getScholarships() {
-  let scholarships = [];
-  let total_scholarships = 0;
-  try {
-    const response = await fetch(
-      "https://api.brighterbeginnings.me/scholarships"
-    );
-    const result = await response.json();
-    scholarships = result["Scholarships"];
-    total_scholarships = result["Total scholarships"];
-  } catch (error) {
-    console.log(error);
-  }
-  return { scholarships, total_scholarships };
-}
+import { getCities } from "./Cities";
+import { getOrganizations } from "./Organizations";
+import { getScholarships } from "./Scholarships";
 
 const Home = () => {
   const [apiCities, setApiCities] = useState({ cities: [], total_cities: 0 });
   useEffect(() => {
-    getCities().then((data) => setApiCities(data));
+    getCities("", null).then((data) => setApiCities(data));
   }, []);
 
   const [apiOrganizations, setApiOrganizations] = useState({
@@ -69,7 +26,7 @@ const Home = () => {
     total_organizations: 0,
   });
   useEffect(() => {
-    getOrganizations().then((data) => setApiOrganizations(data));
+    getOrganizations("", null).then((data) => setApiOrganizations(data));
   }, []);
 
   const [apiScholarships, setApiScholarships] = useState({
@@ -77,70 +34,29 @@ const Home = () => {
     total_scholarships: 0,
   });
   useEffect(() => {
-    getScholarships().then((data) => setApiScholarships(data));
+    getScholarships("", null).then((data) => setApiScholarships(data));
   }, []);
-
-  const [searchCities, setSearchCities] = useState({
-    cities: [],
-    total_cities: 0,
-  });
-
-  const [searchOrganizations, setSearchOrganizations] = useState({
-    organizations: [],
-    total_organizations: 0,
-  });
-
-  const [searchScholarships, setSearchScholarships] = useState({
-    scholarships: [],
-    total_scholarships: 0,
-  });
 
   const [searchText, setSearchText] = useState("");
 
   const handleSitewideSearch = (searchText) => {
     if (searchText === "") {
       setSearchText("");
-      setSearchCities({ cities: [], total_cities: 0 });
-      setSearchOrganizations({ organizations: [], total_organizations: 0 });
-      setSearchScholarships({ scholarships: [], total_scholarships: 0 });
+      setApiCities({ cities: [], total_cities: 0 });
+      setApiOrganizations({ organizations: [], total_organizations: 0 });
+      setApiScholarships({ scholarships: [], total_scholarships: 0 });
     } else {
       setSearchText(searchText);
-      setSearchCities({
-        cities: apiCities.cities.filter(
-          (city) =>
-            city.name.toLowerCase().includes(searchText.toLowerCase()) ||
-            city.state.toLowerCase().includes(searchText.toLowerCase()) ||
-            states[city.state].abbreviation
-              .toLowerCase()
-              .includes(searchText.toLowerCase())
-        ),
-      });
 
-      setSearchOrganizations({
-        organizations: apiOrganizations.organizations.filter(
-          (organization) =>
-            organization.name
-              .toLowerCase()
-              .includes(searchText.toLowerCase()) ||
-            organization.organization_type
-              .toLowerCase()
-              .includes(searchText.toLowerCase())
-        ),
-      });
+      getCities(searchText, null).then((data) => setApiCities(data));
 
-      setSearchScholarships({
-        scholarships: apiScholarships.scholarships.filter(
-          (scholarship) =>
-            (scholarship.name &&
-              scholarship.name
-                .toLowerCase()
-                .includes(searchText.toLowerCase())) ||
-            (scholarship.awarded_by &&
-              scholarship.awarded_by
-                .toLowerCase()
-                .includes(searchText.toLowerCase()))
-        ),
-      });
+      getOrganizations(searchText, null).then((data) =>
+        setApiOrganizations(data)
+      );
+
+      getScholarships(searchText, null).then((data) =>
+        setApiScholarships(data)
+      );
     }
   };
 
@@ -195,19 +111,22 @@ const Home = () => {
           </div>
 
           <div className="w-100">
-            <AwesomeSearch handleSearch={handleSitewideSearch} />
+            <AwesomeSearch
+              handleSearch={handleSitewideSearch}
+              onlySearch={true}
+            />
           </div>
 
           {searchText.length !== 0 &&
-            searchCities.cities.length === 0 &&
-            searchOrganizations.organizations.length === 0 &&
-            searchScholarships.scholarships.length === 0 && (
+            apiCities.cities.length === 0 &&
+            apiOrganizations.organizations.length === 0 &&
+            apiScholarships.scholarships.length === 0 && (
               <div className="text-center mt-2 pt-1">
                 <h4>No items found!</h4>
               </div>
             )}
 
-          {searchCities.cities.length !== 0 && (
+          {apiCities.cities.length !== 0 && (
             <>
               <div className="w-100">
                 <p className="ms-4 ps-2 mb-2 pb-1">
@@ -219,7 +138,7 @@ const Home = () => {
                 ></hr>
               </div>
               <div className="row justify-content-start mb-3 mx-4">
-                {searchCities.cities.map((city, index) => (
+                {apiCities.cities.map((city, index) => (
                   <CitiesCard
                     key={index}
                     id={city.id}
@@ -239,7 +158,7 @@ const Home = () => {
             </>
           )}
 
-          {searchOrganizations.organizations.length !== 0 && (
+          {apiOrganizations.organizations.length !== 0 && (
             <>
               <div className="w-100">
                 <p className="ms-4 ps-2 mb-2 pb-1">
@@ -251,7 +170,7 @@ const Home = () => {
                 ></hr>
               </div>
               <div className="row justify-content-start mb-3 mx-4">
-                {searchOrganizations.organizations.map((org, index) => (
+                {apiOrganizations.organizations.map((org, index) => (
                   <OrganizationsCard
                     key={index}
                     img_src={org.img_src}
@@ -269,7 +188,7 @@ const Home = () => {
             </>
           )}
 
-          {searchScholarships.scholarships.length !== 0 && (
+          {apiScholarships.scholarships.length !== 0 && (
             <>
               <div className="w-100">
                 <p className="ms-4 ps-2 mb-2 pb-1">
@@ -281,7 +200,7 @@ const Home = () => {
                 ></hr>
               </div>
               <div className="row justify-content-start mb-5 mx-4">
-                {searchScholarships.scholarships.map((scholarship, index) => (
+                {apiScholarships.scholarships.map((scholarship, index) => (
                   <ScholarshipsCard
                     key={index}
                     img_src={scholarship.img_src}

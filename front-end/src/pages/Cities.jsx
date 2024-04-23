@@ -8,7 +8,7 @@ import "./Cities.css";
 import AwesomeSearch from "../components/AwesomeSearch.jsx";
 // import states from "../data/states.js";
 
-async function getCities(search, sort) {
+export async function getCities(search, sort) {
   let cities = [];
   let total_cities = 0;
   try {

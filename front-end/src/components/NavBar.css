@@ -50,3 +50,8 @@
  .navbar-light .navbar-brand {
     color: #05c7ed
 }
+
+.visualizationsButton {
+    color: #707071;
+    height: 100%;    
+}

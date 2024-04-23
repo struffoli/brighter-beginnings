@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function AwesomeSearch({ handleSearch, sorts, filters}) {
+function AwesomeSearch({ handleSearch, sorts, filters, onlySearch }) {
   const [searchText, setSearchText] = useState("");
 
   const searchInputHandler = (enteredText) => {
@@ -15,7 +15,9 @@ function AwesomeSearch({ handleSearch, sorts, filters}) {
     let selectedSort = document.querySelector('input[name="sort"]:checked');
     selectedSort = selectedSort ? selectedSort.nextSibling.textContent : "";
     let selectedFilter = document.querySelector('input[name="filter"]:checked');
-    selectedFilter = selectedFilter ? selectedFilter.nextSibling.textContent : "";
+    selectedFilter = selectedFilter
+      ? selectedFilter.nextSibling.textContent
+      : "";
     const getData = setTimeout(() => {
       handleSearch(searchText, selectedSort, selectedFilter);
     }, 300);
@@ -41,7 +43,9 @@ function AwesomeSearch({ handleSearch, sorts, filters}) {
     );
   }
 
-  let filterChoices = filters ? [<h6 class="dropdown-header">Filtering</h6>] : [];
+  let filterChoices = filters
+    ? [<h6 class="dropdown-header">Filtering</h6>]
+    : [];
   for (let filter in filters) {
     filterChoices.push(
       <div className="ms-3 form-check">
@@ -109,20 +113,23 @@ function AwesomeSearch({ handleSearch, sorts, filters}) {
           </span>
         </div>
       </div>
-      <div className="dropdown ms-1 pe-2 me-4">
-        <button
-          className="btn btn-primary dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          data-bs-auto-close="outside"
-          aria-expanded="false">
-          Sort / Filter
-        </button>
-        <ul className="dropdown-menu">
+      {!onlySearch && (
+        <div className="dropdown ms-1 pe-2 me-4">
+          <button
+            className="btn btn-primary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            data-bs-auto-close="outside"
+            aria-expanded="false"
+          >
+            Sort / Filter
+          </button>
+          <ul className="dropdown-menu">
             {sortChoices}
             {filterChoices}
-        </ul>
-      </div>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
