@@ -51,6 +51,74 @@ class Tests(unittest.TestCase):
         city = response.json["City"]
         self.assertIsNotNone(city)
         self.assertEqual(city["id"], 1)
+        
+    def testScholarshipsSort(self):
+        response = self.client.get("/scholarships?sort=award_amount")
+        self.assertEqual(response.status_code, 200)
+        reponse = self.client.get("/scholarships?sort=name")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/scholarships?sort=awarded_by")
+        self.assertEqual(response.status_code, 200)
+        
+    def testScholarshipsFilter(self):
+        response = self.client.get("/scholarships?filter=merit_based")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/scholarships?filter=need_based")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/scholarships?filter=essay_based")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/scholarships?filter=nationwide")
+        self.assertEqual(response.status_code, 200)
+        
+    def testOrganizationsSort(self):
+        response = self.client.get("/organizations?sort=name")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/organizations?sort=email")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/organizations?sort=organization_type")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/organizations?sort=id")
+        self.assertEqual(response.status_code, 200)
+        
+    def testOrganizationsFilter(self):
+        response = self.client.get("/organizations?filter=email")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/organizations?filter=phone")
+        self.assertEqual(response.status_code, 200)
+        
+    def testCitiesSort(self):
+        response = self.client.get("/cities?sort=name")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/cities?sort=state")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/cities?sort=population")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/cities?sort=median_income")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/cities?sort=unemployment_rate")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/cities?sort=college_educated_rate")
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get("/cities?sort=poverty_rate")
+        self.assertEqual(response.status_code, 200)
+        
+    def testScholarshipsSearch(self):
+        response = self.client.get("/scholarships?search=women")
+        self.assertEqual(response.status_code, 200)
+        self.assertIsNotNone(response.json["Scholarships"])
+        self.assertEqual(len(response.json["Scholarships"]), 2)
+        
+    def testCitiesSearch(self):
+        response = self.client.get("/cities?search=New")
+        self.assertEqual(response.status_code, 200)
+        self.assertIsNotNone(response.json["Cities"])
+        self.assertEqual(len(response.json["Cities"]), 9)
+        
+    def testOrganizationsSearch(self):
+        response = self.client.get("/organizations?search=College")
+        self.assertEqual(response.status_code, 200)
+        self.assertIsNotNone(response.json["Organizations"])
+        self.assertEqual(len(response.json["Organizations"]), 4)
 
 if __name__ == "__main__":
     unittest.main()
