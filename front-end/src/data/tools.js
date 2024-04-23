@@ -1,7 +1,7 @@
 import react from "../assets/react.png";
 import amplify from "../assets/amplify.png";
 import postman from "../assets/postman.png";
-import vscode from "../assets/vscode.png";
+// import vscode from "../assets/vscode.png";
 import gitlab from "../assets/gitlab.png";
 import bootstrap from "../assets/bootstrap.jpg";
 import npm from "../assets/npm.png";
@@ -12,6 +12,8 @@ import sqla from "../assets/sqla.png";
 import pandas from "../assets/pandas.png";
 import python from "../assets/python.png";
 import mysql from "../assets/mysql.png";
+import jest from "../assets/jest.png";
+import selenium from "../assets/selenium.png";
 
 export const tools = [
   {
@@ -29,11 +31,11 @@ export const tools = [
     img_src: postman,
     description: "API",
   },
-  {
-    name: "VS Code",
-    img_src: vscode,
-    description: "IDE",
-  },
+  // {
+  //   name: "VS Code",
+  //   img_src: vscode,
+  //   description: "IDE",
+  // },
   {
     name: "GitLab",
     img_src: gitlab,
@@ -83,5 +85,15 @@ export const tools = [
     name: "MySQL",
     img_src: mysql,
     description: "Database",
+  },
+  {
+    name: "Jest",
+    img_src: jest,
+    description: "Tests",
+  },
+  {
+    name: "Selenium",
+    img_src: selenium,
+    description: "Tests",
   },
 ];
