@@ -5,7 +5,7 @@ import Pagination from "../components/Pagination";
 import "./Organizations.css";
 import AwesomeSearch from "../components/AwesomeSearch";
 
-async function getOrganizations(search, sort, filter) {
+export async function getOrganizations(search, sort, filter) {
   let organizations = [];
   let total_organizations = 0;
   try {
