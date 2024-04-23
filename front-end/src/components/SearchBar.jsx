@@ -11,7 +11,9 @@ function SearchBar() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        if (searchTerm.trim() === '') return;
         navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
+        window.location.reload();
     };
 
     return (
