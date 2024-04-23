@@ -44,16 +44,7 @@ def get_scholarships():
             query = query.order_by(Scholarship.award_amount)
 
     # filtering 
-    if filter is not None:
-        if filter == 'merit_based':
-            query = query.filter(Scholarship.merit_based == True)
-        elif filter == 'need_based':
-            query = query.filter(Scholarship.need_based == True)
-        elif filter == 'essay_based':
-            query = query.filter(Scholarship.essay_based == True)
-        elif filter == 'nationwide':
-            query = query.filter(Scholarship.nationwide == True)
-        total = query.count()
+    
 
     result = query.paginate(page=page, per_page=per_page, error_out=False)
     
@@ -90,8 +81,18 @@ def get_scholarships():
         total = len(uniqueSearchResults)
         query = Scholarship.query.filter(Scholarship.id.in_(uniqueSearchResults.keys())).order_by(func.field(Scholarship.id, *sortedLisst))   
             
-        result = query.paginate(page=page, per_page=per_page, error_out=False)
-    
+        
+    if filter is not None:
+        if filter == 'merit_based':
+            query = query.filter(Scholarship.merit_based == True)
+        elif filter == 'need_based':
+            query = query.filter(Scholarship.need_based == True)
+        elif filter == 'essay_based':
+            query = query.filter(Scholarship.essay_based == True)
+        elif filter == 'nationwide':
+            query = query.filter(Scholarship.nationwide == True)
+        total = query.count()
+    result = query.paginate(page=page, per_page=per_page, error_out=False)
     schema = ScholarshipSchema().dump(result, many=True)
     return jsonify({"Scholarships":schema, "Total scholarships": total})
 
@@ -127,12 +128,7 @@ def get_organizations():
             query = query.order_by(Organization.address)
 
     # filtering 
-    if filter is not None:
-        if filter == 'email':
-            query = query.filter(Organization.email != 'N/A')
-        if filter == 'phone':
-            query = query.filter(Organization.phone != 'N/A')
-        total = query.count()
+    
 
     result = query.paginate(page=page, per_page=per_page, error_out=False)
     
@@ -170,7 +166,15 @@ def get_organizations():
         total = len(uniqueSearchResults)
         query = Organization.query.filter(Organization.id.in_(uniqueSearchResults.keys())).order_by(func.field(Organization.id, *sortedLisst))
             
-        result = query.paginate(page=page, per_page=per_page, error_out=False)
+    if filter is not None:
+        if filter == 'email':
+            query = query.filter(Organization.email != 'N/A')
+        if filter == 'phone':
+            query = query.filter(Organization.phone != 'N/A')
+        total = query.count()
+        
+    result = query.paginate(page=page, per_page=per_page, error_out=False)
+        
     
     schema = OrganizationSchema().dump(result, many=True)
     
