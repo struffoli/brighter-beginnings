@@ -46,13 +46,13 @@ function CitySubPage() {
               <b>Median Income:</b> {city.City.median_income}
             </p>
             <p className="card-text">
-              <b>Unemployment Rate:</b> {city.City.unemployment_rate * 100}%
+              <b>Unemployment Rate:</b> {(city.City.unemployment_rate * 100).toFixed(1)}%
             </p>
             <p className="card-text">
-              <b>Poverty Rate:</b> {city.City.poverty_rate * 100}%
+              <b>Poverty Rate:</b> {(city.City.poverty_rate * 100).toFixed(1)}%
             </p>
             <p className="card-text">
-                <b>College Educated Rate:</b> {city.City.college_educated_rate * 100}%
+                <b>College Educated Rate:</b> {(city.City.college_educated_rate * 100).toFixed(1)}%
             </p>
             <iframe
               title="google map of this page's city"
