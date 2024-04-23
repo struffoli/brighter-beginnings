@@ -99,8 +99,6 @@ const Cities = () => {
     );
   };
 
-  console.log(apiCities);
-
   return (
     <div>
       <h2 className="title">

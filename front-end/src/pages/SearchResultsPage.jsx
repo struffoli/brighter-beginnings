@@ -3,6 +3,10 @@ import { useLocation } from "react-router-dom";
 import CitiesCard from "../components/cards/CitiesCard";
 import ScholarshipsCard from "../components/cards/ScholarshipsCard";
 import OrganizationsCard from "../components/cards/OrganizationsCard";
+import { getCities } from "./Cities";
+import { getOrganizations } from "./Organizations";
+import { getScholarships } from "./Scholarships";
+import Pagination from "../components/Pagination.jsx";
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -11,84 +15,174 @@ function useQuery() {
 function SearchResultsPage() {
     const query = useQuery();
     const searchTerm = query.get("query");
-    const [citiesResults, setCitiesResults] = useState([]);
-    const [scholarshipsResults, setScholarshipsResults] = useState([]);
-    const [organizationsResults, setOrganizationsResults] = useState([]);
 
+    const [currentPageCity, setCurrentPageCity] = useState(1);
+    const [currentPageOrg, setCurrentPageOrg] = useState(1);
+    const [currentPageScholarship, setCurrentPageScholarship] = useState(1);
+    const [itemsPerPage] = useState(15); // Set the number of items per page
+    const [apiCities, setApiCities] = useState({ cities: [], total_cities: 0 });
     useEffect(() => {
-        const fetchData = async () => {
-            if (searchTerm) {
-                try {
-                    const citiesResponse = await fetch(`https://api.brighterbeginnings.me/cities`);
-                    const citiesData = await citiesResponse.json();
-                    setCitiesResults(citiesData.Cities.filter(city =>
-                        city.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                        city.state.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                        city.population.toString().toLowerCase().includes(searchTerm.toLowerCase()) ||
-                        city.median_income.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                        city.unemployment_rate.toString().toLowerCase().includes(searchTerm.toLowerCase()) ||
-                        city.poverty_rate.toString().toLowerCase().includes(searchTerm.toLowerCase())
-                    ));
+        getCities(searchTerm, null).then((data) => setApiCities(data));
+    }, []);
 
-                    const scholarshipsResponse = await fetch(`https://api.brighterbeginnings.me/scholarships`);
-                    const scholarshipsData = await scholarshipsResponse.json();
-                    setScholarshipsResults(scholarshipsData.Scholarships.filter(scholarship => {
-                        const nameMatch = scholarship.name && scholarship.name.toLowerCase().includes(searchTerm.toLowerCase());
-                        const awardedByMatch = scholarship.awarded_by && scholarship.awarded_by.toLowerCase().includes(searchTerm.toLowerCase());
-                        const amountMatch = scholarship.award_amount !== undefined && scholarship.award_amount.toString().toLowerCase().includes(searchTerm.toLowerCase());
-                        const meritBasedMatch = scholarship.merit_based === true && searchTerm.toLowerCase() === 'yes';
-                        const needBasedMatch = scholarship.need_based === true && searchTerm.toLowerCase() === 'yes';
-                        const essayBasedMatch = scholarship.essay_based === true && searchTerm.toLowerCase() === 'yes';
-                        const nationwideMatch = scholarship.nationwide === true && searchTerm.toLowerCase() === 'yes';
-                        
-                        return nameMatch || awardedByMatch || amountMatch || meritBasedMatch || needBasedMatch || essayBasedMatch || nationwideMatch;
-                    }));
+    const [apiOrganizations, setApiOrganizations] = useState({
+        organizations: [],
+        total_organizations: 0,
+    });
+    useEffect(() => {
+        getOrganizations(searchTerm, null).then((data) => setApiOrganizations(data));
+    }, []);
 
-                    const organizationsResponse = await fetch(`https://api.brighterbeginnings.me/organizations`);
-                    const organizationsData = await organizationsResponse.json();
-                    setOrganizationsResults(organizationsData.Organizations.filter(organization =>
-                        organization.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                        organization.organization_type.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                        organization.phone.toString().toLowerCase().includes(searchTerm.toLowerCase())
-                    ));
-                } catch (error) {
-                    console.error('Error fetching search data:', error);
-                }
-            }
-        };
-        fetchData();
-    }, [searchTerm]);
+    const [apiScholarships, setApiScholarships] = useState({
+        scholarships: [],
+        total_scholarships: 0,
+    });
+    useEffect(() => {
+        getScholarships(searchTerm, null).then((data) => setApiScholarships(data));
+    }, []);
+
+    const indexOfLastCityItem = currentPageCity * itemsPerPage;
+    const indexOfFirstCityItem = indexOfLastCityItem - itemsPerPage;
+    const currentCityItems = apiCities.cities.slice(
+        indexOfFirstCityItem,
+        indexOfLastCityItem
+    );
+    const paginateCity = (pageNumber) => setCurrentPageCity(pageNumber);
+
+    const indexOfLastOrgItem = currentPageOrg * itemsPerPage;
+    const indexOfFirstOrgItem = indexOfLastOrgItem - itemsPerPage;
+    const currentOrgItems = apiOrganizations.organizations.slice(
+        indexOfFirstOrgItem,
+        indexOfLastOrgItem
+    );
+    const paginateOrg = (pageNumber) => setCurrentPageOrg(pageNumber);
+
+    const indexOfLastScholarshipItem = currentPageScholarship * itemsPerPage;
+    const indexOfFirstScholarshipItem = indexOfLastScholarshipItem - itemsPerPage;
+    const currentScholarshipItems = apiScholarships.scholarships.slice(
+        indexOfFirstScholarshipItem,
+        indexOfLastScholarshipItem
+    );
+    const paginateScholarship = (pageNumber) => setCurrentPageScholarship(pageNumber);
 
     return (
         <div>
             <h2>Search Results for "{searchTerm}"</h2>
 
-            <h3>Cities</h3>
-            <div className="row">
-                {citiesResults.length > 0 ? (
-                    citiesResults.map((city, index) => (
-                        <CitiesCard key={index} {...city} searchText={searchTerm}/>
-                    ))
-                ) : ( <p>No cities found!</p> )}
-            </div>
+            {apiCities.cities.length > 0 ? (
+            <>
+              <div className="w-100">
+                <p className="ms-4 ps-2 mb-2 pb-1">
+                  <b>Cities</b>
+                </p>
+                <hr
+                  className="mb-3"
+                  style={{ width: "94%", margin: "auto" }}
+                ></hr>
+              </div>
+              <div className="row justify-content-start mb-3 mx-4">
+                {currentCityItems.map((city, index) => (
+                  <CitiesCard
+                    key={index}
+                    id={city.id}
+                    img_src={city.img_src}
+                    name={city.name}
+                    population={city.population}
+                    median_income={city.median_income}
+                    poverty_rate={city.poverty_rate}
+                    state={city.state}
+                    unemployment_rate={city.unemployment_rate}
+                    organization={city.organization}
+                    scholarship={city.scholarship}
+                    searchText={searchTerm}
+                  />
+                ))}
+                <Pagination
+                  itemsPerPage={itemsPerPage}
+                  totalItems={apiCities.cities.length}
+                  paginate={paginateCity}
+                  currentPage={currentPageCity}
+                  currentItems={currentCityItems}
+                />
+              </div>
+            </>
+          ) : (<p>No cities found!</p>)}
 
-            <h3>Scholarships</h3>
-            <div className="row">
-                {scholarshipsResults.length > 0 ? (
-                    scholarshipsResults.map((scholarship, index) => (
-                        <ScholarshipsCard key={index} {...scholarship} searchText={searchTerm}/>
-                    ))
-                ) : ( <p>No scholarships found!</p> )}
-            </div>
+            {apiOrganizations.organizations.length > 0 ? (
+            <>
+              <div className="w-100">
+                <p className="ms-4 ps-2 mb-2 pb-1">
+                  <b>Organizations</b>
+                </p>
+                <hr
+                  className="mb-3"
+                  style={{ width: "94%", margin: "auto" }}
+                ></hr>
+              </div>
+              <div className="row justify-content-start mb-3 mx-4">
+                {currentOrgItems.map((org, index) => (
+                  <OrganizationsCard
+                    key={index}
+                    img_src={org.img_src}
+                    name={org.name}
+                    id={org.id}
+                    email={org.email}
+                    phone={org.phone}
+                    organization_type={org.organization_type}
+                    city={org.city}
+                    scholarship={org.scholarship}
+                    searchText={searchTerm}
+                  />
+                ))}
+                <Pagination
+                  itemsPerPage={itemsPerPage}
+                  totalItems={apiOrganizations.organizations.length}
+                  paginate={paginateOrg}
+                  currentPage={currentPageOrg}
+                  currentItems={currentOrgItems}
+                />
+              </div>
+            </>
+          ) : (<p>No organizations found!</p>)}
 
-            <h3>Organizations</h3>
-            <div className="row">
-                {organizationsResults.length > 0 ? (
-                    organizationsResults.map((organization, index) => (
-                        <OrganizationsCard key={index} {...organization} searchText={searchTerm}/>
-                    ))
-                ) : ( <p>No organizations found!</p> )}
-            </div>
+            {apiScholarships.scholarships.length > 0 ? (
+            <>
+              <div className="w-100">
+                <p className="ms-4 ps-2 mb-2 pb-1">
+                  <b>Scholarships</b>
+                </p>
+                <hr
+                  className="mb-3"
+                  style={{ width: "94%", margin: "auto" }}
+                ></hr>
+              </div>
+              <div className="row justify-content-start mb-5 mx-4">
+                {currentScholarshipItems.map((scholarship, index) => (
+                  <ScholarshipsCard
+                    key={index}
+                    img_src={scholarship.img_src}
+                    name={scholarship.name}
+                    id={scholarship.id}
+                    awarded_by={scholarship.awarded_by}
+                    award_amount={scholarship.award_amount}
+                    nationwide={scholarship.nationwide}
+                    need_based={scholarship.need_based}
+                    merit_based={scholarship.merit_based}
+                    essay_based={scholarship.essay_based}
+                    link={scholarship.link}
+                    searchText={searchTerm}
+                  />
+                ))}
+                <Pagination
+                  itemsPerPage={itemsPerPage}
+                  totalItems={apiScholarships.scholarships.length}
+                  paginate={paginateScholarship}
+                  currentPage={currentPageScholarship}
+                  currentItems={currentScholarshipItems}
+                />
+              </div>
+            </>
+          ) : (<p>No scholarships found!</p>)}
         </div>
     );
 }

@@ -14,8 +14,13 @@ import ScholarshipsCard from "../components/cards/ScholarshipsCard";
 import { getCities } from "./Cities";
 import { getOrganizations } from "./Organizations";
 import { getScholarships } from "./Scholarships";
+import Pagination from "../components/Pagination.jsx";
 
 const Home = () => {
+  const [currentPageCity, setCurrentPageCity] = useState(1);
+  const [currentPageOrg, setCurrentPageOrg] = useState(1);
+  const [currentPageScholarship, setCurrentPageScholarship] = useState(1);
+  const [itemsPerPage] = useState(15); // Set the number of items per page
   const [apiCities, setApiCities] = useState({ cities: [], total_cities: 0 });
   useEffect(() => {
     getCities("", null).then((data) => setApiCities(data));
@@ -59,6 +64,30 @@ const Home = () => {
       );
     }
   };
+  
+  const indexOfLastCityItem = currentPageCity * itemsPerPage;
+  const indexOfFirstCityItem = indexOfLastCityItem - itemsPerPage;
+  const currentCityItems = apiCities.cities.slice(
+    indexOfFirstCityItem,
+    indexOfLastCityItem
+  );
+  const paginateCity = (pageNumber) => setCurrentPageCity(pageNumber);
+
+  const indexOfLastOrgItem = currentPageOrg * itemsPerPage;
+  const indexOfFirstOrgItem = indexOfLastOrgItem - itemsPerPage;
+  const currentOrgItems = apiOrganizations.organizations.slice(
+    indexOfFirstOrgItem,
+    indexOfLastOrgItem
+  );
+  const paginateOrg = (pageNumber) => setCurrentPageOrg(pageNumber);
+
+  const indexOfLastScholarshipItem = currentPageScholarship * itemsPerPage;
+  const indexOfFirstScholarshipItem = indexOfLastScholarshipItem - itemsPerPage;
+  const currentScholarshipItems = apiScholarships.scholarships.slice(
+    indexOfFirstScholarshipItem,
+    indexOfLastScholarshipItem
+  );
+  const paginateScholarship = (pageNumber) => setCurrentPageScholarship(pageNumber);
 
   return (
     <div>
@@ -138,7 +167,7 @@ const Home = () => {
                 ></hr>
               </div>
               <div className="row justify-content-start mb-3 mx-4">
-                {apiCities.cities.map((city, index) => (
+                {currentCityItems.map((city, index) => (
                   <CitiesCard
                     key={index}
                     id={city.id}
@@ -154,6 +183,13 @@ const Home = () => {
                     searchText={searchText}
                   />
                 ))}
+                <Pagination
+                  itemsPerPage={itemsPerPage}
+                  totalItems={apiCities.cities.length}
+                  paginate={paginateCity}
+                  currentPage={currentPageCity}
+                  currentItems={currentCityItems}
+                />
               </div>
             </>
           )}
@@ -170,7 +206,7 @@ const Home = () => {
                 ></hr>
               </div>
               <div className="row justify-content-start mb-3 mx-4">
-                {apiOrganizations.organizations.map((org, index) => (
+                {currentOrgItems.map((org, index) => (
                   <OrganizationsCard
                     key={index}
                     img_src={org.img_src}
@@ -184,6 +220,13 @@ const Home = () => {
                     searchText={searchText}
                   />
                 ))}
+                <Pagination
+                  itemsPerPage={itemsPerPage}
+                  totalItems={apiOrganizations.organizations.length}
+                  paginate={paginateOrg}
+                  currentPage={currentPageOrg}
+                  currentItems={currentOrgItems}
+                />
               </div>
             </>
           )}
@@ -200,7 +243,7 @@ const Home = () => {
                 ></hr>
               </div>
               <div className="row justify-content-start mb-5 mx-4">
-                {apiScholarships.scholarships.map((scholarship, index) => (
+                {currentScholarshipItems.map((scholarship, index) => (
                   <ScholarshipsCard
                     key={index}
                     img_src={scholarship.img_src}
@@ -216,6 +259,13 @@ const Home = () => {
                     searchText={searchText}
                   />
                 ))}
+                <Pagination
+                  itemsPerPage={itemsPerPage}
+                  totalItems={apiScholarships.scholarships.length}
+                  paginate={paginateScholarship}
+                  currentPage={currentPageScholarship}
+                  currentItems={currentScholarshipItems}
+                />
               </div>
             </>
           )}
