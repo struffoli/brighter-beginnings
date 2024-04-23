@@ -6,7 +6,7 @@ const HighlightedText = ({ text, searchText }) => {
   } else if (!searchText || searchText.trim() === "") {
     return <>{text}</>;
   }
-  const escapedSearchText = searchText.replace(/[-\\^$*+?.()|[\]{}]/g, "\\$&");
+  const escapedSearchText = searchText.replace(/[-\\^$*+?.()|[\]{}]/g, "\\$&").replace(" ", "|");
   const regEx = new RegExp(`(${escapedSearchText})`, "gi");
   const terms = text.split(regEx);
 
