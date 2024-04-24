@@ -114,6 +114,17 @@ const Visualizations = () => {
             <ZAxis dataKey="name" name="city" unit="" />
             <Tooltip cursor={{ strokeDasharray: "3 3" }} />
             <Scatter data={scatterData} fill="#4a90e2" />
+            <Legend
+              layout="horizontal"
+              verticalAlign="top"
+              align="center"
+              payload={[
+                {
+                  value: "City",
+                  color: "#4a90e2",
+                },
+              ]}
+            />
           </ScatterChart>
         </ResponsiveContainer>
 
@@ -141,7 +152,15 @@ const Visualizations = () => {
             />
           </YAxis>
           <Tooltip />
-          <Legend iconType="circle" />
+          <Legend
+            iconType="circle"
+            payload={[
+              {
+                value: "Value",
+                color: "#4a90e2",
+              },
+            ]}
+          />
           <Bar dataKey="value" fill="#4a90e2" unit=" USD" />
         </BarChart>
 
@@ -156,6 +175,17 @@ const Visualizations = () => {
               fill="#4a90e2"
               fillOpacity={0.6}
             />
+            <Legend
+              layout="horizontal"
+              verticalAlign="top"
+              align="center"
+              payload={[
+                {
+                  value: "City",
+                  color: "#4a90e2",
+                },
+              ]}
+            />
           </RadarChart>
         </ResponsiveContainer>
       </div>
@@ -164,8 +194,31 @@ const Visualizations = () => {
         <h1 className="mx-4 my-3 mt-4">
           <b>Critiques</b>
         </h1>
-        <h4 className="my-3 pt-1 w-100 mb-5 pb-5">
-          WE LOVE TO CODE!!!!!!!!!!!! a lot because we really do love to code
+        <h4 className="my-3 pt-1 w-75 mb-5 pb-5 text-center">
+          The team effectively came together to divide labor amongst the
+          numerous tasks which were involved in the creation of this project.
+          Along the way, we learned a lot about the relevant technologies, many
+          of which were new to us. Additionally, the entire team gained a lot of
+          experience with developing as a team with heavy emphasis on
+          communication and version control. When someone was assigned to use an
+          unfamiliar technology, they would take the knowledge they picked up
+          and teach the rest of the team how to work with it to allow for
+          flexibility with who maintains what code. If we were to do this
+          project over again, we could've definitely done better with our time
+          management and planning. Many of our roadblocks were not actually
+          technical and rather involved communication and planning.
+          Additionally, we would be more meticulous with solely using Bootstrap
+          to format our website to keep formatting consistent, maintanable, and
+          responsive. Peer reviews were helpful for each member of the team to
+          identify their strengths and weaknesses and how these played a role
+          within the team as a whole. It was a good way for us to provide
+          anonymous feedback within the team. We are still puzzled by things
+          like how to most efficiently make the website scalable and what major
+          overhauls would be needed to provide a better user experience. Given
+          the project constraints like time and requirements, we did not
+          particularly focus on implementing the most efficient algorithms or
+          making the prettiest website, so this is something that we could focus
+          on if we were to continue with this project.
         </h4>
       </div>
     </div>
