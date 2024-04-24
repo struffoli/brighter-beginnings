@@ -9,6 +9,9 @@ def get_distance(origin, destination, api_key):
     # Request distance information from the Distance Matrix API
     # print(origin + " ///// " + destination)
     distance_result = gmaps.distance_matrix(origins=origin, destinations=destination, mode='driving')
+
+    if (distance_result['rows'][0]['elements'][0]['status'] == 'ZERO_RESULTS'): # possibly not accessible, like Hawaii
+        return float('inf')
     
     # Extract distance from the result
     distance = distance_result['rows'][0]['elements'][0]['distance']['value']
@@ -67,7 +70,7 @@ with open('connections_before.txt') as file:
             distances = []
 
             for city in unmatched_cities:
-                distance = get_distance(org_pair[0]["address"], city["name"], "AIzaSyD7niW97aGw6jUpDAucOAEBCXxnM9zmx-E")
+                distance = get_distance(org_pair[0]["address"], city["name"] + ", " + city["state"], "AIzaSyD7niW97aGw6jUpDAucOAEBCXxnM9zmx-E")
                 distances.append((city, distance))
             
             distances.sort(key=lambda x: x[1])
@@ -77,5 +80,3 @@ with open('connections_before.txt') as file:
             unmatched_cities.remove(distances[1][0])
             unmatched_cities.remove(distances[2][0])
             print(group)
-        
-        print(groups)
