@@ -26,16 +26,7 @@ const Visualizations = () => {
   const [scholarshipData, setScholarshipData] = useState();
   useEffect(() => {
     const getData = async () => {
-      await getCities("", null).then(
-        (data) => setScatterData(data.cities)
-        // data.cities.forEach((city) => {
-        //   scatterData.push({
-        //     name: city.name,
-        //     x: Math.round(city.poverty_rate * 1000) / 10,
-        //     y: Math.round(city.unemployment_rate * 1000) / 10,
-        //   });
-        // })
-      );
+      await getCities("", null).then((data) => setScatterData(data.cities));
 
       let scholarships = [
         { name: "Need Based", value: 0, count: 0 },
@@ -122,7 +113,7 @@ const Visualizations = () => {
             </YAxis>
             <ZAxis dataKey="name" name="city" unit="" />
             <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-            <Scatter name="A school" data={scatterData} fill="#4a90e2" />
+            <Scatter data={scatterData} fill="#4a90e2" />
           </ScatterChart>
         </ResponsiveContainer>
 
