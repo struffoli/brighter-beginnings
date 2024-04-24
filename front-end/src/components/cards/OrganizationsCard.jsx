@@ -26,10 +26,15 @@ const OrganizationsCard = (props) => {
             </Link>
           </h5>
           <p className="card-text">
-            <b>Org Number:</b> {props.id}
+            <b>Address:</b>{" "}
+            <HighlightedText
+              searchText={props.searchText}
+              text={props.address.substring(0, props.address.length - 5)}
+            />
           </p>
           <p className="card-text">
-            <b>Email:</b> {props.email}
+            <b>Email:</b>{" "}
+            <HighlightedText searchText={props.searchText} text={props.email} />
           </p>
           <p className="card-text">
             <b>Phone:</b> {props.phone}

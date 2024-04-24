@@ -40,7 +40,7 @@ function OrganizationSubPage() {
               <b>{org.Organization.name}</b>
             </h3>
             <p className="card-text">
-              <b>Org Number:</b> {org.Organization.id}
+              <b>Address:</b> {org.Organization.address}
             </p>
             <p className="card-text">
               <b>Email:</b> {org.Organization.email}

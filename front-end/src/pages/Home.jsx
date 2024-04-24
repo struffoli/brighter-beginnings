@@ -64,7 +64,7 @@ const Home = () => {
       );
     }
   };
-  
+
   const indexOfLastCityItem = currentPageCity * itemsPerPage;
   const indexOfFirstCityItem = indexOfLastCityItem - itemsPerPage;
   const currentCityItems = apiCities.cities.slice(
@@ -87,7 +87,8 @@ const Home = () => {
     indexOfFirstScholarshipItem,
     indexOfLastScholarshipItem
   );
-  const paginateScholarship = (pageNumber) => setCurrentPageScholarship(pageNumber);
+  const paginateScholarship = (pageNumber) =>
+    setCurrentPageScholarship(pageNumber);
 
   return (
     <div>
@@ -218,6 +219,7 @@ const Home = () => {
                     city={org.city}
                     scholarship={org.scholarship}
                     searchText={searchText}
+                    adress={org.address}
                   />
                 ))}
                 <Pagination

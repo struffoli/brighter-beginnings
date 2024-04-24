@@ -112,6 +112,7 @@ const Organizations = () => {
             city={org.city}
             scholarship={org.scholarship}
             searchText={searchText}
+            address={org.address}
           />
         ))}
       </div>

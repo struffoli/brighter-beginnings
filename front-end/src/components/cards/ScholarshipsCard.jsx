@@ -34,6 +34,15 @@ const ScholarshipsCard = (props) => {
           </p>
           <p className="card-text">
             <b>Award Amount:</b>{" "}
+            {/* <HighlightedText
+              searchText={props.searchText}
+              text={props.award_amount.toString()}
+              isMoney={true}
+              // text={props.award_amount.toLocaleString("en-US", {
+              //   style: "currency",
+              //   currency: "USD",
+              // })}
+            /> */}
             {props.award_amount.toLocaleString("en-US", {
               style: "currency",
               currency: "USD",
