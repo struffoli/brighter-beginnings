@@ -298,6 +298,9 @@ const ProviderVisualizations = () => {
             <Tooltip cursor={{ strokeDasharray: "3 3" }} />
             <Scatter data={scatterData} fill="#4a90e2" />
             <Legend
+              layout="horizontal"
+              verticalAlign="top"
+              align="center"
               payload={[
                 {
                   value: "City where abortion is restricted",
@@ -313,9 +316,25 @@ const ProviderVisualizations = () => {
         <h1 className="mx-4 my-3 mt-4">
           <b>Critiques</b>
         </h1>
-        <h4 className="my-3 pt-1 w-100 mb-5 pb-5">
-          THEY LOVE TO CODE!!!!!!!!!!!! a lot because they really do love to
-          code
+        <h4 className="my-3 pt-1 w-75 mb-5 pb-5 text-center">
+          Our developer's website does an excellent job of providing a good user
+          experience as the theming of the website is very consistent across
+          pages and information is easily accessible. The attention to detail
+          with styling provides an experience that is comfortable and navigable.
+          Their RESTful API is well documented; it was both easy to use and
+          efficient when grabbing data for our visualizations. Every phase they
+          did a great job at implementing our user stories. There was no need to
+          negotiate what we expected of them and they efficiently implemented
+          our requested features exactly as intended. We learned a lot of things
+          from their website in the frontend aspect, and their search algorithm
+          provided us with a good starting point to implement our own. Something
+          they could improve upon is to sort the community activities so that
+          past events do not default to the first instances displayed. Some of
+          the fields on their instances are a little puzzling for a first-time
+          user. For instance, it could be made clear that in legislation
+          information that the time before banned is time since the last
+          menstrual period. Also, it is not clear if there is a difference
+          between "N/A" and "99" weeks for the ban time.
         </h4>
       </div>
     </div>
