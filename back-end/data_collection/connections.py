@@ -220,6 +220,7 @@ with app.app_context():
                 phone=group[1]['phone'],
                 organization_type=group[1]['organization_type'],
                 img_src=group[1]['img_src'],
+                address=group[1]['address'],
                 scholarship=scholarship
             )
 
@@ -230,6 +231,7 @@ with app.app_context():
                 phone=group[2]['phone'],
                 organization_type=group[2]['organization_type'],
                 img_src=group[2]['img_src'],
+                address=group[2]['address'],
                 scholarship=scholarship
             )
 
