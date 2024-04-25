@@ -23,7 +23,7 @@ function SearchResultsPage() {
   const [apiCities, setApiCities] = useState({ cities: [], total_cities: 0 });
   useEffect(() => {
     getCities(searchTerm, null).then((data) => setApiCities(data));
-  }, []);
+  }, [searchTerm]);
 
   const [apiOrganizations, setApiOrganizations] = useState({
     organizations: [],
@@ -33,7 +33,7 @@ function SearchResultsPage() {
     getOrganizations(searchTerm, null).then((data) =>
       setApiOrganizations(data)
     );
-  }, []);
+  }, [searchTerm]);
 
   const [apiScholarships, setApiScholarships] = useState({
     scholarships: [],
@@ -41,7 +41,7 @@ function SearchResultsPage() {
   });
   useEffect(() => {
     getScholarships(searchTerm, null).then((data) => setApiScholarships(data));
-  }, []);
+  }, [searchTerm]);
 
   const indexOfLastCityItem = currentPageCity * itemsPerPage;
   const indexOfFirstCityItem = indexOfLastCityItem - itemsPerPage;
