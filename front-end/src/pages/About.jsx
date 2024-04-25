@@ -216,6 +216,11 @@ function About() {
           <h4 style={{ marginBottom: "0" }}>GitLab Repository</h4>
         </a>
       </div>
+      <div className="text-center my-5 align-items-center">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/Pm5R1ecjYn4?si=Q7LQEnlwMsIU8d13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
+        </div>
+      </div>
     </div>
   );
 }
