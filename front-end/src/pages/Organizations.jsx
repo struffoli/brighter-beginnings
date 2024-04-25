@@ -75,13 +75,16 @@ const Organizations = () => {
   let sorts = ["None", "Address", "Name", "Organization Type"];
   let filters = ["None", "Has Email", "Has phone number"];
 
-  const handleOrganizationsSearch = (searchText, sort, filter) => {
-    setSearchText(searchText);
-    getOrganizations(
-      searchText,
-      sorts.indexOf(sort),
-      filters.indexOf(filter)
-    ).then((data) => setApiOrganizations(data));
+  const handleOrganizationsSearch = (newText, sort, filter) => {
+    if (searchText !== newText) {
+      setSearchText(newText);
+      getOrganizations(
+        newText,
+        sorts.indexOf(sort),
+        filters.indexOf(filter)
+      ).then((data) => setApiOrganizations(data));
+      setCurrentPage(1);
+    }
   };
 
   return (

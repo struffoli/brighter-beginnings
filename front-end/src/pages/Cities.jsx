@@ -94,11 +94,14 @@ const Cities = () => {
   ];
   let filters = null;
 
-  const handleCitiesSearch = (searchText, searchSort, searchFilters) => {
-    setSearchText(searchText);
-    getCities(searchText, sorts.indexOf(searchSort)).then((data) =>
-      setApiCities(data)
-    );
+  const handleCitiesSearch = (newText, searchSort, searchFilters) => {
+    if (searchText !== newText) {
+      setSearchText(newText);
+      getCities(newText, sorts.indexOf(searchSort)).then((data) =>
+        setApiCities(data)
+      );
+      setCurrentPage(1);
+    }
   };
 
   return (

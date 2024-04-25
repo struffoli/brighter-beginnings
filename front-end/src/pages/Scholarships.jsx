@@ -87,13 +87,16 @@ const Scholarships = () => {
     "Nationwide",
   ];
 
-  const handleScholarshipsSearch = (searchText, sort, filter) => {
-    setSearchText(searchText);
-    getScholarships(
-      searchText,
-      sorts.indexOf(sort),
-      filters.indexOf(filter)
-    ).then((data) => setApiScholarships(data));
+  const handleScholarshipsSearch = (newText, sort, filter) => {
+    if (searchText !== newText) {
+      setSearchText(newText);
+      getScholarships(
+        newText,
+        sorts.indexOf(sort),
+        filters.indexOf(filter)
+      ).then((data) => setApiScholarships(data));
+      setCurrentPage(1);
+    }
   };
 
   return (

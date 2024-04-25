@@ -44,24 +44,27 @@ const Home = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  const handleSitewideSearch = (searchText) => {
-    if (searchText === "") {
-      setSearchText("");
-      setApiCities({ cities: [], total_cities: 0 });
-      setApiOrganizations({ organizations: [], total_organizations: 0 });
-      setApiScholarships({ scholarships: [], total_scholarships: 0 });
-    } else {
-      setSearchText(searchText);
+  const handleSitewideSearch = (newText) => {
+    if (searchText !== newText) {
+      if (newText === "") {
+        setSearchText("");
+        setApiCities({ cities: [], total_cities: 0 });
+        setApiOrganizations({ organizations: [], total_organizations: 0 });
+        setApiScholarships({ scholarships: [], total_scholarships: 0 });
+      } else {
+        setSearchText(newText);
 
-      getCities(searchText, null).then((data) => setApiCities(data));
+        getCities(newText, null).then((data) => setApiCities(data));
 
-      getOrganizations(searchText, null).then((data) =>
-        setApiOrganizations(data)
-      );
+        getOrganizations(newText, null).then((data) =>
+          setApiOrganizations(data)
+        );
 
-      getScholarships(searchText, null).then((data) =>
-        setApiScholarships(data)
-      );
+        getScholarships(newText, null).then((data) => setApiScholarships(data));
+      }
+      setCurrentPageCity(1);
+      setCurrentPageOrg(1);
+      setCurrentPageScholarship(1);
     }
   };
 
