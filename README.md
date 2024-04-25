@@ -28,7 +28,7 @@
 | Phase 1 | Kevin Xu | Phase leader Kevin keeps track of current status, watches issues closely, and maintains list of what is left to do. |
 | Phase 2 | Bryan | Phase leader Bryan diligently managed tasks and assigned them between group members, oversaw and led development of entire backend. |
 | Phase 3| Tyler | Phase leader Tyler coordinated tasks between members, ensured collaboration between back and front ends, and kept track of project requirements. |
-| Phase 4 |  |
+| Phase 4 | Josh | Phase leader Josh delegated tasks efficiently, oversaw development of visualizations, and ensured diligency when polishing final touches for the website.
 
 ## Phase 1: Estimated and Actual Completion Time
 | Team Member | Estimated (hours) | Actual (hours) |
@@ -56,3 +56,12 @@
 | Tyler Kubecka | 5 | 10 |
 | Ben Yu | 5 | 10 |
 | Bryan Lee | 5 | 10 |  
+
+## Phase 4: Estimated and Actual Completion Time
+| Team Member | Estimated (hours) | Actual (hours) |
+| :---------- | :---------- | :---------- |
+| Kevin Xu | 5 | 15 |
+| Joshua Yu | 10 | 15 |
+| Tyler Kubecka | 5 | 15 |
+| Ben Yu | 5 | 15 |
+| Bryan Lee | 5 | 15 |  
