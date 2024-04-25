@@ -47,7 +47,7 @@ class SeleniumTests(unittest.TestCase):
     def test_6(self) -> None:
         self.driver.get(url + "/about")
         self.driver.implicitly_wait(5)
-        self.assertIn("VS Code", self.driver.page_source)
+        self.assertIn("Jest", self.driver.page_source)
         
     def test_7(self) -> None:
         self.driver.get(url + "/about")
