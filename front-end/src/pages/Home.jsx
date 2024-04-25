@@ -22,25 +22,25 @@ const Home = () => {
   const [currentPageScholarship, setCurrentPageScholarship] = useState(1);
   const [itemsPerPage] = useState(15); // Set the number of items per page
   const [apiCities, setApiCities] = useState({ cities: [], total_cities: 0 });
-  useEffect(() => {
-    getCities("", null).then((data) => setApiCities(data));
-  }, []);
+  // useEffect(() => {
+  //   getCities("", null).then((data) => setApiCities(data));
+  // }, []);
 
   const [apiOrganizations, setApiOrganizations] = useState({
     organizations: [],
     total_organizations: 0,
   });
-  useEffect(() => {
-    getOrganizations("", null).then((data) => setApiOrganizations(data));
-  }, []);
+  // useEffect(() => {
+  //   getOrganizations("", null).then((data) => setApiOrganizations(data));
+  // }, []);
 
   const [apiScholarships, setApiScholarships] = useState({
     scholarships: [],
     total_scholarships: 0,
   });
-  useEffect(() => {
-    getScholarships("", null).then((data) => setApiScholarships(data));
-  }, []);
+  // useEffect(() => {
+  //   getScholarships("", null).then((data) => setApiScholarships(data));
+  // }, []);
 
   const [searchText, setSearchText] = useState("");
 
