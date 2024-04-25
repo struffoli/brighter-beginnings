@@ -18,7 +18,7 @@
 | Phase 1 | a1584d75 |
 | Phase 2 | 0ac41bfc |
 | Phase 3| 422ebd09bd32953fdcfb06ca8ad27322511bcb42 |
-| Phase 4 |  |
+| Phase 4 | b689f0ac9f7dc13b1398bf17bfa02a10daad3b35 |
 
 **Pipeline:** https://gitlab.com/kxut/cs373-group-01/-/pipelines
 
