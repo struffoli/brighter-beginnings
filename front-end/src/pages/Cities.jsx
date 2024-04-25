@@ -14,6 +14,7 @@ export async function getCities(search, sort) {
   try {
     let sorts = [
       null,
+      null,
       "population",
       "name",
       "state",
@@ -81,6 +82,7 @@ const Cities = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   let sorts = [
+    "None",
     "Population (↓)",
     "Population (↑)",
     "Name",

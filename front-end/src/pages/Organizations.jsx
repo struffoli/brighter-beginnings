@@ -9,7 +9,7 @@ export async function getOrganizations(search, sort, filter) {
   let organizations = [];
   let total_organizations = 0;
   try {
-    let sorts = ["id", "name", "organization_type"];
+    let sorts = [null, "address", "name", "organization_type"];
     let filters = [null, "email", "phone"];
     const response = await fetch(
       "https://api.brighterbeginnings.me/organizations" +
@@ -72,7 +72,7 @@ const Organizations = () => {
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  let sorts = ["ID", "Name", "Organization Type"];
+  let sorts = ["None", "Address", "Name", "Organization Type"];
   let filters = ["None", "Has Email", "Has phone number"];
 
   const handleOrganizationsSearch = (searchText, sort, filter) => {
