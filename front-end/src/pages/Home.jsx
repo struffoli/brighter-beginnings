@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import splash from "../assets/splash.png";
 import ExploreCard from "../components/cards/ExploreCard";
