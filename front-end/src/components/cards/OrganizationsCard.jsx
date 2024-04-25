@@ -29,7 +29,11 @@ const OrganizationsCard = (props) => {
             <b>Address:</b>{" "}
             <HighlightedText
               searchText={props.searchText}
-              text={props.address.substring(0, props.address.length - 5)}
+              text={
+                props.address
+                  ? props.address.substring(0, props.address.length - 5)
+                  : "N/A"
+              }
             />
           </p>
           <p className="card-text">

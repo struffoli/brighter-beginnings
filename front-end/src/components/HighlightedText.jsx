@@ -23,7 +23,6 @@ const HighlightedText = ({ text, searchText, isMoney }) => {
   const terms = text.split(regEx);
 
   // console.log(searchText, terms, isMoney);
-  console.log(terms);
 
   return (
     <div>
